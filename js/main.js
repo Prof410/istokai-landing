@@ -56,7 +56,11 @@ function initChatCarousel() {
 
   function goTo(nextIndex) {
     index = (nextIndex + total) % total;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const viewport = carousel.querySelector(".chat-carousel-viewport");
+    const slideWidth = viewport ? viewport.clientWidth : 0;
+    track.style.transform = slideWidth
+      ? `translate3d(-${index * slideWidth}px, 0, 0)`
+      : `translateX(-${index * 100}%)`;
     dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
   }
 

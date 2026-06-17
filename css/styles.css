@@ -402,13 +402,17 @@ img {
 
 .chat-carousel-viewport {
   overflow: hidden;
+  overflow-x: clip;
   border-radius: 20px;
   width: 100%;
   max-width: 100%;
+  position: relative;
+  isolation: isolate;
 }
 
 .chat-carousel-track {
   display: flex;
+  flex-wrap: nowrap;
   width: 100%;
   transition: transform 0.45s ease;
   will-change: transform;
@@ -420,6 +424,7 @@ img {
   min-width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .carousel-controls {
@@ -803,68 +808,114 @@ img {
 
 @media (max-width: 960px) {
   .hero {
-    padding: 32px 0 48px;
+    padding: 24px 0 40px;
+  }
+
+  .hero::before {
+    width: 320px;
+    height: 320px;
+    inset: -10% -10% auto auto;
+    transform: none;
   }
 
   .hero-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "main"
-      "carousel"
-      "stats";
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-main {
+    display: contents;
+  }
+
+  .hero-grid h1 {
+    order: 1;
+    font-size: clamp(1.45rem, 6.2vw, 1.85rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .hero-grid .hero-lead:first-of-type {
+    order: 2;
+    font-size: 0.98rem;
+    margin-bottom: 12px;
   }
 
   .hero-grid .chat-carousel {
-    align-self: stretch;
+    order: 3;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .hero h1 {
-    font-size: clamp(1.55rem, 6.5vw, 2rem);
-    line-height: 1.12;
+  .hero-grid .hero-lead-second {
+    order: 4;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .hero-grid .hero-actions {
+    order: 5;
+    margin-bottom: 0;
+  }
+
+  .hero-grid .hero-stats {
+    order: 6;
   }
 
   .hero-lead {
-    font-size: 1rem;
     max-width: none;
-  }
-
-  .hero-actions {
-    margin-bottom: 0;
   }
 
   .hero-actions .btn {
     flex: 1 1 calc(50% - 6px);
-    min-width: 140px;
+    min-width: 0;
+    padding: 11px 16px;
+    font-size: 0.9rem;
   }
 
   .chat-body {
     min-height: 0;
-    padding: 14px;
-    gap: 12px;
+    padding: 12px;
+    gap: 10px;
   }
 
   .chat-header {
-    padding: 12px 14px;
+    padding: 10px 12px;
+    gap: 8px;
   }
 
   .chat-title {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .chat-input {
-    margin: 0 14px 14px;
-    font-size: 0.82rem;
-  }
-
-  .bubble {
-    font-size: 0.84rem;
+    margin: 0 12px 12px;
+    font-size: 0.8rem;
     padding: 10px 12px;
   }
 
+  .bubble {
+    font-size: 0.82rem;
+    padding: 10px 11px;
+    max-width: 95%;
+  }
+
+  .source-link {
+    font-size: 0.75rem;
+  }
+
   .doc-chip {
-    font-size: 0.72rem;
-    padding: 5px 8px;
+    font-size: 0.68rem;
+    padding: 4px 7px;
+  }
+
+  .chat-mockup {
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
   }
 
   .contact-grid,
@@ -879,19 +930,20 @@ img {
 
   .stats-row {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .stat-card {
-    padding: 12px;
+    padding: 10px 12px;
   }
 
   .stat-value {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .stat-label {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
+    line-height: 1.35;
   }
 
   .rag-diagram {
@@ -900,12 +952,13 @@ img {
 
   .header-inner {
     position: relative;
+    min-height: 64px;
   }
 
   .nav {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 64px;
     left: 0;
     right: 0;
     flex-direction: column;
