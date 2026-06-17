@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Istok AI">
+  <defs>
+    <linearGradient id="istok-water" x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="istok-hill" x1="24" y1="8" x2="24" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E3A5F"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="istok-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 13) rotate(90) scale(12 8)">
+      <stop stop-color="#38BDF8" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#0F172A"/>
+  <ellipse cx="24" cy="13" rx="14" ry="6" fill="url(#istok-glow)"/>
+  <path d="M12 18C16 14 20 12 24 12C28 12 32 14 36 18C34 16 29 15 24 15C19 15 14 16 12 18Z" fill="url(#istok-hill)"/>
+  <circle cx="24" cy="13" r="4.2" fill="url(#istok-water)"/>
+  <circle cx="24" cy="13" r="6.8" stroke="url(#istok-water)" stroke-opacity="0.35" stroke-width="1.2"/>
+  <path d="M24 16.8C24 20.5 18.5 24 13 34" stroke="url(#istok-water)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M24 16.8C24 22.5 24 27.5 24 36" stroke="url(#istok-water)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M24 16.8C24 20.5 29.5 24 35 34" stroke="url(#istok-water)" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="13" cy="34" r="1.6" fill="#38BDF8" fill-opacity="0.8"/>
+  <circle cx="24" cy="36" r="1.6" fill="#3B82F6" fill-opacity="0.9"/>
+  <circle cx="35" cy="34" r="1.6" fill="#6366F1" fill-opacity="0.8"/>
+</svg>

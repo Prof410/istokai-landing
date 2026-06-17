@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istok AI — умный поиск по корпоративной базе знаний</title>
+  <meta name="description" content="Istok AI — технология RAG для компаний: ИИ отвечает по вашим документам с цитатами и ссылками на источник. istokai.ru">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img class="logo-icon" src="assets/logo-mark.svg" width="40" height="40" alt="">
+        <span class="logo-text">Istok <span class="logo-ai">AI</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#rag">Что такое RAG</a>
+        <a href="#how">Как работает</a>
+        <a href="#benefits">Для бизнеса</a>
+        <a href="#case">Кейс</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary">Связаться</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="section-label">istokai.ru</p>
+          <h1>Istok AI — ответы из вашей корпоративной базы знаний</h1>
+          <p class="hero-lead">
+            <strong>Istok</strong> — «источник»: каждый ответ привязан к документу, из которого он взят.
+            Технология RAG подключает языковую модель к материалам компании — регламентам, договорам,
+            инструкциям и wiki. Сотрудник задаёт вопрос — Istok AI находит фрагменты и формирует ответ со ссылкой на источник.
+          </p>
+          <div class="hero-actions">
+            <a href="#rag" class="btn btn-primary">Узнать про RAG</a>
+            <a href="#how" class="btn btn-secondary">Как это работает</a>
+          </div>
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-value">90%</div>
+              <div class="stat-label">экономии времени на поиск</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">прозрачность источников</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">доступ к базе знаний</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">RAG</div>
+              <div class="stat-label">не «угадывание» модели</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-mockup" aria-hidden="true">
+          <div class="chat-header">
+            <span class="chat-title">Istok AI Chat</span>
+            <span class="chat-badge">● онлайн</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-docs">
+              <span class="doc-chip">Регламент_HR.pdf</span>
+              <span class="doc-chip">Договор_шаблон.docx</span>
+              <span class="doc-chip">База знаний IT</span>
+            </div>
+            <div class="bubble bubble-user">
+              Можно ли оформить удалёнку на 3 дня без согласования с руководителем отдела?
+            </div>
+            <div class="bubble bubble-bot">
+              <strong>Нет.</strong> По регламенту удалённая работа согласуется с непосредственным руководителем
+              не позднее чем за 1 рабочий день.
+              <br><br>
+              Источник: «Положение о дистанционной работе», п. 4.2.
+              <span class="source-link">→ открыть фрагмент документа</span>
+            </div>
+          </div>
+          <div class="chat-input">Задайте вопрос по документам компании…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rag">
+      <div class="container">
+        <p class="section-label">Технология</p>
+        <h2 class="section-title">Что такое RAG и зачем он нужен</h2>
+        <p class="section-subtitle">
+          Обычный чат с ИИ не знает внутренних документов вашей организации и может отвечать неточно.
+          RAG решает эту задачу: перед ответом система <strong>ищет</strong> в корпоративной базе знаний
+          и только потом <strong>генерирует</strong> ответ на основе найденного. Это и есть умный поиск + ИИ.
+        </p>
+
+        <div class="rag-diagram">
+          <div class="rag-node">
+            <strong>1. База знаний</strong>
+            <span>Документы компании: PDF, Word, wiki, Confluence, SharePoint, markdown</span>
+          </div>
+          <div class="rag-node">
+            <strong>2. Поиск (Retrieval)</strong>
+            <span>Семантический поиск находит релевантные фрагменты по смыслу вопроса</span>
+          </div>
+          <div class="rag-node">
+            <strong>3. Ответ (Generation)</strong>
+            <span>Модель формулирует ответ только на основе найденного контекста</span>
+          </div>
+        </div>
+
+        <div class="cards-grid" style="margin-top: 32px;">
+          <article class="card">
+            <div class="card-icon">◎</div>
+            <h3>Понимает смысл, не только слова</h3>
+            <p>Вопрос можно задать своими словами — система найдёт нужный раздел даже при другой формулировке.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⎘</div>
+            <h3>Ваши документы, ваши правила</h3>
+            <p>Ответ опирается на загруженную корпоративную базу — вы сами определяете, какие материалы в системе.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✓</div>
+            <h3>Проверяемый результат</h3>
+            <p>Каждый вывод можно сверить: цитата, документ, раздел. Решение остаётся за человеком.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how" style="background: var(--bg-soft);">
+      <div class="container">
+        <p class="section-label">Процесс</p>
+        <h2 class="section-title">Как работает RAG на практике</h2>
+        <p class="section-subtitle">
+          Неважно, юридический у вас отдел, HR, IT или производство — схема одна:
+          документы компании становятся доступны для умного поиска через чат.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Собираете базу</h3>
+            <p>Загружаете корпоративные документы: регламенты, договоры, инструкции, FAQ, отраслевые материалы.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Задаёте вопрос</h3>
+            <p>На естественном языке — как коллеге: «где прописано…», «как оформить…», «чем отличается…».</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Система ищет</h3>
+            <p>RAG находит наиболее релевантные фрагменты среди тысяч страниц вашей базы знаний.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Получаете ответ</h3>
+            <p>С формулировкой, цитатой и указанием, из какого документа взят вывод.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <h3>Проверяете</h3>
+            <p>Открываете источник и принимаете решение — полный контроль за результатом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <p class="section-label">Ценность</p>
+        <h2 class="section-title">Что RAG приносит бизнесу</h2>
+        <p class="section-subtitle">
+          Когда знания разбросаны по папкам, почте и головам сотрудников, поиск информации тормозит работу.
+          RAG превращает корпоративную базу в доступного 24/7 ассистента.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Скорость</h3>
+            <p><s>Было:</s> «найди в регламентах» — часы.<br><strong>Стало:</strong> ответ за секунды с указанием источника.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">◎</div>
+            <h3>Точность</h3>
+            <p>Ответ строится на ваших документах, а не на общей «памяти» модели без привязки к компании.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⬡</div>
+            <h3>Масштаб</h3>
+            <p>10 файлов или 10 000 — система работает со всей базой и находит связи между документами.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Контроль данных</h3>
+            <p>База может работать на вашем сервере. Доступ разграничивается по ролям и подразделениям.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">₽</div>
+            <h3>Меньше потерь</h3>
+            <p>Меньше ошибок из-за устаревших версий документов и «устных договорённостей».</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">👥</div>
+            <h3>Быстрый онбординг</h3>
+            <p>Новый сотрудник быстрее входит в контекст через ответы с ссылками на внутренние материалы.</p>
+          </article>
+        </div>
+
+        <div class="compare-grid" style="margin-top: 40px;">
+          <div class="compare-card bad">
+            <h3>Обычный чат с ИИ</h3>
+            <ul>
+              <li>Не знает внутренних документов вашей компании</li>
+              <li>Может уверенно ответить неверно</li>
+              <li>Сложно проверить источник</li>
+              <li>Не учитывает ваши редакции и версии файлов</li>
+            </ul>
+          </div>
+          <div class="compare-card good">
+            <h3>RAG по базе знаний</h3>
+            <ul>
+              <li>Ищет в корпоративных документах перед ответом</li>
+              <li>Цитирует конкретные фрагменты и разделы</li>
+              <li>Ответ можно проверить в один клик</li>
+              <li>База обновляется под ваши актуальные материалы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-soft);">
+      <div class="container">
+        <p class="section-label">Применение</p>
+        <h2 class="section-title">Где используется корпоративный RAG</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Юридические и compliance-отделы</h3>
+            <p>Поиск условий в договорах, сравнение версий, быстрый доступ к регламентам и политикам.</p>
+          </article>
+          <article class="card">
+            <h3>HR и внутренние сервисы</h3>
+            <p>Ответы по кадровым процедурам, отпускам, бенефитам — из актуальных внутренних документов.</p>
+          </article>
+          <article class="card">
+            <h3>IT и техподдержка</h3>
+            <p>База знаний по инцидентам, инструкциям, настройкам — без долгого поиска в тикетах.</p>
+          </article>
+          <article class="card">
+            <h3>Продажи и консалтинг</h3>
+            <p>Быстрый доступ к кейсам, презентациям, методичкам и типовым ответам клиентам.</p>
+          </article>
+          <article class="card">
+            <h3>Производство и качество</h3>
+            <p>Технологические карты, стандарты, инструкции по безопасности — в одном умном поиске.</p>
+          </article>
+          <article class="card">
+            <h3>Регулируемые отрасли</h3>
+            <p>Нормативка, отраслевые акты, письма регуляторов — с обязательной ссылкой на пункт источника.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section" id="case">
+      <div class="container">
+        <p class="section-label">Реализованный проект</p>
+        <h2 class="section-title">Кейс: ИИ-консультант по электроэнергетике</h2>
+        <p class="section-subtitle">
+          Один из рабочих примеров платформы Istok AI — отраслевой консультант по нормативке
+          электроэнергетики РФ. Та же архитектура, что подходит для любой корпоративной базы:
+          документы → поиск → ответ с источником.
+        </p>
+
+        <div class="case-grid">
+          <div class="case-content">
+            <h3>ИИ-консультант по электроэнергетике</h3>
+            <p>
+              На базе Istok AI развёрнут отраслевой ассистент: отвечает на вопросы по приказам Минэнерго,
+              постановлениям Правительства и методическим указаниям — с цитатами и ссылками на пункты.
+              Для юристов, тарифных специалистов, сбытовых и договорных подразделений.
+            </p>
+            <ul class="case-list">
+              <li>База: нормативные акты с актуальными редакциями</li>
+              <li>Поиск: семантический RAG по векторной базе</li>
+              <li>Ответ: формулировка + документ + пункт</li>
+              <li>Доступ: закрытое демо по приглашению</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Запросить демо кейса</a>
+          </div>
+
+          <div class="chat-mockup case-mockup" aria-hidden="true">
+            <div class="chat-header">
+              <span class="chat-title">Istok AI · ЭЭ</span>
+              <span class="chat-badge">кейс</span>
+            </div>
+            <div class="chat-body">
+              <div class="chat-docs">
+                <span class="doc-chip">ПП РФ №442</span>
+                <span class="doc-chip">Приказ №1178</span>
+                <span class="doc-chip">МУ 1554/17</span>
+              </div>
+              <div class="bubble bubble-user">
+                Учитываются ли точки поставки без ПУ при расчёте НВВ по методу аналогов?
+              </div>
+              <div class="bubble bubble-bot">
+                <strong>Да</strong>, при действующем договоре энергоснабжения такие точки включаются в количество для НВВ.
+                <br><br>
+                Основание: п. 65(2) Приказа №1178, п. 13 МУ 1554/17, п. 32 и 42 ПП РФ №442.
+                <span class="source-link">→ открыть фрагмент документа</span>
+              </div>
+            </div>
+            <div class="chat-input">Пример ответа по отраслевой базе знаний</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" style="background: var(--bg-soft);">
+      <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Чем RAG отличается от обычного ChatGPT?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              ChatGPT отвечает на основе обучения модели и не знает ваших внутренних файлов.
+              RAG сначала ищет в корпоративной базе знаний и только потом формулирует ответ —
+              с привязкой к конкретным документам.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Это замена сотрудникам или экспертам?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Нет. RAG ускоряет поиск и подготовку черновика ответа. Окончательное решение,
+              оценка рисков и ответственность остаются за человеком.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Какие документы можно подключить?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              PDF, Word, Excel, текстовые файлы, markdown, материалы из wiki и Confluence —
+              всё, из чего можно извлечь текст. Состав базы определяете вы.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Безопасно ли это для корпоративных данных?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Да, при правильном внедрении: развёртывание на вашем сервере или в выделенном контуре,
+              разграничение доступа, контроль того, какие документы попадают в базу.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Подойдёт ли только для больших компаний?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Нет. RAG полезен любой организации, где много документов и регулярные вопросы
+              «где это написано?». Масштаб базы и инфраструктуры подбирается под задачу.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Контакт</p>
+          <h2 class="section-title">Обсудить Istok AI</h2>
+          <p class="section-subtitle" style="margin-bottom: 24px;">
+            Расскажем, как Istok AI работает на вашей базе знаний, покажем отраслевой кейс
+            по электроэнергетике и обсудим пилот для вашей компании.
+          </p>
+          <ul style="color: var(--text-muted); padding-left: 18px;">
+            <li>Консультация по архитектуре и внедрению</li>
+            <li>Ответ в течение 1–2 рабочих дней</li>
+            <li>Демо по приглашению</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form id="lead-form">
+            <div class="form-group">
+              <label for="name">Имя *</label>
+              <input id="name" name="name" type="text" required placeholder="Как к вам обращаться">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="name@company.ru">
+            </div>
+            <div class="form-group">
+              <label for="company">Компания</label>
+              <input id="company" name="company" type="text" placeholder="Организация">
+            </div>
+            <div class="form-group">
+              <label for="role">Роль</label>
+              <select id="role" name="role">
+                <option value="">Выберите</option>
+                <option value="management">Руководитель / собственник</option>
+                <option value="it">IT / цифровизация</option>
+                <option value="legal">Юрист / compliance</option>
+                <option value="hr">HR / внутренние сервисы</option>
+                <option value="operations">Операционный блок</option>
+                <option value="consulting">Консалтинг / интегратор</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Комментарий</label>
+              <textarea id="message" name="message" placeholder="Какая база знаний, какие задачи?"></textarea>
+            </div>
+            <div class="form-group checkbox-row">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">Согласен на обработку персональных данных для обратной связи</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку</button>
+            <p class="form-note">
+              Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.
+            </p>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="https://istokai.ru" class="logo" style="margin-bottom: 8px;">
+          <img class="logo-icon" src="assets/logo-mark.svg" width="32" height="32" alt="">
+          <span class="logo-text">Istok <span class="logo-ai">AI</span></span>
+        </a>
+        <span style="color: var(--text-muted); font-size: 0.88rem;">RAG-платформа для корпоративных документов</span>
+      </div>
+      <div class="footer-links">
+        <a href="#rag">Технология</a>
+        <a href="#case">Кейс ЭЭ</a>
+        <a href="https://istokai.ru">istokai.ru</a>
+        <a href="#contact">Контакт</a>
+      </div>
+      <div>© 2026 Istok AI</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
