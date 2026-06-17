@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Istok AI — умный поиск по корпоративной базе знаний</title>
-  <meta name="description" content="Istok AI — технология RAG для компаний: ИИ отвечает по вашим документам с цитатами и ссылками на источник. istokai.ru">
+  <title>Istok.AI — умный поиск по корпоративной базе знаний</title>
+  <meta name="description" content="Istok.AI — технология RAG для компаний: ИИ отвечает по вашим документам с цитатами и ссылками на источник. istokai.ru">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <div class="container header-inner">
       <a href="#" class="logo">
         <img class="logo-icon" src="assets/logo-mark.svg" width="40" height="40" alt="">
-        <span class="logo-text">Istok <span class="logo-ai">AI</span></span>
+        <span class="logo-text">Istok<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
       </a>
       <nav class="nav">
         <a href="#rag">Что такое RAG</a>
@@ -34,12 +34,15 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="section-label">istokai.ru</p>
-          <h1>Istok AI — ответы из вашей корпоративной базы знаний</h1>
+          <h1>Istok.AI — ответы из Вашей корпоративной базы знаний</h1>
           <p class="hero-lead">
-            <strong>Istok</strong> — «источник»: каждый ответ привязан к документу, из которого он взят.
-            Технология RAG подключает языковую модель к материалам компании — регламентам, договорам,
-            инструкциям и wiki. Сотрудник задаёт вопрос — Istok AI находит фрагменты и формирует ответ со ссылкой на источник.
+            Istok.AI — современная технология использования искусственного интеллекта для работы
+            с корпоративными документами.
+          </p>
+          <p class="hero-lead hero-lead-second">
+            В основе — архитектура RAG (Retrieval-Augmented Generation), которая подключает языковую модель
+            к материалам компании: регламентам, договорам, инструкциям и внутренним положениям.
+            Сотрудник задаёт вопрос — Istok.AI находит нужные фрагменты и формирует ответ со ссылкой на источник.
           </p>
           <div class="hero-actions">
             <a href="#rag" class="btn btn-primary">Узнать про RAG</a>
@@ -60,34 +63,99 @@
             </div>
             <div class="stat-card">
               <div class="stat-value">RAG</div>
-              <div class="stat-label">не «угадывание» модели</div>
+              <div class="stat-label">все в одном месте</div>
             </div>
           </div>
         </div>
 
-        <div class="chat-mockup" aria-hidden="true">
-          <div class="chat-header">
-            <span class="chat-title">Istok AI Chat</span>
-            <span class="chat-badge">● онлайн</span>
+        <div class="chat-carousel" id="hero-chat-carousel">
+          <div class="chat-carousel-viewport">
+            <div class="chat-carousel-track">
+              <article class="chat-mockup chat-slide">
+                <div class="chat-header">
+                  <span class="chat-title">Istok.AI Chat</span>
+                  <span class="chat-badge">● онлайн</span>
+                </div>
+                <div class="chat-body">
+                  <div class="chat-docs">
+                    <span class="doc-chip">Регламент_HR.pdf</span>
+                    <span class="doc-chip">Договор_шаблон.docx</span>
+                    <span class="doc-chip">База знаний IT</span>
+                  </div>
+                  <div class="bubble bubble-user">
+                    Можно ли оформить удалёнку на 3 дня без согласования с руководителем отдела?
+                  </div>
+                  <div class="bubble bubble-bot">
+                    <strong>Нет.</strong> По регламенту удалённая работа согласуется с непосредственным руководителем
+                    не позднее чем за 1 рабочий день.
+                    <br><br>
+                    Источник: «Положение о дистанционной работе», п. 4.2.
+                    <span class="source-link">→ открыть фрагмент документа</span>
+                  </div>
+                </div>
+                <div class="chat-input">Задайте вопрос по документам компании…</div>
+              </article>
+
+              <article class="chat-mockup chat-slide">
+                <div class="chat-header">
+                  <span class="chat-title">Istok.AI Chat</span>
+                  <span class="chat-badge">● онлайн</span>
+                </div>
+                <div class="chat-body">
+                  <div class="chat-docs">
+                    <span class="doc-chip">Договор_поставки.pdf</span>
+                    <span class="doc-chip">Реестр_договоров.xlsx</span>
+                    <span class="doc-chip">Типовые_условия.docx</span>
+                  </div>
+                  <div class="bubble bubble-user">
+                    Есть ли в договоре с поставщиком право расторгнуть его при просрочке поставки более 10 дней?
+                  </div>
+                  <div class="bubble bubble-bot">
+                    <strong>Да.</strong> В разделе 8.3 предусмотрено одностороннее расторжение при нарушении сроков
+                    поставки более чем на 10 рабочих дней, с письменным уведомлением за 5 дней.
+                    <br><br>
+                    Источник: Договор поставки №127/2025, п. 8.3, 8.4.
+                    <span class="source-link">→ открыть фрагмент документа</span>
+                  </div>
+                </div>
+                <div class="chat-input">Задайте вопрос по документам компании…</div>
+              </article>
+
+              <article class="chat-mockup chat-slide">
+                <div class="chat-header">
+                  <span class="chat-title">Istok.AI Chat</span>
+                  <span class="chat-badge">● онлайн</span>
+                </div>
+                <div class="chat-body">
+                  <div class="chat-docs">
+                    <span class="doc-chip">НК_РФ_выдержки.pdf</span>
+                    <span class="doc-chip">Учётная_политика.docx</span>
+                    <span class="doc-chip">Мемо_НДС.pdf</span>
+                  </div>
+                  <div class="bubble bubble-user">
+                    Можно ли принять НДС к вычету по авансовому счёту-фактуре, если оплата ещё не проведена?
+                  </div>
+                  <div class="bubble bubble-bot">
+                    <strong>Нет.</strong> По учётной политике компании вычет по авансовому СФ отражается после фактической
+                    оплаты поставщику и проведения платежа в учётной системе.
+                    <br><br>
+                    Источник: Учётная политика 2026, разд. 4; п. 2 ст. 171 НК РФ.
+                    <span class="source-link">→ открыть фрагмент документа</span>
+                  </div>
+                </div>
+                <div class="chat-input">Задайте вопрос по документам компании…</div>
+              </article>
+            </div>
           </div>
-          <div class="chat-body">
-            <div class="chat-docs">
-              <span class="doc-chip">Регламент_HR.pdf</span>
-              <span class="doc-chip">Договор_шаблон.docx</span>
-              <span class="doc-chip">База знаний IT</span>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Предыдущий пример">‹</button>
+            <div class="carousel-dots" role="tablist" aria-label="Примеры чата">
+              <button type="button" class="carousel-dot active" aria-label="Пример 1" data-slide="0"></button>
+              <button type="button" class="carousel-dot" aria-label="Пример 2" data-slide="1"></button>
+              <button type="button" class="carousel-dot" aria-label="Пример 3" data-slide="2"></button>
             </div>
-            <div class="bubble bubble-user">
-              Можно ли оформить удалёнку на 3 дня без согласования с руководителем отдела?
-            </div>
-            <div class="bubble bubble-bot">
-              <strong>Нет.</strong> По регламенту удалённая работа согласуется с непосредственным руководителем
-              не позднее чем за 1 рабочий день.
-              <br><br>
-              Источник: «Положение о дистанционной работе», п. 4.2.
-              <span class="source-link">→ открыть фрагмент документа</span>
-            </div>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Следующий пример">›</button>
           </div>
-          <div class="chat-input">Задайте вопрос по документам компании…</div>
         </div>
       </div>
     </section>
@@ -97,15 +165,16 @@
         <p class="section-label">Технология</p>
         <h2 class="section-title">Что такое RAG и зачем он нужен</h2>
         <p class="section-subtitle">
-          Обычный чат с ИИ не знает внутренних документов вашей организации и может отвечать неточно.
-          RAG решает эту задачу: перед ответом система <strong>ищет</strong> в корпоративной базе знаний
-          и только потом <strong>генерирует</strong> ответ на основе найденного. Это и есть умный поиск + ИИ.
+          Обычный чат с ИИ не знает всех внутренних документов Вашей организации и будет отвечать неточно
+          или с ошибками. Технология RAG решает эту задачу: перед ответом система ищет в корпоративной базе знаний
+          нужную информацию по смысловому содержанию и только потом генерирует ответ на основе найденного.
+          Это и есть умный поиск с ИИ.
         </p>
 
         <div class="rag-diagram">
           <div class="rag-node">
             <strong>1. База знаний</strong>
-            <span>Документы компании: PDF, Word, wiki, Confluence, SharePoint, markdown</span>
+            <span>Документы компании: PDF, Word, Excel, презентации, картинки и сканы.</span>
           </div>
           <div class="rag-node">
             <strong>2. Поиск (Retrieval)</strong>
@@ -279,7 +348,7 @@
         <p class="section-label">Реализованный проект</p>
         <h2 class="section-title">Кейс: ИИ-консультант по электроэнергетике</h2>
         <p class="section-subtitle">
-          Один из рабочих примеров платформы Istok AI — отраслевой консультант по нормативке
+          Один из рабочих примеров платформы Istok.AI — отраслевой консультант по нормативке
           электроэнергетики РФ. Та же архитектура, что подходит для любой корпоративной базы:
           документы → поиск → ответ с источником.
         </p>
@@ -288,7 +357,7 @@
           <div class="case-content">
             <h3>ИИ-консультант по электроэнергетике</h3>
             <p>
-              На базе Istok AI развёрнут отраслевой ассистент: отвечает на вопросы по приказам Минэнерго,
+              На базе Istok.AI развёрнут отраслевой ассистент: отвечает на вопросы по приказам Минэнерго,
               постановлениям Правительства и методическим указаниям — с цитатами и ссылками на пункты.
               Для юристов, тарифных специалистов, сбытовых и договорных подразделений.
             </p>
@@ -303,7 +372,7 @@
 
           <div class="chat-mockup case-mockup" aria-hidden="true">
             <div class="chat-header">
-              <span class="chat-title">Istok AI · ЭЭ</span>
+              <span class="chat-title">Istok.AI · ЭЭ</span>
               <span class="chat-badge">кейс</span>
             </div>
             <div class="chat-body">
@@ -392,9 +461,9 @@
       <div class="container contact-grid">
         <div>
           <p class="section-label">Контакт</p>
-          <h2 class="section-title">Обсудить Istok AI</h2>
+          <h2 class="section-title">Обсудить Istok.AI</h2>
           <p class="section-subtitle" style="margin-bottom: 24px;">
-            Расскажем, как Istok AI работает на вашей базе знаний, покажем отраслевой кейс
+            Расскажем, как Istok.AI работает на вашей базе знаний, покажем отраслевой кейс
             по электроэнергетике и обсудим пилот для вашей компании.
           </p>
           <ul style="color: var(--text-muted); padding-left: 18px;">
@@ -455,7 +524,7 @@
       <div>
         <a href="https://istokai.ru" class="logo" style="margin-bottom: 8px;">
           <img class="logo-icon" src="assets/logo-mark.svg" width="32" height="32" alt="">
-          <span class="logo-text">Istok <span class="logo-ai">AI</span></span>
+          <span class="logo-text">Istok<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
         </a>
         <span style="color: var(--text-muted); font-size: 0.88rem;">RAG-платформа для корпоративных документов</span>
       </div>
@@ -465,7 +534,7 @@
         <a href="https://istokai.ru">istokai.ru</a>
         <a href="#contact">Контакт</a>
       </div>
-      <div>© 2026 Istok AI</div>
+      <div>© 2026 Istok.AI</div>
     </div>
   </footer>
 

@@ -41,6 +41,62 @@ function initFaq() {
   });
 }
 
+function initChatCarousel() {
+  const carousel = document.getElementById("hero-chat-carousel");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".chat-carousel-track");
+  const slides = carousel.querySelectorAll(".chat-slide");
+  const dots = carousel.querySelectorAll(".carousel-dot");
+  const prevBtn = carousel.querySelector(".carousel-prev");
+  const nextBtn = carousel.querySelector(".carousel-next");
+  const total = slides.length;
+  let index = 0;
+  let timer = null;
+
+  function goTo(nextIndex) {
+    index = (nextIndex + total) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  function next() {
+    goTo(index + 1);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    timer = setInterval(next, 7000);
+  }
+
+  function stopAutoplay() {
+    if (timer) clearInterval(timer);
+  }
+
+  prevBtn?.addEventListener("click", () => {
+    goTo(index - 1);
+    startAutoplay();
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    next();
+    startAutoplay();
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goTo(Number(dot.dataset.slide));
+      startAutoplay();
+    });
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  goTo(0);
+  startAutoplay();
+}
+
 function setFormStatus(message, type) {
   const status = document.getElementById("form-status");
   if (!status) return;
@@ -127,6 +183,7 @@ async function submitLeadForm(event) {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
+  initChatCarousel();
 
   const form = document.getElementById("lead-form");
   if (form) {
