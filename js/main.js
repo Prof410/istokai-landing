@@ -92,6 +92,7 @@ function initChatCarousel() {
 
   carousel.addEventListener("mouseenter", stopAutoplay);
   carousel.addEventListener("mouseleave", startAutoplay);
+  window.addEventListener("resize", () => goTo(index));
 
   goTo(0);
   startAutoplay();

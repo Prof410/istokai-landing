@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -220,8 +222,28 @@ img {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-areas:
+    "main carousel"
+    "stats carousel";
+  gap: 32px 48px;
+  align-items: start;
+}
+
+.hero-main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.hero-stats {
+  grid-area: stats;
+}
+
+.hero-grid .chat-carousel {
+  grid-area: carousel;
+  align-self: center;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero h1 {
@@ -333,6 +355,8 @@ img {
   padding: 12px 14px;
   border-radius: 14px;
   font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .bubble-user {
@@ -371,21 +395,31 @@ img {
 /* Hero chat carousel */
 .chat-carousel {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .chat-carousel-viewport {
   overflow: hidden;
   border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .chat-carousel-track {
   display: flex;
+  width: 100%;
   transition: transform 0.45s ease;
+  will-change: transform;
 }
 
 .chat-carousel .chat-slide {
   flex: 0 0 100%;
+  width: 100%;
   min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-controls {
@@ -768,7 +802,71 @@ img {
 }
 
 @media (max-width: 960px) {
-  .hero-grid,
+  .hero {
+    padding: 32px 0 48px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "carousel"
+      "stats";
+    gap: 24px;
+  }
+
+  .hero-grid .chat-carousel {
+    align-self: stretch;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
+    line-height: 1.12;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+    max-width: none;
+  }
+
+  .hero-actions {
+    margin-bottom: 0;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 140px;
+  }
+
+  .chat-body {
+    min-height: 0;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .chat-header {
+    padding: 12px 14px;
+  }
+
+  .chat-title {
+    font-size: 0.88rem;
+  }
+
+  .chat-input {
+    margin: 0 14px 14px;
+    font-size: 0.82rem;
+  }
+
+  .bubble {
+    font-size: 0.84rem;
+    padding: 10px 12px;
+  }
+
+  .doc-chip {
+    font-size: 0.72rem;
+    padding: 5px 8px;
+  }
+
   .contact-grid,
   .compare-grid,
   .case-grid {
@@ -781,10 +879,27 @@ img {
 
   .stats-row {
     grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.76rem;
   }
 
   .rag-diagram {
     grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    position: relative;
   }
 
   .nav {
@@ -797,10 +912,15 @@ img {
     padding: 16px;
     background: var(--bg-soft);
     border-bottom: 1px solid var(--border);
+    z-index: 101;
   }
 
   .nav.open {
     display: flex;
+  }
+
+  .nav .btn {
+    width: 100%;
   }
 
   .menu-toggle {
@@ -809,11 +929,56 @@ img {
 }
 
 @media (max-width: 600px) {
+  .container {
+    width: min(100% - 24px, var(--max-width));
+  }
+
   .section {
-    padding: 64px 0;
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 24px 0 40px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    flex: none;
   }
 
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-controls {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-badge {
+    display: none;
   }
 }
