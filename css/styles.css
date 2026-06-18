@@ -210,7 +210,13 @@ img {
 .btn-secondary {
   background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1.5px solid rgba(147, 197, 253, 0.75);
+}
+
+.btn-secondary:hover {
+  border-color: #93c5fd;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .menu-toggle {
