@@ -468,9 +468,9 @@ async function submitLeadForm(event) {
     }
 
     form.reset();
-    setFormStatus("Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.", "success");
+    setFormStatus("Спасибо! Заявка отправлена. Мы свяжемся с Вами в ближайшее время.", "success");
   } catch (error) {
-    setFormStatus("Не удалось отправить заявку. Попробуйте позже или напишите на почту из футера.", "error");
+    setFormStatus("Не удалось отправить заявку. Попробуйте позже или напишите нам в Телеграм.", "error");
     console.error(error);
   } finally {
     submitBtn.disabled = false;
