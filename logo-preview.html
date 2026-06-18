@@ -106,7 +106,7 @@
   <div class="wrap">
     <a class="back" href="index.html">← Вернуться на сайт</a>
     <h1>Варианты логотипа Istok.AI</h1>
-    <p class="lead">Сравните знаки в разных размерах. Напишите номер варианта — подставим на сайт.</p>
+    <p class="lead">16 новых идей + текущий знак. Сравните в разных размерах и напишите номер — подставим на сайт.</p>
     <div class="grid" id="logo-grid"></div>
   </div>
 
@@ -114,8 +114,14 @@
   <script>
     const SIZES = [32, 40, 64];
 
-    function svgAtSize(svg, size) {
-      const doc = new DOMParser().parseFromString(svg, "image/svg+xml");
+    function namespaceSvgIds(svg, prefix) {
+      let out = svg.replace(/\bid="([^"]+)"/g, `id="${prefix}$1"`);
+      out = out.replace(/url\(#([^)]+)\)/g, `url(#${prefix}$1)`);
+      return out;
+    }
+
+    function svgAtSize(svg, size, idPrefix) {
+      const doc = new DOMParser().parseFromString(namespaceSvgIds(svg, idPrefix), "image/svg+xml");
       const node = doc.documentElement;
       if (node.querySelector("parsererror")) return null;
       node.setAttribute("width", String(size));
@@ -123,9 +129,9 @@
       return node;
     }
 
-    function fillSlot(slot, svg, size) {
+    function fillSlot(slot, svg, size, idPrefix) {
       slot.innerHTML = "";
-      const node = svgAtSize(svg, size);
+      const node = svgAtSize(svg, size, idPrefix);
       if (!node) {
         slot.textContent = "?";
         return;
@@ -135,7 +141,7 @@
 
     const grid = document.getElementById("logo-grid");
 
-    LOGO_VARIANTS.forEach((variant) => {
+    LOGO_VARIANTS.forEach((variant, variantIndex) => {
       const card = document.createElement("article");
       card.className = "card" + (variant.current ? " current" : "");
 
@@ -156,8 +162,10 @@
         </div>
       `;
 
+      let slotIndex = 0;
       card.querySelectorAll(".logo-slot").forEach((slot) => {
-        fillSlot(slot, variant.svg, Number(slot.dataset.size));
+        const prefix = `l${variantIndex}-${slotIndex++}-`;
+        fillSlot(slot, variant.svg, Number(slot.dataset.size), prefix);
       });
 
       grid.appendChild(card);
