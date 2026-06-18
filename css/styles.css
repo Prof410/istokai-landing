@@ -207,6 +207,53 @@ img {
   box-shadow: 0 10px 30px var(--accent-glow);
 }
 
+.btn-contact-shimmer,
+.btn-rag-shimmer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-contact-shimmer::after,
+.btn-rag-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 62%,
+    transparent 100%
+  );
+  transform: translateX(-130%);
+  animation: btn-shimmer-loop 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-shimmer-loop {
+  0% {
+    transform: translateX(-130%);
+  }
+
+  38% {
+    transform: translateX(130%);
+  }
+
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-contact-shimmer::after,
+  .btn-rag-shimmer::after {
+    animation: none;
+    display: none;
+  }
+}
+
 .btn-secondary {
   background: transparent;
   color: var(--text);
