@@ -669,11 +669,13 @@ img {
 }
 
 .compare-card.bad {
-  background: rgba(239, 68, 68, 0.06);
+  background: rgba(239, 68, 68, 0.16);
+  border-color: rgba(248, 113, 113, 0.45);
 }
 
 .compare-card.good {
-  background: rgba(34, 197, 94, 0.06);
+  background: rgba(34, 197, 94, 0.16);
+  border-color: rgba(74, 222, 128, 0.45);
 }
 
 .compare-card h3 {
@@ -744,6 +746,35 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
+}
+
+.contact-perks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-perk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-perk-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
 }
 
 .form-card {
@@ -838,8 +869,36 @@ img {
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  gap: 16px 20px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-telegram {
+  color: #93c5fd;
+}
+
+.footer-telegram:hover {
+  color: #bfdbfe;
+}
+
+.contact-telegram {
+  margin: 20px 0 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.contact-telegram a {
+  color: #93c5fd;
+  font-weight: 500;
+}
+
+.contact-telegram a:hover {
+  color: #bfdbfe;
 }
 
 /* Rag diagram */
@@ -901,6 +960,57 @@ img {
 
 .case-mockup {
   box-shadow: 0 20px 50px rgba(59, 130, 246, 0.12);
+}
+
+.case-carousel {
+  position: relative;
+  margin-top: 8px;
+}
+
+.case-carousel-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.case-carousel-text {
+  min-width: 0;
+}
+
+.case-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.case-carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.case-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 4px 0 0;
+}
+
+.case-chat-panel {
+  min-width: 0;
+}
+
+.case-carousel-controls {
+  margin-top: 32px;
+  justify-content: center;
+  width: 100%;
+}
+
+#case-demo-source {
+  display: block;
+  margin-top: 10px;
 }
 
 @media (max-width: 960px) {
@@ -1032,7 +1142,8 @@ img {
 
   .contact-grid,
   .compare-grid,
-  .case-grid {
+  .case-grid,
+  .case-carousel-layout {
     grid-template-columns: 1fr;
   }
 

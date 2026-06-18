@@ -70,6 +70,19 @@ function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function typeInto(element, cursor, text, speed = 28, isPaused = () => false) {
+  if (!element) return;
+  element.textContent = "";
+  if (cursor) cursor.hidden = false;
+  for (const char of text) {
+    if (isPaused()) return;
+    element.textContent += char;
+    await wait(speed);
+    if (isPaused()) return;
+  }
+  if (cursor) cursor.hidden = true;
+}
+
 function syncHeroChatHeight() {
   const main = document.querySelector(".hero-main");
   const demo = document.querySelector(".chat-demo");
@@ -122,15 +135,8 @@ function initChatDemo() {
     inputCursor.hidden = false;
   }
 
-  async function typeInto(element, cursor, text, speed = 28) {
-    element.textContent = "";
-    cursor.hidden = false;
-    for (const char of text) {
-      if (paused) return;
-      element.textContent += char;
-      await wait(speed);
-    }
-    cursor.hidden = true;
+  async function typeIntoLocal(element, cursor, text, speed = 28) {
+    return typeInto(element, cursor, text, speed, () => paused);
   }
 
   async function playDemo(index) {
@@ -144,7 +150,7 @@ function initChatDemo() {
     await wait(500);
     if (currentRun !== runId) return;
 
-    await typeInto(inputText, inputCursor, demo.question, 24);
+    await typeIntoLocal(inputText, inputCursor, demo.question, 24);
     if (currentRun !== runId) return;
 
     await wait(350);
@@ -153,7 +159,7 @@ function initChatDemo() {
     inputText.textContent = "";
     inputCursor.hidden = true;
     userBubble.hidden = false;
-    await typeInto(userText, userCursor, demo.question, 20);
+    await typeIntoLocal(userText, userCursor, demo.question, 20);
     if (currentRun !== runId) return;
 
     await wait(450);
@@ -165,17 +171,11 @@ function initChatDemo() {
 
     typingEl.hidden = true;
     botBubble.hidden = false;
-    await typeInto(botText, botCursor, demo.answer, 16);
+    await typeIntoLocal(botText, botCursor, demo.answer, 16);
     if (currentRun !== runId) return;
 
     sourceEl.textContent = demo.source;
     sourceEl.hidden = false;
-
-    await wait(4500);
-    if (currentRun !== runId) return;
-
-    demoIndex = (index + 1) % CHAT_DEMOS.length;
-    playDemo(demoIndex);
   }
 
   function startDemo(index) {
@@ -205,6 +205,154 @@ function initChatDemo() {
   startDemo(0);
   syncHeroChatHeight();
   window.addEventListener("resize", syncHeroChatHeight);
+}
+
+const CASE_CHAT_DEMOS = [
+  {
+    chatTitle: "Istok.AI · ЭЭ",
+    docs: ["ПП РФ №442", "Приказ №1178", "МУ 1554/17"],
+    question: "Учитываются ли точки поставки без ПУ при расчёте НВВ по методу аналогов?",
+    answer:
+      "Да, при действующем договоре энергоснабжения такие точки включаются в количество для НВВ. Основание: п. 65(2) Приказа №1178, п. 13 МУ 1554/17, п. 32 и 42 ПП РФ №442.",
+    source: "→ открыть фрагмент документа",
+  },
+  {
+    chatTitle: "Istok.AI · ЖКХ",
+    docs: ["ЖК РФ", "Договор управления", "Правила содержания МКД"],
+    question: "В какой срок УК обязана ответить на заявку жильца о протечке крыши?",
+    answer:
+      "Срочная аварийная заявка регистрируется в течение 24 часов. Устранение — в сроки по договору управления и регламенту УК; при угрозе имуществу жильцов — немедленно после обращения.",
+    source: "Источник: договор управления, приложение 2; ПП РФ №491, п. 11. → открыть фрагмент",
+  },
+  {
+    chatTitle: "Istok.AI · HR",
+    docs: ["Регламент HR.pdf", "Командировки.docx", "FAQ сотрудника"],
+    question: "Как оформить командировку и какие документы нужны для согласования?",
+    answer:
+      "Заявка в HR-системе не позднее чем за 3 рабочих дня. Приложите цель поездки, маршрут и смету расходов. Согласование — у непосредственного руководителя и бухгалтерии.",
+    source: "Источник: «Положение о служебных поездках», п. 3.1–3.4. → открыть фрагмент",
+  },
+];
+
+function initCaseCarousel() {
+  const root = document.getElementById("case-carousel");
+  if (!root) return;
+
+  const track = root.querySelector(".case-carousel-track");
+  const slides = root.querySelectorAll(".case-slide");
+  const dots = root.querySelectorAll("[data-case]");
+  const prevBtn = root.querySelector(".case-prev");
+  const nextBtn = root.querySelector(".case-next");
+  const chatTitle = document.getElementById("case-chat-title");
+  const docsEl = document.getElementById("case-demo-docs");
+  const userBubble = document.getElementById("case-demo-user");
+  const userText = document.getElementById("case-demo-user-text");
+  const userCursor = document.getElementById("case-demo-user-cursor");
+  const botBubble = document.getElementById("case-demo-bot");
+  const botText = document.getElementById("case-demo-bot-text");
+  const botCursor = document.getElementById("case-demo-bot-cursor");
+  const sourceEl = document.getElementById("case-demo-source");
+  const typingEl = document.getElementById("case-demo-typing");
+  const inputText = document.getElementById("case-demo-input-text");
+  const inputCursor = document.getElementById("case-demo-input-cursor");
+
+  let slideIndex = 0;
+  let runId = 0;
+  let paused = false;
+
+  function isStopped(currentRun) {
+    return paused || currentRun !== runId;
+  }
+
+  function resetChat() {
+    userBubble.hidden = true;
+    botBubble.hidden = true;
+    typingEl.hidden = true;
+    sourceEl.hidden = true;
+    userText.textContent = "";
+    botText.textContent = "";
+    sourceEl.textContent = "";
+    inputText.textContent = "";
+    userCursor.hidden = true;
+    botCursor.hidden = true;
+    inputCursor.hidden = false;
+  }
+
+  function renderDocs(docs) {
+    docsEl.innerHTML = docs.map((name) => `<span class="doc-chip">${name}</span>`).join("");
+  }
+
+  async function playSlideChat(index, currentRun) {
+    const demo = CASE_CHAT_DEMOS[index];
+    if (!demo) return;
+
+    if (chatTitle) chatTitle.textContent = demo.chatTitle;
+    resetChat();
+    renderDocs(demo.docs);
+
+    await wait(500);
+    if (isStopped(currentRun)) return;
+
+    await typeInto(inputText, inputCursor, demo.question, 24, () => isStopped(currentRun));
+    if (isStopped(currentRun)) return;
+
+    await wait(350);
+    if (isStopped(currentRun)) return;
+
+    inputText.textContent = "";
+    inputCursor.hidden = true;
+    userBubble.hidden = false;
+    await typeInto(userText, userCursor, demo.question, 20, () => isStopped(currentRun));
+    if (isStopped(currentRun)) return;
+
+    await wait(450);
+    if (isStopped(currentRun)) return;
+
+    typingEl.hidden = false;
+    await wait(1100);
+    if (isStopped(currentRun)) return;
+
+    typingEl.hidden = true;
+    botBubble.hidden = false;
+    await typeInto(botText, botCursor, demo.answer, 16, () => isStopped(currentRun));
+    if (isStopped(currentRun)) return;
+
+    sourceEl.textContent = demo.source;
+    sourceEl.hidden = false;
+
+    await wait(4500);
+    if (isStopped(currentRun)) return;
+
+    goToSlide(slideIndex + 1);
+  }
+
+  function goToSlide(index) {
+    slideIndex = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${slideIndex * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === slideIndex));
+    runId += 1;
+    playSlideChat(slideIndex, runId);
+  }
+
+  prevBtn?.addEventListener("click", () => goToSlide(slideIndex - 1));
+  nextBtn?.addEventListener("click", () => goToSlide(slideIndex + 1));
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => goToSlide(Number(dot.dataset.case)));
+  });
+
+  root.addEventListener("mouseenter", () => {
+    paused = true;
+    runId += 1;
+  });
+
+  root.addEventListener("mouseleave", () => {
+    if (!paused) return;
+    paused = false;
+    goToSlide(slideIndex);
+  });
+
+  goToSlide(0);
 }
 
 function setFormStatus(message, type) {
@@ -294,6 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
   initChatDemo();
+  initCaseCarousel();
   window.addEventListener("load", syncHeroChatHeight);
 
   const form = document.getElementById("lead-form");
