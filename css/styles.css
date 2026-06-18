@@ -1173,23 +1173,23 @@ img {
     margin-bottom: 12px;
   }
 
-  .hero-grid .hero-lead:first-of-type {
+  .hero-grid .hero-lead:not(.hero-lead-second) {
     order: 2;
     font-size: 0.98rem;
     margin-bottom: 12px;
     max-width: none;
   }
 
-  .hero-grid .hero-lead-second {
+  .hero-grid .hero-stats {
     order: 3;
+    margin: 0 0 16px;
+  }
+
+  .hero-grid .hero-lead-second {
+    order: 4;
     font-size: 0.86rem;
     line-height: 1.55;
     margin-bottom: 12px;
-  }
-
-  .hero-grid .hero-stats {
-    order: 4;
-    margin: 0 0 16px;
   }
 
   .hero-grid .chat-demo {
