@@ -83,6 +83,39 @@ async function typeInto(element, cursor, text, speed = 28, isPaused = () => fals
   if (cursor) cursor.hidden = true;
 }
 
+async function initHeroTitleTypewriter() {
+  const textEl = document.getElementById("hero-title-text");
+  const cursor = document.getElementById("hero-title-cursor");
+  const title = document.getElementById("hero-title");
+  if (!textEl || !title) return;
+
+  const fullText = title.dataset.typingText?.trim() || "";
+  if (!fullText) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    textEl.textContent = fullText;
+    if (cursor) cursor.hidden = true;
+    return;
+  }
+
+  if (document.fonts?.ready) {
+    await document.fonts.ready;
+  }
+
+  textEl.textContent = fullText;
+  if (cursor) cursor.hidden = true;
+  title.style.visibility = "hidden";
+  title.style.minHeight = `${title.offsetHeight}px`;
+  textEl.textContent = "";
+  title.style.visibility = "";
+  if (cursor) cursor.hidden = false;
+
+  await wait(350);
+  await typeInto(textEl, cursor, fullText, 26);
+  title.style.minHeight = "";
+  syncHeroChatHeight();
+}
+
 function syncHeroChatHeight() {
   const main = document.querySelector(".hero-main");
   const demo = document.querySelector(".chat-demo");
@@ -447,6 +480,7 @@ async function submitLeadForm(event) {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
+  initHeroTitleTypewriter();
   initChatDemo();
   initCaseCarousel();
   window.addEventListener("load", syncHeroChatHeight);

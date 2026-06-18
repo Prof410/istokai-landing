@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=26">
+  <link rel="stylesheet" href="css/styles.css?v=28">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -22,6 +22,18 @@
     ym(109957581, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <!-- /Yandex.Metrika counter -->
+  <noscript>
+    <style>
+      #hero-title[data-typing-text]::before {
+        content: attr(data-typing-text);
+      }
+
+      #hero-title[data-typing-text] .hero-title-text,
+      #hero-title[data-typing-text] .hero-title-cursor {
+        display: none;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/109957581" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -51,7 +63,9 @@
       <div class="container hero-grid">
         <div class="hero-main">
           <p class="hero-eyebrow">ИИ-помощник для работы с Вашими документами</p>
-          <h1>Умный ИИ-поиск по Вашей корпоративной базе знаний и документов</h1>
+          <h1 class="hero-title" id="hero-title" data-typing-text="Умный ИИ-поиск по Вашей корпоративной базе знаний и документов">
+            <span class="hero-title-text" id="hero-title-text"></span><span class="type-cursor hero-title-cursor" id="hero-title-cursor" aria-hidden="true">|</span>
+          </h1>
           <p class="hero-lead">
             Istok.AI — современная технология использования искусственного интеллекта для работы
             с корпоративными документами.
@@ -610,6 +624,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=21"></script>
+  <script src="js/main.js?v=22"></script>
 </body>
 </html>
