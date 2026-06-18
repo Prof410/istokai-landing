@@ -10,7 +10,7 @@
  */
 const FORM_CONFIG = {
   mode: "formspree", // "formspree" | "web3forms" | "disabled"
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+  formspreeEndpoint: "https://formspree.io/f/xlgkyrqa",
   web3formsAccessKey: "YOUR_WEB3FORMS_ACCESS_KEY",
 };
 
