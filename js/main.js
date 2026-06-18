@@ -70,6 +70,19 @@ function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function syncHeroChatHeight() {
+  const main = document.querySelector(".hero-main");
+  const demo = document.querySelector(".chat-demo");
+  if (!main || !demo) return;
+
+  if (window.innerWidth <= 960) {
+    demo.style.minHeight = "";
+    return;
+  }
+
+  demo.style.minHeight = `${main.offsetHeight}px`;
+}
+
 function initChatDemo() {
   const root = document.getElementById("hero-chat-demo");
   if (!root) return;
@@ -190,6 +203,8 @@ function initChatDemo() {
   });
 
   startDemo(0);
+  syncHeroChatHeight();
+  window.addEventListener("resize", syncHeroChatHeight);
 }
 
 function setFormStatus(message, type) {
@@ -279,6 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
   initChatDemo();
+  window.addEventListener("load", syncHeroChatHeight);
 
   const form = document.getElementById("lead-form");
   if (form) {

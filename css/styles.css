@@ -234,11 +234,11 @@ img {
 
 .hero-eyebrow {
   margin: 0 0 14px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #93c5fd;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .hero-grid .chat-demo {
@@ -247,6 +247,7 @@ img {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   height: 100%;
 }
 
@@ -269,8 +270,12 @@ img {
 .hero-lead {
   color: var(--text-muted);
   font-size: 1.12rem;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   max-width: 560px;
+}
+
+.hero-lead-second {
+  margin-bottom: 8px;
 }
 
 .hero-actions {
@@ -346,13 +351,14 @@ img {
 .chat-mockup-hero {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-height: 460px;
+  flex: 1 1 auto;
+  min-height: 100%;
+  height: 100%;
 }
 
 .chat-body-demo {
-  flex: 1;
-  min-height: 360px;
+  flex: 1 1 auto;
+  min-height: 200px;
   justify-content: flex-start;
 }
 
@@ -921,7 +927,7 @@ img {
 
   .hero-grid .hero-eyebrow {
     order: 1;
-    font-size: 0.82rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
 
@@ -932,36 +938,45 @@ img {
     margin-bottom: 12px;
   }
 
-  .hero-grid .hero-lead {
+  .hero-grid .hero-lead:first-of-type {
     order: 3;
     font-size: 0.98rem;
     margin-bottom: 12px;
     max-width: none;
   }
 
-  .hero-grid .hero-stats {
+  .hero-grid .hero-lead-second {
     order: 4;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .hero-grid .hero-stats {
+    order: 5;
     margin: 0 0 16px;
   }
 
   .hero-grid .chat-demo {
-    order: 5;
+    order: 6;
     width: 100%;
     max-width: 100%;
+    height: auto;
   }
 
   .hero-grid .hero-actions {
-    order: 6;
+    order: 7;
     margin-bottom: 0;
     margin-top: 0;
   }
 
   .chat-mockup-hero {
     min-height: 400px;
+    height: auto;
   }
 
   .chat-body-demo {
-    min-height: 300px;
+    min-height: 280px;
   }
 
   .hero-actions .btn {
