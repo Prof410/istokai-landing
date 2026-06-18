@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Istok.AI  20@80=B 4: 2>;=K ?>8A:0">
+  <defs>
+    <linearGradient id="v4-stroke" x1="14" y1="14" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#0F172A"/>
+  <circle cx="24" cy="24" r="4" fill="url(#v4-stroke)"/>
+  <circle cx="24" cy="24" r="9" stroke="url(#v4-stroke)" stroke-width="2" stroke-opacity="0.85"/>
+  <circle cx="24" cy="24" r="14" stroke="url(#v4-stroke)" stroke-width="1.8" stroke-opacity="0.55"/>
+  <circle cx="24" cy="24" r="19" stroke="url(#v4-stroke)" stroke-width="1.5" stroke-opacity="0.3"/>
+</svg>

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
   <header class="header">
@@ -35,7 +35,7 @@
       <div class="container hero-grid">
         <div class="hero-main">
           <p class="hero-eyebrow">ИИ-помощник для работы с Вашими документами</p>
-          <h1>Мгновенные ответы из Вашей корпоративной базы знаний</h1>
+          <h1>Умный ИИ-поиск по Вашей корпоративной базе знаний и документов</h1>
           <p class="hero-lead">
             Istok.AI — современная технология использования искусственного интеллекта для работы
             с корпоративными документами.
@@ -60,7 +60,7 @@
             </div>
             <div class="stat-card">
               <div class="stat-value">RAG</div>
-              <div class="stat-label">все в одном месте</div>
+              <div class="stat-label">все фаилы в одном месте</div>
             </div>
           </div>
           <div class="hero-actions">
@@ -150,7 +150,7 @@
     <section class="section" id="how" style="background: var(--bg-soft);">
       <div class="container">
         <p class="section-label">Процесс</p>
-        <h2 class="section-title">Как работает RAG на практике</h2>
+        <h2 class="section-title">Как это работает на практике</h2>
         <p class="section-subtitle">
           Неважно, юридический ли у Вас отдел, HR, IT или производство — схема одна:
           документы компании становятся доступны для умного поиска через чат.
@@ -189,7 +189,7 @@
     <section class="section" id="benefits">
       <div class="container">
         <p class="section-label">Ценность</p>
-        <h2 class="section-title">Что RAG приносит бизнесу</h2>
+        <h2 class="section-title">Что Ваш бизнес получит</h2>
         <p class="section-subtitle">
           Когда знания разбросаны по папкам, почте и головам сотрудников, поиск информации тормозит работу.
           RAG превращает корпоративную базу в доступного 24/7 ассистента.
@@ -249,7 +249,7 @@
             </ul>
           </div>
           <div class="compare-card good">
-            <h3>RAG по базе знаний</h3>
+            <h3>Чат Istok.AI по базе знаний</h3>
             <ul>
               <li>Ищет в корпоративных документах перед ответом</li>
               <li>Цитирует конкретные фрагменты и разделы</li>
@@ -264,7 +264,7 @@
     <section class="section" style="background: var(--bg-soft);">
       <div class="container">
         <p class="section-label">Применение</p>
-        <h2 class="section-title">Где используется корпоративный RAG</h2>
+        <h2 class="section-title">Где используется технология RAG</h2>
         <div class="cards-grid">
           <article class="card">
             <h3>Юридические и compliance-отделы</h3>
@@ -516,8 +516,8 @@
               <input id="email" name="email" type="email" required placeholder="name@company.ru">
             </div>
             <div class="form-group">
-              <label for="company">Компания</label>
-              <input id="company" name="company" type="text" placeholder="Организация">
+              <label for="phone">Телефон *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="+7 900 000-00-00" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="role">Роль</label>
@@ -538,7 +538,7 @@
             </div>
             <div class="form-group checkbox-row">
               <input id="consent" name="consent" type="checkbox" required>
-              <label for="consent">Согласен на обработку персональных данных для обратной связи</label>
+              <label for="consent">Согласен на обработку персональных данных<br>для обратной связи</label>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку</button>
             <p class="form-note">
@@ -553,12 +553,15 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>
+      <div class="footer-brand">
         <a href="https://istokai.ru" class="logo" style="margin-bottom: 8px;">
           <img class="logo-icon" src="assets/logo-mark.svg" width="32" height="32" alt="">
           <span class="logo-text">Istok<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
         </a>
-        <span style="color: var(--text-muted); font-size: 0.88rem;">RAG-платформа для корпоративных документов</span>
+        <p class="footer-tagline">
+          ИИ-консультант на базе технологии RAG<br>
+          для корпоративных баз данных и документов.
+        </p>
       </div>
       <div class="footer-links">
         <a href="#rag">Что такое RAG</a>
@@ -569,10 +572,10 @@
         <a href="#contact">Связаться</a>
         <a href="https://t.me/Prof410" class="footer-telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
       </div>
-      <div>© 2026 Istok.AI</div>
+      <div class="footer-copy">© 2026 Istok.AI. Все права защищены.</div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=20"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Istok.AI  20@80=B 6: 4>:C<5=BK">
+  <defs>
+    <linearGradient id="v6-doc" x1="14" y1="12" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#0F172A"/>
+  <path d="M14 16H30L34 20V34C34 35.1 33.1 36 32 36H16C14.9 36 14 35.1 14 34V16Z" stroke="url(#v6-doc)" stroke-width="2" stroke-linejoin="round" stroke-opacity="0.45"/>
+  <path d="M16 12H28L32 16V30C32 31.1 31.1 32 30 32H16C14.9 32 14 31.1 14 30V12Z" stroke="url(#v6-doc)" stroke-width="2" stroke-linejoin="round" stroke-opacity="0.7"/>
+  <path d="M18 10H30L34 14V28C34 29.1 33.1 30 32 30H18C16.9 30 16 29.1 16 28V10Z" fill="#0F172A" stroke="url(#v6-doc)" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="25" cy="36" r="3" fill="url(#v6-doc)"/>
+  <path d="M25 33V28M22 36H28" stroke="url(#v6-doc)" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.6"/>
+</svg>

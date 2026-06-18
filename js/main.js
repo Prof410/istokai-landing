@@ -369,18 +369,24 @@ async function submitLeadForm(event) {
   const submitBtn = form.querySelector('button[type="submit"]');
   const name = form.name.value.trim();
   const email = form.email.value.trim();
-  const company = form.company.value.trim();
+  const phone = form.phone.value.trim();
   const role = form.role.value;
   const message = form.message.value.trim();
   const consent = form.consent.checked;
 
-  if (!name || !email || !consent) {
-    setFormStatus("Заполните имя, email и согласие на обработку данных.", "error");
+  if (!name || !email || !phone || !consent) {
+    setFormStatus("Заполните имя, email, телефон и согласие на обработку данных.", "error");
     return;
   }
 
   if (!EMAIL_RE.test(email)) {
     setFormStatus("Проверьте корректность email.", "error");
+    return;
+  }
+
+  const phoneDigits = phone.replace(/\D/g, "");
+  if (phoneDigits.length < 10) {
+    setFormStatus("Проверьте корректность телефона.", "error");
     return;
   }
 
@@ -398,7 +404,7 @@ async function submitLeadForm(event) {
   const payload = {
     name,
     email,
-    company,
+    phone,
     role,
     message,
     _subject: "Заявка с istokai.ru",
