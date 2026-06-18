@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
   <header class="header">
@@ -34,128 +34,63 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-main">
-          <h1>Istok.AI — ответы из Вашей корпоративной базы знаний</h1>
+          <p class="hero-eyebrow">ИИ-помощник для работы с Вашими документами</p>
+          <h1>Мгновенные ответы из Вашей корпоративной базы знаний</h1>
           <p class="hero-lead">
             Istok.AI — современная технология использования искусственного интеллекта для работы
             с корпоративными документами.
           </p>
-          <p class="hero-lead hero-lead-second">
-            В основе — архитектура RAG (Retrieval-Augmented Generation), которая подключает языковую модель
-            к материалам компании: регламентам, договорам, инструкциям и внутренним положениям.
-            Сотрудник задаёт вопрос — Istok.AI находит нужные фрагменты и формирует ответ со ссылкой на источник.
-          </p>
+          <div class="hero-stats stats-row">
+            <div class="stat-card">
+              <div class="stat-value">90%</div>
+              <div class="stat-label">экономии времени на поиск</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">прозрачность источников</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">доступ к базе знаний</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">RAG</div>
+              <div class="stat-label">все в одном месте</div>
+            </div>
+          </div>
           <div class="hero-actions">
             <a href="#rag" class="btn btn-primary">Узнать про RAG</a>
             <a href="#how" class="btn btn-secondary">Как это работает</a>
           </div>
         </div>
 
-        <div class="chat-carousel" id="hero-chat-carousel">
-          <div class="chat-carousel-viewport">
-            <div class="chat-carousel-track">
-              <article class="chat-mockup chat-slide">
-                <div class="chat-header">
-                  <span class="chat-title">Istok.AI Chat</span>
-                  <span class="chat-badge">● онлайн</span>
-                </div>
-                <div class="chat-body">
-                  <div class="chat-docs">
-                    <span class="doc-chip">Регламент_HR.pdf</span>
-                    <span class="doc-chip">Договор_шаблон.docx</span>
-                    <span class="doc-chip">База знаний IT</span>
-                  </div>
-                  <div class="bubble bubble-user">
-                    Можно ли оформить удалёнку на 3 дня без согласования с руководителем отдела?
-                  </div>
-                  <div class="bubble bubble-bot">
-                    <strong>Нет.</strong> По регламенту удалённая работа согласуется с непосредственным руководителем
-                    не позднее чем за 1 рабочий день.
-                    <br><br>
-                    Источник: «Положение о дистанционной работе», п. 4.2.
-                    <span class="source-link">→ открыть фрагмент документа</span>
-                  </div>
-                </div>
-                <div class="chat-input">Задайте вопрос по документам компании…</div>
-              </article>
-
-              <article class="chat-mockup chat-slide">
-                <div class="chat-header">
-                  <span class="chat-title">Istok.AI Chat</span>
-                  <span class="chat-badge">● онлайн</span>
-                </div>
-                <div class="chat-body">
-                  <div class="chat-docs">
-                    <span class="doc-chip">Договор_поставки.pdf</span>
-                    <span class="doc-chip">Реестр_договоров.xlsx</span>
-                    <span class="doc-chip">Типовые_условия.docx</span>
-                  </div>
-                  <div class="bubble bubble-user">
-                    Есть ли в договоре с поставщиком право расторгнуть его при просрочке поставки более 10 дней?
-                  </div>
-                  <div class="bubble bubble-bot">
-                    <strong>Да.</strong> В разделе 8.3 предусмотрено одностороннее расторжение при нарушении сроков
-                    поставки более чем на 10 рабочих дней, с письменным уведомлением за 5 дней.
-                    <br><br>
-                    Источник: Договор поставки №127/2025, п. 8.3, 8.4.
-                    <span class="source-link">→ открыть фрагмент документа</span>
-                  </div>
-                </div>
-                <div class="chat-input">Задайте вопрос по документам компании…</div>
-              </article>
-
-              <article class="chat-mockup chat-slide">
-                <div class="chat-header">
-                  <span class="chat-title">Istok.AI Chat</span>
-                  <span class="chat-badge">● онлайн</span>
-                </div>
-                <div class="chat-body">
-                  <div class="chat-docs">
-                    <span class="doc-chip">НК_РФ_выдержки.pdf</span>
-                    <span class="doc-chip">Учётная_политика.docx</span>
-                    <span class="doc-chip">Мемо_НДС.pdf</span>
-                  </div>
-                  <div class="bubble bubble-user">
-                    Можно ли принять НДС к вычету по авансовому счёту-фактуре, если оплата ещё не проведена?
-                  </div>
-                  <div class="bubble bubble-bot">
-                    <strong>Нет.</strong> По учётной политике компании вычет по авансовому СФ отражается после фактической
-                    оплаты поставщику и проведения платежа в учётной системе.
-                    <br><br>
-                    Источник: Учётная политика 2026, разд. 4; п. 2 ст. 171 НК РФ.
-                    <span class="source-link">→ открыть фрагмент документа</span>
-                  </div>
-                </div>
-                <div class="chat-input">Задайте вопрос по документам компании…</div>
-              </article>
+        <div class="chat-demo" id="hero-chat-demo" aria-live="polite">
+          <article class="chat-mockup chat-mockup-hero">
+            <div class="chat-header">
+              <span class="chat-title">Istok.AI Chat</span>
+              <span class="chat-badge">● онлайн</span>
             </div>
-          </div>
-          <div class="carousel-controls">
-            <button type="button" class="carousel-btn carousel-prev" aria-label="Предыдущий пример">‹</button>
-            <div class="carousel-dots" role="tablist" aria-label="Примеры чата">
-              <button type="button" class="carousel-dot active" aria-label="Пример 1" data-slide="0"></button>
-              <button type="button" class="carousel-dot" aria-label="Пример 2" data-slide="1"></button>
-              <button type="button" class="carousel-dot" aria-label="Пример 3" data-slide="2"></button>
+            <div class="chat-body chat-body-demo">
+              <div class="chat-docs" id="demo-docs"></div>
+              <div class="bubble bubble-user bubble-user-demo" id="demo-user" hidden>
+                <span id="demo-user-text"></span><span class="type-cursor" id="demo-user-cursor" hidden>|</span>
+              </div>
+              <div class="bubble bubble-bot bubble-bot-demo" id="demo-bot" hidden>
+                <span id="demo-bot-text"></span><span class="type-cursor" id="demo-bot-cursor" hidden>|</span>
+                <span class="source-link" id="demo-source" hidden></span>
+              </div>
+              <div class="typing-indicator" id="demo-typing" hidden aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
             </div>
-            <button type="button" class="carousel-btn carousel-next" aria-label="Следующий пример">›</button>
-          </div>
-        </div>
-
-        <div class="hero-stats stats-row">
-          <div class="stat-card">
-            <div class="stat-value">90%</div>
-            <div class="stat-label">экономии времени на поиск</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">100%</div>
-            <div class="stat-label">прозрачность источников</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">24/7</div>
-            <div class="stat-label">доступ к базе знаний</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">RAG</div>
-            <div class="stat-label">все в одном месте</div>
+            <div class="chat-input chat-input-demo">
+              <span id="demo-input-text"></span><span class="type-cursor" id="demo-input-cursor">|</span>
+            </div>
+          </article>
+          <div class="carousel-dots demo-dots" role="tablist" aria-label="Примеры запросов">
+            <button type="button" class="carousel-dot active" aria-label="Пример 1" data-demo="0"></button>
+            <button type="button" class="carousel-dot" aria-label="Пример 2" data-demo="1"></button>
+            <button type="button" class="carousel-dot" aria-label="Пример 3" data-demo="2"></button>
           </div>
         </div>
       </div>
@@ -539,6 +474,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
