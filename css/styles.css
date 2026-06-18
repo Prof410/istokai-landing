@@ -1679,6 +1679,19 @@ img {
 @media (max-width: 960px) {
   .case-metrics {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .case-metric {
+    padding: 12px 10px;
+  }
+
+  .case-metric-value {
+    font-size: 1.2rem;
+  }
+
+  .case-metric-label {
+    font-size: 0.72rem;
   }
 
   .case-page-hero {
@@ -1691,10 +1704,6 @@ img {
 }
 
 @media (max-width: 480px) {
-  .case-metrics {
-    grid-template-columns: 1fr;
-  }
-
   .case-results-table {
     font-size: 0.85rem;
   }
