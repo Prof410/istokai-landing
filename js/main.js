@@ -242,7 +242,7 @@ function initChatDemo() {
 
 const CASE_CHAT_DEMOS = [
   {
-    chatTitle: "Istok.AI · ЭЭ",
+    chatTitle: "Zakon.AI · ЭЭ",
     docs: ["ПП РФ №442", "Приказ №1178", "МУ 1554/17"],
     question: "Учитываются ли точки поставки без ПУ при расчёте НВВ по методу аналогов?",
     answer:
@@ -250,7 +250,7 @@ const CASE_CHAT_DEMOS = [
     source: "→ открыть фрагмент документа",
   },
   {
-    chatTitle: "Istok.AI · ЖКХ",
+    chatTitle: "Zakon.AI · ЖКХ",
     docs: ["ЖК РФ", "Договор управления", "Правила содержания МКД"],
     question: "В какой срок УК обязана ответить на заявку жильца о протечке крыши?",
     answer:
@@ -258,7 +258,7 @@ const CASE_CHAT_DEMOS = [
     source: "Источник: договор управления, приложение 2; ПП РФ №491, п. 11. → открыть фрагмент",
   },
   {
-    chatTitle: "Istok.AI · HR",
+    chatTitle: "Zakon.AI · HR",
     docs: ["Регламент HR.pdf", "Командировки.docx", "FAQ сотрудника"],
     question: "Как оформить командировку и какие документы нужны для согласования?",
     answer:
@@ -440,7 +440,7 @@ async function submitLeadForm(event) {
     phone,
     role,
     message,
-    _subject: "Заявка с istokai.ru",
+    _subject: "Заявка с zakon-ai.ru",
   };
 
   try {
