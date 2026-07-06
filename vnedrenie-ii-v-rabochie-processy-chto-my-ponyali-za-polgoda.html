@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=36">
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=42">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -33,17 +35,32 @@
           <img class="logo-icon" src="assets/logo-mark.svg?v=3" width="48" height="48" alt="">
           <span class="logo-text">Zakon<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="header-tagline">ИИ-помощник для работы<br>с Вашими документами</p>
+        <p class="header-tagline" data-i18n-html="header.tagline">ИИ-помощник для работы<br>с Вашими документами</p>
       </div>
       <nav class="nav">
-        <a href="index.html#rag">Что такое RAG</a>
-        <a href="index.html#how">Как работает</a>
-        <a href="index.html#benefits">Для бизнеса</a>
-        <a href="index.html#case">Кейсы</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#contact" class="btn btn-primary btn-contact-shimmer">Связаться</a>
+        <a href="index.html#rag" data-i18n="nav.rag">Что такое RAG</a>
+        <a href="index.html#how" data-i18n="nav.how">Как работает</a>
+        <a href="index.html#benefits" data-i18n="nav.benefits">Для бизнеса</a>
+        <a href="index.html#case" data-i18n="nav.case">Кейс</a>
+        <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="index.html#contact" class="btn btn-primary btn-contact-shimmer" data-i18n="nav.contact">Связаться</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" data-i18n-aria="ui.langGroup" aria-label="Язык">
+          <button type="button" class="lang-switch-btn active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switch-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch-btn" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <div class="theme-switch" role="group" data-i18n-aria="ui.themeGroup" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" data-i18n-aria="ui.themeDark" aria-pressed="true" aria-label="Тёмная тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-set="light" data-i18n-aria="ui.themeLight" aria-pressed="false" aria-label="Светлая тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" data-i18n-aria="ui.menu" aria-label="Меню">☰</button>
     </div>
   </header>
 
@@ -168,6 +185,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=22"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js?v=25"></script>
 </body>
 </html>

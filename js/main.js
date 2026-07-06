@@ -16,6 +16,18 @@ const FORM_CONFIG = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function i18n(key) {
+  return window.ZakonI18n?.t?.(key) || key;
+}
+
+function getChatDemos() {
+  return window.ZakonI18n?.getChatDemos?.() || [];
+}
+
+function getCaseChatDemos() {
+  return window.ZakonI18n?.getCaseChatDemos?.() || [];
+}
+
 function initMobileNav() {
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
@@ -40,31 +52,6 @@ function initFaq() {
     });
   });
 }
-
-const CHAT_DEMOS = [
-  {
-    docs: ["Регламент_HR.pdf", "Договор_шаблон.docx", "База знаний IT"],
-    question: "Можно ли оформить удалёнку на 3 дня без согласования с руководителем отдела?",
-    answer:
-      "Нет. По регламенту удалённая работа согласуется с непосредственным руководителем не позднее чем за 1 рабочий день.",
-    source: "Источник: «Положение о дистанционной работе», п. 4.2. → открыть фрагмент документа",
-  },
-  {
-    docs: ["Договор_поставки.pdf", "Реестр_договоров.xlsx", "Типовые_условия.docx"],
-    question:
-      "Есть ли в договоре с поставщиком право расторгнуть его при просрочке поставки более 10 дней?",
-    answer:
-      "Да. В разделе 8.3 предусмотрено одностороннее расторжение при нарушении сроков поставки более чем на 10 рабочих дней, с письменным уведомлением за 5 дней.",
-    source: "Источник: Договор поставки №127/2025, п. 8.3, 8.4. → открыть фрагмент документа",
-  },
-  {
-    docs: ["НК_РФ_выдержки.pdf", "Учётная_политика.docx", "Мемо_НДС.pdf"],
-    question: "Можно ли принять НДС к вычету по авансовому счёту-фактуре, если оплата ещё не проведена?",
-    answer:
-      "Нет. По учётной политике компании вычет по авансовому СФ отражается после фактической оплаты поставщику и проведения платежа в учётной системе.",
-    source: "Источник: Учётная политика 2026, разд. 4; п. 2 ст. 171 НК РФ. → открыть фрагмент документа",
-  },
-];
 
 function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -174,7 +161,9 @@ function initChatDemo() {
 
   async function playDemo(index) {
     const currentRun = ++runId;
-    const demo = CHAT_DEMOS[index];
+    const demos = getChatDemos();
+    const demo = demos[index];
+    if (!demo) return;
     resetStage();
     renderDocs(demo.docs);
 
@@ -238,34 +227,12 @@ function initChatDemo() {
   startDemo(0);
   syncHeroChatHeight();
   window.addEventListener("resize", syncHeroChatHeight);
+  window.__zakonRestartChatDemo = () => startDemo(0);
 }
 
-const CASE_CHAT_DEMOS = [
-  {
-    chatTitle: "Zakon.AI · ЭЭ",
-    docs: ["ПП РФ №442", "Приказ №1178", "МУ 1554/17"],
-    question: "Учитываются ли точки поставки без ПУ при расчёте НВВ по методу аналогов?",
-    answer:
-      "Да, при действующем договоре энергоснабжения такие точки включаются в количество для НВВ. Основание: п. 65(2) Приказа №1178, п. 13 МУ 1554/17, п. 32 и 42 ПП РФ №442.",
-    source: "→ открыть фрагмент документа",
-  },
-  {
-    chatTitle: "Zakon.AI · ЖКХ",
-    docs: ["ЖК РФ", "Договор управления", "Правила содержания МКД"],
-    question: "В какой срок УК обязана ответить на заявку жильца о протечке крыши?",
-    answer:
-      "Срочная аварийная заявка регистрируется в течение 24 часов. Устранение — в сроки по договору управления и регламенту УК; при угрозе имуществу жильцов — немедленно после обращения.",
-    source: "Источник: договор управления, приложение 2; ПП РФ №491, п. 11. → открыть фрагмент",
-  },
-  {
-    chatTitle: "Zakon.AI · HR",
-    docs: ["Регламент HR.pdf", "Командировки.docx", "FAQ сотрудника"],
-    question: "Как оформить командировку и какие документы нужны для согласования?",
-    answer:
-      "Заявка в HR-системе не позднее чем за 3 рабочих дня. Приложите цель поездки, маршрут и смету расходов. Согласование — у непосредственного руководителя и бухгалтерии.",
-    source: "Источник: «Положение о служебных поездках», п. 3.1–3.4. → открыть фрагмент",
-  },
-];
+function getCaseChatDemosList() {
+  return getCaseChatDemos();
+}
 
 function initCaseCarousel() {
   const root = document.getElementById("case-carousel");
@@ -316,7 +283,8 @@ function initCaseCarousel() {
   }
 
   async function playSlideChat(index, currentRun) {
-    const demo = CASE_CHAT_DEMOS[index];
+    const demos = getCaseChatDemosList();
+    const demo = demos[index];
     if (!demo) return;
 
     if (chatTitle) chatTitle.textContent = demo.chatTitle;
@@ -386,6 +354,7 @@ function initCaseCarousel() {
   });
 
   goToSlide(0);
+  window.__zakonRestartCaseDemo = () => goToSlide(slideIndex);
 }
 
 function setFormStatus(message, type) {
@@ -408,31 +377,28 @@ async function submitLeadForm(event) {
   const consent = form.consent.checked;
 
   if (!name || !email || !phone || !consent) {
-    setFormStatus("Заполните имя, email, телефон и согласие на обработку данных.", "error");
+    setFormStatus(i18n("form.error.required"), "error");
     return;
   }
 
   if (!EMAIL_RE.test(email)) {
-    setFormStatus("Проверьте корректность email.", "error");
+    setFormStatus(i18n("form.error.email"), "error");
     return;
   }
 
   const phoneDigits = phone.replace(/\D/g, "");
   if (phoneDigits.length < 10) {
-    setFormStatus("Проверьте корректность телефона.", "error");
+    setFormStatus(i18n("form.error.phone"), "error");
     return;
   }
 
   if (FORM_CONFIG.mode === "disabled" || FORM_CONFIG.formspreeEndpoint.includes("YOUR_FORM_ID")) {
-    setFormStatus(
-      "Форма ещё не подключена. Укажите endpoint Formspree в js/main.js (см. README).",
-      "error"
-    );
+    setFormStatus(i18n("form.error.notConfigured"), "error");
     return;
   }
 
   submitBtn.disabled = true;
-  setFormStatus("Отправляем заявку…", "");
+  setFormStatus(i18n("form.error.sending"), "");
 
   const payload = {
     name,
@@ -468,13 +434,66 @@ async function submitLeadForm(event) {
     }
 
     form.reset();
-    setFormStatus("Спасибо! Заявка отправлена. Мы свяжемся с Вами в ближайшее время.", "success");
+    setFormStatus(i18n("form.error.success"), "success");
   } catch (error) {
-    setFormStatus("Не удалось отправить заявку. Попробуйте позже или напишите нам в Телеграм.", "error");
+    setFormStatus(i18n("form.error.fail"), "error");
     console.error(error);
   } finally {
     submitBtn.disabled = false;
   }
+}
+
+function initCasePageTabs() {
+  const tabs = document.querySelectorAll("[data-case-tab]");
+  if (!tabs.length) return;
+
+  const panels = {
+    users: document.getElementById("case-tab-users"),
+    developers: document.getElementById("case-tab-developers"),
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const key = tab.dataset.caseTab;
+      if (!key || !panels[key]) return;
+
+      tabs.forEach((t) => {
+        const active = t === tab;
+        t.classList.toggle("active", active);
+        t.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      Object.entries(panels).forEach(([name, panel]) => {
+        if (!panel) return;
+        const show = name === key;
+        panel.classList.toggle("active", show);
+        panel.hidden = !show;
+      });
+    });
+  });
+}
+
+function initThemeToggle() {
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll("[data-theme-set]");
+  if (!buttons.length) return;
+
+  function applyTheme(theme) {
+    const next = theme === "light" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("zakon-theme", next);
+    buttons.forEach((btn) => {
+      const active = btn.dataset.themeSet === next;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => applyTheme(btn.dataset.themeSet));
+  });
+
+  applyTheme(root.getAttribute("data-theme") || "dark");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -483,7 +502,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroTitleTypewriter();
   initChatDemo();
   initCaseCarousel();
+  initCasePageTabs();
+  initThemeToggle();
   window.addEventListener("load", syncHeroChatHeight);
+
+  document.addEventListener("zakon:langchange", () => {
+    initHeroTitleTypewriter();
+    window.__zakonRestartChatDemo?.();
+    window.__zakonRestartCaseDemo?.();
+  });
 
   const form = document.getElementById("lead-form");
   if (form) {
