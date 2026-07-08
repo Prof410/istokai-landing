@@ -70,9 +70,27 @@ formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
 
 В GitHub: **Settings → Pages → Custom domain** → `zakon-ai.ru`. Добавьте `istokai.ru` как дополнительный домен для редиректа.
 
-### istokai.ru
+### istokai.ru → редирект на zakon-ai.ru
 
-DNS у регистратора — те же A-записи на GitHub. Сайт не дублируется: пользователь сразу попадает на `https://zakon-ai.ru` с сохранением пути (например, `/cases/energy.html`).
+Сейчас `istokai.ru` должен **не показывать сайт**, а перенаправлять на `https://zakon-ai.ru`.
+
+**Вариант А — через GitHub (сохраняет путь `/cases/energy.html` и т.д.):**
+
+1. Откройте https://github.com/Prof410/istokai-landing/settings/pages  
+2. В **Custom domain** уже должен быть `zakon-ai.ru`  
+3. Нажмите **Add domain** и добавьте **`istokai.ru`** (второй домен, первый не удаляйте)  
+4. Дождитесь зелёной галочки DNS для `istokai.ru`  
+5. У REG.RU для `istokai.ru` — те же **4 A-записи** GitHub Pages (как у zakon-ai.ru)
+
+После этого сработает `js/redirect.js` на всех страницах.
+
+**Вариант Б — переадресация в REG.RU (проще, если GitHub не привязывается):**
+
+1. REG.RU → **istokai.ru** → **Переадресация** / Web-переадресация  
+2. URL: `https://zakon-ai.ru`  
+3. Тип: постоянная (301), с сохранением пути — если есть такая опция  
+
+При варианте Б DNS `istokai.ru` настраивает сам REG.RU, GitHub для этого домена не нужен.
 
 ## Что на сайте
 

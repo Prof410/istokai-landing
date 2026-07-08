@@ -2,6 +2,14 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var h = location.hostname.toLowerCase().replace(/^www\./, "");
+      if (h === "istokai.ru") {
+        location.replace("https://zakon-ai.ru" + location.pathname + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Zakon.AI — Умный ИИ-поиск по законам, нормативке и корпоративным документам</title>
   <meta name="description" content="Zakon.AI — технология RAG для компаний: ИИ отвечает по вашим документам и нормативной базе с цитатами и ссылками на пункт источника. zakon-ai.ru">
@@ -21,9 +29,9 @@
       m[i].l=1*new Date();
       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109957581', 'ym');
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110508043', 'ym');
 
-    ym(109957581, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    ym(110508043, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <!-- /Yandex.Metrika counter -->
   <noscript>
@@ -40,7 +48,7 @@
   </noscript>
 </head>
 <body>
-  <noscript><div><img src="https://mc.yandex.ru/watch/109957581" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110508043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <header class="header">
     <div class="container header-inner">
       <div class="header-brand">
@@ -62,7 +70,6 @@
         <div class="lang-switch" role="group" data-i18n-aria="ui.langGroup" aria-label="Язык">
           <button type="button" class="lang-switch-btn active" data-lang="ru" aria-pressed="true">RU</button>
           <button type="button" class="lang-switch-btn" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" class="lang-switch-btn" data-lang="zh" aria-pressed="false">中</button>
         </div>
         <div class="theme-switch" role="group" data-i18n-aria="ui.themeGroup" aria-label="Тема">
           <button type="button" class="theme-switch-btn active" data-theme-set="dark" data-i18n-aria="ui.themeDark" aria-pressed="true" aria-label="Тёмная тема">

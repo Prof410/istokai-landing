@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "zakon-lang";
-  const LANGUAGES = ["ru", "en", "zh"];
+  const LANGUAGES = ["ru", "en"];
   const DEFAULT_LANG = "ru";
 
   const I18N = {
@@ -1192,7 +1192,7 @@
   }
 
   function setHtmlLang(lang) {
-    document.documentElement.setAttribute("lang", lang === "zh" ? "zh-CN" : lang);
+    document.documentElement.setAttribute("lang", lang);
   }
 
   function t(key, lang) {
