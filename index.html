@@ -11,8 +11,8 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Zakon.AI — Умный ИИ-поиск по законам, нормативке и корпоративным документам</title>
-  <meta name="description" content="Zakon.AI — технология RAG для компаний: ИИ отвечает по вашим документам и нормативной базе с цитатами и ссылками на пункт источника. zakon-ai.ru">
+  <title>Zakon-AI — Умный ИИ-поиск по законам, нормативке и корпоративным документам</title>
+  <meta name="description" content="Zakon-AI — технология RAG для компаний: ИИ отвечает по вашим документам и нормативной базе с цитатами и ссылками на пункт источника. zakon-ai.ru">
   <link rel="canonical" href="https://zakon-ai.ru/">
   <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
   <script src="js/redirect.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/lang.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=42">
+  <link rel="stylesheet" href="css/styles.css?v=45">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -54,7 +54,7 @@
       <div class="header-brand">
         <a href="#" class="logo">
           <img class="logo-icon" src="assets/logo-mark.svg?v=3" width="48" height="48" alt="">
-          <span class="logo-text">Zakon<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
         <p class="header-tagline" data-i18n-html="header.tagline">ИИ-помощник для работы<br>с Вашими документами</p>
       </div>
@@ -62,6 +62,7 @@
         <a href="#rag" data-i18n="nav.rag">Что такое RAG</a>
         <a href="#how" data-i18n="nav.how">Как работает</a>
         <a href="#benefits" data-i18n="nav.benefits">Для бизнеса</a>
+        <a href="#pricing" data-i18n="nav.pricing">Тарифы</a>
         <a href="#case" data-i18n="nav.case">Кейс</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" class="btn btn-primary btn-contact-shimmer" data-i18n="nav.contact">Связаться</a>
@@ -89,46 +90,45 @@
       <div class="container hero-grid">
         <div class="hero-main">
           <p class="hero-eyebrow" data-i18n="hero.eyebrow">ИИ-помощник для работы с Вашими документами</p>
-          <h1 class="hero-title" id="hero-title" data-typing-text="Умный ИИ-поиск по Вашей базе знаний и корпоративным документам">
+          <h1 class="hero-title" id="hero-title" data-typing-text="Ответ по вашим документам за минуты — со ссылкой на источник">
             <span class="hero-title-text" id="hero-title-text"></span><span class="type-cursor hero-title-cursor" id="hero-title-cursor" aria-hidden="true">|</span>
           </h1>
           <p class="hero-lead" data-i18n="hero.lead1">
-            Zakon.AI — современная технология использования искусственного интеллекта для работы
-            с корпоративными документами.
+            Zakon-AI — ИИ-помощник, который отвечает по вашим документам и нормативке:
+            договоры, регламенты, инструкции, отраслевые акты.
           </p>
           <p class="hero-lead hero-lead-second" data-i18n="hero.lead2">
-            В основе — архитектура RAG (Retrieval-Augmented Generation), которая подключает языковую модель
-            к материалам компании: регламентам, договорам, инструкциям и внутренним положениям.
-            Сотрудник задаёт вопрос — Zakon.AI находит нужные фрагменты и формирует ответ со ссылкой на источник.
+            Сотрудник задаёт вопрос обычными словами — система находит нужный текст в базе
+            и формулирует ответ с цитатой и ссылкой на пункт. Ниже — как это устроено и сколько стоит.
           </p>
           <div class="hero-stats stats-row">
             <div class="stat-card">
-              <div class="stat-value">95 %</div>
-              <div class="stat-label" data-i18n="hero.stat1.label">экономии времени на поиск</div>
+              <div class="stat-value" data-i18n="hero.stat1.value">~1,5 мин</div>
+              <div class="stat-label" data-i18n="hero.stat1.label">среднее время ответа</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">100 %</div>
-              <div class="stat-label" data-i18n="hero.stat2.label">прозрачность источников</div>
+              <div class="stat-value" data-i18n="hero.stat2.value">Цитата</div>
+              <div class="stat-label" data-i18n="hero.stat2.label">и пункт документа в каждом ответе</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">24/7</div>
+              <div class="stat-value" data-i18n="hero.stat3.value">24/7</div>
               <div class="stat-label" data-i18n="hero.stat3.label">доступ к базе знаний</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">RAG</div>
-              <div class="stat-label" data-i18n="hero.stat4.label">все файлы в одном месте</div>
+              <div class="stat-value" data-i18n="hero.stat4.value">1 база</div>
+              <div class="stat-label" data-i18n="hero.stat4.label">все документы в одном чате</div>
             </div>
           </div>
-          <div class="hero-actions">
-            <a href="#rag" class="btn btn-primary btn-rag-shimmer" data-i18n="hero.btnRag">Узнать про RAG</a>
-            <a href="#how" class="btn btn-secondary" data-i18n="hero.btnHow">Как это работает</a>
+          <div class="hero-actions hero-actions--pair">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="hero.btnTry">Начать бесплатно</a>
+            <a href="#pricing" class="btn btn-secondary" data-i18n="hero.btnPricing">Тарифы</a>
           </div>
         </div>
 
         <div class="chat-demo" id="hero-chat-demo" aria-live="polite">
           <article class="chat-mockup chat-mockup-hero">
             <div class="chat-header">
-              <span class="chat-title" data-i18n="chat.title">Zakon.AI Chat</span>
+              <span class="chat-title" data-i18n="chat.title">Zakon-AI Chat</span>
               <span class="chat-badge" data-i18n="chat.online">● онлайн</span>
             </div>
             <div class="chat-body chat-body-demo">
@@ -153,6 +153,48 @@
             <button type="button" class="carousel-dot" data-i18n-aria="chat.demo2Aria" aria-label="Пример 2" data-demo="1"></button>
             <button type="button" class="carousel-dot" data-i18n-aria="chat.demo3Aria" aria-label="Пример 3" data-demo="2"></button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="outcomes">
+      <div class="container">
+        <p class="section-label" data-i18n="outcomes.label">Результат</p>
+        <h2 class="section-title" data-i18n="outcomes.title">Что изменится в Вашем бизнесе</h2>
+        <p class="section-subtitle" data-i18n="outcomes.subtitle">
+          Не «ещё один чат с ИИ», а инструмент, который влияет на выручку, риски и загрузку команды.
+        </p>
+        <div class="outcome-pillars">
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">↑</div>
+            <h3 data-i18n="outcomes.card1.title">Больше заработаете</h3>
+            <p data-i18n="outcomes.card1.text">Быстрее готовите ответы по тендерам, договорам и клиентским запросам — не теряете сделки из‑за долгого поиска в документах.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">↓</div>
+            <h3 data-i18n="outcomes.card2.title">Меньше потеряете</h3>
+            <p data-i18n="outcomes.card2.text">Меньше риска пропустить пункт в договоре, норме или регламенте — каждый вывод можно проверить по источнику.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">⚡</div>
+            <h3 data-i18n="outcomes.card3.title">Больше с тем же штатом</h3>
+            <p data-i18n="outcomes.card3.text">Рутинный поиск занимает минуты вместо часов: юристы и эксперты фокусируются на решениях, а не на «где это написано».</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">⏱</div>
+            <h3 data-i18n="outcomes.card4.title">Быстрее принимаете решения</h3>
+            <p data-i18n="outcomes.card4.text">Типовые вопросы не зависают в ожидании эксперта — ответ со ссылкой на документ за минуты, а не за дни согласований.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">⬡</div>
+            <h3 data-i18n="outcomes.card5.title">Знания остаются в компании</h3>
+            <p data-i18n="outcomes.card5.text">Опыт не уходит вместе с сотрудником: регламенты, кейсы и ответы накапливаются в общей базе, а не в переписке и личных папках.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">◎</div>
+            <h3 data-i18n="outcomes.card6.title">Единая позиция для всех</h3>
+            <p data-i18n="outcomes.card6.text">Продажи, HR и юристы отвечают клиентам и коллегам одинаково — по актуальным документам компании, а не «как помнят».</p>
+          </article>
         </div>
       </div>
     </section>
@@ -214,41 +256,91 @@
           документы компании становятся доступны для умного поиска через чат.
         </p>
 
-        <div class="steps">
-          <div class="step">
-            <div class="step-head">
-              <span class="step-num">1</span>
-              <h3 data-i18n="how.step1.title">Собираете базу</h3>
+        <div class="how-flow" id="how-flow">
+          <div class="how-flow-layout">
+            <div class="how-flow-nav" role="tablist" data-i18n-aria="how.tabsAria" aria-label="Шаги процесса">
+              <button type="button" class="how-flow-tab is-active" role="tab" aria-selected="true" data-how="0" id="how-tab-0" aria-controls="how-panel-0">
+                <span class="how-flow-tab-num">01</span>
+                <span class="how-flow-tab-label" data-i18n="how.step1.tab">База</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="1" id="how-tab-1" aria-controls="how-panel-1">
+                <span class="how-flow-tab-num">02</span>
+                <span class="how-flow-tab-label" data-i18n="how.step2.tab">Вопрос</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="2" id="how-tab-2" aria-controls="how-panel-2">
+                <span class="how-flow-tab-num">03</span>
+                <span class="how-flow-tab-label" data-i18n="how.step3.tab">Поиск</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="3" id="how-tab-3" aria-controls="how-panel-3">
+                <span class="how-flow-tab-num">04</span>
+                <span class="how-flow-tab-label" data-i18n="how.step4.tab">Ответ</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="4" id="how-tab-4" aria-controls="how-panel-4">
+                <span class="how-flow-tab-num">05</span>
+                <span class="how-flow-tab-label" data-i18n="how.step5.tab">Проверка</span>
+              </button>
             </div>
-            <p data-i18n="how.step1.text">Загружаете Ваши документы: регламенты, договоры, инструкции, FAQ, отраслевые материалы. Система анализирует и индексирует данные.</p>
-          </div>
-          <div class="step">
-            <div class="step-head">
-              <span class="step-num">2</span>
-              <h3 data-i18n="how.step2.title">Задаёте вопрос</h3>
+
+            <div class="how-flow-stage">
+              <div class="how-flow-progress" aria-hidden="true">
+                <div class="how-flow-progress-fill" id="how-flow-progress"></div>
+              </div>
+
+              <div class="how-flow-panels">
+                <article class="how-flow-panel is-active" role="tabpanel" id="how-panel-0" aria-labelledby="how-tab-0" data-how-panel="0">
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">📂</span>
+                    <div class="how-flow-chips">
+                      <span>PDF</span><span>Word</span><span>Excel</span>
+                    </div>
+                  </div>
+                  <h3 data-i18n="how.step1.title">Собираете базу</h3>
+                  <p data-i18n="how.step1.text">Загружаете Ваши документы: регламенты, договоры, инструкции, FAQ, отраслевые материалы. Система анализирует и индексирует данные.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-1" aria-labelledby="how-tab-1" data-how-panel="1" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">💬</span>
+                    <p class="how-flow-quote" data-i18n="how.step2.quote">«Где прописаны штрафные санкции в договоре?»</p>
+                  </div>
+                  <h3 data-i18n="how.step2.title">Задаёте вопрос</h3>
+                  <p data-i18n="how.step2.text">На естественном, обычном языке — как коллеге спрашиваете: «где прописано…», «как оформить…», «чем отличается…».</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-2" aria-labelledby="how-tab-2" data-how-panel="2" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">🔍</span>
+                    <div class="how-flow-scan">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <h3 data-i18n="how.step3.title">Система ищет</h3>
+                  <p data-i18n="how.step3.text">RAG находит наиболее релевантные фрагменты среди тысяч страниц Вашей базы знаний и готовит структурированный ответ.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-3" aria-labelledby="how-tab-3" data-how-panel="3" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">✓</span>
+                    <p class="how-flow-source" data-i18n="how.step4.source">п. 8.3 · Договор поставки</p>
+                  </div>
+                  <h3 data-i18n="how.step4.title">Получаете ответ</h3>
+                  <p data-i18n="how.step4.text">С формулировкой, цитатой и указанием, из какого документа взят вывод. Ответ системы занимает в среднем 1,5 минуты.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-4" aria-labelledby="how-tab-4" data-how-panel="4" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">👁</span>
+                    <div class="how-flow-verify">
+                      <span data-i18n="how.step5.visual">Источник открыт</span>
+                    </div>
+                  </div>
+                  <h3 data-i18n="how.step5.title">Проверяете</h3>
+                  <p data-i18n="how.step5.text">Открываете источник и принимаете решение — полный контроль сотрудника за результатом.</p>
+                </article>
+              </div>
+
+              <div class="how-flow-controls">
+                <button type="button" class="how-flow-arrow" id="how-flow-prev" data-i18n-aria="how.prevAria" aria-label="Предыдущий шаг">←</button>
+                <div class="how-flow-dots" id="how-flow-dots" role="presentation"></div>
+                <button type="button" class="how-flow-arrow" id="how-flow-next" data-i18n-aria="how.nextAria" aria-label="Следующий шаг">→</button>
+              </div>
             </div>
-            <p data-i18n="how.step2.text">На естественном, обычном языке — как коллеге спрашиваете: «где прописано…», «как оформить…», «чем отличается…».</p>
-          </div>
-          <div class="step">
-            <div class="step-head">
-              <span class="step-num">3</span>
-              <h3 data-i18n="how.step3.title">Система ищет</h3>
-            </div>
-            <p data-i18n="how.step3.text">RAG находит наиболее релевантные фрагменты среди тысяч страниц Вашей базы знаний и готовит структурированный ответ.</p>
-          </div>
-          <div class="step">
-            <div class="step-head">
-              <span class="step-num">4</span>
-              <h3 data-i18n="how.step4.title">Получаете ответ</h3>
-            </div>
-            <p data-i18n="how.step4.text">С формулировкой, цитатой и указанием, из какого документа взят вывод. Ответ системы занимает в среднем 1,5 минуты.</p>
-          </div>
-          <div class="step">
-            <div class="step-head">
-              <span class="step-num">5</span>
-              <h3 data-i18n="how.step5.title">Проверяете</h3>
-            </div>
-            <p data-i18n="how.step5.text">Открываете источник и принимаете решение — полный контроль сотрудника за результатом.</p>
           </div>
         </div>
       </div>
@@ -259,8 +351,7 @@
         <p class="section-label" data-i18n="benefits.label">Ценность</p>
         <h2 class="section-title" data-i18n="benefits.title">Что получит Ваш бизнес</h2>
         <p class="section-subtitle" data-i18n="benefits.subtitle">
-          Когда знания разбросаны по папкам, почте и головам сотрудников, поиск информации тормозит работу.
-          RAG превращает корпоративную базу в доступного 24/7 ассистента.
+          Меньше часов на поиск в папках и почте — больше времени на решения. Корпоративная база становится доступным ассистентом с проверяемыми источниками.
         </p>
 
         <div class="cards-grid">
@@ -282,11 +373,11 @@
           <article class="card">
             <div class="card-icon">🔒</div>
             <h3 data-i18n="benefits.card4.title">Конфиденциальность</h3>
-            <p data-i18n="benefits.card4.text">Система будет работать на Вашем сервере. Доступ разграничивается по ролям и подразделениям Вашей компании.</p>
+            <p data-i18n="benefits.card4.text">Можно развернуть на вашем сервере или в выделенном контуре. Доступ разграничивается по ролям и подразделениям вашей компании.</p>
           </article>
           <article class="card">
             <div class="card-icon">₽</div>
-            <h3 data-i18n="benefits.card5.title">Отсутствие ошибок</h3>
+            <h3 data-i18n="benefits.card5.title">Актуальные документы</h3>
             <p data-i18n="benefits.card5.text">Меньше ошибок и неточностей из-за устаревших версий документов и «устных договорённостей». База документов регулярно обновляется.</p>
           </article>
           <article class="card">
@@ -297,7 +388,7 @@
           <article class="card">
             <div class="card-icon">🕐</div>
             <h3 data-i18n="benefits.card7.title">Доступность 24/7</h3>
-            <p data-i18n="benefits.card7.text">Помощь Zakon.AI доступна в любое время суток, в любой день недели, из любой точки мира.</p>
+            <p data-i18n="benefits.card7.text">Помощь Zakon-AI доступна в любое время суток, в любой день недели, из любой точки мира.</p>
           </article>
           <article class="card">
             <div class="card-icon">💰</div>
@@ -317,7 +408,7 @@
             </ul>
           </div>
           <div class="compare-card good">
-            <h3 data-i18n="benefits.compare.good.title">Чат Zakon.AI по базе знаний</h3>
+            <h3 data-i18n="benefits.compare.good.title">Чат Zakon-AI по базе знаний</h3>
             <ul>
               <li data-i18n="benefits.compare.good.item1">Ищет в корпоративных документах перед ответом</li>
               <li data-i18n="benefits.compare.good.item2">Цитирует конкретные фрагменты и разделы</li>
@@ -326,6 +417,101 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="start">
+      <div class="container">
+        <p class="section-label" data-i18n="start.label">Старт</p>
+        <h2 class="section-title" data-i18n="start.title">Попробовать самостоятельно</h2>
+        <p class="section-subtitle" data-i18n="start.subtitle">
+          Для личного или пилотного доступа — без долгого согласования. Загрузите свои материалы и задайте первый вопрос.
+        </p>
+        <div class="start-steps">
+          <div class="start-step">
+            <span class="start-step-num">1</span>
+            <h3 data-i18n="start.step1.title">Регистрация</h3>
+            <p data-i18n="start.step1.text">Создайте аккаунт на платформе — бесплатный стартовый лимит для знакомства с сервисом.</p>
+          </div>
+          <div class="start-step">
+            <span class="start-step-num">2</span>
+            <h3 data-i18n="start.step2.title">Загрузка документов</h3>
+            <p data-i18n="start.step2.text">Добавьте PDF, Word, Excel и другие файлы — система проиндексирует их для поиска по смыслу.</p>
+          </div>
+          <div class="start-step">
+            <span class="start-step-num">3</span>
+            <h3 data-i18n="start.step3.title">Первый вопрос</h3>
+            <p data-i18n="start.step3.text">Спросите как коллегу — получите ответ с цитатой и ссылкой на фрагмент документа.</p>
+          </div>
+        </div>
+        <p class="start-cta">
+          <a href="https://app.zakon-ai.ru" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="start.btn">Перейти в приложение</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <p class="section-label" data-i18n="pricing.label">Тарифы</p>
+        <h2 class="section-title" data-i18n="pricing.title">Планы для команды и компании</h2>
+        <p class="section-subtitle" data-i18n="pricing.subtitle">
+          Оплата по объёму базы и числу запросов. Корпоративное внедрение — на вашем сервере или в выделенном контуре.
+        </p>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 class="pricing-name" data-i18n="pricing.tier1.name">Старт</h3>
+            <p class="pricing-desc" data-i18n="pricing.tier1.desc">Для знакомства и личных задач</p>
+            <ul class="pricing-features">
+              <li data-i18n="pricing.tier1.f1">До 1 ГБ документов</li>
+              <li data-i18n="pricing.tier1.f2">Сотни запросов в месяц</li>
+              <li data-i18n="pricing.tier1.f3">Ответы с цитатами источника</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-secondary pricing-btn" target="_blank" rel="noopener noreferrer" data-i18n="pricing.tier1.btn">Начать бесплатно</a>
+          </article>
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-badge" data-i18n="pricing.tier2.badge">Популярный</span>
+            <h3 class="pricing-name" data-i18n="pricing.tier2.name">Бизнес</h3>
+            <p class="pricing-desc" data-i18n="pricing.tier2.desc">Для отдела или небольшой команды</p>
+            <ul class="pricing-features">
+              <li data-i18n="pricing.tier2.f1">До 10 ГБ документов</li>
+              <li data-i18n="pricing.tier2.f2">Расширенный лимит запросов</li>
+              <li data-i18n="pricing.tier2.f3">Несколько пользователей</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary pricing-btn" data-i18n="pricing.tier2.btn">Подключить</a>
+          </article>
+          <article class="pricing-card">
+            <h3 class="pricing-name" data-i18n="pricing.tier3.name">Про</h3>
+            <p class="pricing-desc" data-i18n="pricing.tier3.desc">Для компании и отраслевых баз</p>
+            <ul class="pricing-features">
+              <li data-i18n="pricing.tier3.f1">Большой объём базы</li>
+              <li data-i18n="pricing.tier3.f2">Роли и разграничение доступа</li>
+              <li data-i18n="pricing.tier3.f3">Развёртывание на вашем сервере</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary pricing-btn" data-i18n="pricing.tier3.btn">Обсудить внедрение</a>
+          </article>
+        </div>
+        <div class="packages-block">
+          <h3 class="packages-title" data-i18n="pricing.packages.title">Готовые пакеты</h3>
+          <p class="packages-lead" data-i18n="pricing.packages.lead">Платформа для своих документов плюс отраслевые наборы — подключаются по мере готовности.</p>
+          <div class="packages-grid">
+            <article class="package-card">
+              <h4 data-i18n="pricing.pkg1.title">Платформа</h4>
+              <p data-i18n="pricing.pkg1.text">Ваши договоры, регламенты и база знаний — загружаете сами, задаёте вопросы в чате.</p>
+              <span class="package-status package-status--live" data-i18n="pricing.pkg1.status">Доступно</span>
+            </article>
+            <article class="package-card">
+              <h4 data-i18n="pricing.pkg2.title">Энергетика</h4>
+              <p data-i18n="pricing.pkg2.text">Нормативка розничного рынка: ПП РФ № 442, приказы Минэнерго, МУ ФАС — пилот в энергосбыте.</p>
+              <a href="cases/energy.html" class="package-link" data-i18n="pricing.pkg2.link">Читать кейс</a>
+            </article>
+            <article class="package-card">
+              <h4 data-i18n="pricing.pkg3.title">Тендеры</h4>
+              <p data-i18n="pricing.pkg3.text">Поиск по требованиям закупок, типовым ответам и внутренним шаблонам — в разработке.</p>
+              <span class="package-status" data-i18n="pricing.pkg3.status">Скоро</span>
+            </article>
+          </div>
+        </div>
+        <p class="pricing-note" data-i18n="pricing.note">Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.</p>
       </div>
     </section>
 
@@ -373,10 +559,11 @@
     <section class="section case-section" id="case">
       <div class="container">
         <p class="section-label" data-i18n="case.label">Внедрение</p>
-        <h2 class="section-title" data-i18n="case.title">Пилотный проект Zakon.AI</h2>
+        <h2 class="section-title" data-i18n="case.title">Проект Zakon-AI для энергетической отрасли</h2>
         <p class="section-subtitle" data-i18n="case.subtitle">
-          Реальный кейс в энергосбытовой компании: нормативная база розничного рынка, семантический поиск
-          и ответ с цитатой источника. Сейчас тестируется коллегами и дорабатывается.
+          Отраслевой ассистент для консалтинговой компании в сфере электроэнергетики:
+          нормативная база розничного рынка, ответы по документам с цитатой источника.
+          Проект в активной доработке.
         </p>
 
         <div class="case-carousel case-carousel--single" id="case-carousel" aria-live="polite">
@@ -388,9 +575,9 @@
                     <div class="case-content">
                       <h3 data-i18n="case.contentTitle">ИИ-консультант по электроэнергетике</h3>
                       <p data-i18n="case.contentText">
-                        На базе Zakon.AI развёрнут отраслевой ассистент: отвечает по ПП РФ № 442, № 1179,
+                        На базе Zakon-AI создан отраслевой ассистент для консалтинга в электроэнергетике: отвечает по ПП РФ № 442, № 1179,
                         приказам Минэнерго и методическим указаниям ФАС — с цитатами и ссылками на пункты.
-                        Для юристов, тарифных специалистов, договорного блока и розничного сбыта.
+                        Для юристов, тарифных специалистов и экспертов по розничному рынку.
                       </p>
                       <ul class="case-list">
                         <li data-i18n="case.list1">База: 450+ документов с актуальными редакциями</li>
@@ -408,7 +595,7 @@
             <div class="case-chat-panel" id="case-chat-demo">
               <article class="chat-mockup case-mockup">
                 <div class="chat-header">
-                  <span class="chat-title" id="case-chat-title" data-i18n="case.chatTitle">Zakon.AI · ЭЭ</span>
+                  <span class="chat-title" id="case-chat-title" data-i18n="case.chatTitle">Zakon-AI · ЭЭ</span>
                   <span class="chat-badge" data-i18n="case.pilotBadge">пилот</span>
                 </div>
                 <div class="chat-body chat-body-demo">
@@ -490,6 +677,28 @@
               «где это написано?». Масштаб базы и инфраструктуры подбирается под задачу.
             </div>
           </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq.q6">Как считаются запросы и объём базы?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq.a6">
+              Тариф зависит от объёма загруженных документов (гигабайты) и числа вопросов к системе в месяц.
+              На старте доступен бесплатный лимит для знакомства; для команды и корпоративного контура
+              лимиты и оплата согласуются индивидуально.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq.q7">Как начать — личный аккаунт или сразу для команды?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq.a7">
+              Можно зарегистрироваться и загрузить свои документы самостоятельно. Для нескольких отделов,
+              ролей и развёртывания на вашем сервере — оставьте заявку в форме ниже: обсудим пилот
+              и подключение под задачи компании.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -498,9 +707,9 @@
       <div class="container contact-grid">
         <div>
           <p class="section-label" data-i18n="contact.label">Контакт</p>
-          <h2 class="section-title" data-i18n="contact.title">Обсудить Zakon.AI</h2>
+          <h2 class="section-title" data-i18n="contact.title">Обсудить Zakon-AI</h2>
           <p class="section-subtitle" style="margin-bottom: 24px;" data-i18n="contact.subtitle">
-            Расскажем, как Zakon.AI работает на Вашей базе знаний, покажем пилотный кейс
+            Расскажем, как Zakon-AI работает на Вашей базе знаний, покажем пилотный кейс
             и обсудим пилот для внедрения в Вашей компании.
           </p>
           <ul class="contact-perks">
@@ -582,7 +791,7 @@
       <div class="footer-brand">
         <a href="https://zakon-ai.ru" class="logo" style="margin-bottom: 8px;">
           <img class="logo-icon" src="assets/logo-mark.svg?v=3" width="32" height="32" alt="">
-          <span class="logo-text">Zakon<span class="logo-dot">.</span><span class="logo-ai">AI</span></span>
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
         <p class="footer-tagline" data-i18n-html="footer.tagline">
           ИИ-консультант на базе технологии RAG<br>
@@ -593,6 +802,7 @@
         <a href="#rag" data-i18n="nav.rag">Что такое RAG</a>
         <a href="#how" data-i18n="nav.how">Как работает</a>
         <a href="#benefits" data-i18n="nav.benefits">Для бизнеса</a>
+        <a href="#pricing" data-i18n="nav.pricing">Тарифы</a>
         <a href="#case" data-i18n="nav.case">Кейс</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Связаться</a>
@@ -602,11 +812,11 @@
           </svg>
         </a>
       </div>
-      <div class="footer-copy" data-i18n="footer.copyright">© 2026 Zakon.AI. Все права защищены.</div>
+      <div class="footer-copy" data-i18n="footer.copyright">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
   </footer>
 
   <script src="js/i18n.js"></script>
-  <script src="js/main.js?v=25"></script>
+  <script src="js/main.js?v=26"></script>
 </body>
 </html>

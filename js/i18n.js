@@ -5,9 +5,9 @@
 
   const I18N = {
     ru: {
-      "meta.title": "Zakon.AI — Умный ИИ-поиск по законам, нормативке и корпоративным документам",
+      "meta.title": "Zakon-AI — Умный ИИ-поиск по законам, нормативке и корпоративным документам",
       "meta.description":
-        "Zakon.AI — технология RAG для компаний: ИИ отвечает по вашим документам и нормативной базе с цитатами и ссылками на пункт источника. zakon-ai.ru",
+        "Zakon-AI — технология RAG для компаний: ИИ отвечает по вашим документам и нормативной базе с цитатами и ссылками на пункт источника. zakon-ai.ru",
 
       "ui.langGroup": "Язык интерфейса",
       "ui.themeGroup": "Тема оформления",
@@ -20,24 +20,30 @@
       "nav.rag": "Что такое RAG",
       "nav.how": "Как работает",
       "nav.benefits": "Для бизнеса",
+      "nav.pricing": "Тарифы",
       "nav.case": "Кейс",
       "nav.faq": "FAQ",
       "nav.contact": "Связаться",
 
       "hero.eyebrow": "ИИ-помощник для работы с Вашими документами",
-      "hero.title": "Умный ИИ-поиск по Вашей базе знаний и корпоративным документам",
+      "hero.title": "Ответ по вашим документам за минуты — со ссылкой на источник",
       "hero.lead1":
-        "Zakon.AI — современная технология использования искусственного интеллекта для работы с корпоративными документами.",
+        "Zakon-AI — ИИ-помощник, который отвечает по вашим документам и нормативке: договоры, регламенты, инструкции, отраслевые акты.",
       "hero.lead2":
-        "В основе — архитектура RAG (Retrieval-Augmented Generation), которая подключает языковую модель к материалам компании: регламентам, договорам, инструкциям и внутренним положениям. Сотрудник задаёт вопрос — Zakon.AI находит нужные фрагменты и формирует ответ со ссылкой на источник.",
-      "hero.stat1.label": "экономии времени на поиск",
-      "hero.stat2.label": "прозрачность источников",
+        "Сотрудник задаёт вопрос обычными словами — система находит нужный текст в базе и формулирует ответ с цитатой и ссылкой на пункт. Ниже — как это устроено и сколько стоит.",
+      "hero.stat1.value": "~1,5 мин",
+      "hero.stat1.label": "среднее время ответа",
+      "hero.stat2.value": "Цитата",
+      "hero.stat2.label": "и пункт документа в каждом ответе",
+      "hero.stat3.value": "24/7",
       "hero.stat3.label": "доступ к базе знаний",
-      "hero.stat4.label": "все файлы в одном месте",
-      "hero.btnRag": "Узнать про RAG",
-      "hero.btnHow": "Как это работает",
+      "hero.stat4.value": "1 база",
+      "hero.stat4.label": "все документы в одном чате",
+      "hero.btnTry": "Начать бесплатно",
+      "hero.btnPricing": "Тарифы",
+      "hero.btnEnterprise": "Внедрение в компанию",
 
-      "chat.title": "Zakon.AI Chat",
+      "chat.title": "Zakon-AI Chat",
       "chat.online": "● онлайн",
       "chat.demoDotsAria": "Примеры запросов",
       "chat.demo1Aria": "Пример 1",
@@ -69,25 +75,59 @@
       "how.title": "Как это работает на практике",
       "how.subtitle":
         "Неважно, юридический ли у Вас отдел, HR, IT или производство — схема одна: документы компании становятся доступны для умного поиска через чат.",
+      "how.tabsAria": "Шаги процесса",
+      "how.prevAria": "Предыдущий шаг",
+      "how.nextAria": "Следующий шаг",
+      "how.step1.tab": "База",
       "how.step1.title": "Собираете базу",
       "how.step1.text":
         "Загружаете Ваши документы: регламенты, договоры, инструкции, FAQ, отраслевые материалы. Система анализирует и индексирует данные.",
+      "how.step2.tab": "Вопрос",
       "how.step2.title": "Задаёте вопрос",
       "how.step2.text":
         "На естественном, обычном языке — как коллеге спрашиваете: «где прописано…», «как оформить…», «чем отличается…».",
+      "how.step2.quote": "«Где прописаны штрафные санкции в договоре?»",
+      "how.step3.tab": "Поиск",
       "how.step3.title": "Система ищет",
       "how.step3.text":
         "RAG находит наиболее релевантные фрагменты среди тысяч страниц Вашей базы знаний и готовит структурированный ответ.",
+      "how.step4.tab": "Ответ",
       "how.step4.title": "Получаете ответ",
       "how.step4.text":
         "С формулировкой, цитатой и указанием, из какого документа взят вывод. Ответ системы занимает в среднем 1,5 минуты.",
+      "how.step4.source": "п. 8.3 · Договор поставки",
+      "how.step5.tab": "Проверка",
       "how.step5.title": "Проверяете",
       "how.step5.text": "Открываете источник и принимаете решение — полный контроль сотрудника за результатом.",
+      "how.step5.visual": "Источник открыт",
+
+      "outcomes.label": "Результат",
+      "outcomes.title": "Что изменится в Вашем бизнесе",
+      "outcomes.subtitle":
+        "Не «ещё один чат с ИИ», а инструмент, который влияет на выручку, риски и загрузку команды.",
+      "outcomes.card1.title": "Больше заработаете",
+      "outcomes.card1.text":
+        "Быстрее готовите ответы по тендерам, договорам и клиентским запросам — не теряете сделки из‑за долгого поиска в документах.",
+      "outcomes.card2.title": "Меньше потеряете",
+      "outcomes.card2.text":
+        "Меньше риска пропустить пункт в договоре, норме или регламенте — каждый вывод можно проверить по источнику.",
+      "outcomes.card3.title": "Больше с тем же штатом",
+      "outcomes.card3.text":
+        "Рутинный поиск занимает минуты вместо часов: юристы и эксперты фокусируются на решениях, а не на «где это написано».",
+      "outcomes.card4.title": "Быстрее принимаете решения",
+      "outcomes.card4.text":
+        "Типовые вопросы не зависают в ожидании эксперта — ответ со ссылкой на документ за минуты, а не за дни согласований.",
+      "outcomes.card5.title": "Знания остаются в компании",
+      "outcomes.card5.text":
+        "Опыт не уходит вместе с сотрудником: регламенты, кейсы и ответы накапливаются в общей базе, а не в переписке и личных папках.",
+      "outcomes.card6.title": "Единая позиция для всех",
+      "outcomes.card6.text":
+        "Продажи, HR и юристы отвечают клиентам и коллегам одинаково — по актуальным документам компании, а не «как помнят».",
 
       "benefits.label": "Ценность",
       "benefits.title": "Что получит Ваш бизнес",
       "benefits.subtitle":
-        "Когда знания разбросаны по папкам, почте и головам сотрудников, поиск информации тормозит работу. RAG превращает корпоративную базу в доступного 24/7 ассистента.",
+        "Меньше часов на поиск в папках и почте — больше времени на решения. Корпоративная база становится доступным ассистентом с проверяемыми источниками.",
       "benefits.card1.title": "Скорость работы",
       "benefits.card1.text":
         " Было «Найди в договоре все штрафные санкции и возможную ответственность за них» — 2-3 часа.<br><strong>Стало:</strong> ответ за 1,5 минуты с указанием пункта договора.",
@@ -99,8 +139,8 @@
         "Неважно насколько большая Ваша база документов — система работает со всей базой и находит связи между документами.",
       "benefits.card4.title": "Конфиденциальность",
       "benefits.card4.text":
-        "Система будет работать на Вашем сервере. Доступ разграничивается по ролям и подразделениям Вашей компании.",
-      "benefits.card5.title": "Отсутствие ошибок",
+        "Можно развернуть на вашем сервере или в выделенном контуре. Доступ разграничивается по ролям и подразделениям вашей компании.",
+      "benefits.card5.title": "Актуальные документы",
       "benefits.card5.text":
         "Меньше ошибок и неточностей из-за устаревших версий документов и «устных договорённостей». База документов регулярно обновляется.",
       "benefits.card6.title": "Быстрый онбординг",
@@ -108,7 +148,7 @@
         "Новый сотрудник быстрее входит в контекст через ответы с ссылками на внутренние материалы.",
       "benefits.card7.title": "Доступность 24/7",
       "benefits.card7.text":
-        "Помощь Zakon.AI доступна в любое время суток, в любой день недели, из любой точки мира.",
+        "Помощь Zakon-AI доступна в любое время суток, в любой день недели, из любой точки мира.",
       "benefits.card8.title": "Экономия времени и средств",
       "benefits.card8.text":
         "Снижает нагрузку на юридический и экспертный блок — рутинный поиск по документам занимает минуты, а не часы.",
@@ -117,11 +157,67 @@
       "benefits.compare.bad.item2": "Может уверенно ответить неверно",
       "benefits.compare.bad.item3": "Сложно проверить источник",
       "benefits.compare.bad.item4": "Не учитывает Ваши редакции и версии файлов",
-      "benefits.compare.good.title": "Чат Zakon.AI по базе знаний",
+      "benefits.compare.good.title": "Чат Zakon-AI по базе знаний",
       "benefits.compare.good.item1": "Ищет в корпоративных документах перед ответом",
       "benefits.compare.good.item2": "Цитирует конкретные фрагменты и разделы",
       "benefits.compare.good.item3": "Ответ можно проверить в один клик",
       "benefits.compare.good.item4": "База обновляется под Ваши актуальные материалы",
+
+      "start.label": "Старт",
+      "start.title": "Попробовать самостоятельно",
+      "start.subtitle":
+        "Для личного или пилотного доступа — без долгого согласования. Загрузите свои материалы и задайте первый вопрос.",
+      "start.step1.title": "Регистрация",
+      "start.step1.text":
+        "Создайте аккаунт на платформе — бесплатный стартовый лимит для знакомства с сервисом.",
+      "start.step2.title": "Загрузка документов",
+      "start.step2.text":
+        "Добавьте PDF, Word, Excel и другие файлы — система проиндексирует их для поиска по смыслу.",
+      "start.step3.title": "Первый вопрос",
+      "start.step3.text":
+        "Спросите как коллегу — получите ответ с цитатой и ссылкой на фрагмент документа.",
+      "start.btn": "Перейти в приложение",
+
+      "pricing.label": "Тарифы",
+      "pricing.title": "Планы для команды и компании",
+      "pricing.subtitle":
+        "Оплата по объёму базы и числу запросов. Корпоративное внедрение — на вашем сервере или в выделенном контуре.",
+      "pricing.tier1.name": "Старт",
+      "pricing.tier1.desc": "Для знакомства и личных задач",
+      "pricing.tier1.f1": "До 1 ГБ документов",
+      "pricing.tier1.f2": "Сотни запросов в месяц",
+      "pricing.tier1.f3": "Ответы с цитатами источника",
+      "pricing.tier1.btn": "Начать бесплатно",
+      "pricing.tier2.badge": "Популярный",
+      "pricing.tier2.name": "Бизнес",
+      "pricing.tier2.desc": "Для отдела или небольшой команды",
+      "pricing.tier2.f1": "До 10 ГБ документов",
+      "pricing.tier2.f2": "Расширенный лимит запросов",
+      "pricing.tier2.f3": "Несколько пользователей",
+      "pricing.tier2.btn": "Подключить",
+      "pricing.tier3.name": "Про",
+      "pricing.tier3.desc": "Для компании и отраслевых баз",
+      "pricing.tier3.f1": "Большой объём базы",
+      "pricing.tier3.f2": "Роли и разграничение доступа",
+      "pricing.tier3.f3": "Развёртывание на вашем сервере",
+      "pricing.tier3.btn": "Обсудить внедрение",
+      "pricing.packages.title": "Готовые пакеты",
+      "pricing.packages.lead":
+        "Платформа для своих документов плюс отраслевые наборы — подключаются по мере готовности.",
+      "pricing.pkg1.title": "Платформа",
+      "pricing.pkg1.text":
+        "Ваши договоры, регламенты и база знаний — загружаете сами, задаёте вопросы в чате.",
+      "pricing.pkg1.status": "Доступно",
+      "pricing.pkg2.title": "Энергетика",
+      "pricing.pkg2.text":
+        "Нормативка розничного рынка: ПП РФ № 442, приказы Минэнерго, МУ ФАС — пилот в энергосбыте.",
+      "pricing.pkg2.link": "Читать кейс",
+      "pricing.pkg3.title": "Тендеры",
+      "pricing.pkg3.text":
+        "Поиск по требованиям закупок, типовым ответам и внутренним шаблонам — в разработке.",
+      "pricing.pkg3.status": "Скоро",
+      "pricing.note":
+        "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.",
 
       "use.label": "Применение",
       "use.title": "Где используется технология RAG",
@@ -151,19 +247,19 @@
         "Ответы для преподавателей и студентов по учебным материалам, регламентам и внутренним положениям вуза или учебного центра.",
 
       "case.label": "Внедрение",
-      "case.title": "Пилотный проект Zakon.AI",
+      "case.title": "Проект Zakon-AI для энергетической отрасли",
       "case.subtitle":
-        "Реальный кейс в энергосбытовой компании: нормативная база розничного рынка, семантический поиск и ответ с цитатой источника. Сейчас тестируется коллегами и дорабатывается.",
+        "Отраслевой ассистент для консалтинговой компании в сфере электроэнергетики: нормативная база розничного рынка, ответы по документам с цитатой источника. Проект в активной доработке.",
       "case.contentTitle": "ИИ-консультант по электроэнергетике",
       "case.contentText":
-        "На базе Zakon.AI развёрнут отраслевой ассистент: отвечает по ПП РФ № 442, № 1179, приказам Минэнерго и методическим указаниям ФАС — с цитатами и ссылками на пункты. Для юристов, тарифных специалистов, договорного блока и розничного сбыта.",
+        "На базе Zakon-AI создан отраслевой ассистент для консалтинга в электроэнергетике: отвечает по ПП РФ № 442, № 1179, приказам Минэнерго и методическим указаниям ФАС — с цитатами и ссылками на пункты. Для юристов, тарифных специалистов и экспертов по розничному рынку.",
       "case.list1": "База: 450+ документов с актуальными редакциями",
       "case.list2": "Поиск: семантический RAG по векторной базе",
       "case.list3": "Ответ: формулировка + документ + пункт",
       "case.list4": "Статус: пилот, тестирование у коллег",
       "case.button": "Читать о проекте",
       "case.pilotBadge": "пилот",
-      "case.chatTitle": "Zakon.AI · ЭЭ",
+      "case.chatTitle": "Zakon-AI · ЭЭ",
 
       "faq.label": "FAQ",
       "faq.title": "Частые вопросы",
@@ -182,11 +278,17 @@
       "faq.q5": "Подойдёт ли только для больших компаний?",
       "faq.a5":
         "Нет. RAG полезен любой организации, где много документов и регулярные вопросы «где это написано?». Масштаб базы и инфраструктуры подбирается под задачу.",
+      "faq.q6": "Как считаются запросы и объём базы?",
+      "faq.a6":
+        "Тариф зависит от объёма загруженных документов (гигабайты) и числа вопросов к системе в месяц. На старте доступен бесплатный лимит для знакомства; для команды и корпоративного контура лимиты и оплата согласуются индивидуально.",
+      "faq.q7": "Как начать — личный аккаунт или сразу для команды?",
+      "faq.a7":
+        "Можно зарегистрироваться и загрузить свои документы самостоятельно. Для нескольких отделов, ролей и развёртывания на вашем сервере — оставьте заявку в форме ниже: обсудим пилот и подключение под задачи компании.",
 
       "contact.label": "Контакт",
-      "contact.title": "Обсудить Zakon.AI",
+      "contact.title": "Обсудить Zakon-AI",
       "contact.subtitle":
-        "Расскажем, как Zakon.AI работает на Вашей базе знаний, покажем пилотный кейс и обсудим пилот для внедрения в Вашей компании.",
+        "Расскажем, как Zakon-AI работает на Вашей базе знаний, покажем пилотный кейс и обсудим пилот для внедрения в Вашей компании.",
       "contact.perk1": "Консультация по архитектуре и внедрению",
       "contact.perk2": "Ответ в течение 1–2 рабочих дней",
       "contact.perk3": "Демо по приглашению",
@@ -217,18 +319,18 @@
 
       "footer.tagline":
         "ИИ-консультант на базе технологии RAG<br>для корпоративных баз знаний и документов.",
-      "footer.copyright": "© 2026 Zakon.AI. Все права защищены.",
+      "footer.copyright": "© 2026 Zakon-AI. Все права защищены.",
 
-      "energy.meta.title": "ИИ-консультант для энергосбытовой компании — кейс Zakon.AI",
+      "energy.meta.title": "ИИ-консультант для энергосбытовой компании — кейс Zakon-AI",
       "energy.meta.description":
-        "Реальный пилот Zakon.AI: RAG-ассистент по нормативке розничного рынка для энергосбытовой компании — ПП РФ № 442, № 1179, приказы Минэнерго, методические указания ФАС.",
+        "Реальный пилот Zakon-AI: RAG-ассистент по нормативке розничного рынка для энергосбытовой компании — ПП РФ № 442, № 1179, приказы Минэнерго, методические указания ФАС.",
       "energy.back": "← На главную",
       "energy.tag1": "Пилот",
       "energy.tag2": "Энергосбыт",
       "energy.tag3": "Розничный рынок",
       "energy.hero.title": "ИИ-консультант по нормативке для энергосбытовой компании",
       "energy.hero.lead":
-        "Реальный проект на базе Zakon.AI: система отвечает по ПП РФ № 442, ПП РФ № 1179, приказам Минэнерго, методическим указаниям ФАС и внутренним регламентам — с цитатой и ссылкой на пункт источника. Сейчас пилот тестируется коллегами и дорабатывается по их обратной связи.",
+        "Реальный проект на базе Zakon-AI: система отвечает по ПП РФ № 442, ПП РФ № 1179, приказам Минэнерго, методическим указаниям ФАС и внутренним регламентам — с цитатой и ссылкой на пункт источника. Сейчас пилот тестируется коллегами и дорабатывается по их обратной связи.",
       "energy.metric1.value": "450+",
       "energy.metric1.label": "документов в базе",
       "energy.metric2.value": "с часов → ~1,5 мин",
@@ -411,9 +513,9 @@
     },
 
     en: {
-      "meta.title": "Zakon.AI — Intelligent AI Search Across Laws, Regulations, and Corporate Documents",
+      "meta.title": "Zakon-AI — Intelligent AI Search Across Laws, Regulations, and Corporate Documents",
       "meta.description":
-        "Zakon.AI — RAG technology for enterprises: AI answers from your documents and regulatory knowledge base with citations and links to source clauses. zakon-ai.ru",
+        "Zakon-AI — RAG technology for enterprises: AI answers from your documents and regulatory knowledge base with citations and links to source clauses. zakon-ai.ru",
 
       "ui.langGroup": "Interface language",
       "ui.themeGroup": "Theme",
@@ -426,24 +528,30 @@
       "nav.rag": "What is RAG",
       "nav.how": "How it works",
       "nav.benefits": "For business",
+      "nav.pricing": "Pricing",
       "nav.case": "Case study",
       "nav.faq": "FAQ",
       "nav.contact": "Contact us",
 
       "hero.eyebrow": "AI assistant for working with your documents",
-      "hero.title": "Intelligent AI search across your knowledge base and corporate documents",
+      "hero.title": "Answers from your documents in minutes — with a link to the source",
       "hero.lead1":
-        "Zakon.AI is a modern approach to using artificial intelligence for corporate document workflows.",
+        "Zakon-AI is an AI assistant that answers from your documents and regulations: contracts, policies, instructions, and industry acts.",
       "hero.lead2":
-        "At its core is RAG (Retrieval-Augmented Generation) architecture that connects a language model to company materials: policies, contracts, instructions, and internal regulations. An employee asks a question — Zakon.AI finds the relevant passages and delivers an answer with a link to the source.",
-      "hero.stat1.label": "time saved on search",
-      "hero.stat2.label": "source transparency",
+        "An employee asks in plain language — the system finds the right text in the knowledge base and returns an answer with a quote and source reference. Below — how it works and what it costs.",
+      "hero.stat1.value": "~1.5 min",
+      "hero.stat1.label": "average response time",
+      "hero.stat2.value": "Quote",
+      "hero.stat2.label": "and source clause in every answer",
+      "hero.stat3.value": "24/7",
       "hero.stat3.label": "knowledge base access",
-      "hero.stat4.label": "all files in one place",
-      "hero.btnRag": "Learn about RAG",
-      "hero.btnHow": "How it works",
+      "hero.stat4.value": "1 base",
+      "hero.stat4.label": "all documents in one chat",
+      "hero.btnTry": "Start for free",
+      "hero.btnPricing": "Pricing",
+      "hero.btnEnterprise": "Enterprise rollout",
 
-      "chat.title": "Zakon.AI Chat",
+      "chat.title": "Zakon-AI Chat",
       "chat.online": "● online",
       "chat.demoDotsAria": "Query examples",
       "chat.demo1Aria": "Example 1",
@@ -475,25 +583,59 @@
       "how.title": "How it works in practice",
       "how.subtitle":
         "Whether you have legal, HR, IT, or operations — the flow is the same: company documents become accessible through intelligent chat search.",
+      "how.tabsAria": "Process steps",
+      "how.prevAria": "Previous step",
+      "how.nextAria": "Next step",
+      "how.step1.tab": "Base",
       "how.step1.title": "Build your knowledge base",
       "how.step1.text":
         "Upload your documents: policies, contracts, instructions, FAQs, and industry materials. The system analyzes and indexes the content.",
+      "how.step2.tab": "Question",
       "how.step2.title": "Ask a question",
       "how.step2.text":
         "In natural language — as you would ask a colleague: \"where is it stated…\", \"how do I process…\", \"what is the difference…\".",
+      "how.step2.quote": "\"Where are the penalty clauses in the contract?\"",
+      "how.step3.tab": "Search",
       "how.step3.title": "The system searches",
       "how.step3.text":
         "RAG finds the most relevant passages across thousands of pages in your knowledge base and prepares a structured answer.",
+      "how.step4.tab": "Answer",
       "how.step4.title": "You get an answer",
       "how.step4.text":
         "With wording, a quote, and the source document. The system typically responds in about 1.5 minutes.",
+      "how.step4.source": "cl. 8.3 · Supply contract",
+      "how.step5.tab": "Verify",
       "how.step5.title": "You verify",
       "how.step5.text": "Open the source and make the decision — the employee stays in full control of the outcome.",
+      "how.step5.visual": "Source opened",
+
+      "outcomes.label": "Outcomes",
+      "outcomes.title": "What will change in your business",
+      "outcomes.subtitle":
+        "Not \"another AI chat\" — a tool that affects revenue, risk, and team workload.",
+      "outcomes.card1.title": "Earn more",
+      "outcomes.card1.text":
+        "Prepare tender, contract, and client responses faster — don't lose deals because document search takes too long.",
+      "outcomes.card2.title": "Lose less",
+      "outcomes.card2.text":
+        "Lower risk of missing a clause in a contract, regulation, or policy — every conclusion can be verified against the source.",
+      "outcomes.card3.title": "Do more with the same team",
+      "outcomes.card3.text":
+        "Routine search takes minutes instead of hours: lawyers and experts focus on decisions, not \"where is it written\".",
+      "outcomes.card4.title": "Decide faster",
+      "outcomes.card4.text":
+        "Routine questions don't stall waiting for an expert — an answer with a document link in minutes, not days of approvals.",
+      "outcomes.card5.title": "Knowledge stays in the company",
+      "outcomes.card5.text":
+        "Expertise doesn't leave with an employee: policies, cases, and answers accumulate in a shared base, not in email threads and personal folders.",
+      "outcomes.card6.title": "One consistent position",
+      "outcomes.card6.text":
+        "Sales, HR, and legal give clients and colleagues the same answers — from current company documents, not from memory.",
 
       "benefits.label": "Value",
       "benefits.title": "What your business gains",
       "benefits.subtitle":
-        "When knowledge is scattered across folders, email, and people's heads, finding information slows work down. RAG turns your corporate knowledge base into a 24/7 assistant.",
+        "Fewer hours searching folders and email — more time for decisions. Your corporate knowledge base becomes an assistant with verifiable sources.",
       "benefits.card1.title": "Faster operations",
       "benefits.card1.text":
         " Before: \"Find all penalty clauses and potential liability in the contract\" — 2–3 hours.<br><strong>Now:</strong> an answer in 1.5 minutes with the contract clause cited.",
@@ -505,8 +647,8 @@
         "No matter how large your document base — the system works across the full corpus and finds connections between documents.",
       "benefits.card4.title": "Confidentiality",
       "benefits.card4.text":
-        "The system runs on your server. Access is segmented by roles and departments in your company.",
-      "benefits.card5.title": "Fewer errors",
+        "Can be deployed on your server or in a dedicated environment. Access is segmented by roles and departments.",
+      "benefits.card5.title": "Up-to-date documents",
       "benefits.card5.text":
         "Fewer mistakes from outdated document versions and verbal agreements. The document base is updated regularly.",
       "benefits.card6.title": "Faster onboarding",
@@ -514,7 +656,7 @@
         "New hires get up to speed faster with answers linked to internal materials.",
       "benefits.card7.title": "24/7 availability",
       "benefits.card7.text":
-        "Zakon.AI assistance is available any time, any day, from anywhere in the world.",
+        "Zakon-AI assistance is available any time, any day, from anywhere in the world.",
       "benefits.card8.title": "Time and cost savings",
       "benefits.card8.text":
         "Reduces load on legal and expert teams — routine document search takes minutes, not hours.",
@@ -523,11 +665,67 @@
       "benefits.compare.bad.item2": "May answer incorrectly with confidence",
       "benefits.compare.bad.item3": "Hard to verify the source",
       "benefits.compare.bad.item4": "Does not account for your revisions and file versions",
-      "benefits.compare.good.title": "Zakon.AI knowledge-base chat",
+      "benefits.compare.good.title": "Zakon-AI knowledge-base chat",
       "benefits.compare.good.item1": "Searches corporate documents before answering",
       "benefits.compare.good.item2": "Quotes specific passages and sections",
       "benefits.compare.good.item3": "Answers can be verified in one click",
       "benefits.compare.good.item4": "The knowledge base is updated with your current materials",
+
+      "start.label": "Get started",
+      "start.title": "Try it yourself",
+      "start.subtitle":
+        "For personal or pilot access — no long approval process. Upload your materials and ask your first question.",
+      "start.step1.title": "Sign up",
+      "start.step1.text":
+        "Create an account on the platform — a free starter limit to explore the service.",
+      "start.step2.title": "Upload documents",
+      "start.step2.text":
+        "Add PDF, Word, Excel, and other files — the system indexes them for semantic search.",
+      "start.step3.title": "First question",
+      "start.step3.text":
+        "Ask as you would a colleague — get an answer with a quote and link to the document fragment.",
+      "start.btn": "Open the app",
+
+      "pricing.label": "Pricing",
+      "pricing.title": "Plans for teams and companies",
+      "pricing.subtitle":
+        "Billing by knowledge base size and number of queries. Enterprise rollout — on your server or in a dedicated environment.",
+      "pricing.tier1.name": "Start",
+      "pricing.tier1.desc": "For exploration and personal use",
+      "pricing.tier1.f1": "Up to 1 GB of documents",
+      "pricing.tier1.f2": "Hundreds of queries per month",
+      "pricing.tier1.f3": "Answers with source citations",
+      "pricing.tier1.btn": "Start for free",
+      "pricing.tier2.badge": "Popular",
+      "pricing.tier2.name": "Business",
+      "pricing.tier2.desc": "For a department or small team",
+      "pricing.tier2.f1": "Up to 10 GB of documents",
+      "pricing.tier2.f2": "Extended query limit",
+      "pricing.tier2.f3": "Multiple users",
+      "pricing.tier2.btn": "Get started",
+      "pricing.tier3.name": "Pro",
+      "pricing.tier3.desc": "For companies and industry knowledge bases",
+      "pricing.tier3.f1": "Large knowledge base volume",
+      "pricing.tier3.f2": "Roles and access control",
+      "pricing.tier3.f3": "Deployment on your server",
+      "pricing.tier3.btn": "Discuss rollout",
+      "pricing.packages.title": "Ready-made packages",
+      "pricing.packages.lead":
+        "Platform for your own documents plus industry packs — added as they become available.",
+      "pricing.pkg1.title": "Platform",
+      "pricing.pkg1.text":
+        "Your contracts, policies, and knowledge base — you upload, you ask questions in chat.",
+      "pricing.pkg1.status": "Available",
+      "pricing.pkg2.title": "Energy",
+      "pricing.pkg2.text":
+        "Retail market regulations: RF Decree No. 442, Ministry of Energy orders, FAS guidelines — pilot in energy retail.",
+      "pricing.pkg2.link": "Read case study",
+      "pricing.pkg3.title": "Tenders",
+      "pricing.pkg3.text":
+        "Search across procurement requirements, standard responses, and internal templates — in development.",
+      "pricing.pkg3.status": "Coming soon",
+      "pricing.note":
+        "Exact limits and pricing are confirmed when you sign up — leave a request below or message us on Telegram.",
 
       "use.label": "Applications",
       "use.title": "Where RAG technology is used",
@@ -557,19 +755,19 @@
         "Answers for faculty and students from course materials, regulations, and internal university or training center policies.",
 
       "case.label": "Deployment",
-      "case.title": "Zakon.AI pilot project",
+      "case.title": "Zakon-AI project for the energy industry",
       "case.subtitle":
-        "A real case at an energy retail company: retail market regulations, semantic search, and answers with source citations. Currently being tested by colleagues and refined.",
+        "An industry assistant for a consulting company in electrical energy: retail market regulations, answers from documents with source citations. The project is actively being refined.",
       "case.contentTitle": "AI consultant for the power industry",
       "case.contentText":
-        "An industry assistant built on Zakon.AI answers questions on RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, and FAS methodological guidelines — with citations and links to clauses. For lawyers, tariff specialists, contract teams, and retail sales.",
+        "Built on Zakon-AI for energy consulting: answers questions on RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, and FAS methodological guidelines — with citations and links to clauses. For lawyers, tariff specialists, and retail market experts.",
       "case.list1": "Knowledge base: 450+ documents with current editions",
       "case.list2": "Search: semantic RAG over a vector database",
       "case.list3": "Answer: wording + document + clause",
       "case.list4": "Status: pilot, internal testing",
       "case.button": "Read about the project",
       "case.pilotBadge": "pilot",
-      "case.chatTitle": "Zakon.AI · Power",
+      "case.chatTitle": "Zakon-AI · Power",
 
       "faq.label": "FAQ",
       "faq.title": "Frequently asked questions",
@@ -588,11 +786,17 @@
       "faq.q5": "Is it only for large companies?",
       "faq.a5":
         "No. RAG is useful for any organization with many documents and recurring \"where is this written?\" questions. Base size and infrastructure are tailored to the task.",
+      "faq.q6": "How are queries and knowledge base size counted?",
+      "faq.a6":
+        "Pricing depends on uploaded document volume (gigabytes) and the number of questions per month. A free starter limit is available for exploration; for teams and corporate environments, limits and billing are agreed individually.",
+      "faq.q7": "How do I start — personal account or team rollout?",
+      "faq.a7":
+        "You can sign up and upload your own documents. For multiple departments, roles, and deployment on your server — leave a request in the form below: we will discuss a pilot and rollout for your company.",
 
       "contact.label": "Contact",
-      "contact.title": "Discuss Zakon.AI",
+      "contact.title": "Discuss Zakon-AI",
       "contact.subtitle":
-        "We will explain how Zakon.AI works on your knowledge base, show the pilot case, and discuss a pilot for your company.",
+        "We will explain how Zakon-AI works on your knowledge base, show the pilot case, and discuss a pilot for your company.",
       "contact.perk1": "Architecture and deployment consultation",
       "contact.perk2": "Response within 1–2 business days",
       "contact.perk3": "Demo by invitation",
@@ -623,18 +827,18 @@
 
       "footer.tagline":
         "AI consultant powered by RAG technology<br>for corporate knowledge bases and documents.",
-      "footer.copyright": "© 2026 Zakon.AI. All rights reserved.",
+      "footer.copyright": "© 2026 Zakon-AI. All rights reserved.",
 
-      "energy.meta.title": "AI Consultant for an Energy Retail Company — Zakon.AI Case Study",
+      "energy.meta.title": "AI Consultant for an Energy Retail Company — Zakon-AI Case Study",
       "energy.meta.description":
-        "A real Zakon.AI pilot: a RAG assistant for retail electricity market regulations at an energy retail company — RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, and FAS methodological guidelines.",
+        "A real Zakon-AI pilot: a RAG assistant for retail electricity market regulations at an energy retail company — RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, and FAS methodological guidelines.",
       "energy.back": "← Back to home",
       "energy.tag1": "Pilot",
       "energy.tag2": "Energy retail",
       "energy.tag3": "Retail market",
       "energy.hero.title": "AI regulatory consultant for an energy retail company",
       "energy.hero.lead":
-        "A real project built on Zakon.AI: the system answers questions on RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, FAS methodological guidelines, and internal regulations — with a quote and a link to the source clause. The pilot is currently being tested by colleagues and refined based on their feedback.",
+        "A real project built on Zakon-AI: the system answers questions on RF Government Decrees No. 442 and No. 1179, Ministry of Energy orders, FAS methodological guidelines, and internal regulations — with a quote and a link to the source clause. The pilot is currently being tested by colleagues and refined based on their feedback.",
       "energy.metric1.value": "450+",
       "energy.metric1.label": "documents in the knowledge base",
       "energy.metric2.value": "hours → ~1.5 min",
@@ -825,9 +1029,9 @@
     },
 
     zh: {
-      "meta.title": "Zakon.AI — 面向法规、标准与企业文档的智能 AI 搜索",
+      "meta.title": "Zakon-AI — 面向法规、标准与企业文档的智能 AI 搜索",
       "meta.description":
-        "Zakon.AI — 面向企业的 RAG 技术：AI 基于您的文档与法规知识库作答，并提供引用与来源条款链接。zakon-ai.ru",
+        "Zakon-AI — 面向企业的 RAG 技术：AI 基于您的文档与法规知识库作答，并提供引用与来源条款链接。zakon-ai.ru",
 
       "ui.langGroup": "界面语言",
       "ui.themeGroup": "主题",
@@ -846,9 +1050,9 @@
 
       "hero.eyebrow": "面向企业文档工作的 AI 助手",
       "hero.title": "面向知识库与企业文档的智能 AI 搜索",
-      "hero.lead1": "Zakon.AI 是将人工智能用于企业文档工作的现代技术方案。",
+      "hero.lead1": "Zakon-AI 是将人工智能用于企业文档工作的现代技术方案。",
       "hero.lead2":
-        "其核心是 RAG（检索增强生成）架构，将语言模型与企业资料连接：制度、合同、操作说明与内部规章。员工提问 — Zakon.AI 找到相关片段并生成带来源链接的回答。",
+        "其核心是 RAG（检索增强生成）架构，将语言模型与企业资料连接：制度、合同、操作说明与内部规章。员工提问 — Zakon-AI 找到相关片段并生成带来源链接的回答。",
       "hero.stat1.label": "搜索时间节省",
       "hero.stat2.label": "来源透明",
       "hero.stat3.label": "知识库访问",
@@ -856,7 +1060,7 @@
       "hero.btnRag": "了解 RAG",
       "hero.btnHow": "工作原理",
 
-      "chat.title": "Zakon.AI Chat",
+      "chat.title": "Zakon-AI Chat",
       "chat.online": "● 在线",
       "chat.demoDotsAria": "查询示例",
       "chat.demo1Aria": "示例 1",
@@ -917,7 +1121,7 @@
       "benefits.card6.title": "加快入职",
       "benefits.card6.text": "新员工通过带来源链接的回答更快熟悉业务。",
       "benefits.card7.title": "全天候可用",
-      "benefits.card7.text": "Zakon.AI 随时、随地、任意时间可用。",
+      "benefits.card7.text": "Zakon-AI 随时、随地、任意时间可用。",
       "benefits.card8.title": "节省时间与成本",
       "benefits.card8.text": "减轻法务与专家负担 — 常规文档检索以分钟计，而非小时。",
       "benefits.compare.bad.title": "普通 AI 聊天",
@@ -925,7 +1129,7 @@
       "benefits.compare.bad.item2": "可能自信地给出错误回答",
       "benefits.compare.bad.item3": "难以核实来源",
       "benefits.compare.bad.item4": "不考虑您的修订版与文件版本",
-      "benefits.compare.good.title": "Zakon.AI 知识库聊天",
+      "benefits.compare.good.title": "Zakon-AI 知识库聊天",
       "benefits.compare.good.item1": "回答前先检索企业文档",
       "benefits.compare.good.item2": "引用具体片段与章节",
       "benefits.compare.good.item3": "一键核实回答",
@@ -951,19 +1155,19 @@
       "use.card8.text": "为教师与学生提供教材、规章与院校/培训中心内部制度相关回答。",
 
       "case.label": "落地",
-      "case.title": "Zakon.AI 试点项目",
+      "case.title": "Zakon-AI 试点项目",
       "case.subtitle":
         "能源销售企业真实案例：零售市场法规库、语义搜索与带来源引用的回答。目前正由同事测试并持续完善。",
       "case.contentTitle": "电力行业 AI 顾问",
       "case.contentText":
-        "基于 Zakon.AI 部署的行业助手，可依据俄罗斯联邦政府令第 442、1179 号、能源部命令及联邦反垄断局方法指南作答 — 附引用与条款链接。面向法务、电价专员、合同团队与零售销售。",
+        "基于 Zakon-AI 部署的行业助手，可依据俄罗斯联邦政府令第 442、1179 号、能源部命令及联邦反垄断局方法指南作答 — 附引用与条款链接。面向法务、电价专员、合同团队与零售销售。",
       "case.list1": "知识库：450+ 份现行有效文档",
       "case.list2": "检索：面向向量库的语义 RAG",
       "case.list3": "回答：表述 + 文档 + 条款",
       "case.list4": "状态：试点，内部测试中",
       "case.button": "了解项目详情",
       "case.pilotBadge": "试点",
-      "case.chatTitle": "Zakon.AI · 电力",
+      "case.chatTitle": "Zakon-AI · 电力",
 
       "faq.label": "FAQ",
       "faq.title": "常见问题",
@@ -983,9 +1187,9 @@
         "不是。任何文档多、常问「写在哪里」的组织都适用。知识库规模与基础设施按任务定制。",
 
       "contact.label": "联系",
-      "contact.title": "洽谈 Zakon.AI",
+      "contact.title": "洽谈 Zakon-AI",
       "contact.subtitle":
-        "我们将介绍 Zakon.AI 如何在您的知识库上运行，展示试点案例，并讨论在贵公司的试点方案。",
+        "我们将介绍 Zakon-AI 如何在您的知识库上运行，展示试点案例，并讨论在贵公司的试点方案。",
       "contact.perk1": "架构与实施咨询",
       "contact.perk2": "1–2 个工作日内回复",
       "contact.perk3": "预约演示",
@@ -1013,18 +1217,18 @@
       "contact.formNote": "点击按钮即表示同意为处理申请而使用您的数据。",
 
       "footer.tagline": "基于 RAG 技术的企业知识库<br>与文档 AI 顾问。",
-      "footer.copyright": "© 2026 Zakon.AI. 保留所有权利。",
+      "footer.copyright": "© 2026 Zakon-AI. 保留所有权利。",
 
-      "energy.meta.title": "能源销售企业 AI 顾问 — Zakon.AI 案例",
+      "energy.meta.title": "能源销售企业 AI 顾问 — Zakon-AI 案例",
       "energy.meta.description":
-        "Zakon.AI 真实试点：面向能源销售企业零售市场法规的 RAG 助手 — 俄联邦政府令第 442、1179 号，能源部命令，联邦反垄断局方法指南。",
+        "Zakon-AI 真实试点：面向能源销售企业零售市场法规的 RAG 助手 — 俄联邦政府令第 442、1179 号，能源部命令，联邦反垄断局方法指南。",
       "energy.back": "← 返回首页",
       "energy.tag1": "试点",
       "energy.tag2": "能源销售",
       "energy.tag3": "零售市场",
       "energy.hero.title": "面向能源销售企业的法规 AI 顾问",
       "energy.hero.lead":
-        "基于 Zakon.AI 的真实项目：系统依据俄联邦政府令第 442、1179 号、能源部命令、联邦反垄断局方法指南及内部规章作答 — 附引用与来源条款链接。试点目前正由同事测试，并根据反馈持续完善。",
+        "基于 Zakon-AI 的真实项目：系统依据俄联邦政府令第 442、1179 号、能源部命令、联邦反垄断局方法指南及内部规章作答 — 附引用与来源条款链接。试点目前正由同事测试，并根据反馈持续完善。",
       "energy.metric1.value": "450+",
       "energy.metric1.label": "知识库文档数",
       "energy.metric2.value": "数小时 → ~1.5 分钟",

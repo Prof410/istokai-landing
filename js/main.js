@@ -473,6 +473,121 @@ function initCasePageTabs() {
   });
 }
 
+function initHowFlow() {
+  const root = document.getElementById("how-flow");
+  if (!root) return;
+
+  const tabs = Array.from(root.querySelectorAll(".how-flow-tab"));
+  const panels = Array.from(root.querySelectorAll(".how-flow-panel"));
+  const progress = root.querySelector(".how-flow-progress-fill");
+  const dotsWrap = root.querySelector(".how-flow-dots");
+  const prevBtn = root.querySelector("#how-flow-prev");
+  const nextBtn = root.querySelector("#how-flow-next");
+  if (!tabs.length || !panels.length) return;
+
+  let current = 0;
+  let autoTimer = null;
+  let paused = false;
+
+  if (dotsWrap && !dotsWrap.children.length) {
+    tabs.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "how-flow-dot";
+      dot.dataset.how = String(index);
+      dot.setAttribute("aria-label", `Шаг ${index + 1}`);
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  const dots = Array.from(root.querySelectorAll(".how-flow-dot"));
+
+  function activate(index, { focusTab = false } = {}) {
+    current = (index + tabs.length) % tabs.length;
+
+    tabs.forEach((tab, i) => {
+      const active = i === current;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+      if (focusTab && active) tab.focus();
+    });
+
+    panels.forEach((panel, i) => {
+      const active = i === current;
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+
+    dots.forEach((dot, i) => dot.classList.toggle("is-active", i === current));
+
+    if (progress) {
+      progress.style.width = `${((current + 1) / tabs.length) * 100}%`;
+    }
+  }
+
+  function stopAuto() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  function startAuto() {
+    stopAuto();
+    if (paused) return;
+    autoTimer = setInterval(() => activate(current + 1), 5500);
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      activate(index);
+      startAuto();
+    });
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      activate(Number(dot.dataset.how));
+      startAuto();
+    });
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    activate(current - 1);
+    startAuto();
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    activate(current + 1);
+    startAuto();
+  });
+
+  root.addEventListener("mouseenter", () => {
+    paused = true;
+    stopAuto();
+  });
+
+  root.addEventListener("mouseleave", () => {
+    paused = false;
+    startAuto();
+  });
+
+  root.addEventListener("focusin", () => {
+    paused = true;
+    stopAuto();
+  });
+
+  root.addEventListener("focusout", (event) => {
+    if (!root.contains(event.relatedTarget)) {
+      paused = false;
+      startAuto();
+    }
+  });
+
+  activate(0);
+  startAuto();
+}
+
 function initThemeToggle() {
   const root = document.documentElement;
   const buttons = document.querySelectorAll("[data-theme-set]");
@@ -499,6 +614,7 @@ function initThemeToggle() {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
+  initHowFlow();
   initHeroTitleTypewriter();
   initChatDemo();
   initCaseCarousel();
