@@ -203,19 +203,20 @@
       "pricing.tier3.btn": "Обсудить внедрение",
       "pricing.packages.title": "Готовые пакеты",
       "pricing.packages.lead":
-        "Платформа для своих документов плюс отраслевые наборы — подключаются по мере готовности.",
+        "Платформа для своих документов плюс отраслевые наборы — подключаются в приложении.",
       "pricing.pkg1.title": "Платформа",
       "pricing.pkg1.text":
         "Ваши договоры, регламенты и база знаний — загружаете сами, задаёте вопросы в чате.",
       "pricing.pkg1.status": "Доступно",
       "pricing.pkg2.title": "Энергетика",
       "pricing.pkg2.text":
-        "Нормативка розничного рынка: ПП РФ № 442, приказы Минэнерго, МУ ФАС — пилот в энергосбыте.",
+        "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности. Ответы по нормам со ссылками на пункты документов.",
+      "pricing.pkg2.status": "Доступно",
       "pricing.pkg2.link": "Читать кейс",
-      "pricing.pkg3.title": "Тендеры",
+      "pricing.pkg3.title": "Тендерный специалист",
       "pricing.pkg3.text":
-        "Поиск по требованиям закупок, типовым ответам и внутренним шаблонам — в разработке.",
-      "pricing.pkg3.status": "Скоро",
+        "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке zakupki.gov.ru с опорой на 44-ФЗ и 223-ФЗ.",
+      "pricing.pkg3.status": "Доступно",
       "pricing.note":
         "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.",
 
@@ -711,19 +712,20 @@
       "pricing.tier3.btn": "Discuss rollout",
       "pricing.packages.title": "Ready-made packages",
       "pricing.packages.lead":
-        "Platform for your own documents plus industry packs — added as they become available.",
+        "Platform for your own documents plus industry packs — connect them in the app.",
       "pricing.pkg1.title": "Platform",
       "pricing.pkg1.text":
         "Your contracts, policies, and knowledge base — you upload, you ask questions in chat.",
       "pricing.pkg1.status": "Available",
       "pricing.pkg2.title": "Energy",
       "pricing.pkg2.text":
-        "Retail market regulations: RF Decree No. 442, Ministry of Energy orders, FAS guidelines — pilot in energy retail.",
+        "AI expert on the electricity and capacity market regulatory base. Answers with links to specific document clauses.",
+      "pricing.pkg2.status": "Available",
       "pricing.pkg2.link": "Read case study",
-      "pricing.pkg3.title": "Tenders",
+      "pricing.pkg3.title": "Tender specialist",
       "pricing.pkg3.text":
-        "Search across procurement requirements, standard responses, and internal templates — in development.",
-      "pricing.pkg3.status": "Coming soon",
+        "Professional AI assistant for public procurement. Tender review from a zakupki.gov.ru link, grounded in 44-FZ and 223-FZ.",
+      "pricing.pkg3.status": "Available",
       "pricing.note":
         "Exact limits and pricing are confirmed when you sign up — leave a request below or message us on Telegram.",
 

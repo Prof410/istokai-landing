@@ -2843,6 +2843,11 @@ img {
   color: #22c55e;
 }
 
+.package-status + .package-link {
+  display: block;
+  margin-top: 10px;
+}
+
 .package-link {
   font-size: 0.88rem;
   font-weight: 600;
