@@ -1471,29 +1471,37 @@
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.dataset.i18n;
-      if (key) {
-        el.textContent = t(key, l);
+      if (!key) return;
+      const value = t(key, l);
+      if (value !== key) {
+        el.textContent = value;
       }
     });
 
     document.querySelectorAll("[data-i18n-html]").forEach((el) => {
       const key = el.dataset.i18nHtml;
-      if (key) {
-        el.innerHTML = t(key, l);
+      if (!key) return;
+      const value = t(key, l);
+      if (value !== key) {
+        el.innerHTML = value;
       }
     });
 
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const key = el.dataset.i18nPlaceholder;
-      if (key) {
-        el.placeholder = t(key, l);
+      if (!key) return;
+      const value = t(key, l);
+      if (value !== key) {
+        el.placeholder = value;
       }
     });
 
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
       const key = el.dataset.i18nAria;
-      if (key) {
-        el.setAttribute("aria-label", t(key, l));
+      if (!key) return;
+      const value = t(key, l);
+      if (value !== key) {
+        el.setAttribute("aria-label", value);
       }
     });
 
