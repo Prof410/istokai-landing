@@ -206,32 +206,32 @@
         "База для своих документов и отраслевые режимы — подключаются в приложении Zakon-AI.",
       "pricing.pkg1.title": "Ваши документы",
       "pricing.pkg1.text":
-        "Ваша личная или командная база знаний — договоры, регламенты, инструкции и любые файлы.",
+        "Ваша личная или командная база знаний — договоры, регламенты, инструкции и любые файлы. Задавайте вопросы обычным языком и получайте ответы со ссылками на фрагменты ваших документов.",
       "pricing.pkg1.status": "Доступно",
       "pricing.pkg2.title": "Энергетика",
       "pricing.pkg2.text":
-        "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности.",
+        "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности. Ответы по нормам со ссылками на пункты — постановления Правительства, приказы Минэнерго, методические указания ФАС.",
       "pricing.pkg2.status": "Доступно",
       "pricing.pkg2.link": "Читать кейс",
       "pricing.pkg3.title": "Финансовый анализ",
       "pricing.pkg3.text":
-        "ИИ-помощник для разбора бухгалтерской, финансовой и налоговой отчётности юридических лиц.",
+        "ИИ-помощник для разбора бухгалтерской, финансовой и налоговой отчётности юридических лиц. Структурированный разбор за минуты: коэффициенты, тренды и риски с опорой на загруженные отчёты.",
       "pricing.pkg3.status": "Скоро",
       "pricing.pkg4.title": "Презентации",
       "pricing.pkg4.text":
-        "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки.",
+        "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки. От идеи до готового каркаса — для совещания, питча, отчёта или обучения.",
       "pricing.pkg4.status": "Доступно",
       "pricing.pkg5.title": "Тендерный специалист",
       "pricing.pkg5.text":
-        "Профессиональный ИИ-помощник для работы с госзакупками.",
+        "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке zakupki.gov.ru с опорой на 44-ФЗ, 223-ФЗ и подзаконные акты — риски и ключевые факты за минуты.",
       "pricing.pkg5.status": "Доступно",
       "pricing.pkg6.title": "Глубокое размышление",
       "pricing.pkg6.text":
-        "Режим для сложных вопросов по документам.",
+        "Режим для сложных вопросов по документам. Несколько моделей разбирают ситуацию с разных сторон — взвешенный итог с точками согласия, расхождениями и рисками.",
       "pricing.pkg6.status": "Доступно",
       "pricing.pkgLink": "Подробнее",
       "pricing.note":
-        "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.",
+        "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже.",
 
       "use.label": "Применение",
       "use.title": "Где используется технология RAG",
@@ -307,7 +307,6 @@
       "contact.perk2": "Ответ в течение 1–2 рабочих дней",
       "contact.perk3": "Демо по приглашению",
       "contact.perk4": "Пилот под задачи Вашей компании",
-      "contact.telegramPrefix": "Или напишите в Telegram:",
       "contact.nameLabel": "Имя *",
       "contact.namePlaceholder": "Как к Вам обращаться",
       "contact.emailLabel": "Email *",
@@ -482,7 +481,7 @@
       "form.error.success":
         "Спасибо! Заявка отправлена. Мы свяжемся с Вами в ближайшее время.",
       "form.error.fail":
-        "Не удалось отправить заявку. Попробуйте позже или напишите нам в Телеграм.",
+        "Не удалось отправить заявку. Попробуйте позже.",
 
       chatDemos: [
         {
@@ -728,32 +727,32 @@
         "Your document base plus industry modes — connect them in the Zakon-AI app.",
       "pricing.pkg1.title": "Your documents",
       "pricing.pkg1.text":
-        "Your personal or team knowledge base — contracts, policies, instructions, and any files.",
+        "Your personal or team knowledge base — contracts, policies, instructions, and any files. Ask questions in plain language and get answers with links to passages in your documents.",
       "pricing.pkg1.status": "Available",
       "pricing.pkg2.title": "Energy",
       "pricing.pkg2.text":
-        "AI expert on the electricity and capacity market regulatory base.",
+        "AI expert on the electricity and capacity market regulatory base. Answers grounded in specific clauses — government resolutions, Ministry of Energy orders, and FAS guidance.",
       "pricing.pkg2.status": "Available",
       "pricing.pkg2.link": "Read case study",
       "pricing.pkg3.title": "Financial analysis",
       "pricing.pkg3.text":
-        "AI assistant for reviewing accounting, financial, and tax reports of legal entities.",
+        "AI assistant for reviewing accounting, financial, and tax reports of legal entities. Structured analysis in minutes: ratios, trends, and risks based on uploaded reports.",
       "pricing.pkg3.status": "Coming soon",
       "pricing.pkg4.title": "Presentations",
       "pricing.pkg4.text":
-        "AI assistant for building presentations: structure, slides, copy, and speaker notes.",
+        "AI assistant for building presentations: structure, slides, copy, and speaker notes. From idea to a working deck — for meetings, pitches, reports, or training.",
       "pricing.pkg4.status": "Available",
       "pricing.pkg5.title": "Tender specialist",
       "pricing.pkg5.text":
-        "Professional AI assistant for public procurement.",
+        "Professional AI assistant for public procurement. Tender review from a zakupki.gov.ru link, grounded in 44-FZ, 223-FZ, and subordinate acts — risks and key facts in minutes.",
       "pricing.pkg5.status": "Available",
       "pricing.pkg6.title": "Deep reasoning",
       "pricing.pkg6.text":
-        "Mode for complex questions about your documents.",
+        "Mode for complex questions about your documents. Several models examine the situation from different angles — a balanced summary of agreement, disagreement, and risks.",
       "pricing.pkg6.status": "Available",
       "pricing.pkgLink": "Learn more",
       "pricing.note":
-        "Exact limits and pricing are confirmed when you sign up — leave a request below or message us on Telegram.",
+        "Exact limits and pricing are confirmed when you sign up — leave a request below.",
 
       "use.label": "Applications",
       "use.title": "Where RAG technology is used",
@@ -829,7 +828,6 @@
       "contact.perk2": "Response within 1–2 business days",
       "contact.perk3": "Demo by invitation",
       "contact.perk4": "Pilot tailored to your company's needs",
-      "contact.telegramPrefix": "Or message us on Telegram:",
       "contact.nameLabel": "Name *",
       "contact.namePlaceholder": "How should we address you",
       "contact.emailLabel": "Email *",
@@ -1012,7 +1010,7 @@
       "form.error.sending": "Sending request…",
       "form.error.success": "Thank you! Your request has been sent. We will contact you shortly.",
       "form.error.fail":
-        "Could not send the request. Please try again later or message us on Telegram.",
+        "Could not send the request. Please try again later.",
 
       chatDemos: [
         {
@@ -1222,7 +1220,6 @@
       "contact.perk2": "1–2 个工作日内回复",
       "contact.perk3": "预约演示",
       "contact.perk4": "按贵公司需求定制试点",
-      "contact.telegramPrefix": "或通过 Telegram 联系我们：",
       "contact.nameLabel": "姓名 *",
       "contact.namePlaceholder": "如何称呼您",
       "contact.emailLabel": "邮箱 *",
@@ -1379,7 +1376,7 @@
       "form.error.notConfigured": "表单尚未配置。请在 js/main.js 中设置 Formspree 端点（见 README）。",
       "form.error.sending": "正在提交申请…",
       "form.error.success": "谢谢！申请已发送。我们将尽快与您联系。",
-      "form.error.fail": "提交失败。请稍后重试或通过 Telegram 联系我们。",
+      "form.error.fail": "提交失败。请稍后重试。",
 
       chatDemos: [
         {
