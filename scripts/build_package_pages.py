@@ -1,0 +1,638 @@
+#!/usr/bin/env python3
+"""Generate static package landing pages from structured content."""
+
+from __future__ import annotations
+
+import html
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = ROOT / "packages"
+
+ICONS = {
+    "file-text": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
+    "landmark": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-4h4v4"/></svg>',
+    "gavel": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg>',
+    "brain": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>',
+    "presentation": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>',
+    "chart": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>',
+    "target": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+    "gift": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>',
+    "stack": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>',
+    "message": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+    "users": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    "wallet": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg>',
+    "shield": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    "folder": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>',
+    "upload": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>',
+    "scale": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>',
+    "check": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>',
+    "layers": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>',
+}
+
+
+def esc(text: str) -> str:
+    return html.escape(text, quote=True)
+
+
+def icon(name: str) -> str:
+    return ICONS.get(name, ICONS["target"])
+
+
+def section(icon_name: str, title: str, body_html: str) -> str:
+    return f"""
+    <section class="pkg-section">
+      <div class="pkg-section-head">
+        <div class="pkg-section-icon">{icon(icon_name)}</div>
+        <h2>{esc(title)}</h2>
+      </div>
+      <div class="pkg-section-body">{body_html}</div>
+    </section>"""
+
+
+def card_grid(items: list[dict]) -> str:
+    rows = []
+    for item in items:
+        meta = f'<p class="pkg-card-meta">{esc(item["meta"])}</p>' if item.get("meta") else ""
+        rows.append(
+            f"""<li>
+              <div class="pkg-card-title-row">{icon(item.get("icon", "target"))}<p class="pkg-card-title">{esc(item["title"])}</p></div>
+              <p class="pkg-card-text">{esc(item["text"])}</p>
+              {meta}
+            </li>"""
+        )
+    return f'<ul class="pkg-card-grid">{"".join(rows)}</ul>'
+
+
+def steps(items: list[dict]) -> str:
+    rows = []
+    for i, item in enumerate(items, 1):
+        rows.append(
+            f"""<li>
+              <div class="pkg-step-top"><span class="pkg-step-num">{i}</span>{icon(item.get("icon", "target"))}</div>
+              <p class="pkg-card-title">{esc(item["title"])}</p>
+              <p class="pkg-card-text">{esc(item["text"])}</p>
+            </li>"""
+        )
+    return f'<ol class="pkg-steps">{"".join(rows)}</ol>'
+
+
+def bullet_list(items: list[str], css_class: str = "pkg-bullet-list") -> str:
+    lis = "".join(f"<li>{esc(x)}</li>" for x in items)
+    return f'<ul class="{css_class}">{lis}</ul>'
+
+
+def check_list(items: list[str]) -> str:
+    lis = "".join(
+        f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in items
+    )
+    return f'<ul class="pkg-check-list">{lis}</ul>'
+
+
+def quote_list(items: list[str]) -> str:
+    return bullet_list(items, "pkg-bullet-list pkg-quote-list")
+
+
+def price_box(label: str, value: str, note: str) -> str:
+    return f"""<div class="pkg-price-box">
+      <p class="pkg-price-label">{esc(label)}</p>
+      <p class="pkg-price-value">{esc(value)}</p>
+      <p class="pkg-price-note">{esc(note)}</p>
+    </div>"""
+
+
+PACKAGES = [
+    {
+        "slug": "your-docs",
+        "filename": "your-docs.html",
+        "title": "Ваши документы",
+        "meta_title": "Пакет «Ваши документы» — Zakon-AI",
+        "meta_description": "Личная и командная база знаний: договоры, регламенты, инструкции. Ответы по вашим файлам со ссылками на источники.",
+        "hero_icon": "file-text",
+        "status": ("Бесплатно", "free"),
+        "lead": "Ваша личная или командная база знаний — договоры, регламенты, инструкции и любые файлы.",
+        "sections": lambda: [
+            section(
+                "file-text",
+                "Зачем нужен этот пакет",
+                """
+                <p>У каждой компании и каждого специалиста есть своя база документов: договоры, регламенты, инструкции, переписка, отчёты. Обычно эти знания «лежат мёртвым грузом» в папках — чтобы найти нужный пункт, приходится открывать файл и листать страницы.</p>
+                <p><strong>Пакет «Ваши документы»</strong> превращает вашу базу файлов в живого консультанта. Вы задаёте вопрос обычным языком — и получаете ответ со ссылками на конкретные фрагменты ваших документов.</p>
+                <p><strong>Результат:</strong> знания компании становятся доступными каждому сотруднику с нужными правами. Вы быстрее находите формулировки, проверяете договоры и принимаете решения, опираясь на свои материалы.</p>
+                """,
+            ),
+            section(
+                "folder",
+                "Что можно загружать",
+                f"""
+                <p>В пакет «Ваши документы» можно загрузить практически любые рабочие материалы:</p>
+                {card_grid([
+                    {"icon": "wallet", "title": "Договоры и контракты", "text": "С поставщиками, клиентами, подрядчиками"},
+                    {"icon": "scale", "title": "Внутренние регламенты и политики", "text": "ПВТР, положения о премировании, стандарты ИБ, политики обработки ПДн"},
+                    {"icon": "users", "title": "Должностные инструкции и методички", "text": "Чтобы новые сотрудники быстрее вникали в процессы"},
+                    {"icon": "gavel", "title": "Тендерную документацию", "text": "Извещения, технические задания, проекты контрактов"},
+                    {"icon": "file-text", "title": "Отраслевые нормативные акты", "text": "Актуальные версии актов для регулируемой сферы"},
+                    {"icon": "message", "title": "Переписку и протоколы встреч", "text": "Чтобы быстро вспомнить, о чём договаривались"},
+                    {"icon": "chart", "title": "Отчёты и аналитику", "text": "Финансовые, маркетинговые и технические отчёты"},
+                    {"icon": "presentation", "title": "Презентации и изображения", "text": "Сервис умеет работать и с визуальными материалами"},
+                ])}
+                <p class="pkg-note"><strong>Поддерживаемые форматы:</strong> PDF, Word, Excel, PowerPoint, TXT, RTF, изображения, архивы ZIP/RAR.</p>
+                """,
+            ),
+            section(
+                "message",
+                "Как это работает",
+                f"""
+                <p>Три простых шага от загрузки файла к ответу на вопрос:</p>
+                {steps([
+                    {"icon": "upload", "title": "Загрузка документов", "text": "Откройте раздел «Документы» и загрузите файлы. Можно раскладывать по папкам и задавать инструкции для ИИ."},
+                    {"icon": "folder", "title": "Индексация", "text": "Система «читает» файл и готовит его к поиску. Когда статус «Готов» — документ можно использовать в чатах."},
+                    {"icon": "message", "title": "Вопросы и ответы", "text": "Создайте чат, прикрепите папку или файл и задайте вопрос. ИИ найдёт фрагменты и даст ссылки на источники."},
+                ])}
+                """,
+            ),
+            section(
+                "target",
+                "Сценарии использования",
+                f"""
+                {card_grid([
+                    {"icon": "scale", "title": "Для юристов и договорных отделов", "text": "Поиск пунктов об ответственности, проверка проектов договоров на соответствие регламентам"},
+                    {"icon": "gavel", "title": "Для специалистов по закупкам", "text": "Сравнение требований в тендерах, сроки подачи заявок, списки документов"},
+                    {"icon": "users", "title": "Для HR и руководителей", "text": "Ответы по положениям о премировании, должностным инструкциям, протоколам встреч"},
+                    {"icon": "shield", "title": "Для специалистов по ИБ", "text": "Проверка договоров на соответствие стандартам, поиск пунктов о персональных данных"},
+                ])}
+                """,
+            ),
+            section(
+                "check",
+                "Что вы получите в ответе",
+                check_list([
+                    "Ответ по вашим материалам — ИИ опирается только на загруженные файлы",
+                    "Ссылки на источники — каждый тезис подкреплён фрагментом документа",
+                    "Возможность проверить — открыть первоисточник и убедиться в формулировке",
+                    "Уточняющие вопросы — диалог, сравнение документов",
+                    "Экспорт результатов — чат в TXT, Word или PDF с перечнем источников",
+                ]),
+            ),
+            section(
+                "shield",
+                "Безопасность и конфиденциальность",
+                check_list([
+                    "Документы на защищённых серверах в РФ (соответствие 152-ФЗ)",
+                    "Файлы не используются для обучения языковых моделей",
+                    "Гибкий доступ к папкам: кто смотрит, спрашивает, загружает или удаляет",
+                    "В тарифе «Команда» правами управляет администратор",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Стоимость",
+                price_box("Подключение", "Бесплатно", "Пакет доступен по умолчанию всем пользователям"),
+            ),
+        ],
+        "cta_primary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_secondary": None,
+    },
+    {
+        "slug": "energy",
+        "filename": "energy.html",
+        "title": "Энергетика",
+        "meta_title": "Пакет «Энергетика» — Zakon-AI",
+        "meta_description": "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности. Ответы по нормам со ссылками на пункты документов.",
+        "hero_icon": "landmark",
+        "status": ("Доступно", "live"),
+        "lead": "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности.",
+        "sections": lambda: [
+            section(
+                "target",
+                "Зачем нужен этот пакет",
+                """
+                <p>Рынок электроэнергии — одна из самых сложных и зарегулированных отраслей в России. Сотни страниц постановлений и приказов постоянно обновляются. Одна ошибка в понимании нормы может привести к штрафу или спору с сетевой организацией.</p>
+                <p><strong>Пакет «Энергетика»</strong> помогает быстро находить нужные нормы и получать ответы со ссылками на конкретные пункты документов.</p>
+                <p><strong>Результат:</strong> экономия часов поиска, уверенность в каждом ответе со ссылкой на источник, защита от ошибок в трактовке сложных норм.</p>
+                """,
+            ),
+            section(
+                "gift",
+                "Тестовый период",
+                """
+                <p>7 дней бесплатного доступа: 5 вопросов по нормативной базе, +70 МБ для документов. Тест доступен один раз на пакет.</p>
+                """,
+            ),
+            section(
+                "stack",
+                "Что внутри пакета",
+                card_grid([
+                    {"icon": "scale", "title": "Основные положения рынков электроэнергии", "text": "Правила розничного и оптового рынков, договоры энергоснабжения, порядок расчётов.", "meta": "ПП РФ № 442, № 1172"},
+                    {"icon": "landmark", "title": "Передача и технологическое присоединение", "text": "Отношения с сетевыми организациями, присоединение устройств, балансовая принадлежность.", "meta": "ПП РФ № 861, № 898"},
+                    {"icon": "wallet", "title": "Ценообразование и тарифы", "text": "Формирование тарифов на электроэнергию и мощность, методические указания ФАС.", "meta": "Приказы ФСТ/ФАС, методические указания"},
+                    {"icon": "stack", "title": "Смежные нормативные акты", "text": "Коммерческий учёт, режимы потребления, дисциплина договорных отношений.", "meta": "ПП РФ № 530, приказы Минэнерго"},
+                ]),
+            ),
+            section(
+                "message",
+                "Как это работает",
+                steps([
+                    {"icon": "wallet", "title": "Подключение", "text": "Оплатите пакет или нажмите «Попробовать» — появится проект «Электроэнергетика» с нормативной базой."},
+                    {"icon": "stack", "title": "Задайте вопрос", "text": "Создайте чат в проекте. База документов уже прикреплена — спрашивайте обычным языком."},
+                    {"icon": "target", "title": "Получите ответ со ссылками", "text": "ИИ найдёт нужные нормы, объяснит применение и даст ссылки на пункты документов."},
+                ]),
+            ),
+            section(
+                "users",
+                "Для кого этот пакет",
+                bullet_list([
+                    "Сбытовым компаниям и гарантирующим поставщикам — ответы по договорам и тарифам",
+                    "Сетевым организациям — технологическое присоединение и качество услуг",
+                    "Крупным потребителям — права и обязанности на розничном рынке",
+                    "Юристам энергокомпаний — поиск нормы под спорную ситуацию",
+                    "Консультантам отрасли — опора на документы, а не на память",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Стоимость",
+                price_box("Подключение пакета", "4 990 ₽ / мес", "Списание с расчётного счёта. Ответы в чате — с баланса ИИ."),
+            ),
+        ],
+        "cta_primary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_secondary": ("Читать кейс", "../cases/energy.html"),
+    },
+    {
+        "slug": "financial-analysis",
+        "filename": "financial-analysis.html",
+        "title": "Финансовый анализ",
+        "meta_title": "Пакет «Финансовый анализ» — Zakon-AI",
+        "meta_description": "ИИ-помощник для разбора бухгалтерской, финансовой и налоговой отчётности юридических лиц.",
+        "hero_icon": "chart",
+        "status": ("Скоро", "soon"),
+        "lead": "ИИ-помощник для разбора бухгалтерской, финансовой и налоговой отчётности юридических лиц.",
+        "sections": lambda: [
+            section(
+                "chart",
+                "Зачем нужен этот пакет",
+                """
+                <p>Отчётность компании — это десятки форм, примечаний и показателей. Ручной разбор занимает часы: сверка баланса, динамика выручки и долга, налоговые риски, выводы для кредитного комитета.</p>
+                <p><strong>Пакет «Финансовый анализ»</strong> помогает быстро получить структурированный разбор по загруженным отчётам — с опорой на сами документы, а не на общие шаблоны.</p>
+                <p><strong>Результат:</strong> за минуты получаете то, на что раньше уходили часы. Видите полную картину финансового состояния и риски.</p>
+                """,
+            ),
+            section(
+                "stack",
+                "Что анализируем",
+                card_grid([
+                    {"icon": "chart", "title": "Бухгалтерская отчётность", "text": "Баланс, ОФР, ОДДС, пояснения — ключевые показатели, сравнение периодов, аномалии"},
+                    {"icon": "wallet", "title": "Финансовые сводки", "text": "KPI, бюджет vs факт, данные по сегментам и подразделениям"},
+                    {"icon": "scale", "title": "Налоговая отчётность", "text": "Декларации и расчёты — картина налоговой нагрузки и зоны внимания"},
+                    {"icon": "file-text", "title": "Сопутствующие материалы", "text": "Аудиторские заключения, пояснительные записки, расшифровки статей"},
+                ]),
+            ),
+            section(
+                "message",
+                "Как это будет работать",
+                steps([
+                    {"icon": "upload", "title": "Загрузка отчётности", "text": "Загрузите бухгалтерскую, финансовую и налоговую отчётность — можно несколько периодов для сравнения."},
+                    {"icon": "message", "title": "Задайте вопрос", "text": "«Оцени ликвидность», «Сравни 2023 и 2024», «Где риски по налогам» — формулируйте как удобно."},
+                    {"icon": "target", "title": "Получите разбор", "text": "Структурированный ответ со ссылками на строки и фрагменты отчётов."},
+                ]),
+            ),
+            section(
+                "message",
+                "Примеры вопросов",
+                quote_list([
+                    "«Какие три главных риска в финансовой отчётности этой компании?»",
+                    "«Сравни выручку и чистую прибыль за 2023 и 2024 год»",
+                    "«Подготовь краткую справку для банка о платёжеспособности»",
+                    "«Рассчитай ключевые коэффициенты ликвидности и рентабельности»",
+                ]),
+            ),
+            section(
+                "users",
+                "Для кого этот пакет",
+                bullet_list([
+                    "Финансовым директорам и бухгалтерам — быстрый анализ и выводы для руководства",
+                    "Банкирам и кредитным аналитикам — оценка платёжеспособности заёмщика",
+                    "Инвесторам и собственникам — понимание финансового состояния компании",
+                    "Налоговым консультантам — поиск рисков в налоговой отчётности",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Статус",
+                price_box("Статус", "Скоро", "Пакет готовится к запуску. Подключение появится позже."),
+            ),
+        ],
+        "cta_primary": ("Связаться", "../index.html#contact"),
+        "cta_secondary": None,
+    },
+    {
+        "slug": "presentations",
+        "filename": "presentations.html",
+        "title": "Презентации",
+        "meta_title": "Пакет «Презентации» — Zakon-AI",
+        "meta_description": "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки.",
+        "hero_icon": "presentation",
+        "status": ("Доступно", "live"),
+        "lead": "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки.",
+        "sections": lambda: [
+            section(
+                "presentation",
+                "Зачем нужен этот пакет",
+                """
+                <p>Собрать сильную презентацию — это не только красивые слайды. Нужно выбрать историю, выстроить логику, уложиться во время и сформулировать тезисы так, чтобы аудитория запомнила главное.</p>
+                <p><strong>Пакет «Презентации»</strong> помогает пройти путь от идеи до готового каркаса: структура, тексты, спикерские заметки, визуализация и чек-лист перед выступлением.</p>
+                <p><strong>Результат:</strong> рабочий каркас презентации за минуты — для совещания, питча, отчёта или обучения.</p>
+                """,
+            ),
+            section(
+                "stack",
+                "Что умеет помощник",
+                card_grid([
+                    {"icon": "target", "title": "Структура и сценарий", "text": "Цель, аудитория, длительность, логика «проблема → решение → доказательства → призыв»"},
+                    {"icon": "file-text", "title": "Тексты слайдов", "text": "Короткие заголовки, буллеты без воды, титульный и финальный слайды"},
+                    {"icon": "message", "title": "Спикерские заметки", "text": "Что говорить к каждому слайду, где пауза, какие вопросы ожидать"},
+                    {"icon": "layers", "title": "Редактура и сжатие", "text": "Длинный документ или отчёт → компактная презентация"},
+                    {"icon": "chart", "title": "Варианты визуализации", "text": "Таблица, схема, таймлайн или ключевая цифра"},
+                    {"icon": "check", "title": "Чек-лист перед выступлением", "text": "Ясность, перегруз слайдов, тайминг, сильное закрытие"},
+                ]),
+            ),
+            section(
+                "message",
+                "Как это работает",
+                steps([
+                    {"icon": "wallet", "title": "Подключите пакет", "text": "В разделе «Пакеты» нажмите «Подключить» и подтвердите оплату."},
+                    {"icon": "folder", "title": "Откройте проект", "text": "Проект «Презентации» — можно загрузить исходные материалы в папку пакета."},
+                    {"icon": "message", "title": "Опишите задачу", "text": "Тема, аудитория, длительность — получите структуру, тексты и спикерские заметки."},
+                ]),
+            ),
+            section(
+                "message",
+                "Примеры запросов",
+                quote_list([
+                    "«Собери структуру презентации на 10 минут для руководства о результатах квартала»",
+                    "«Преврати этот отчёт в 8 слайдов: вывод, цифры, риски, next steps»",
+                    "«Сожми презентацию с 20 до 12 слайдов, сохрани главный месседж»",
+                ]),
+            ),
+            section(
+                "users",
+                "Кому полезен",
+                bullet_list([
+                    "Руководителям и менеджерам — отчёты и статусные презентации",
+                    "Продажам — питчи и коммерческие предложения",
+                    "Аналитикам и консультантам — упаковка выводов для заказчика",
+                    "HR и обучению — учебные и онбординг-материалы",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Стоимость",
+                price_box("Подключение пакета", "2 990 ₽ / мес", "Списание с расчётного счёта. Ответы в чате — с баланса ИИ."),
+            ),
+        ],
+        "cta_primary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_secondary": None,
+    },
+    {
+        "slug": "tenders",
+        "filename": "tenders.html",
+        "title": "Тендерный специалист",
+        "meta_title": "Пакет «Тендерный специалист» — Zakon-AI",
+        "meta_description": "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке с опорой на 44-ФЗ и 223-ФЗ.",
+        "hero_icon": "gavel",
+        "status": ("Доступно", "live"),
+        "lead": "Профессиональный ИИ-помощник для работы с госзакупками.",
+        "sections": lambda: [
+            section(
+                "target",
+                "Зачем нужен этот пакет",
+                """
+                <p><strong>В мире госзакупок цена ошибки измеряется миллионами.</strong> Одна неточность, пропущенный срок или неверно истолкованная норма — и заявка отклонена.</p>
+                <p><strong>Пакет «Тендерный специалист»</strong> за секунды анализирует документацию, находит скрытые риски и подсказывает, стоит ли участвовать. Ответы с опорой на 44-ФЗ, 223-ФЗ и подзаконные акты.</p>
+                <p><strong>Результат:</strong> взвешенные решения быстрее, меньше дорогостоящих ошибок, больше времени на сильные заявки.</p>
+                """,
+            ),
+            section(
+                "gift",
+                "Тестовый период",
+                """
+                <p>7 дней бесплатно: <strong>5 анализов тендеров по ссылкам с zakupki.gov.ru</strong>, +70 МБ для документов. Тест один раз на пакет, без списаний с расчётного счёта.</p>
+                """,
+            ),
+            section(
+                "stack",
+                "Что внутри пакета",
+                card_grid([
+                    {"icon": "scale", "title": "Базовые законы о закупках", "text": "44-ФЗ и 223-ФЗ с актуальными изменениями — процедуры, требования, контрактная логика.", "meta": "44-ФЗ, 223-ФЗ"},
+                    {"icon": "gavel", "title": "Антимонопольный блок", "text": "135-ФЗ и разъяснения ФАС — допуск, ограничения, оспаривание формулировок.", "meta": "135-ФЗ, разъяснения ФАС"},
+                    {"icon": "file-text", "title": "Смежные подзаконные акты", "text": "Постановления Правительства и федеральные акты для специальных условий и процедур.", "meta": "ПП РФ, федеральные акты"},
+                ]),
+            ),
+            section(
+                "message",
+                "Как это работает",
+                steps([
+                    {"icon": "wallet", "title": "Подключение", "text": "Оплата с расчётного счёта или «Попробовать» — появятся папка и проект «Тендеры»."},
+                    {"icon": "message", "title": "Работа в проекте", "text": "Создайте чат — нормативная база уже прикреплена."},
+                    {"icon": "target", "title": "Ссылка и анализ", "text": "Отправьте URL извещения с zakupki.gov.ru — система скачает документы и вернёт карточку с рисками."},
+                ]),
+            ),
+            section(
+                "users",
+                "Для кого этот пакет",
+                bullet_list([
+                    "Специалисты по закупкам — проверка требований и формулировок заявки",
+                    "Юристы поставщиков и заказчиков — поиск нормы под спорную ситуацию",
+                    "Коммерческие отделы — сверка условий до подачи заявки",
+                    "Консультанты по 44-ФЗ и 223-ФЗ — опора на документы, а не на память",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Стоимость",
+                price_box("Подключение пакета", "2 990 ₽ / мес", "Списание с расчётного счёта. Ответы в чате — с баланса ИИ."),
+            ),
+        ],
+        "cta_primary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_secondary": None,
+    },
+    {
+        "slug": "deep-reasoning",
+        "filename": "deep-reasoning.html",
+        "title": "Глубокое размышление",
+        "meta_title": "Пакет «Глубокое размышление» — Zakon-AI",
+        "meta_description": "Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.",
+        "hero_icon": "brain",
+        "status": ("Доступно", "live"),
+        "lead": "Режим для сложных вопросов по документам.",
+        "sections": lambda: [
+            section(
+                "brain",
+                "Зачем нужен этот пакет",
+                """
+                <p>Нормы в документах часто неоднозначны: одна модель может уверенно выдать единственный вариант, хотя спорных трактовок несколько. Когда речь о договоре на миллионы или решении об участии в тендере — цена ошибки слишком высока.</p>
+                <p><strong>Пакет «Глубокое размышление»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
+                <p><strong>Результат:</strong> не упрощённый вердикт «да/нет», а взвешенный разбор с опорой на документы.</p>
+                """,
+            ),
+            section(
+                "gift",
+                "Тестовый период",
+                """
+                <p><strong>5 глубоких вопросов</strong> бесплатно — один раз на пакет, без списания с расчётного счёта. На бесплатном периоде приложения тест заканчивается вместе с ним.</p>
+                """,
+            ),
+            section(
+                "layers",
+                "Как это работает",
+                steps([
+                    {"icon": "message", "title": "Задайте сложный вопрос", "text": "В любом чате с прикреплёнными документами — как в обычной работе."},
+                    {"icon": "layers", "title": "Несколько моделей", "text": "Запрос уходит к нескольким сильным моделям — каждая смотрит на ситуацию под своим углом."},
+                    {"icon": "brain", "title": "Сводный итог", "text": "Продвинутая модель собирает разбор: согласие, расхождения, риски подходов — со ссылками на источники."},
+                ]),
+            ),
+            section(
+                "scale",
+                "Что вы получите в ответе",
+                check_list([
+                    "Разбор ситуации по документам: где модели согласны и расходятся",
+                    "Без принудительного «да/нет» — итог помогает принять решение",
+                    "Ссылки на источники из документов — как в обычном чате",
+                ]),
+            ),
+            section(
+                "target",
+                "Когда использовать",
+                bullet_list([
+                    "Спорная норма или формулировка в договоре",
+                    "Выбор между вариантами с разными рисками",
+                    "Тонкости розничного и оптового рынка, регулируемых отраслей",
+                    "Решение об участии в тендере с высокими ставками",
+                ]),
+            ),
+            section(
+                "wallet",
+                "Стоимость",
+                price_box("Подключение пакета", "2 990 ₽ / мес", "Глубокий запрос ≈ 45–90 ₽ с баланса ИИ. Списание с расчётного — за подключение."),
+            ),
+        ],
+        "cta_primary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_secondary": None,
+    },
+]
+
+
+def render_page(pkg: dict) -> str:
+    status_text, status_kind = pkg["status"]
+    sections_html = "".join(pkg["sections"]())
+
+    cta_secondary = ""
+    if pkg.get("cta_secondary"):
+        label, href = pkg["cta_secondary"]
+        cta_secondary = f'<a href="{esc(href)}" class="btn btn-secondary">{esc(label)}</a>'
+
+    cta_primary_label, cta_primary_href = pkg["cta_primary"]
+    external = ' target="_blank" rel="noopener noreferrer"' if cta_primary_href.startswith("http") else ""
+
+    return f"""<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>{esc(pkg["meta_title"])}</title>
+  <meta name="description" content="{esc(pkg["meta_description"])}">
+  <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="../js/redirect.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/lang.js"></script>
+  <link rel="stylesheet" href="../css/styles.css?v=48">
+  <link rel="stylesheet" href="../css/package-pages.css?v=1">
+</head>
+<body data-page="package">
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../index.html" class="logo">
+          <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+        </a>
+        <p class="header-tagline">ИИ-помощник для работы<br>с Вашими документами</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html#pricing">Пакеты</a>
+        <a href="../index.html#how">Как работает</a>
+        <a href="../index.html#faq">FAQ</a>
+        <a href="../index.html#contact" class="btn btn-primary btn-contact-shimmer">Связаться</a>
+      </nav>
+      <div class="header-tools">
+        <div class="theme-switch" role="group" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" aria-label="Тёмная тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <main class="pkg-page">
+    <div class="container pkg-page-inner">
+      <a href="../index.html#pricing" class="pkg-back">← К пакетам</a>
+
+      <header class="pkg-hero">
+        <div class="pkg-hero-icon">{icon(pkg["hero_icon"])}</div>
+        <div class="pkg-hero-body">
+          <h1>{esc(pkg["title"])}</h1>
+          <p class="pkg-hero-lead">{esc(pkg["lead"])}</p>
+          <span class="pkg-status-badge pkg-status-badge--{status_kind}">{esc(status_text)}</span>
+        </div>
+      </header>
+
+      {sections_html}
+
+      <div class="pkg-cta-bar">
+        <a href="{esc(cta_primary_href)}" class="btn btn-primary btn-contact-shimmer"{external}>{esc(cta_primary_label)}</a>
+        {cta_secondary}
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" style="margin-bottom: 8px;">
+          <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="32" height="32" alt="">
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+        </a>
+        <p class="footer-tagline">ИИ-консультант на базе технологии RAG<br>для корпоративных баз знаний и документов.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html#pricing">Пакеты</a>
+        <a href="../index.html#contact">Связаться</a>
+      </div>
+      <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=26"></script>
+</body>
+</html>
+"""
+
+
+def main() -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    for pkg in PACKAGES:
+        path = OUT_DIR / pkg["filename"]
+        path.write_text(render_page(pkg), encoding="utf-8")
+        print(f"Wrote {path.name}")
+
+
+if __name__ == "__main__":
+    main()

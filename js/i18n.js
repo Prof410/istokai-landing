@@ -229,6 +229,7 @@
       "pricing.pkg6.text":
         "Режим для сложных вопросов по документам.",
       "pricing.pkg6.status": "Доступно",
+      "pricing.pkgLink": "Подробнее",
       "pricing.note":
         "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.",
 
@@ -750,6 +751,7 @@
       "pricing.pkg6.text":
         "Mode for complex questions about your documents.",
       "pricing.pkg6.status": "Available",
+      "pricing.pkgLink": "Learn more",
       "pricing.note":
         "Exact limits and pricing are confirmed when you sign up — leave a request below or message us on Telegram.",
 

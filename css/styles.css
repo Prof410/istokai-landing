@@ -2852,6 +2852,19 @@ img {
   margin-top: 10px;
 }
 
+.package-card .package-link + .package-link {
+  margin-top: 6px;
+}
+
+.package-link--secondary {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.package-link--secondary:hover {
+  color: var(--accent);
+}
+
 .package-link {
   font-size: 0.88rem;
   font-weight: 600;
