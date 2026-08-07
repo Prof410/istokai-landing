@@ -203,20 +203,32 @@
       "pricing.tier3.btn": "Обсудить внедрение",
       "pricing.packages.title": "Готовые пакеты",
       "pricing.packages.lead":
-        "Платформа для своих документов плюс отраслевые наборы — подключаются в приложении.",
-      "pricing.pkg1.title": "Платформа",
+        "База для своих документов и отраслевые режимы — подключаются в приложении Zakon-AI.",
+      "pricing.pkg1.title": "Ваши документы",
       "pricing.pkg1.text":
-        "Ваши договоры, регламенты и база знаний — загружаете сами, задаёте вопросы в чате.",
+        "Ваша личная или командная база знаний — договоры, регламенты, инструкции и любые файлы.",
       "pricing.pkg1.status": "Доступно",
       "pricing.pkg2.title": "Энергетика",
       "pricing.pkg2.text":
-        "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности. Ответы по нормам со ссылками на пункты документов.",
+        "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности.",
       "pricing.pkg2.status": "Доступно",
       "pricing.pkg2.link": "Читать кейс",
-      "pricing.pkg3.title": "Тендерный специалист",
+      "pricing.pkg3.title": "Финансовый анализ",
       "pricing.pkg3.text":
-        "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке zakupki.gov.ru с опорой на 44-ФЗ и 223-ФЗ.",
-      "pricing.pkg3.status": "Доступно",
+        "ИИ-помощник для разбора бухгалтерской, финансовой и налоговой отчётности юридических лиц.",
+      "pricing.pkg3.status": "Скоро",
+      "pricing.pkg4.title": "Презентации",
+      "pricing.pkg4.text":
+        "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки.",
+      "pricing.pkg4.status": "Доступно",
+      "pricing.pkg5.title": "Тендерный специалист",
+      "pricing.pkg5.text":
+        "Профессиональный ИИ-помощник для работы с госзакупками.",
+      "pricing.pkg5.status": "Доступно",
+      "pricing.pkg6.title": "Глубокое размышление",
+      "pricing.pkg6.text":
+        "Режим для сложных вопросов по документам.",
+      "pricing.pkg6.status": "Доступно",
       "pricing.note":
         "Точные лимиты и стоимость уточняйте при подключении — оставьте заявку ниже или напишите в Telegram.",
 
@@ -712,20 +724,32 @@
       "pricing.tier3.btn": "Discuss rollout",
       "pricing.packages.title": "Ready-made packages",
       "pricing.packages.lead":
-        "Platform for your own documents plus industry packs — connect them in the app.",
-      "pricing.pkg1.title": "Platform",
+        "Your document base plus industry modes — connect them in the Zakon-AI app.",
+      "pricing.pkg1.title": "Your documents",
       "pricing.pkg1.text":
-        "Your contracts, policies, and knowledge base — you upload, you ask questions in chat.",
+        "Your personal or team knowledge base — contracts, policies, instructions, and any files.",
       "pricing.pkg1.status": "Available",
       "pricing.pkg2.title": "Energy",
       "pricing.pkg2.text":
-        "AI expert on the electricity and capacity market regulatory base. Answers with links to specific document clauses.",
+        "AI expert on the electricity and capacity market regulatory base.",
       "pricing.pkg2.status": "Available",
       "pricing.pkg2.link": "Read case study",
-      "pricing.pkg3.title": "Tender specialist",
+      "pricing.pkg3.title": "Financial analysis",
       "pricing.pkg3.text":
-        "Professional AI assistant for public procurement. Tender review from a zakupki.gov.ru link, grounded in 44-FZ and 223-FZ.",
-      "pricing.pkg3.status": "Available",
+        "AI assistant for reviewing accounting, financial, and tax reports of legal entities.",
+      "pricing.pkg3.status": "Coming soon",
+      "pricing.pkg4.title": "Presentations",
+      "pricing.pkg4.text":
+        "AI assistant for building presentations: structure, slides, copy, and speaker notes.",
+      "pricing.pkg4.status": "Available",
+      "pricing.pkg5.title": "Tender specialist",
+      "pricing.pkg5.text":
+        "Professional AI assistant for public procurement.",
+      "pricing.pkg5.status": "Available",
+      "pricing.pkg6.title": "Deep reasoning",
+      "pricing.pkg6.text":
+        "Mode for complex questions about your documents.",
+      "pricing.pkg6.status": "Available",
       "pricing.note":
         "Exact limits and pricing are confirmed when you sign up — leave a request below or message us on Telegram.",
 
