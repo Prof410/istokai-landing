@@ -519,8 +519,8 @@ PACKAGES = [
                 ("Узнать о тарифах", "https://app.zakon-ai.ru"),
             ),
         ],
-        "cta_primary": ("Попробовать бесплатно", "https://app.zakon-ai.ru"),
-        "cta_secondary": ("Открыть приложение", "https://app.zakon-ai.ru"),
+        "cta_primary": None,
+        "cta_secondary": None,
     },
     {
         "slug": "deep-reasoning",
@@ -597,8 +597,15 @@ def render_page(pkg: dict) -> str:
         label, href = pkg["cta_secondary"]
         cta_secondary = f'<a href="{esc(href)}" class="btn btn-secondary">{esc(label)}</a>'
 
-    cta_primary_label, cta_primary_href = pkg["cta_primary"]
-    external = ' target="_blank" rel="noopener noreferrer"' if cta_primary_href.startswith("http") else ""
+    cta_bar = ""
+    if pkg.get("cta_primary"):
+        cta_primary_label, cta_primary_href = pkg["cta_primary"]
+        external = ' target="_blank" rel="noopener noreferrer"' if cta_primary_href.startswith("http") else ""
+        cta_bar = f"""
+      <div class="pkg-cta-bar">
+        <a href="{esc(cta_primary_href)}" class="btn btn-primary btn-contact-shimmer"{external}>{esc(cta_primary_label)}</a>
+        {cta_secondary}
+      </div>"""
 
     return f"""<!DOCTYPE html>
 <html lang="ru">
@@ -661,11 +668,7 @@ def render_page(pkg: dict) -> str:
       </header>
 
       {sections_html}
-
-      <div class="pkg-cta-bar">
-        <a href="{esc(cta_primary_href)}" class="btn btn-primary btn-contact-shimmer"{external}>{esc(cta_primary_label)}</a>
-        {cta_secondary}
-      </div>
+{cta_bar}
     </div>
   </main>
 
