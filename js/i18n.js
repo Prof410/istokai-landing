@@ -225,7 +225,7 @@
       "pricing.pkg5.text":
         "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке с опорой на 44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ, ПП РФ (1005, 1875, 878 и др.) и ведомственные акты — риски и ключевые факты за минуты.",
       "pricing.pkg5.status": "Доступно",
-      "pricing.pkg6.title": "Глубокое размышление",
+      "pricing.pkg6.title": "Экспертное мнение",
       "pricing.pkg6.text":
         "Режим для сложных вопросов по документам. Несколько моделей разбирают ситуацию с разных сторон — взвешенный итог с точками согласия, расхождениями и рисками.",
       "pricing.pkg6.status": "Доступно",
@@ -746,7 +746,7 @@
       "pricing.pkg5.text":
         "Professional AI assistant for public procurement. Tender review from a link, grounded in 44-FZ, 223-FZ, 135-FZ, 63-FZ, Government Decrees (1005, 1875, 878, etc.), and departmental acts — risks and key facts in minutes.",
       "pricing.pkg5.status": "Available",
-      "pricing.pkg6.title": "Deep reasoning",
+      "pricing.pkg6.title": "Expert opinion",
       "pricing.pkg6.text":
         "Mode for complex questions about your documents. Several models examine the situation from different angles — a balanced summary of agreement, disagreement, and risks.",
       "pricing.pkg6.status": "Available",
