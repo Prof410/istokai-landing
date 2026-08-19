@@ -211,7 +211,7 @@
       "pricing.pkg2.title": "Энергетика",
       "pricing.pkg2.text":
         "ИИ-эксперт по нормативной базе рынка электроэнергии и мощности. Ответы по нормам со ссылками на пункты — постановления Правительства, приказы Минэнерго, методические указания ФАС.",
-      "pricing.pkg2.status": "Доступно",
+      "pricing.pkg2.status": "Скоро",
       "pricing.pkg2.link": "Читать кейс",
       "pricing.pkg3.title": "Финансовый анализ",
       "pricing.pkg3.text":
@@ -220,7 +220,7 @@
       "pricing.pkg4.title": "Презентации",
       "pricing.pkg4.text":
         "ИИ-помощник по созданию презентаций: структура, слайды, тексты и спикерские заметки. От идеи до готового каркаса — для совещания, питча, отчёта или обучения.",
-      "pricing.pkg4.status": "Доступно",
+      "pricing.pkg4.status": "Скоро",
       "pricing.pkg5.title": "Тендерный специалист",
       "pricing.pkg5.text":
         "Профессиональный ИИ-помощник для работы с госзакупками. Разбор тендера по ссылке с опорой на 44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ, ПП РФ (1005, 1875, 878 и др.) и ведомственные акты — риски и ключевые факты за минуты.",
@@ -732,7 +732,7 @@
       "pricing.pkg2.title": "Energy",
       "pricing.pkg2.text":
         "AI expert on the electricity and capacity market regulatory base. Answers grounded in specific clauses — government resolutions, Ministry of Energy orders, and FAS guidance.",
-      "pricing.pkg2.status": "Available",
+      "pricing.pkg2.status": "Coming soon",
       "pricing.pkg2.link": "Read case study",
       "pricing.pkg3.title": "Financial analysis",
       "pricing.pkg3.text":
@@ -741,7 +741,7 @@
       "pricing.pkg4.title": "Presentations",
       "pricing.pkg4.text":
         "AI assistant for building presentations: structure, slides, copy, and speaker notes. From idea to a working deck — for meetings, pitches, reports, or training.",
-      "pricing.pkg4.status": "Available",
+      "pricing.pkg4.status": "Coming soon",
       "pricing.pkg5.title": "Tender specialist",
       "pricing.pkg5.text":
         "Professional AI assistant for public procurement. Tender review from a link, grounded in 44-FZ, 223-FZ, 135-FZ, 63-FZ, Government Decrees (1005, 1875, 878, etc.), and departmental acts — risks and key facts in minutes.",
