@@ -3,19 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Пакет «Тендерный специалист» — Zakon-AI</title>
-  <meta name="description" content="ИИ-помощник по госзакупкам для участника и заказчика: разбор документации, риски и замечания с опорой на 44-ФЗ, 223-ФЗ и подзаконные акты.">
+  <title>Тендерный специалист — ИИ-разбор госзакупок | Zakon-AI</title>
+  <meta name="description" content="Проверьте тендер до подачи заявки: карточка закупки, риски, чек-лист допуска и вопросы организатору. 44-ФЗ, 223-ФЗ, цитаты из документов. 7 дней бесплатно.">
+  <link rel="canonical" href="https://zakon-ai.ru/packages/tenders.html">
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
-  <script src="../js/lang.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=48">
-  <link rel="stylesheet" href="../css/package-pages.css?v=3">
+  <link rel="stylesheet" href="../css/styles.css?v=52">
+  <link rel="stylesheet" href="../css/package-pages.css?v=4">
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110508043', 'ym');
+    ym(110508043, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+  </script>
 </head>
-<body data-page="package">
+<body data-page="tenders-landing">
+  <noscript><div><img src="https://mc.yandex.ru/watch/110508043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
   <header class="header">
     <div class="container header-inner">
       <div class="header-brand">
@@ -23,13 +34,15 @@
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="header-tagline">ИИ-помощник для работы<br>с Вашими документами</p>
+        <p class="header-tagline">ИИ-помощник по госзакупкам<br>для участника и заказчика</p>
       </div>
       <nav class="nav">
-        <a href="../index.html#pricing">Пакеты</a>
-        <a href="../index.html#how">Как работает</a>
-        <a href="../index.html#faq">FAQ</a>
-        <a href="../index.html#contact" class="btn btn-primary btn-contact-shimmer">Связаться</a>
+        <a href="#outcomes">Зачем</a>
+        <a href="#how">Как работает</a>
+        <a href="#benefits">Возможности</a>
+        <a href="#pricing">Тариф</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать</a>
       </nav>
       <div class="header-tools">
         <div class="theme-switch" role="group" aria-label="Тема">
@@ -45,158 +58,580 @@
     </div>
   </header>
 
-  <main class="pkg-page">
-    <div class="container pkg-page-inner">
-      <a href="../index.html#pricing" class="pkg-back">← К пакетам</a>
-
-      <header class="pkg-hero">
-        <div class="pkg-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg></div>
-        <div class="pkg-hero-body">
-          <h1>Тендерный специалист</h1>
-          <p class="pkg-hero-lead">ИИ-помощник по госзакупкам для участника и заказчика — разбор документации, риски и замечания с опорой на актуальные законы, постановления Правительства и ведомственные акты.</p>
-          <span class="pkg-status-badge pkg-status-badge--live">Доступно</span>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <p class="hero-eyebrow">Пакет «Тендерный специалист» · доступен сейчас</p>
+          <h1 class="hero-title" id="hero-title" data-typing-text="Проверьте закупку до заявки — за минуты, не за часы">
+            <span class="hero-title-text" id="hero-title-text"></span><span class="type-cursor hero-title-cursor" id="hero-title-cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero-lead">
+            ИИ разбирает извещение, техническое задание и проект контракта — с опорой на 44-ФЗ, 223-ФЗ и актуальную нормативную базу.
+            Каждый риск и каждый вывод можно проверить по цитате из исходного документа.
+          </p>
+          <p class="hero-lead hero-lead-second">
+            Один инструмент для участника и заказчика: оценить «стоит ли участвовать», найти ловушки в договоре или подготовить замечания к комплекту до публикации.
+          </p>
+          <div class="tenders-hero-badges">
+            <span class="tenders-hero-badge"><strong>7 дней</strong> бесплатно</span>
+            <span class="tenders-hero-badge"><strong>44-ФЗ · 223-ФЗ</strong></span>
+            <span class="tenders-hero-badge">без ручного чтения PDF</span>
+          </div>
+          <div class="hero-stats stats-row">
+            <div class="stat-card">
+              <div class="stat-value">~5 мин</div>
+              <div class="stat-label">от ссылки до отчёта</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">5</div>
+              <div class="stat-label">анализов в тестовом доступе</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Цитаты</div>
+              <div class="stat-label">из ТЗ, контракта и извещения</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">2 стороны</div>
+              <div class="stat-label">участник и заказчик</div>
+            </div>
+          </div>
+          <div class="hero-actions hero-actions--pair">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
+            <a href="#how" class="btn btn-secondary">Как это работает</a>
+          </div>
         </div>
-      </header>
 
-      
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <h2>Зачем нужен этот пакет</h2>
-      </div>
-      <div class="pkg-section-body">
-                <p><strong>В госзакупках одна процедура — две стороны, и у каждой свои риски.</strong> Участнику достаточно жёсткой формулировки в проекте контракта — и заявку отклонят или контракт станет убыточным. Заказчику достаточно противоречия между извещением, ТЗ и договором — и процедуру оспорят, а сроки сорвутся.</p>
-                <p><strong>Пакет «Тендерный специалист»</strong> одинаково полезен исполнителю и заказчику: за секунды разбирает десятки страниц документации, находит риски и помогает сформулировать замечания. Ответы не из общих рассуждений — с опорой на текст ваших файлов, актуальную нормативную базу пакета (44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ, постановления Правительства, ведомственные акты) и точные ссылки на источники.</p>
-                <p><strong>Результат:</strong> быстрее принимаете решения, меньше ручного чтения PDF и DOC, ниже риск отклонения заявки, оспаривания процедуры или подписания невыгодного контракта — неважно, с какой стороны вы работаете.</p>
-                </div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h2>Участник и заказчик — один инструмент</h2>
-      </div>
-      <div class="pkg-section-body">
-                <p>Не нужно два разных сервиса. Загрузите документацию или отправьте ссылку на извещение — и задайте вопрос с вашей роли: «стоит ли участвовать», «что исправить перед публикацией», «составь замечания к проекту договора».</p>
-                <ul class="pkg-card-grid"><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><p class="pkg-card-title">Участник (исполнитель)</p></div>
-              <p class="pkg-card-text">Карточка закупки и риски по извещению, ТЗ и проекту договора. Оценка «стоит ли участвовать», чек-лист заявки, замечания к проекту контракта — что разъяснить или оспорить.</p>
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12h12"/><path d="M6 16h12"/><path d="M6 20h12"/><path d="M6 8h12"/></svg><p class="pkg-card-title">Заказчик</p></div>
-              <p class="pkg-card-text">Проверка комплекта до публикации: согласованность извещения, ТЗ и договора, соответствие 44-ФЗ / 223-ФЗ. Структурированные замечания к черновику — для внутренней доработки и снижения риска претензий ФАС.</p>
-            </li></ul>
-                <p>В чате можно попросить составить <strong>замечания к документам</strong> — по пунктам, со ссылками на источник. Это работает и для участника, и для заказчика.</p>
-                </div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div>
-        <h2>Тестовый период: попробуйте перед покупкой</h2>
-      </div>
-      <div class="pkg-section-body">
-                <p>Мы понимаем: прежде чем доверить ИИ важные задачи, нужно убедиться в его компетенции. Поэтому даём <strong>7 дней бесплатного доступа</strong>.</p>
-                <ul class="pkg-check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>5 полных анализов тендеров по ссылкам с zakupki.gov.ru</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>+70 МБ дополнительного места для ваших документов</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Полноценный доступ ко всем функциям пакета без ограничений по времени суток</span></li></ul>
-                <p class="pkg-note"><em>Тест доступен один раз на пакет. Никаких скрытых списаний с расчётного счёта: просто нажмите «Попробовать».</em></p>
-                </div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
-        <h2>Что внутри пакета</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-card-grid"><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><p class="pkg-card-title">Федеральные законы</p></div>
-              <p class="pkg-card-text">Контрактная система, корпоративные закупки, защита конкуренции и смежные ограничения для участников процедур.</p>
-              <p class="pkg-card-meta">44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ</p>
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg><p class="pkg-card-title">Постановления Правительства РФ</p></div>
-              <p class="pkg-card-text">Банковские гарантии, допуск участников, национальный режим, ограничения на иностранное ПО и правила проведения закупок.</p>
-              <p class="pkg-card-meta">1005-ПП, 1236-ПП, 1875-ПП, 238-ПП, 2571-ПП, 2604-ПП, 878-ПП</p>
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><p class="pkg-card-title">Ведомственные акты</p></div>
-              <p class="pkg-card-text">Методика расчёта НМЦК и практические разъяснения по применению норм закупок.</p>
-              <p class="pkg-card-meta">567-ПР, 158Н, 258-Н</p>
-            </li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></div>
-        <h2>Инструменты для работы с тендерами</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-card-grid"><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg><p class="pkg-card-title">Замечания к документам</p></div>
-              <p class="pkg-card-text">Попросите составить замечания к извещению, ТЗ или проекту договора — по пунктам, со ссылками на источник. Подходит и участнику, и заказчику.</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><p class="pkg-card-title">Готовые шаблоны запросов</p></div>
-              <p class="pkg-card-text">«Найти все штрафы», «Составить чек-лист для заявки», «Сравнить условия», «Подготовить замечания к проекту контракта» — ИИ ответит по вашим документам и нормам пакета.</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><p class="pkg-card-title">Сравнительные таблицы</p></div>
-              <p class="pkg-card-text">Попросите ИИ сравнить несколько тендеров — получите таблицу (Сроки | Обеспечение | Штрафы) и экспорт в Excel в один клик.</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><p class="pkg-card-title">Проверка по источнику</p></div>
-              <p class="pkg-card-text">Каждая ссылка в блоке рисков кликабельна: откроется нужный файл, а в тексте подсветится фрагмент, подтверждающий риск.</p>
-              
-            </li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h2>Как это работает</h2>
-      </div>
-      <div class="pkg-section-body"><ol class="pkg-steps"><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></div>
-              <p class="pkg-card-title">Подключение</p>
-              <p class="pkg-card-text">Оплатите пакет или нажмите «Попробовать». В аккаунте появится проект «Тендеры» с уже загруженной нормативной базой.</p>
-            </li><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-              <p class="pkg-card-title">Анализ по ссылке</p>
-              <p class="pkg-card-text">Отправьте URL извещения с zakupki.gov.ru в чат. Система скачает документацию и вернёт структурированную карточку с рисками.</p>
-            </li><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></div>
-              <p class="pkg-card-title">Работа с файлами</p>
-              <p class="pkg-card-text">Загружайте извещения, ТЗ и проекты договоров. Спросите как участник или как заказчик: «Проверь проект контракта», «Составь замечания к ТЗ», «Есть ли противоречия с 223-ФЗ».</p>
-            </li></ol></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h2>Для кого этот пакет</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-bullet-list"><li>Тендерные специалисты и отделы продаж (участник) — риски участия, чек-листы, замечания к контракту</li><li>Службы заказчика — проверка комплекта до публикации, замечания к черновикам</li><li>Юристы поставщиков и заказчиков — нормы, ФАС, формулировки замечаний с опорой на закон</li><li>Консультанты по 44-ФЗ и 223-ФЗ — разбор для клиента с любой стороны процедуры</li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h2>Безопасность и конфиденциальность</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Сервис работает на серверах в РФ (полное соответствие 152-ФЗ)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Загруженные документы и тендерная документация никогда не используются для обучения языковых моделей</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Ваши данные изолированы и доступны только вам и вашей команде</span></li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></div>
-        <h2>Стоимость</h2>
-      </div>
-      <div class="pkg-section-body"><div class="pkg-price-grid"><div class="pkg-price-card">
-              <p class="pkg-price-label">Тест</p>
-              <p class="pkg-price-value">7 дней бесплатно</p>
-              <p class="pkg-price-note">5 анализов по ссылкам с zakupki.gov.ru</p>
-            </div><div class="pkg-price-card pkg-price-card--featured">
-              <p class="pkg-price-label">Полный доступ</p>
-              <p class="pkg-price-value">2 990 ₽ / мес</p>
-              <p class="pkg-price-note">Ответы модели в чате списываются с баланса ИИ. Подключение пакета — с расчётного счёта.</p>
-            </div></div></div>
-    </section><section class="pkg-final-cta">
-      <h2>Готовы ускорить работу с тендерами?</h2>
-      <p>Подключите пакет «Тендерный специалист» — для участника и заказчика: разбор документации, риски, замечания и уверенность в каждом решении по закупке.</p>
-      <div class="pkg-final-cta-actions">
-        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
-        <a href="https://app.zakon-ai.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Узнать о тарифах</a>
+        <div class="tenders-report-mockup" aria-hidden="true">
+          <div class="tenders-report-head">
+            <span>Отчёт по тендеру · zakupki.gov.ru</span>
+            <span class="tenders-report-live">● готово</span>
+          </div>
+          <div class="tenders-report-body">
+            <div class="tenders-report-verdict">Участвовать с оговорками</div>
+            <ul class="tenders-report-rows">
+              <li><span>НМЦК</span><strong>12,4 млн ₽</strong></li>
+              <li><span>Обеспечение</span><strong>1,5% · 14 дней</strong></li>
+              <li><span>Риски</span><strong>3 критичных</strong></li>
+              <li><span>Чек-лист</span><strong>8 пунктов допуска</strong></li>
+            </ul>
+            <blockquote class="tenders-report-quote">
+              «Размер обеспечения исполнения контракта составляет 5% от НМЦК…»
+              <cite>→ Проект контракта, п. 21</cite>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </section>
 
-    </div>
+    <section class="section section--soft" id="outcomes">
+      <div class="container">
+        <p class="section-label">Зачем</p>
+        <h2 class="section-title">Зачем нужен этот пакет</h2>
+        <p class="section-subtitle">
+          В госзакупках одна процедура — две стороны, и у каждой свои риски. Участнику достаточно жёсткой формулировки в проекте контракта — и заявку отклонят или контракт станет убыточным.
+          Заказчику достаточно противоречия между извещением, ТЗ и договором — и процедуру оспорят, а сроки сорвутся.
+        </p>
+        <div class="outcome-pillars">
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">⚡</div>
+            <h3>Быстрее решение «участвовать / нет»</h3>
+            <p>Не тратьте полдня на первичный разбор: система собирает документы, выделяет ключевые условия и формирует структурированный отчёт.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">↓</div>
+            <h3>Меньше скрытых рисков</h3>
+            <p>Штрафы, обеспечение, односторонний отказ, несогласованные формулировки — видны до подготовки заявки, а не после отклонения.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">✓</div>
+            <h3>Проверяемые выводы</h3>
+            <p>Ответы не из общих рассуждений: опора на текст ваших файлов, 44-ФЗ, 223-ФЗ и подзаконные акты — с точными ссылками на источники.</p>
+          </article>
+          <article class="outcome-card">
+            <div class="outcome-icon" aria-hidden="true">⇄</div>
+            <h3>Участник и заказчик</h3>
+            <p>Не нужно два разных сервиса. Одна ссылка или загрузка документов — и вопрос с вашей роли: «стоит ли участвовать» или «что исправить перед публикацией».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <p class="section-label">Проблема</p>
+        <h2 class="section-title">Ручной разбор съедает часы — ошибка всплывает уже после заявки</h2>
+        <p class="section-subtitle">
+          Документы разбросаны по файлам: извещение, ТЗ, проект контракта, обоснование НМЦК, требования к участнику.
+          У типичной закупки — десятки и сотни страниц PDF, спрятанных в вкладках ЕИС. Команда тратит время на заявку — и только потом замечает критичный пункт.
+        </p>
+        <div class="tenders-manual-grid">
+          <div class="tenders-manual-card">
+            <h3>Ручной разбор · до 3 часов</h3>
+            <ol>
+              <li>Скачать пакет из ЕИС — 5–12 файлов</li>
+              <li>Прочитать ТЗ — часто 50–200 страниц</li>
+              <li>Разобрать проект договора и обеспечение</li>
+              <li>Сверить требования с 44-ФЗ / 223-ФЗ</li>
+              <li>Собрать выводы в таблицу или Word</li>
+            </ol>
+            <p class="tenders-manual-total">Итого: <em>2–3 часа</em> на одну закупку</p>
+          </div>
+          <div class="tenders-manual-card tenders-manual-card--fast">
+            <h3>Zakon-AI · несколько минут</h3>
+            <ol>
+              <li>Вставьте ссылку с zakupki.gov.ru или загрузите файлы</li>
+              <li>Система скачает и разберёт документацию</li>
+              <li>Получите отчёт: карточка, риски, чек-лист, обеспечение</li>
+              <li>Каждый пункт — с цитатой из первоисточника</li>
+            </ol>
+            <p class="tenders-manual-total">Итого: <em>~5 минут</em> от ссылки до готового отчёта</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="how">
+      <div class="container">
+        <p class="section-label">Процесс</p>
+        <h2 class="section-title">Как это работает</h2>
+        <p class="section-subtitle">
+          Экспресс-разбор занимает несколько минут: система собирает документы, извлекает ключевые параметры,
+          проверяет требования к участникам и формирует отчёт с рисками и рекомендациями.
+        </p>
+
+        <div class="how-flow" id="how-flow">
+          <div class="how-flow-layout">
+            <div class="how-flow-nav" role="tablist" aria-label="Шаги анализа тендера">
+              <button type="button" class="how-flow-tab is-active" role="tab" aria-selected="true" data-how="0" id="how-tab-0" aria-controls="how-panel-0">
+                <span class="how-flow-tab-num">01</span>
+                <span class="how-flow-tab-label">Ссылка</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="1" id="how-tab-1" aria-controls="how-panel-1">
+                <span class="how-flow-tab-num">02</span>
+                <span class="how-flow-tab-label">Документы</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="2" id="how-tab-2" aria-controls="how-panel-2">
+                <span class="how-flow-tab-num">03</span>
+                <span class="how-flow-tab-label">Разбор</span>
+              </button>
+              <button type="button" class="how-flow-tab" role="tab" aria-selected="false" data-how="3" id="how-tab-3" aria-controls="how-panel-3">
+                <span class="how-flow-tab-num">04</span>
+                <span class="how-flow-tab-label">Отчёт</span>
+              </button>
+            </div>
+
+            <div class="how-flow-stage">
+              <div class="how-flow-progress" aria-hidden="true">
+                <div class="how-flow-progress-fill" id="how-flow-progress"></div>
+              </div>
+              <div class="how-flow-panels">
+                <article class="how-flow-panel is-active" role="tabpanel" id="how-panel-0" aria-labelledby="how-tab-0" data-how-panel="0">
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">🔗</span>
+                    <p class="how-flow-quote">zakupki.gov.ru/…</p>
+                  </div>
+                  <h3>Ссылки с zakupki.gov.ru достаточно</h3>
+                  <p>Поддерживаем 44-ФЗ и 223-ФЗ: аукцион, конкурс, запрос котировок и другие процедуры. Вставьте URL извещения — или загрузите документы вручную.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-1" aria-labelledby="how-tab-1" data-how-panel="1" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">📥</span>
+                    <div class="how-flow-chips">
+                      <span>ТЗ</span><span>Контракт</span><span>НМЦК</span>
+                    </div>
+                  </div>
+                  <h3>Скачиваем комплект из ЕИС</h3>
+                  <p>Извещение, техническое задание, проект контракта, обоснование НМЦК, требования к участникам — всё, что заказчик опубликовал на площадке.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-2" aria-labelledby="how-tab-2" data-how-panel="2" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">🔍</span>
+                    <div class="how-flow-scan"><span></span><span></span><span></span></div>
+                  </div>
+                  <h3>Разбираем содержимое построчно</h3>
+                  <p>Извлекаем требования к участнику и предмету закупки, сверяем с нормами 44-ФЗ и 223-ФЗ, ищем противоречия между извещением, ТЗ и договором.</p>
+                </article>
+                <article class="how-flow-panel" role="tabpanel" id="how-panel-3" aria-labelledby="how-tab-3" data-how-panel="3" hidden>
+                  <div class="how-flow-visual" aria-hidden="true">
+                    <span class="how-flow-icon">📋</span>
+                    <p class="how-flow-source">Риск · Документ · Ссылка</p>
+                  </div>
+                  <h3>Получаете отчёт и план действий</h3>
+                  <p>Карточка закупки, блок рисков, чек-лист допуска, обеспечение и вопросы организатору. Каждое утверждение — с цитатой из исходного файла. Отчёт можно скачать в PDF.</p>
+                </article>
+              </div>
+              <div class="how-flow-controls">
+                <button type="button" class="how-flow-arrow" id="how-flow-prev" aria-label="Предыдущий шаг">←</button>
+                <div class="how-flow-dots" id="how-flow-dots" role="presentation"></div>
+                <button type="button" class="how-flow-arrow" id="how-flow-next" aria-label="Следующий шаг">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <p class="section-label">Возможности</p>
+        <h2 class="section-title">Инструменты для работы с тендерами</h2>
+        <p class="section-subtitle">
+          Один отчёт вместо десятка вкладок и файлов. Каждый вывод связан с источником — пунктом ТЗ, проекта контракта или извещения.
+        </p>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">📋</div>
+            <h3>Структурированный отчёт</h3>
+            <p>Карточка закупки, риски, чек-лист допуска, обеспечение и вопросы организатору — в едином формате, готовом к работе команды.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💬</div>
+            <h3>Замечания к документам</h3>
+            <p>Попросите составить замечания к извещению, ТЗ или проекту договора — по пунктам, со ссылками. Подходит и участнику, и заказчику.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Сравнительные таблицы</h3>
+            <p>Сравните несколько закупок: сроки, обеспечение, штрафы — и экспортируйте таблицу в Excel в один клик.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✓</div>
+            <h3>Проверка по источнику</h3>
+            <p>Каждая ссылка в блоке рисков кликабельна: откроется нужный файл, а в тексте подсветится фрагмент, подтверждающий вывод.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚖</div>
+            <h3>Нормативная база в комплекте</h3>
+            <p>44-ФЗ, 223-ФЗ, 135-ФЗ, постановления Правительства и ведомственные акты уже подключены — не нужно собирать базу самостоятельно.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📄</div>
+            <h3>Экспорт отчёта и вопросов</h3>
+            <p>Скачайте полный отчёт в PDF или список вопросов организатору в Word — для согласования внутри команды или отправки на площадку.</p>
+          </article>
+        </div>
+
+        <div class="compare-grid" style="margin-top: 40px;">
+          <div class="compare-card bad">
+            <h3>Без системы</h3>
+            <ul>
+              <li>1–2 закупки в день на первичный отбор</li>
+              <li>Риски видны уже на этапе заявки</li>
+              <li>Часы на PDF, таблицы и повторные проверки</li>
+              <li>Выводы сложно обосновать коллегам</li>
+            </ul>
+          </div>
+          <div class="compare-card good">
+            <h3>С «Тендерным специалистом»</h3>
+            <ul>
+              <li>10–15 закупок для первичного отбора в день</li>
+              <li>Риски и экономика — до подготовки заявки</li>
+              <li>~5 минут от ссылки до готового отчёта</li>
+              <li>Каждый вывод — с цитатой из документа</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="audience">
+      <div class="container">
+        <p class="section-label">Аудитория</p>
+        <h2 class="section-title">Участник и заказчик — один инструмент</h2>
+        <p class="section-subtitle">
+          Сервис нужен тем, кто регулярно выбирает закупки, проверяет документацию и принимает решение: заходить в тендер или не тратить ресурсы команды.
+        </p>
+        <div class="tenders-audience-grid">
+          <article class="tenders-audience-card">
+            <h3>Участник (исполнитель)</h3>
+            <p>Поставщик, подрядчик, претендент. Разбор чужой документации перед подачей заявки: где спрятаны риски, что может стоить отклонения или убытков по контракту.</p>
+            <ul class="pkg-check-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Карточка закупки и риски по извещению, ТЗ и проекту договора</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Оценка целесообразности участия до траты ресурсов на заявку</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Чек-лист документов и замечания к проекту контракта</span></li>
+            </ul>
+          </article>
+          <article class="tenders-audience-card">
+            <h3>Заказчик</h3>
+            <p>Организация, проводящая закупку. Проверка своей документации до публикации: согласованность комплекта, соответствие закону, риски претензий участников и ФАС.</p>
+            <ul class="pkg-check-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Сверка извещения, ТЗ и проекта контракта между собой</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Поиск противоречий 44-ФЗ / 223-ФЗ и положения о закупках</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Структурированные замечания к черновику — для внутренней доработки</span></li>
+            </ul>
+          </article>
+        </div>
+        <ul class="pkg-bullet-list" style="margin-top: 28px;">
+          <li>Тендерные специалисты и отделы продаж — риски участия, чек-листы, замечания к контракту</li>
+          <li>Юристы поставщиков и заказчиков — норма под спорную ситуацию, аргументы для ФАС</li>
+          <li>Службы заказчика — проверка комплекта до публикации, снижение риска оспаривания</li>
+          <li>Консультанты по 44-ФЗ и 223-ФЗ — быстрый разбор для клиента с любой стороны процедуры</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="corpus">
+      <div class="container">
+        <p class="section-label">Нормативная база</p>
+        <h2 class="section-title">Что внутри пакета</h2>
+        <p class="section-subtitle">
+          Актуальная нормативная база по закупкам подключена автоматически — не нужно загружать законы самостоятельно.
+        </p>
+        <ul class="pkg-card-grid">
+          <li>
+            <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><p class="pkg-card-title">Федеральные законы</p></div>
+            <p class="pkg-card-text">Контрактная система, корпоративные закупки, защита конкуренции и смежные ограничения для участников процедур.</p>
+            <p class="pkg-card-meta">44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ</p>
+          </li>
+          <li>
+            <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg><p class="pkg-card-title">Постановления Правительства РФ</p></div>
+            <p class="pkg-card-text">Банковские гарантии, допуск участников, национальный режим, ограничения на иностранное ПО и правила проведения закупок.</p>
+            <p class="pkg-card-meta">1005-ПП, 1236-ПП, 1875-ПП, 238-ПП, 2571-ПП, 2604-ПП, 878-ПП</p>
+          </li>
+          <li>
+            <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><p class="pkg-card-title">Ведомственные акты</p></div>
+            <p class="pkg-card-text">Методика расчёта НМЦК и практические разъяснения по применению норм закупок.</p>
+            <p class="pkg-card-meta">567-ПР, 158Н, 258-Н</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="trial">
+      <div class="container">
+        <p class="section-label">Старт</p>
+        <h2 class="section-title">Тестовый период: попробуйте перед покупкой</h2>
+        <p class="section-subtitle">
+          Прежде чем доверить ИИ важные задачи, нужно убедиться в его компетенции. Поэтому даём 7 дней бесплатного доступа — без привязки карты.
+        </p>
+        <div class="start-steps">
+          <div class="start-step">
+            <span class="start-step-num">1</span>
+            <h3>Регистрация</h3>
+            <p>Создайте аккаунт на платформе Zakon-AI и подключите пакет «Тендерный специалист» — нажмите «Попробовать».</p>
+          </div>
+          <div class="start-step">
+            <span class="start-step-num">2</span>
+            <h3>Первый анализ</h3>
+            <p>Отправьте ссылку с zakupki.gov.ru в чат — система скачает документы и вернёт структурированный отчёт с рисками.</p>
+          </div>
+          <div class="start-step">
+            <span class="start-step-num">3</span>
+            <h3>Решение по тарифу</h3>
+            <p>5 полных анализов по ссылкам и +70 МБ для ваших документов — достаточно, чтобы оценить сервис на реальных закупках.</p>
+          </div>
+        </div>
+        <ul class="pkg-check-list" style="margin-top: 24px;">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span><strong>5 полных анализов</strong> тендеров по ссылкам с zakupki.gov.ru</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span><strong>+70 МБ</strong> дополнительного места для ваших документов</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Полноценный доступ ко всем функциям пакета</span></li>
+        </ul>
+        <p class="pkg-note"><em>Тест доступен один раз на пакет. Никаких скрытых списаний со счёта приложения.</em></p>
+        <p class="start-cta" style="margin-top: 28px;">
+          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать бесплатно</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <p class="section-label">Тариф</p>
+        <h2 class="section-title">Стоимость пакета</h2>
+        <p class="section-subtitle">
+          Начните со стартового доступа, продолжите с полным — когда убедитесь, что сервис экономит время команды.
+        </p>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 class="pricing-name">Тест</h3>
+            <p class="pricing-desc">7 дней бесплатно</p>
+            <ul class="pricing-features">
+              <li>5 анализов по ссылкам с zakupki.gov.ru</li>
+              <li>+70 МБ для документов</li>
+              <li>Все функции пакета</li>
+              <li>Без привязки карты</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-secondary pricing-btn" target="_blank" rel="noopener noreferrer">Попробовать</a>
+          </article>
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-badge">Основной</span>
+            <h3 class="pricing-name">Полный доступ</h3>
+            <p class="pricing-desc">2 990 ₽ / месяц</p>
+            <ul class="pricing-features">
+              <li>Неограниченное число анализов*</li>
+              <li>Отчёт: карточка, риски, чек-лист, обеспечение</li>
+              <li>Экспорт отчёта PDF и вопросов Word</li>
+              <li>Нормативная база в комплекте</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Подключить</a>
+          </article>
+        </div>
+        <p class="tenders-pricing-note">* Ответы модели в чате списываются со счёта ИИ. Подключение пакета — со счёта приложения (2 990 ₽/мес).</p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="security">
+      <div class="container">
+        <p class="section-label">Безопасность</p>
+        <h2 class="section-title">Безопасность и конфиденциальность</h2>
+        <ul class="pkg-check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Загруженные документы и тендерная документация <strong>не используются</strong> для обучения языковых моделей</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Данные изолированы и доступны только вам и вашей команде</span></li>
+        </ul>
+        <p class="section-subtitle" style="margin-top: 20px; margin-bottom: 0;">
+          Отчёт не заменяет юриста и не является юридическим заключением. Сервис ускоряет разбор закупки и показывает источники выводов — финальное решение об участии остаётся за вами.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Можно ли доверять выводам сервиса?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Отчёт не заменяет юриста. Система помогает быстро разобрать закупку и показывает источники: пункты ТЗ, проекта контракта, извещения и приложений. Каждый вывод можно проверить по цитате.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Что входит в бесплатный тест?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              7 дней доступа, 5 полных анализов по ссылкам с zakupki.gov.ru и +70 МБ для ваших документов. Тест один раз на пакет, без скрытых списаний со счёта приложения.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Какие закупки поддерживаются?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Анализ по ссылке с zakupki.gov.ru по 44-ФЗ и 223-ФЗ: аукцион, конкурс, запрос котировок и другие конкурентные процедуры. Также можно загрузить документы вручную и разобрать их в чате.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Подходит ли пакет заказчику?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Да. Загрузите черновик комплекта или опубликуйте ссылку — система найдёт противоречия между извещением, ТЗ и договором, подскажет риски претензий ФАС и поможет сформулировать замечания к документам.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Нужно ли самому загружать законы 44-ФЗ и 223-ФЗ?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Нет. Актуальная нормативная база по закупкам подключена автоматически при подключении пакета — федеральные законы, постановления Правительства и ведомственные акты.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Как считается оплата?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Подключение пакета — 2 990 ₽ в месяц со счёта приложения. Ответы модели в чате списываются отдельно со счёта ИИ по тарифу вашего аккаунта.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <section class="pkg-final-cta">
+          <h2>Готовы ускорить работу с тендерами?</h2>
+          <p>Подключите пакет «Тендерный специалист» — для участника и заказчика: разбор документации, риски, замечания и уверенность в каждом решении по закупке.</p>
+          <div class="pkg-final-cta-actions">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
+            <a href="#contact" class="btn btn-secondary">Задать вопрос</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Контакт</p>
+          <h2 class="section-title">Обсудить пакет «Тендерный специалист»</h2>
+          <p class="section-subtitle" style="margin-bottom: 24px;">
+            Расскажем, как сервис работает на ваших закупках, поможем с первым анализом
+            и ответим на вопросы по подключению для команды.
+          </p>
+          <ul class="contact-perks">
+            <li class="contact-perk">
+              <span class="contact-perk-icon" aria-hidden="true">⬡</span>
+              <span>Консультация по возможностям пакета</span>
+            </li>
+            <li class="contact-perk">
+              <span class="contact-perk-icon" aria-hidden="true">⏱</span>
+              <span>Ответ в течение 1–2 рабочих дней</span>
+            </li>
+            <li class="contact-perk">
+              <span class="contact-perk-icon" aria-hidden="true">▶</span>
+              <span>Демо разбора реальной закупки</span>
+            </li>
+            <li class="contact-perk">
+              <span class="contact-perk-icon" aria-hidden="true">🚀</span>
+              <span>Подключение для тендерного отдела</span>
+            </li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <form id="lead-form">
+            <input type="hidden" name="product" value="tenders">
+            <div class="form-group">
+              <label for="name">Имя *</label>
+              <input id="name" name="name" type="text" required placeholder="Как к Вам обращаться">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="name@company.ru">
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="+7 900 000-00-00" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="role">Роль</label>
+              <select id="role" name="role">
+                <option value="">Выберите</option>
+                <option value="tender">Тендерный специалист</option>
+                <option value="management">Руководитель / собственник</option>
+                <option value="legal">Юрист</option>
+                <option value="sales">Коммерческий отдел</option>
+                <option value="customer">Служба заказчика</option>
+                <option value="consulting">Консалтинг</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Комментарий</label>
+              <textarea id="message" name="message" placeholder="Какие закупки разбираете? 44-ФЗ или 223-ФЗ?"></textarea>
+            </div>
+            <div class="form-group checkbox-row">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">Согласен на обработку персональных данных<br>для обратной связи</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку</button>
+            <p class="form-note">Нажимая кнопку, Вы соглашаетесь на обработку данных для связи по заявке.</p>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -209,8 +644,11 @@
         <p class="footer-tagline">ИИ-консультант на базе технологии RAG<br>для корпоративных баз знаний и документов.</p>
       </div>
       <div class="footer-links">
-        <a href="../index.html#pricing">Пакеты</a>
-        <a href="../index.html#contact">Связаться</a>
+        <a href="../index.html">Главная</a>
+        <a href="#how">Как работает</a>
+        <a href="#pricing">Тариф</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Связаться</a>
       </div>
       <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
