@@ -677,6 +677,11 @@
   justify-content: start;
 }
 
+.pricing-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 880px;
+}
+
 .pkg-final-cta {
   margin-top: 0;
   padding: 36px 28px;
@@ -713,7 +718,8 @@ body[data-page="your-docs"] #security .security-grid {
 
 @media (max-width: 900px) {
   body[data-page="your-docs"] #security .security-grid,
-  .pricing-grid--single {
+  .pricing-grid--single,
+  .pricing-grid--2 {
     grid-template-columns: 1fr;
   }
 }

@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Пакет «Экспертное мнение» — Zakon-AI</title>
   <meta name="description" content="Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.">
+  <link rel="canonical" href="https://zakon-ai.ru/packages/expert-opinion.html">
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
-  <script src="../js/lang.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=48">
-  <link rel="stylesheet" href="../css/package-pages.css?v=3">
+  <link rel="stylesheet" href="../css/styles.css?v=55">
+  <link rel="stylesheet" href="../css/home-draft.css?v=12">
 </head>
-<body data-page="package">
+<body data-page="expert-opinion">
   <header class="header">
     <div class="container header-inner">
       <div class="header-brand">
@@ -23,13 +23,14 @@
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="header-tagline">ИИ-эксперт для работы<br>с Вашими документами</p>
+        <p class="header-tagline">ИИ-эксперт для работы<br>с вашими документами</p>
       </div>
       <nav class="nav">
-        <a href="../index.html#pricing">Пакеты</a>
-        <a href="../index.html#how">Как работает</a>
+        <a href="../index.html#start">Как начать</a>
+        <a href="../index.html#pricing">Тарифы</a>
+        <a href="../index.html#paths">Пакеты</a>
         <a href="../index.html#faq">FAQ</a>
-        <a href="../index.html#contact" class="btn btn-primary btn-contact-shimmer">Связаться</a>
+        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
       </nav>
       <div class="header-tools">
         <div class="theme-switch" role="group" aria-label="Тема">
@@ -45,129 +46,264 @@
     </div>
   </header>
 
-  <main class="pkg-page">
-    <div class="container pkg-page-inner">
-      <a href="../index.html#pricing" class="pkg-back">← К пакетам</a>
-
-      <header class="pkg-hero">
-        <div class="pkg-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></div>
-        <div class="pkg-hero-body">
-          <h1>Экспертное мнение</h1>
-          <p class="pkg-hero-lead">Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.</p>
-          <span class="pkg-status-badge pkg-status-badge--live">Доступно</span>
+  <main>
+    <section class="hero hero--pkg">
+      <div class="container">
+        <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+        <p class="path-kicker path-kicker--live">Уже работает</p>
+        <h1 class="hero-title">Экспертное мнение</h1>
+        <p class="hero-lead hero-lead--wide">
+          Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.
+        </p>
+        <div class="hero-pills">
+          <span class="hero-pill">Несколько моделей</span>
+          <span class="hero-pill">Сводный итог</span>
+          <span class="hero-pill">Ссылки на источники</span>
+          <span class="hero-pill">5 запросов в тесте</span>
         </div>
-      </header>
-
-      
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></div>
-        <h2>Зачем нужен этот пакет</h2>
-      </div>
-      <div class="pkg-section-body">
-                <p><strong>Нормы в документах часто неоднозначны:</strong> одна модель может уверенно выдать единственный вариант, хотя спорных трактовок несколько. Когда речь о договоре на миллионы или решении об участии в тендере — цена ошибки слишком высока.</p>
-                <p><strong>Пакет «Экспертное мнение»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
-                <p><strong>Результат:</strong> не упрощённый вердикт «да/нет», а взвешенный разбор с опорой на документы и ссылками на источники.</p>
-                </div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div>
-        <h2>Тестовый период: попробуйте перед покупкой</h2>
-      </div>
-      <div class="pkg-section-body">
-                <p>Прежде чем использовать режим в критичных решениях, попробуйте его на своих документах. Доступно <strong>5 экспертных запросов</strong> бесплатно.</p>
-                <ul class="pkg-check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>5 экспертных запросов с разбором несколькими моделями</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Полноценный сводный итог со ссылками на документы</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Без списания с расчётного счёта за подключение теста</span></li></ul>
-                <p class="pkg-note"><em>Тест доступен один раз на пакет. На бесплатном периоде приложения тест заканчивается вместе с ним.</em></p>
-                </div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></div>
-        <h2>Ключевые возможности</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-card-grid"><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg><p class="pkg-card-title">Несколько моделей</p></div>
-              <p class="pkg-card-text">Запрос уходит к нескольким сильным моделям — каждая смотрит на ситуацию под своим углом.</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg><p class="pkg-card-title">Сводный итог</p></div>
-              <p class="pkg-card-text">Продвинутая модель собирает разбор: согласие, расхождения, риски подходов — без принудительного «да/нет».</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><p class="pkg-card-title">Ссылки на источники</p></div>
-              <p class="pkg-card-text">Как в обычном чате — каждый тезис можно проверить по фрагменту документа.</p>
-              
-            </li><li>
-              <div class="pkg-card-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><p class="pkg-card-title">Для спорных ситуаций</p></div>
-              <p class="pkg-card-text">Спорная норма в договоре, выбор между рисками, решение об участии в тендере с высокими ставками.</p>
-              
-            </li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h2>Как это работает</h2>
-      </div>
-      <div class="pkg-section-body"><ol class="pkg-steps"><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></div>
-              <p class="pkg-card-title">Подключите пакет</p>
-              <p class="pkg-card-text">В разделе «Пакеты» нажмите «Подключить» или «Попробовать» — режим станет доступен в чатах.</p>
-            </li><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-              <p class="pkg-card-title">Задайте сложный вопрос</p>
-              <p class="pkg-card-text">В любом чате с прикреплёнными документами — как в обычной работе.</p>
-            </li><li>
-              <div class="pkg-step-top"><span class="pkg-step-num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></div>
-              <p class="pkg-card-title">Получите взвешенный разбор</p>
-              <p class="pkg-card-text">Несколько моделей разберут ситуацию, итог соберёт продвинутая модель — со ссылками на источники.</p>
-            </li></ol></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
-        <h2>Что вы получите в ответе</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Разбор ситуации по документам: где модели согласны и расходятся</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Без принудительного «да/нет» — итог помогает принять решение</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Ссылки на источники из документов — как в обычном чате</span></li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <h2>Для кого этот пакет</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-bullet-list"><li>Юристам и договорным отделам — спорные формулировки и трактовки норм</li><li>Специалистам по закупкам — решения об участии в тендерах с высокими ставками</li><li>Консультантам в регулируемых отраслях — энергетика, финансы, госконтракты</li><li>Руководителям — когда нужен не быстрый ответ, а взвешенный разбор альтернатив</li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h2>Безопасность и конфиденциальность</h2>
-      </div>
-      <div class="pkg-section-body"><ul class="pkg-check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Сервис работает на серверах в РФ (полное соответствие 152-ФЗ)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Загруженные документы никогда не используются для обучения языковых моделей</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Ваши данные изолированы и доступны только вам и вашей команде</span></li></ul></div>
-    </section>
-    <section class="pkg-section">
-      <div class="pkg-section-head">
-        <div class="pkg-section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></div>
-        <h2>Стоимость</h2>
-      </div>
-      <div class="pkg-section-body"><div class="pkg-price-grid"><div class="pkg-price-card">
-              <p class="pkg-price-label">Тест</p>
-              <p class="pkg-price-value">5 вопросов бесплатно</p>
-              <p class="pkg-price-note">Один раз на пакет, без списания со счёта приложения</p>
-            </div><div class="pkg-price-card pkg-price-card--featured">
-              <p class="pkg-price-label">Полный доступ</p>
-              <p class="pkg-price-value">2 990 ₽ / мес</p>
-              <p class="pkg-price-note">Экспертный запрос ≈ 45–90 ₽ со счёта ИИ. Подключение — со счёта приложения.</p>
-            </div></div></div>
-    </section><section class="pkg-final-cta">
-      <h2>Нужен взвешенный разбор, а не быстрый вердикт?</h2>
-      <p>Подключите «Экспертное мнение» — несколько моделей разберут сложный вопрос по вашим документам и соберут итог с точками согласия и расхождения.</p>
-      <div class="pkg-final-cta-actions">
-        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
-        <a href="https://app.zakon-ai.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Узнать о тарифах</a>
+        <div class="hero-actions hero-actions--pair">
+          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
+          <a href="../index.html#pricing" class="btn btn-secondary">Узнать о тарифах</a>
+        </div>
       </div>
     </section>
 
-    </div>
+    <section class="section section--soft" id="why">
+      <div class="container">
+        <p class="section-label">Зачем</p>
+        <h2 class="section-title">Зачем нужен этот пакет</h2>
+        <div class="pkg-prose">
+          <p><strong>Нормы в документах часто неоднозначны:</strong> одна модель может уверенно выдать единственный вариант, хотя спорных трактовок несколько. Когда речь о договоре на миллионы или решении об участии в тендере — цена ошибки слишком высока.</p>
+          <p><strong>Пакет «Экспертное мнение»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
+          <p><strong>Результат:</strong> не упрощённый вердикт «да/нет», а взвешенный разбор с опорой на документы и ссылками на источники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trial">
+      <div class="container">
+        <p class="section-label">Тест</p>
+        <h2 class="section-title">Тестовый период: попробуйте перед покупкой</h2>
+        <p class="section-subtitle">Прежде чем использовать режим в критичных решениях, попробуйте его на своих документах. Доступно <strong>5 экспертных запросов</strong> бесплатно.</p>
+        <div class="audience-grid audience-grid--2x3">
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+              <h3>5 экспертных запросов</h3>
+            </div>
+            <p class="audience-lead">Разбор несколькими моделями — полноценный режим, не урезанная демо-версия.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+              <h3>Сводный итог со ссылками</h3>
+            </div>
+            <p class="audience-lead">Полноценный итог с опорой на ваши документы и ссылками на фрагменты.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></span>
+              <h3>Без списания за тест</h3>
+            </div>
+            <p class="audience-lead">Подключение теста не списывается с расчётного счёта приложения.</p>
+          </article>
+        </div>
+        <p class="pkg-formats-note"><em>Тест доступен один раз на пакет. На бесплатном периоде приложения тест заканчивается вместе с ним.</em></p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="features">
+      <div class="container">
+        <p class="section-label">Возможности</p>
+        <h2 class="section-title">Ключевые возможности</h2>
+        <div class="audience-grid audience-grid--2x2">
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></span>
+              <h3>Несколько моделей</h3>
+            </div>
+            <p class="audience-lead">Запрос уходит к нескольким сильным моделям — каждая смотрит на ситуацию под своим углом.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
+              <h3>Сводный итог</h3>
+            </div>
+            <p class="audience-lead">Продвинутая модель собирает разбор: согласие, расхождения, риски подходов — без принудительного «да/нет».</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+              <h3>Ссылки на источники</h3>
+            </div>
+            <p class="audience-lead">Как в обычном чате — каждый тезис можно проверить по фрагменту документа.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
+              <h3>Для спорных ситуаций</h3>
+            </div>
+            <p class="audience-lead">Спорная норма в договоре, выбор между рисками, решение об участии в тендере с высокими ставками.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="start">
+      <div class="container">
+        <p class="section-label">Как это работает</p>
+        <h2 class="section-title">Три простых шага</h2>
+        <p class="section-subtitle">От подключения пакета до взвешенного разбора по вашим документам.</p>
+        <div class="start-steps">
+          <article class="start-step">
+            <span class="start-step-num">1</span>
+            <h3>Подключите пакет</h3>
+            <p>В разделе «Пакеты» нажмите «Подключить» или «Попробовать» — режим станет доступен в чатах.</p>
+          </article>
+          <article class="start-step">
+            <span class="start-step-num">2</span>
+            <h3>Задайте сложный вопрос</h3>
+            <p>В любом чате с прикреплёнными документами — как в обычной работе.</p>
+          </article>
+          <article class="start-step">
+            <span class="start-step-num">3</span>
+            <h3>Получите взвешенный разбор</h3>
+            <p>Несколько моделей разберут ситуацию, итог соберёт продвинутая модель — со ссылками на источники.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="answer">
+      <div class="container">
+        <p class="section-label">Ответ</p>
+        <h2 class="section-title">Что вы получите в ответе</h2>
+        <div class="audience-grid audience-grid--2x3">
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg></span>
+              <h3>Согласие и расхождения</h3>
+            </div>
+            <p class="audience-lead">Разбор ситуации по документам: где модели согласны и где расходятся.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <h3>Без принудительного «да/нет»</h3>
+            </div>
+            <p class="audience-lead">Итог помогает принять решение, а не подменяет ответственность.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-head">
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+              <h3>Ссылки на источники</h3>
+            </div>
+            <p class="audience-lead">Как в обычном чате — можно проверить формулировку в документе.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="who">
+      <div class="container">
+        <p class="section-label">Аудитория</p>
+        <h2 class="section-title">Для кого этот пакет</h2>
+        <div class="role-grid role-grid--2x2">
+          <article class="role-card">
+            <h3>Юристы и договорные отделы</h3>
+            <p class="role-lead">Спорные формулировки и трактовки норм.</p>
+          </article>
+          <article class="role-card">
+            <h3>Специалисты по закупкам</h3>
+            <p class="role-lead">Решения об участии в тендерах с высокими ставками.</p>
+          </article>
+          <article class="role-card">
+            <h3>Консультанты в регулируемых отраслях</h3>
+            <p class="role-lead">Энергетика, финансы, госконтракты.</p>
+          </article>
+          <article class="role-card">
+            <h3>Руководители</h3>
+            <p class="role-lead">Когда нужен не быстрый ответ, а взвешенный разбор альтернатив.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="security">
+      <div class="container">
+        <p class="section-label">Безопасность</p>
+        <h2 class="section-title">Безопасность и конфиденциальность</h2>
+        <div class="security-grid">
+          <article class="security-card">
+            <div class="security-head">
+              <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
+              <h3>Резидентство</h3>
+            </div>
+            <p>Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>).</p>
+          </article>
+          <article class="security-card">
+            <div class="security-head">
+              <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <h3>Приватность</h3>
+            </div>
+            <p>Загруженные документы <strong>никогда не используются</strong> для обучения языковых моделей.</p>
+          </article>
+          <article class="security-card">
+            <div class="security-head">
+              <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+              <h3>Изоляция данных</h3>
+            </div>
+            <p>Ваши данные изолированы и доступны только вам и вашей команде.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <p class="section-label">Стоимость</p>
+        <h2 class="section-title">Сколько стоит</h2>
+        <div class="pricing-grid pricing-grid--2">
+          <article class="pricing-card">
+            <span class="pricing-badge">Тест</span>
+            <h3 class="pricing-name">Попробовать</h3>
+            <p class="pricing-amount">5 вопросов</p>
+            <p class="pricing-desc">Бесплатно</p>
+            <ul class="pricing-features">
+              <li>Один раз на пакет</li>
+              <li>Без списания со счёта приложения</li>
+              <li>Полноценный экспертный разбор</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-secondary pricing-btn" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
+          </article>
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-badge">Полный доступ</span>
+            <h3 class="pricing-name">Экспертное мнение</h3>
+            <p class="pricing-amount">2 990 ₽ <span>/ мес</span></p>
+            <p class="pricing-desc">Экспертный запрос ≈ 45–90 ₽ со счёта ИИ. Подключение — со счёта приложения.</p>
+            <ul class="pricing-features">
+              <li>Несколько моделей на один вопрос</li>
+              <li>Сводный итог со ссылками</li>
+              <li>Для спорных и дорогих решений</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Подключить</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="pkg-final-cta">
+          <h2>Нужен взвешенный разбор, а не быстрый вердикт?</h2>
+          <p>Подключите «Экспертное мнение» — несколько моделей разберут сложный вопрос по вашим документам и соберут итог с точками согласия и расхождения.</p>
+          <div class="pkg-final-cta-actions">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
+            <a href="../index.html#pricing" class="btn btn-secondary">Узнать о тарифах</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -177,16 +313,18 @@
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="32" height="32" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="footer-tagline">ИИ-консультант на базе технологии RAG<br>для корпоративных баз знаний и документов.</p>
+        <p class="footer-tagline">Ответы по вашим документам<br>с цитатой и ссылкой на пункт</p>
       </div>
       <div class="footer-links">
-        <a href="../index.html#pricing">Пакеты</a>
-        <a href="../index.html#contact">Связаться</a>
+        <a href="../index.html#start">Как начать</a>
+        <a href="../index.html#pricing">Тарифы</a>
+        <a href="../index.html#paths">Пакеты</a>
+        <a href="../index.html#faq">FAQ</a>
       </div>
       <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=26"></script>
+  <script src="../js/main.js?v=27"></script>
 </body>
 </html>
