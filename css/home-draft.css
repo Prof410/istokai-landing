@@ -57,6 +57,40 @@
   color: var(--text-muted);
 }
 
+.hero-lead-list {
+  margin: 0 0 28px;
+  padding: 0;
+  max-width: 38rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-lead-list li {
+  position: relative;
+  padding-left: 1.1em;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.hero-lead-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-text);
+}
+
+.pkg-final-cta p + p {
+  margin-top: -12px;
+}
+
 .hero-actions--pair {
   gap: 12px;
 }
