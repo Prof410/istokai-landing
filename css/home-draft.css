@@ -187,8 +187,32 @@
 .pain-card h3,
 .proof-card h3,
 .audience-card h3 {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 1.08rem;
+}
+
+.audience-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.audience-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.audience-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .audience-lead {
