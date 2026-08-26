@@ -122,10 +122,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 88px;
 }
 
 body {
   margin: 0;
+  padding-top: 72px;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -180,8 +182,10 @@ img {
 
 /* Header */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   backdrop-filter: blur(14px);
   background: var(--header-bg);
@@ -1825,6 +1829,14 @@ img {
   .header-inner {
     position: relative;
     min-height: 64px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  html {
+    scroll-padding-top: 80px;
   }
 
   .nav {
