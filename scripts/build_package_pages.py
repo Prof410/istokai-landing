@@ -629,7 +629,7 @@ def render_page(pkg: dict) -> str:
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="32" height="32" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="footer-tagline">ИИ-консультант на базе технологии RAG<br>для корпоративных баз знаний и документов.</p>
+        <p class="footer-tagline">ИИ-эксперт для работы с вашими документами</p>
       </div>
       <div class="footer-links">
         <a href="../index.html#pricing">Пакеты</a>
