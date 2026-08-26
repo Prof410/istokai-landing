@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Пакет «Экспертное мнение» — Zakon-AI</title>
-  <meta name="description" content="Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.">
+  <meta name="description" content="Консилиум моделей для сложных вопросов по документам: перекрёстный анализ, оценка рисков и взвешенное заключение со ссылками на источники.">
   <link rel="canonical" href="https://zakon-ai.ru/packages/expert-opinion.html">
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/styles.css?v=57">
-  <link rel="stylesheet" href="../css/home-draft.css?v=18">
+  <link rel="stylesheet" href="../css/home-draft.css?v=20">
 </head>
 <body data-page="expert-opinion">
   <header class="header">
@@ -48,101 +48,108 @@
 
   <main>
     <section class="hero hero--pkg">
-      <div class="container">
-        <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
-        <p class="path-kicker path-kicker--live">Уже работает · в тарифе приложения</p>
-        <h1 class="hero-title">Экспертное мнение</h1>
-        <p class="hero-lead hero-lead--wide">
-          Режим для сложных вопросов по документам: несколько моделей разбирают ситуацию и собирают взвешенный итог.
-        </p>
-        <div class="hero-pills">
-          <span class="hero-pill">Несколько моделей</span>
-          <span class="hero-pill">Сводный итог</span>
-          <span class="hero-pill">Ссылки на источники</span>
-          <span class="hero-pill">В тарифе приложения</span>
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+          <p class="path-kicker path-kicker--live">Включён в тариф приложения</p>
+          <h1 class="hero-title">Экспертное мнение <span class="hero-title-note">(консилиум моделей)</span></h1>
+          <p class="hero-lead hero-lead--wide">
+            Когда цена ошибки слишком высока для обычного чата. Запустите перекрёстный анализ документа несколькими ИИ-моделями и получите взвешенное заключение с оценкой рисков, а не упрощённый вердикт «да/нет».
+          </p>
+          <div class="hero-pills">
+            <span class="hero-pill">Несколько моделей</span>
+            <span class="hero-pill">Сводный итог</span>
+            <span class="hero-pill">Оценка рисков</span>
+            <span class="hero-pill">Цена до отправки</span>
+          </div>
+          <div class="hero-actions hero-actions--pair">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Запустить анализ в приложении</a>
+            <a href="#example" class="btn btn-secondary">Смотреть пример ответа</a>
+          </div>
         </div>
-        <div class="hero-actions hero-actions--pair">
-          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать бесплатно</a>
-          <a href="../index.html#pricing" class="btn btn-secondary">Узнать о тарифах</a>
-        </div>
+
+        <aside class="docs-hero-visual" aria-hidden="true">
+          <article class="chat-mockup chat-mockup-hero docs-hero-mockup expert-hero-mockup">
+            <div class="chat-header">
+              <span class="chat-title">Экспертное мнение</span>
+              <span class="chat-badge">● 2 модели · итог</span>
+            </div>
+            <div class="chat-body">
+              <div class="bubble bubble-user">Можно ли расторгнуть договор без штрафов на 5-й день просрочки?</div>
+              <div class="bubble bubble-bot">
+                <strong>Сводный итог:</strong> одностороннее расторжение на 5-й день сопряжено с риском. П. 8.1 допускает расторжение при просрочке &gt;10 дней, а п. 4.2 обязывает уплатить неустойку за фактический период.
+                <span class="source-link">→ Договор_поставки.pdf, п. 4.2, п. 8.1</span>
+              </div>
+            </div>
+          </article>
+        </aside>
       </div>
     </section>
 
     <section class="section section--soft" id="why">
       <div class="container">
         <p class="section-label">Зачем</p>
-        <h2 class="section-title">Зачем нужен этот пакет</h2>
+        <h2 class="section-title">Зачем нужен этот режим</h2>
         <div class="pkg-prose">
           <p><strong>Нормы в документах часто неоднозначны:</strong> одна модель может уверенно выдать единственный вариант, хотя спорных трактовок несколько. Когда речь о договоре на миллионы или решении об участии в тендере — цена ошибки слишком высока.</p>
-          <p><strong>Пакет «Экспертное мнение»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
+          <p><strong>«Экспертное мнение»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
           <p><strong>Результат:</strong> не упрощённый вердикт «да/нет», а взвешенный разбор с опорой на документы и ссылками на источники.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="trial">
+    <section class="section" id="example">
       <div class="container">
-        <p class="section-label">Старт</p>
-        <h2 class="section-title">Доступен в тарифе приложения</h2>
-        <p class="section-subtitle">Отдельная оплата за пакет не нужна — режим входит в тариф. Зарегистрируйтесь, загрузите документы и задайте сложный вопрос в режиме «Экспертное мнение».</p>
-        <div class="audience-grid audience-grid--2x3">
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>Без отдельной подписки</h3>
-            </div>
-            <p class="audience-lead">Пакет включён в тариф приложения — как чат по вашим документам.</p>
-          </article>
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
-              <h3>Сводный итог со ссылками</h3>
-            </div>
-            <p class="audience-lead">Полноценный разбор несколькими моделями с опорой на ваши файлы.</p>
-          </article>
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></span>
-              <h3>Можно начать с теста</h3>
-            </div>
-            <p class="audience-lead">При регистрации доступен тестовый период приложения — проверьте режим на своих документах.</p>
-          </article>
-        </div>
+        <p class="section-label">На практике</p>
+        <h2 class="section-title">Как это выглядит на практике</h2>
+        <p class="section-subtitle">Пример ответа режима «Экспертное мнение» — так пользователь видит ценность быстрее любого абстрактного описания.</p>
+        <article class="expert-example">
+          <h3 class="expert-example-title">Как выглядит ответ «Экспертного мнения»</h3>
+          <div class="expert-example-block">
+            <p class="expert-example-label">Ваш вопрос</p>
+            <p class="expert-example-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
+          </div>
+          <div class="expert-example-block">
+            <p class="expert-example-label">Анализ моделей</p>
+            <ul class="expert-example-list">
+              <li><strong>Модель 1</strong> указывает на п. 4.2, где указан штраф 0,1% за каждый день.</li>
+              <li><strong>Модель 2</strong> обращает внимание на п. 8.1, допускающий расторжение при нарушении сроков свыше 10 дней.</li>
+            </ul>
+          </div>
+          <div class="expert-example-block expert-example-block--verdict">
+            <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
+            <p class="expert-example-quote">«Одностороннее расторжение на 5-й день сопряжено с риском. Хотя п. 8.1 даёт право на расторжение при просрочке &gt;10 дней, п. 4.2 прямо обязывает уплатить неустойку за фактический период просрочки. Рекомендация: направить претензию о добровольном устранении нарушения, чтобы избежать штрафа».</p>
+          </div>
+          <p class="expert-example-sources"><strong>Источники:</strong> Договор_поставки.pdf, п. 4.2, п. 8.1</p>
+        </article>
       </div>
     </section>
 
     <section class="section section--soft" id="features">
       <div class="container">
-        <p class="section-label">Возможности</p>
-        <h2 class="section-title">Ключевые возможности</h2>
-        <div class="audience-grid audience-grid--2x2">
+        <p class="section-label">Почему надёжнее</p>
+        <h2 class="section-title">Почему это надёжнее обычного чата</h2>
+        <div class="audience-grid audience-grid--2x3">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></span>
-              <h3>Несколько моделей</h3>
+              <h3>Перекрёстная проверка</h3>
             </div>
-            <p class="audience-lead">Запрос уходит к нескольким сильным моделям — каждая смотрит на ситуацию под своим углом.</p>
+            <p class="audience-lead">Запрос обрабатывают несколько независимых моделей — это снижает риск «галлюцинаций» и однобоких трактовок.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
-              <h3>Сводный итог</h3>
+              <h3>Сводный итог, а не просто текст</h3>
             </div>
-            <p class="audience-lead">Продвинутая модель собирает разбор: согласие, расхождения, риски подходов — без принудительного «да/нет».</p>
+            <p class="audience-lead">Продвинутая модель выступает как ведущий эксперт: не просто суммирует ответы, а выделяет точки согласия, расхождения и оценивает риски каждого подхода.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>Ссылки на источники</h3>
+              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+              <h3>Полная прозрачность</h3>
             </div>
-            <p class="audience-lead">Как в обычном чате — каждый тезис можно проверить по фрагменту документа.</p>
-          </article>
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
-              <h3>Для спорных ситуаций</h3>
-            </div>
-            <p class="audience-lead">Спорная норма в договоре, выбор между рисками, решение об участии в тендере с высокими ставками.</p>
+            <p class="audience-lead">Как и в базовом чате, каждый тезис подкреплён кликабельной ссылкой на конкретный абзац вашего документа.</p>
           </article>
         </div>
       </div>
@@ -151,59 +158,29 @@
     <section class="section" id="start">
       <div class="container">
         <p class="section-label">Как это работает</p>
-        <h2 class="section-title">Три простых шага</h2>
-        <p class="section-subtitle">От подключения пакета до взвешенного разбора по вашим документам.</p>
+        <h2 class="section-title">Три шага в интерфейсе</h2>
+        <p class="section-subtitle">Привязано к приложению — понятно, куда нажимать.</p>
         <div class="start-steps">
           <article class="start-step">
             <span class="start-step-num">1</span>
-            <h3>Откройте режим</h3>
-            <p>В чате с прикреплёнными документами выберите режим «Экспертное мнение» — он доступен в тарифе.</p>
+            <h3>Прикрепите документы</h3>
+            <p>Откройте чат и добавьте папку или файл (договор, тендер, регламент).</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">2</span>
-            <h3>Задайте сложный вопрос</h3>
-            <p>В любом чате с прикреплёнными документами — как в обычной работе.</p>
+            <h3>Включите режим</h3>
+            <p>Нажмите переключатель «Экспертное мнение» (или «Усиленный ответ») рядом с полем ввода. Система покажет ориентировочную стоимость запроса.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">3</span>
-            <h3>Получите взвешенный разбор</h3>
-            <p>Несколько моделей разберут ситуацию, итог соберёт продвинутая модель — со ссылками на источники.</p>
+            <h3>Задайте сложный вопрос</h3>
+            <p>Например: «Выдели все противоречия между разделом „Ответственность“ и Приложением №1». Получите структурированный разбор со ссылками.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--soft" id="answer">
-      <div class="container">
-        <p class="section-label">Ответ</p>
-        <h2 class="section-title">Что вы получите в ответе</h2>
-        <div class="audience-grid audience-grid--2x3">
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg></span>
-              <h3>Согласие и расхождения</h3>
-            </div>
-            <p class="audience-lead">Разбор ситуации по документам: где модели согласны и где расходятся.</p>
-          </article>
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-              <h3>Без принудительного «да/нет»</h3>
-            </div>
-            <p class="audience-lead">Итог помогает принять решение, а не подменяет ответственность.</p>
-          </article>
-          <article class="audience-card">
-            <div class="audience-head">
-              <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
-              <h3>Ссылки на источники</h3>
-            </div>
-            <p class="audience-lead">Как в обычном чате — можно проверить формулировку в документе.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who">
+    <section class="section section--soft" id="who">
       <div class="container">
         <p class="section-label">Аудитория</p>
         <h2 class="section-title">Для кого этот пакет</h2>
@@ -228,7 +205,7 @@
       </div>
     </section>
 
-    <section class="section section--soft" id="security">
+    <section class="section" id="security">
       <div class="container">
         <p class="section-label">Безопасность</p>
         <h2 class="section-title">Безопасность и конфиденциальность</h2>
@@ -258,23 +235,14 @@
       </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="section section--soft" id="pricing">
       <div class="container">
         <p class="section-label">Стоимость</p>
-        <h2 class="section-title">Сколько стоит</h2>
-        <div class="pricing-grid pricing-grid--single">
-          <article class="pricing-card pricing-card--featured">
-            <span class="pricing-badge">Подключение</span>
-            <h3 class="pricing-name">Экспертное мнение</h3>
-            <p class="pricing-amount">Бесплатно</p>
-            <p class="pricing-desc">Пакет входит в тариф приложения — отдельная подписка не нужна</p>
-            <ul class="pricing-features">
-              <li>В тарифе приложения</li>
-              <li>Несколько моделей на один вопрос</li>
-              <li>Сводный итог со ссылками на источники</li>
-            </ul>
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Начать бесплатно</a>
-          </article>
+        <h2 class="section-title">Включён в тариф приложения</h2>
+        <div class="pkg-price-note">
+          <p class="pkg-price-lead">Отдельная ежемесячная подписка на пакет не требуется.</p>
+          <p>Режим «Экспертное мнение» доступен всем пользователям тарифа. Стоимость ответа рассчитывается по ставке усиленной модели и прозрачно списывается с вашего внутреннего баланса ИИ в рублях. Вы видите цену до отправки запроса.</p>
+          <p>Это снимает страх скрытых платежей, но защищает ваш бизнес от злоупотреблений.</p>
         </div>
       </div>
     </section>
@@ -282,11 +250,11 @@
     <section class="section">
       <div class="container">
         <div class="pkg-final-cta">
-          <h2>Нужен взвешенный разбор, а не быстрый вердикт?</h2>
-          <p>Откройте «Экспертное мнение» в приложении — несколько моделей разберут сложный вопрос по вашим документам и соберут итог с точками согласия и расхождения.</p>
+          <h2>Проверьте сложный договор прямо сейчас</h2>
+          <p>Загрузите документ, включите режим «Экспертное мнение» и задайте каверзный вопрос. Убедитесь, что система найдёт нюансы, которые легко пропустить при беглом чтении.</p>
           <div class="pkg-final-cta-actions">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать бесплатно</a>
-            <a href="../index.html#pricing" class="btn btn-secondary">Узнать о тарифах</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Запустить анализ в приложении</a>
+            <a href="../index.html#pricing" class="btn btn-secondary">Смотреть тарифы</a>
           </div>
         </div>
       </div>
