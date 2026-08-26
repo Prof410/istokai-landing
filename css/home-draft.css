@@ -45,12 +45,12 @@
 .hero .hero-title {
   font-size: clamp(1.55rem, 3.6vw, 2.35rem);
   line-height: 1.15;
-  max-width: 38rem;
+  max-width: 44rem;
 }
 
 .hero h2.hero-lead {
   margin: 0 0 28px;
-  max-width: 38rem;
+  max-width: 44rem;
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.55;
@@ -64,8 +64,9 @@
 .hero-actions--pair .btn {
   text-align: center;
   line-height: 1.25;
-  padding: 14px 20px;
-  max-width: 100%;
+  padding: 14px 22px;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .value-grid {
@@ -493,9 +494,22 @@
 
 .path-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   margin-top: auto;
+}
+
+.path-actions .btn {
+  white-space: nowrap;
+  flex: 0 1 auto;
+}
+
+.pkg-final-cta-actions {
+  flex-wrap: nowrap;
+}
+
+.pkg-final-cta-actions .btn {
+  white-space: nowrap;
 }
 
 .soon-row {
@@ -561,5 +575,15 @@
   .value-grid,
   .security-grid {
     grid-template-columns: 1fr;
+  }
+
+  .path-actions,
+  .pkg-final-cta-actions {
+    flex-wrap: wrap;
+  }
+
+  .path-actions .btn,
+  .pkg-final-cta-actions .btn {
+    white-space: normal;
   }
 }
