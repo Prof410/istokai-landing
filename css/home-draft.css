@@ -1001,12 +1001,14 @@
   min-height: 300px;
 }
 
-body[data-page="expert-opinion"] #security .security-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+body[data-page="expert-opinion"] #security .security-grid,
+body[data-page="expert-opinion"] #security .security-grid--2x2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 900px) {
-  body[data-page="expert-opinion"] #security .security-grid {
+  body[data-page="expert-opinion"] #security .security-grid,
+  body[data-page="expert-opinion"] #security .security-grid--2x2 {
     grid-template-columns: 1fr;
   }
 
