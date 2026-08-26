@@ -1021,12 +1021,17 @@ body[data-page="expert-opinion"] #security .security-grid--2x2 {
 
 .pricing-grid--single {
   grid-template-columns: minmax(0, 420px);
-  justify-content: start;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pricing-grid--2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .pkg-final-cta {
