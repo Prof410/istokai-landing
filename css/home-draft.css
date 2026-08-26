@@ -185,7 +185,11 @@
 
 .role-card h3,
 .pain-card h3,
-.proof-card h3,
+.proof-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
 .audience-card h3 {
   margin: 0;
   font-size: 1.08rem;
