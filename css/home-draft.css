@@ -1063,8 +1063,15 @@ body[data-page="your-docs"] #security .security-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+body[data-page="tenders"] #security .security-grid,
+body[data-page="tenders"] #security .security-grid--2x2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (max-width: 900px) {
   body[data-page="your-docs"] #security .security-grid,
+  body[data-page="tenders"] #security .security-grid,
+  body[data-page="tenders"] #security .security-grid--2x2,
   .pricing-grid--single,
   .pricing-grid--2 {
     grid-template-columns: 1fr;
