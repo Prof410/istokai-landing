@@ -1493,8 +1493,19 @@ img {
   align-items: center;
 }
 
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .footer-links a:hover {
   color: var(--text);
+}
+
+.checkbox-row label a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .footer-links a[href="#contact"],
