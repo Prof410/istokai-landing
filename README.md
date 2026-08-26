@@ -74,7 +74,7 @@ formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
 
 Сейчас `istokai.ru` должен **не показывать сайт**, а перенаправлять на `https://zakon-ai.ru`.
 
-**Вариант А — через GitHub (сохраняет путь `/cases/energy.html` и т.д.):**
+**Вариант А — через GitHub (сохраняет путь страницы):**
 
 1. Откройте https://github.com/Prof410/istokai-landing/settings/pages  
 2. В **Custom domain** уже должен быть `zakon-ai.ru`  
