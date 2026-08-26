@@ -597,6 +597,7 @@
 @media (max-width: 900px) {
   .role-grid,
   .role-grid--2x2,
+  .role-grid--3x3,
   .pain-grid,
   .proof-grid,
   .audience-grid,
@@ -836,6 +837,37 @@
 .role-grid--2x2,
 .security-grid--2x2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.role-grid--3x3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pkg-price-note {
+  margin-top: 24px;
+  max-width: 40rem;
+}
+
+.pkg-price-note p {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.pkg-price-note p:last-child {
+  margin-bottom: 0;
+}
+
+.pkg-price-lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
+  color: var(--text) !important;
+}
+
+.pkg-price-note strong {
+  color: var(--accent-text);
+  font-weight: 700;
 }
 
 .pricing-grid--single {

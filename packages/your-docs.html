@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=56">
-  <link rel="stylesheet" href="../css/home-draft.css?v=17">
+  <link rel="stylesheet" href="../css/styles.css?v=57">
+  <link rel="stylesheet" href="../css/home-draft.css?v=18">
 </head>
 <body data-page="your-docs">
   <header class="header">
@@ -262,7 +262,7 @@
       <div class="container">
         <p class="section-label">Аудитория</p>
         <h2 class="section-title">Для кого этот пакет</h2>
-        <div class="role-grid role-grid--2x2">
+        <div class="role-grid role-grid--3x3">
           <article class="role-card">
             <h3>Юристы и договорные отделы</h3>
             <p class="role-lead">Поиск пунктов об ответственности и проверка проектов договоров.</p>
@@ -278,6 +278,26 @@
           <article class="role-card">
             <h3>Специалисты по ИБ</h3>
             <p class="role-lead">Проверка договоров на соответствие стандартам и требованиям к ПДн.</p>
+          </article>
+          <article class="role-card">
+            <h3>Финансисты и бухгалтерия</h3>
+            <p class="role-lead">Условия оплаты, штрафы, акты и формулировки из договоров и регламентов.</p>
+          </article>
+          <article class="role-card">
+            <h3>Инженеры и технические специалисты</h3>
+            <p class="role-lead">Быстрый доступ к методичкам, ТЗ, нормам и внутренним инструкциям.</p>
+          </article>
+          <article class="role-card">
+            <h3>Консультанты и аудиторы</h3>
+            <p class="role-lead">Разбор клиентских материалов со ссылками на конкретные фрагменты.</p>
+          </article>
+          <article class="role-card">
+            <h3>Служба поддержки и клиентский сервис</h3>
+            <p class="role-lead">Ответы по регламентам и базе знаний без ожидания эксперта.</p>
+          </article>
+          <article class="role-card">
+            <h3>Владельцы и руководители малого бизнеса</h3>
+            <p class="role-lead">Единая база договоров и правил компании без сложного внедрения.</p>
           </article>
         </div>
       </div>
@@ -325,19 +345,9 @@
       <div class="container">
         <p class="section-label">Стоимость</p>
         <h2 class="section-title">Сколько стоит</h2>
-        <div class="pricing-grid pricing-grid--single">
-          <article class="pricing-card pricing-card--featured">
-            <span class="pricing-badge">Подключение</span>
-            <h3 class="pricing-name">Ваши документы</h3>
-            <p class="pricing-amount">Бесплатно</p>
-            <p class="pricing-desc">Пакет доступен по умолчанию всем пользователям</p>
-            <ul class="pricing-features">
-              <li>Входит в тариф приложения</li>
-              <li>Личная или командная база</li>
-              <li>Ответы со ссылками на источники</li>
-            </ul>
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Загрузить первый файл и задать вопрос</a>
-          </article>
+        <div class="pkg-price-note">
+          <p class="pkg-price-lead">Пакет «Ваши документы» <strong>включён в тариф пользования</strong> — отдельная оплата не нужна.</p>
+          <p>Доступен сразу после регистрации: загружайте файлы, настраивайте папки и задавайте вопросы в рамках выбранного тарифа приложения.</p>
         </div>
       </div>
     </section>
@@ -358,21 +368,21 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo" style="margin-bottom: 8px;">
+      <div class="footer-row">
+        <a href="../index.html" class="logo footer-logo">
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="32" height="32" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="footer-tagline">ИИ-эксперт для работы с вашими документами</p>
+        <div class="footer-links">
+          <a href="../index.html#start">Как начать</a>
+          <a href="../index.html#pricing">Тарифы</a>
+          <a href="../index.html#paths">Пакеты</a>
+          <a href="../index.html#faq">FAQ</a>
+          <a href="../legal/terms.html">Пользовательское соглашение</a>
+          <a href="../legal/privacy.html">Политика конфиденциальности</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html#start">Как начать</a>
-        <a href="../index.html#pricing">Тарифы</a>
-        <a href="../index.html#paths">Пакеты</a>
-        <a href="../index.html#faq">FAQ</a>
-        <a href="../legal/terms.html">Пользовательское соглашение</a>
-        <a href="../legal/privacy.html">Политика конфиденциальности</a>
-      </div>
+      <p class="footer-tagline">ИИ-эксперт для работы с вашими документами</p>
       <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
   </footer>
