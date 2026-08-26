@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Zakon-AI — ответы по вашим документам со ссылкой на источник</title>
+  <meta name="description" content="Zakon-AI ищет в договорах, регламентах и инструкциях, которые загрузили вы. Ответ с цитатой и ссылкой на пункт. Разбор тендера — отдельный сценарий.">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=53">
+  <link rel="stylesheet" href="css/package-pages.css?v=4">
+  <link rel="stylesheet" href="css/home-draft.css?v=3">
+</head>
+<body>
+  <p class="draft-banner"><strong>Черновик главной</strong> — только локально, в индекс и на прод не попадает</p>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="index-draft.html" class="logo">
+          <img class="logo-icon" src="assets/logo-mark.svg?v=3" width="48" height="48" alt="">
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+        </a>
+        <p class="header-tagline">ИИ-помощник для работы<br>с вашими документами</p>
+      </div>
+      <nav class="nav">
+        <a href="#pain">Зачем</a>
+        <a href="#start">Как начать</a>
+        <a href="#proof">Как работает</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#paths">Пакеты</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
+      </nav>
+      <div class="header-tools">
+        <div class="theme-switch" role="group" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" aria-label="Тёмная тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+            <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <p class="hero-eyebrow">ИИ-помощник для работы с вашими документами</p>
+          <h1 class="hero-title" id="hero-title" data-typing-text="Ваши файлы → ответ с цитатой и ссылкой на пункт">
+            <span class="hero-title-text" id="hero-title-text"></span><span class="type-cursor hero-title-cursor" id="hero-title-cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero-lead">
+            Zakon-AI ищет в договорах, регламентах и инструкциях, которые загрузили <strong>вы</strong>.
+            Ответ можно проверить: фрагмент, файл, пункт — не догадка модели «вообще».
+          </p>
+          <div class="hero-pills">
+            <span class="hero-pill">Цитата в каждом ответе</span>
+            <span class="hero-pill">PDF, Word, Excel</span>
+            <span class="hero-pill">Без IT-внедрения</span>
+            <span class="hero-pill">Регистрация за минуту</span>
+          </div>
+          <div class="hero-actions hero-actions--pair">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
+            <a href="#pricing" class="btn btn-secondary">Тарифы</a>
+          </div>
+        </div>
+        <div class="chat-demo" id="hero-chat-demo" aria-live="polite">
+          <article class="chat-mockup chat-mockup-hero">
+            <div class="chat-header">
+              <span class="chat-title">Zakon-AI Chat</span>
+              <span class="chat-badge">● онлайн</span>
+            </div>
+            <div class="chat-body chat-body-demo">
+              <div class="chat-docs" id="demo-docs"></div>
+              <div class="bubble bubble-user bubble-user-demo" id="demo-user" hidden>
+                <span id="demo-user-text"></span><span class="type-cursor" id="demo-user-cursor" hidden>|</span>
+              </div>
+              <div class="bubble bubble-bot bubble-bot-demo" id="demo-bot" hidden>
+                <span id="demo-bot-text"></span><span class="type-cursor" id="demo-bot-cursor" hidden>|</span>
+                <span class="source-link" id="demo-source" hidden></span>
+              </div>
+              <div class="typing-indicator" id="demo-typing" hidden aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="chat-input chat-input-demo">
+              <span id="demo-input-text"></span><span class="type-cursor" id="demo-input-cursor">|</span>
+            </div>
+          </article>
+          <div class="carousel-dots demo-dots" role="tablist" aria-label="Примеры запросов">
+            <button type="button" class="carousel-dot active" aria-label="Пример 1" data-demo="0"></button>
+            <button type="button" class="carousel-dot" aria-label="Пример 2" data-demo="1"></button>
+            <button type="button" class="carousel-dot" aria-label="Пример 3" data-demo="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="pain">
+      <div class="container">
+        <p class="section-label">Зачем</p>
+        <h2 class="section-title">Кому это даёт результат</h2>
+        <p class="section-subtitle">Один инструмент — разная польза. Выберите свою роль и получите максимум преимуществ от приложения.</p>
+        <div class="role-grid">
+          <article class="role-card">
+            <h3>Собственник бизнеса</h3>
+            <p class="role-lead">Нужно, чтобы знания компании работали без вас и без «человека, у которого всё в голове».</p>
+            <ul class="role-benefits">
+              <li>Меньше зависимости от одного эксперта: ответы берутся из документов, а не из памяти сотрудника</li>
+              <li>Быстрее решения по договорам и закупкам — без ожидания «когда юрист освободится»</li>
+              <li>Меньше риска пропустить пункт, который потом стоит денег</li>
+              <li>Можно начать без IT-проекта: пилот на своих файлах, не внедрение на полгода</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h3>Руководитель</h3>
+            <p class="role-lead">Нужно разгрузить команду и держать единую позицию по регламентам и договорам.</p>
+            <ul class="role-benefits">
+              <li>Сотрудники сами находят «где написано» — меньше очереди к вам и к эксперту отдела</li>
+              <li>Одинаковые ответы из актуальной версии документа, а не «как кто запомнил»</li>
+              <li>Первичный разбор договора или тендера за минуты, а не за полдня</li>
+              <li>Новый человек быстрее входит в работу: база уже в чате, не в чужих папках</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h3>Менеджер</h3>
+            <p class="role-lead">Нужно быстро найти пункт, подготовить ответ коллеге или клиенту и не гадать.</p>
+            <ul class="role-benefits">
+              <li>Вопрос своими словами — ответ с цитатой и ссылкой на файл, без ручного поиска по PDF</li>
+              <li>Можно проверить формулировку в исходном пункте, а не верить чату «на слово»</li>
+              <li>Типовые вопросы по договору, ТЗ и регламенту закрываются без эскалации наверх</li>
+              <li>Для закупок: черновик рисков и вопросов организатору, чтобы не начинать с пустого листа</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="start">
+      <div class="container">
+        <p class="section-label">Как начать</p>
+        <h2 class="section-title">Три простых шага — без внедрения и IT специалистов</h2>
+        <p class="section-subtitle">Без заключения договора, аренды сервера и долгих согласований. Попробуйте прямо сейчас и когда увидите пользу — подключайте коллег.</p>
+        <div class="start-steps">
+          <article class="start-step">
+            <span class="start-step-num">1</span>
+            <h3>Зарегистрируйтесь</h3>
+            <p>Откройте приложение и создайте аккаунт. Тестовый лимит — без договора, без сервера, без ожидания.</p>
+          </article>
+          <article class="start-step">
+            <span class="start-step-num">2</span>
+            <h3>Загрузите файлы</h3>
+            <p>Договор, инструкция, ТЗ, архив — то, по чему вы обычно ищете вручную. PDF, Word, Excel и другие форматы.</p>
+          </article>
+          <article class="start-step">
+            <span class="start-step-num">3</span>
+            <h3>Задайте вопрос</h3>
+            <p>Как коллеге: «где штраф», «какой срок». Откройте цитату в документе и решите сами.</p>
+          </article>
+        </div>
+        <p class="start-cta">
+          <a href="https://app.zakon-ai.ru" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Попробовать на своих файлах</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="proof">
+      <div class="container">
+        <p class="section-label">Как работает</p>
+        <h2 class="section-title">Как выглядит ответ</h2>
+        <p class="section-subtitle">Ответ ИИ-помощника без ссылки на источник — это просто мнение. С источником — рабочий черновик, который можно проверить и использовать в своей работе.</p>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>Фрагмент из файла</h3>
+            <p>Система ищет смысл вопроса в <strong>ваших</strong> документах, а не выдумывает норму «из головы» модели.</p>
+            <span class="proof-cite">Договор поставки.pdf, п. 8.3</span>
+          </article>
+          <article class="proof-card">
+            <h3>Цитата в ответе</h3>
+            <p>В ответе системы вы видите откуда взялась конкретная формулировка. Можно проверить цитирование по документам.</p>
+            <span class="proof-cite">«штраф 0,1% за каждый день просрочки…»</span>
+          </article>
+          <article class="proof-card">
+            <h3>Проверка человеком — решение за человеком</h3>
+            <p>Zakon-AI значительно ускоряет поиск и обработку информации. Юриста, бухгалтера или тендерного специалиста система не заменит.</p>
+            <span class="proof-cite">Источник открыт → окончательное решение за вами</span>
+          </article>
+        </div>
+        <div class="proof-compare">
+          <h3>ИИ-чат удобен для личного использования. Для бизнеса нужен умный помощник.</h3>
+          <p class="proof-compare-lead">Бесплатный ИИ-чат удобен для общих вопросов. Для проверки и составления договоров, ТЗ и регламентов нужен ИИ-помощник, который ищет ответы по вашей базе документов, даёт цитату со ссылкой на пункт.</p>
+          <div class="compare-grid">
+            <div class="compare-card bad">
+              <h3>Обычная нейросеть (ChatGPT и аналоги)</h3>
+              <ul>
+                <li>Файл можно приложить, но это разовый чат — нет постоянной базы документов и актуальных версий</li>
+                <li>ИИ может уверенно ответить неверно — без ссылки на ваш файл</li>
+                <li>Нет ссылки на документ, который можно открыть и проверить</li>
+                <li>Документы уходят во внешний сервис: не ваш контур и не общая база команды</li>
+                <li>Не держит единую базу компании: знания остаются в истории чата</li>
+              </ul>
+            </div>
+            <div class="compare-card good">
+              <h3>Zakon-AI</h3>
+              <ul>
+                <li>Система ищет ответ в ваших загруженных документах</li>
+                <li>Ответ с цитатой и указанием файла или пункта конкретного документа</li>
+                <li>Всегода можно проверить цитирование в источнике за секунду</li>
+                <li>Один раз загрузили в базу знаний — дальше спрашиваете сколько угодно</li>
+                <li>Единая база для команды: все опираются на одни и те же актуальные файлы</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <p class="section-label">Тарифы</p>
+        <h2 class="section-title">Сколько стоит</h2>
+        <p class="section-subtitle">Сначала тест без оплаты. Дальше — тариф под вашу задачу.</p>
+        <div class="pricing-grid">
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-badge">Для себя</span>
+            <h3 class="pricing-name">Личный</h3>
+            <p class="pricing-amount">1 990 ₽ <span>/ мес</span></p>
+            <p class="pricing-desc">Чат по документам и экспертное мнение. Тест при регистрации — бесплатно.</p>
+            <ul class="pricing-features">
+              <li>100 МБ документов</li>
+              <li>Ответы с цитатами из ваших файлов</li>
+              <li>Пакет «Экспертное мнение» в тарифе</li>
+            </ul>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Начать работать</a>
+          </article>
+          <article class="pricing-card">
+            <h3 class="pricing-name">Команда</h3>
+            <p class="pricing-amount">14 900 ₽ <span>/ мес</span></p>
+            <p class="pricing-desc">Несколько человек, общая база</p>
+            <ul class="pricing-features">
+              <li>Общие файлы отдела</li>
+              <li>Одинаковые ответы из одной версии</li>
+              <li>Лимиты под объём работы</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary pricing-btn">Обсудить пилот</a>
+          </article>
+          <article class="pricing-card">
+            <h3 class="pricing-name">Корпорат</h3>
+            <p class="pricing-amount">По запросу</p>
+            <p class="pricing-desc">Свой контур, роли, большая база</p>
+            <ul class="pricing-features">
+              <li>Сервер заказчика или выделенный контур</li>
+              <li>Разграничение доступа</li>
+              <li>Отраслевые пакеты по запросу</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary pricing-btn">Написать нам</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paths">
+      <div class="container">
+        <p class="section-label">Пакеты</p>
+        <h2 class="section-title">Дополнительные возможности Zakon-AI</h2>
+        <p class="section-subtitle">Готовые пакеты в приложении для решения вопросов вашего бизнеса.</p>
+        <div class="paths-grid paths-grid--2x2">
+          <article class="path-card">
+            <p class="path-kicker path-kicker--live">Уже работает</p>
+            <h3>Чат по вашим документам</h3>
+            <p class="path-tagline">ИИ-помощник для ваших документов</p>
+            <p class="path-price">В тарифе приложения</p>
+            <div class="path-body">
+              <p>Загрузите договоры, регламенты, инструкции и рабочие файлы — личную или командную базу знаний.</p>
+              <ul>
+                <li>Вопрос обычным языком — ответ с точной ссылкой на фрагмент документа</li>
+                <li>Не общие рассуждения, а опора на ваши файлы</li>
+                <li>Один источник правды для команды: актуальные версии, а не «как помнят»</li>
+              </ul>
+            </div>
+            <div class="path-actions">
+              <a href="packages/your-docs.html" class="btn btn-primary">Подробнее</a>
+              <a href="https://app.zakon-ai.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Открыть чат</a>
+            </div>
+          </article>
+          <article class="path-card">
+            <p class="path-kicker path-kicker--live">Уже работает</p>
+            <h3>Разбор тендера</h3>
+            <p class="path-price">2 990 ₽ / мес</p>
+            <div class="path-body">
+              <p>Вставьте ссылку на закупку или загрузите комплект документов — ИИ разберёт извещение, ТЗ и проект контракта.</p>
+              <ul>
+                <li>Карточка закупки, риски, чек-лист допуска</li>
+                <li>Готовые вопросы организатору</li>
+                <li>Каждый вывод — с цитатой из документа и опорой на 44-ФЗ / 223-ФЗ</li>
+                <li>Решение «стоит ли участвовать» — ещё до заявки</li>
+              </ul>
+            </div>
+            <div class="path-actions">
+              <a href="packages/tenders.html" class="btn btn-primary">Разобрать тендер</a>
+            </div>
+          </article>
+          <article class="path-card">
+            <p class="path-kicker path-kicker--live">Уже работает</p>
+            <h3>Экспертное мнение</h3>
+            <p class="path-price">В тарифе приложения</p>
+            <div class="path-body">
+              <p>Когда нормы неоднозначны и цена ошибки высока — вопрос одновременно разбирают несколько сильных моделей.</p>
+              <ul>
+                <li>Где модели согласны, а где расходятся</li>
+                <li>Какие риски у разных подходов</li>
+                <li>Взвешенный итог со ссылками на источники</li>
+                <li>Не упрощённое «да/нет», а разбор для ответственного решения</li>
+              </ul>
+            </div>
+            <div class="path-actions">
+              <a href="packages/expert-opinion.html" class="btn btn-primary">Подробнее о пакете</a>
+            </div>
+          </article>
+          <article class="path-card path-card--soon">
+            <p class="path-kicker path-kicker--soon">В разработке</p>
+            <h3>Финансовый анализ</h3>
+            <p class="path-price path-price--soon">Цена появится при запуске</p>
+            <div class="path-body">
+              <p>Загрузите бухгалтерскую, финансовую и налоговую отчётность юрлица — баланс, ОФР, ОДДС, пояснения.</p>
+              <ul>
+                <li>Ключевые показатели и сравнение периодов</li>
+                <li>Тренды и зоны риска</li>
+                <li>Структурированный разбор за минуты вместо часов ручной сверки</li>
+                <li>Опора на сами документы, а не на общие шаблоны</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="who">
+      <div class="container">
+        <p class="section-label">Использование</p>
+        <h2 class="section-title">Варианты использования приложения</h2>
+        <p class="section-subtitle">Используйте приложение на различных этапах бизнес-процессов, чтобы увеличить эффективность вашего бизнеса.</p>
+        <div class="audience-grid audience-grid--2x3">
+          <article class="audience-card">
+            <h3>Юридический блок</h3>
+            <p class="audience-lead">Договоры, допсоглашения, претензии и внутренние юридические позиции — без ручного поиска по десяткам PDF.</p>
+            <ul class="audience-points">
+              <li>Быстро находите пункты об ответственности, сроках, расторжении, штрафах и порядке претензий</li>
+              <li>Сверяете формулировки между шаблоном и конкретным договором — со ссылкой на фрагмент</li>
+              <li>Готовите черновик ответа коллеге или контрагенту, опираясь на актуальные версии файлов</li>
+              <li>Снижаете очередь к одному юристу: типовые вопросы закрываются из базы документов</li>
+            </ul>
+          </article>
+          <article class="audience-card">
+            <h3>Закупки и тендеры</h3>
+            <p class="audience-lead">Первичный разбор закупки до решения «участвовать или нет» — по ссылке или по комплекту документов.</p>
+            <ul class="audience-points">
+              <li>Карточка закупки, риски, чек-лист допуска и вопросы организатору</li>
+              <li>Цитаты из ТЗ и проекта контракта с опорой на 44-ФЗ / 223-ФЗ</li>
+              <li>Меньше часов на чтение PDF — больше времени на решение и заявку</li>
+              <li>Полезно и участнику, и заказчику: ловушки в комплекте до публикации</li>
+            </ul>
+          </article>
+          <article class="audience-card">
+            <h3>Руководитель отдела</h3>
+            <p class="audience-lead">Единая база знаний отдела: сотрудники сами находят «где написано», без очереди к вам.</p>
+            <ul class="audience-points">
+              <li>Одинаковые ответы из актуальной версии регламента, а не «как кто запомнил»</li>
+              <li>Новый сотрудник быстрее входит в работу — правила уже в чате</li>
+              <li>Меньше эскалаций по типовым вопросам и меньше ручной пересылки файлов</li>
+              <li>Контроль качества: можно проверить, на какой пункт опирался ответ</li>
+            </ul>
+          </article>
+          <article class="audience-card">
+            <h3>HR и кадровые процессы</h3>
+            <p class="audience-lead">Политики, должностные инструкции, ЛНА и ответы сотрудникам — из одной актуальной базы.</p>
+            <ul class="audience-points">
+              <li>Быстрый поиск норм по отпускам, командировкам, дисциплине и допуску к работе</li>
+              <li>Меньше разночтений: все опираются на одну версию документа</li>
+              <li>Онбординг без «спроси у Марии» — ответы со ссылкой на инструкцию</li>
+              <li>Подготовка пояснений для руководства на основе внутренних правил</li>
+            </ul>
+          </article>
+          <article class="audience-card">
+            <h3>Продажи и клиентский сервис</h3>
+            <p class="audience-lead">Ответы клиенту и внутренние согласования — по договору, оферте и коммерческим условиям.</p>
+            <ul class="audience-points">
+              <li>Находите срок, объём услуг, условия оплаты и ответственность без листания договора</li>
+              <li>Готовите корректный ответ в переписке с опорой на цитату, а не на память</li>
+              <li>Меньше ошибок в обещаниях клиенту — формулировка сверена с документом</li>
+              <li>Быстрее эскалация юристу: уже есть ссылка на спорный пункт</li>
+            </ul>
+          </article>
+          <article class="audience-card">
+            <h3>Финансы и контроль</h3>
+            <p class="audience-lead">Регламенты согласований, лимиты, договоры с поставщиками и внутренние финансовые политики.</p>
+            <ul class="audience-points">
+              <li>Быстро проверяете порядок платежей, лимиты и условия закрывающих документов</li>
+              <li>Сверяете обязательства по договору с фактическим запросом от подразделения</li>
+              <li>Снижаете риск пропустить штрафной или кассовый пункт в длинном договоре</li>
+              <li>Готовите разбор для руководителя на основе ваших файлов, а не общих шаблонов</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Коротко о главном</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button">Что умеет приложение?<span>+</span></button>
+            <div class="faq-answer">Zakon-AI — чат по вашим документам: загружаете договоры, регламенты и инструкции, задаёте вопрос обычным языком и получаете ответ с цитатой и ссылкой на фрагмент. Можно проверить источник — это не «мнение модели вообще», а опора на ваши файлы.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Это замена юристу?<span>+</span></button>
+            <div class="faq-answer">Нет. Это ускорение поиска и черновик ответа. Решение, риски и подпись остаются на человеке.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Чем отличается от ChatGPT?<span>+</span></button>
+            <div class="faq-answer">Обычный чат не видит ваши файлы, пока вы не вставите куски текста. Zakon-AI ищет по загруженной базе и показывает, из какого пункта взял формулировку. Удобно для команды: одна актуальная версия документов, а не «как кто запомнил».</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Нужно ли внедрение, чтобы попробовать?<span>+</span></button>
+            <div class="faq-answer">Нет. Регистрация, загрузка файлов, вопрос. Свой сервер и роли — отдельный разговор, если пилот уже нужен всей компании.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Какие файлы можно загрузить?<span>+</span></button>
+            <div class="faq-answer">PDF, Word, Excel и другие текстовые форматы. Состав базы задаёте вы: только то, что можно отдавать в систему.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Какие модели используются?<span>+</span></button>
+            <div class="faq-answer">В чате доступны современные языковые модели — можно выбрать подходящую под задачу. Режим «Экспертное мнение» запускает разбор несколькими моделями и собирает взвешенный итог. Ответ по-прежнему строится на ваших документах и сопровождается ссылками на источники.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Сколько стоит?<span>+</span></button>
+            <div class="faq-answer">Тариф «Личный» — 1 990 ₽ в месяц, «Команда» — 14 900 ₽ в месяц, «Корпорат» — по запросу. В тариф входят чат по документам и «Экспертное мнение». Сначала можно пройти тест бесплатно.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Как происходит оплата?<span>+</span></button>
+            <div class="faq-answer">Тариф приложения и ответы модели в чате учитываются отдельно: подписка — со счёта приложения, расход моделей — со счёта ИИ. Для «Личного» оплата идёт в приложении после теста. Для «Команды» и «Корпората» обычно оформляем доступ по заявке — счёт или договор.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Какой платёжный период?<span>+</span></button>
+            <div class="faq-answer">Основной период — месяц. Лимиты тарифа обновляются раз в 30 дней с момента подключения. Продление — на следующий месяц; для корпоративного контура сроки согласуем отдельно.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Где хранятся документы и кто их видит?<span>+</span></button>
+            <div class="faq-answer">Сервис работает на серверах в РФ. Ваши файлы доступны только вам и вашей команде с нужными правами. Документы не используются для обучения языковых моделей.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Можно ли работать всей командой?<span>+</span></button>
+            <div class="faq-answer">Да. В тарифе «Команда» — общая база и одинаковые ответы из одной версии документов. «Корпорат» — свой контур, роли и разграничение доступа. Напишите нам, если нужен пилот для отдела.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Что такое «Разбор тендера»?<span>+</span></button>
+            <div class="faq-answer">Это отдельный пакет поверх приложения: разбор закупки по ссылке или комплекту документов — риски, допуск, вопросы организатору с цитатами. Основной продукт — чат по вашим документам; тендеры подключают, если нужна именно эта задача.</div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="pkg-final-cta">
+          <h2>Загрузите один документ — и задайте вопрос, который обычно ищете полчаса</h2>
+          <p>Если цитата бесполезная — вы это увидите сразу. Если полезная — можно подключать коллег и расширять базу.</p>
+          <div class="pkg-final-cta-actions">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
+            <a href="#contact" class="btn btn-secondary">Пилот для отдела</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Контакт</p>
+          <h2 class="section-title">Пилот для отдела</h2>
+          <p class="section-subtitle" style="margin-bottom: 24px;">
+            Если нужен общий доступ, роли или свой сервер — напишите. Для себя достаточно кнопки «Начать работать».
+          </p>
+          <ul class="contact-note-list">
+            <li>Пилот на ваших документах, не презентация «вообще про ИИ»</li>
+            <li>Ответ в течение 1–2 рабочих дней</li>
+            <li>Можно сначала зарегистрироваться самим</li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <form id="lead-form">
+            <div class="form-group">
+              <label for="name">Имя *</label>
+              <input id="name" name="name" type="text" required placeholder="Как к вам обращаться">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="name@company.ru">
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="+7 900 000-00-00" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="message">Комментарий</label>
+              <textarea id="message" name="message" placeholder="Отдел, документы, тендеры или общий чат"></textarea>
+            </div>
+            <div class="form-group checkbox-row">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">Согласен на обработку персональных данных для ответа по заявке</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить</button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.</p>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index-draft.html" class="logo" style="margin-bottom: 8px;">
+          <img class="logo-icon" src="assets/logo-mark.svg?v=3" width="32" height="32" alt="">
+          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+        </a>
+        <p class="footer-tagline">Ответы по вашим документам<br>с цитатой и ссылкой на пункт</p>
+      </div>
+      <div class="footer-links">
+        <a href="#start">Как начать</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#paths">Пакеты</a>
+        <a href="packages/tenders.html">Тендеры</a>
+        <a href="#contact">Связаться</a>
+        <a href="index.html">Старая главная</a>
+      </div>
+      <div class="footer-copy">© 2026 Zakon-AI · черновик</div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=51"></script>
+  <script src="js/main.js?v=26"></script>
+</body>
+</html>

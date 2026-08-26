@@ -2529,6 +2529,13 @@ img {
   color: #0a0a0a;
 }
 
+[data-theme="light"] .nav a.btn-primary:hover,
+[data-theme="light"] .nav a.btn-primary:focus-visible,
+[data-theme="light"] .btn-primary:hover,
+[data-theme="light"] .btn-primary:focus-visible {
+  color: #ffffff;
+}
+
 [data-theme="light"] .case-tabs-wrap {
   background: var(--case-tabs-bg);
   backdrop-filter: blur(14px);
