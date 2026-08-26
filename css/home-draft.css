@@ -660,6 +660,15 @@
   margin: 0 0 20px;
 }
 
+.hero--pkg .hero-lead-list {
+  max-width: 44rem;
+  margin-bottom: 18px;
+}
+
+.hero--pkg .hero-pills {
+  margin-bottom: 24px;
+}
+
 .pkg-back-inline {
   color: var(--text-muted);
   font-weight: 500;
