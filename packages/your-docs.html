@@ -13,7 +13,7 @@
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/styles.css?v=57">
-  <link rel="stylesheet" href="../css/home-draft.css?v=18">
+  <link rel="stylesheet" href="../css/home-draft.css?v=19">
 </head>
 <body data-page="your-docs">
   <header class="header">
@@ -48,26 +48,49 @@
 
   <main>
     <section class="hero hero--pkg">
-      <div class="container">
-        <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
-        <p class="path-kicker path-kicker--live">Уже работает · в тарифе приложения</p>
-        <h1 class="hero-title">ИИ-эксперт для работы с вашими документами</h1>
-        <ul class="hero-lead-list">
-          <li>Zakon-AI превращает ваши документы в интеллектуальную систему, которая отвечает на вопросы за секунды.</li>
-          <li>Загрузите договоры, регламенты, технические задания, методички — всё, по чему вы обычно ищете вручную.</li>
-          <li>Задайте вопрос как коллеге: «где штраф за просрочку», «какой срок расторжения», «что по форс-мажору».</li>
-          <li>Получите точную цитату со ссылкой на конкретный пункт файла.</li>
-        </ul>
-        <div class="hero-pills">
-          <span class="hero-pill">Цитата в каждом ответе</span>
-          <span class="hero-pill">PDF, Word, Excel</span>
-          <span class="hero-pill">Папки и роли доступа</span>
-          <span class="hero-pill">Личная и командная база</span>
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+          <p class="path-kicker path-kicker--live">Уже работает · в тарифе приложения</p>
+          <h1 class="hero-title">ИИ-эксперт для работы с вашими документами</h1>
+          <ul class="hero-lead-list">
+            <li>Zakon-AI превращает ваши документы в интеллектуальную систему, которая отвечает на вопросы за секунды.</li>
+            <li>Загрузите договоры, регламенты, технические задания, методички — всё, по чему вы обычно ищете вручную.</li>
+            <li>Задайте вопрос как коллеге: «где штраф за просрочку», «какой срок расторжения», «что по форс-мажору».</li>
+            <li>Получите точную цитату со ссылкой на конкретный пункт файла.</li>
+          </ul>
+          <div class="hero-pills">
+            <span class="hero-pill">Цитата в каждом ответе</span>
+            <span class="hero-pill">PDF, Word, Excel</span>
+            <span class="hero-pill">Папки и роли доступа</span>
+            <span class="hero-pill">Личная и командная база</span>
+          </div>
+          <div class="hero-actions hero-actions--pair">
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Загрузить первый файл и задать вопрос</a>
+            <a href="../index.html#pricing" class="btn btn-secondary">Настроить доступ для команды</a>
+          </div>
         </div>
-        <div class="hero-actions hero-actions--pair">
-          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Загрузить первый файл и задать вопрос</a>
-          <a href="../index.html#pricing" class="btn btn-secondary">Настроить доступ для команды</a>
-        </div>
+
+        <aside class="docs-hero-visual" aria-hidden="true">
+          <article class="chat-mockup chat-mockup-hero docs-hero-mockup">
+            <div class="chat-header">
+              <span class="chat-title">Ваши документы</span>
+              <span class="chat-badge">● готов</span>
+            </div>
+            <div class="chat-body">
+              <div class="chat-docs docs-hero-files">
+                <span class="doc-chip">📄 Договор_поставки_2024.pdf</span>
+                <span class="doc-chip">📄 Регламент_премирования.docx</span>
+                <span class="doc-chip">📁 Папка · Юридический отдел</span>
+              </div>
+              <div class="bubble bubble-user">Где штраф за просрочку поставки?</div>
+              <div class="bubble bubble-bot">
+                Согласно договору, при просрочке поставки поставщик уплачивает неустойку в размере <strong>0,1% от суммы недопоставленного товара за каждый день</strong>, но не более 10% от стоимости партии.
+                <span class="source-link">→ Договор_поставки_2024.pdf, п. 7.3</span>
+              </div>
+            </div>
+          </article>
+        </aside>
       </div>
     </section>
 
