@@ -195,7 +195,7 @@ img {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
   min-height: 72px;
 }
@@ -268,6 +268,7 @@ img {
   display: flex;
   align-items: center;
   gap: 28px;
+  margin-left: auto;
 }
 
 .nav a {
