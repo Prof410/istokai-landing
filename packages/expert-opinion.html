@@ -13,7 +13,7 @@
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/styles.css?v=57">
-  <link rel="stylesheet" href="../css/home-draft.css?v=25">
+  <link rel="stylesheet" href="../css/home-draft.css?v=26">
 </head>
 <body data-page="expert-opinion">
   <header class="header">
@@ -95,10 +95,81 @@
       <div class="container">
         <p class="section-label">Зачем</p>
         <h2 class="section-title">Зачем нужен этот режим</h2>
-        <div class="pkg-prose">
-          <p><strong>Нормы в документах часто неоднозначны:</strong> одна модель может уверенно выдать единственный вариант, хотя спорных трактовок несколько. Когда речь о договоре на миллионы или решении об участии в тендере — цена ошибки слишком высока.</p>
-          <p><strong>«Экспертное мнение»</strong> — режим, в котором вопрос одновременно разбирают несколько сильных моделей. Затем самая продвинутая собирает итог: где модели согласны, где расходятся, какие риски у разных подходов.</p>
-          <p><strong>Результат:</strong> не упрощённый вердикт «да/нет», а взвешенный разбор с опорой на документы и ссылками на источники.</p>
+        <p class="section-subtitle">Нормы в документах часто неоднозначны: одна модель может уверенно выдать единственный вариант, хотя трактовок несколько. Когда цена ошибки высока — нужен консилиум, а не быстрый вердикт.</p>
+
+        <div class="expert-flow" aria-hidden="true">
+          <div class="expert-flow-step expert-flow-step--q">
+            <span class="expert-flow-badge">1</span>
+            <div class="expert-flow-card">
+              <p class="expert-flow-label">Ваш вопрос</p>
+              <p class="expert-flow-text">Сложный кейс по договору, тендеру или регламенту</p>
+            </div>
+          </div>
+
+          <div class="expert-flow-arrow" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="expert-flow-models">
+            <div class="expert-flow-step expert-flow-step--m1">
+              <span class="expert-flow-badge">2a</span>
+              <div class="expert-flow-card">
+                <p class="expert-flow-label">Модель 1</p>
+                <p class="expert-flow-text">Свой угол и ссылки на пункты</p>
+              </div>
+            </div>
+            <div class="expert-flow-step expert-flow-step--m2">
+              <span class="expert-flow-badge">2b</span>
+              <div class="expert-flow-card">
+                <p class="expert-flow-label">Модель 2</p>
+                <p class="expert-flow-text">Другая трактовка и риски</p>
+              </div>
+            </div>
+            <div class="expert-flow-step expert-flow-step--m3">
+              <span class="expert-flow-badge">2c</span>
+              <div class="expert-flow-card">
+                <p class="expert-flow-label">Модель 3</p>
+                <p class="expert-flow-text">Ещё один взгляд на норму</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="expert-flow-arrow" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="expert-flow-step expert-flow-step--sum">
+            <span class="expert-flow-badge">3</span>
+            <div class="expert-flow-card expert-flow-card--sum">
+              <p class="expert-flow-label">Сводный итог</p>
+              <p class="expert-flow-text">Ведущая модель собирает согласие, расхождения и оценку рисков — со ссылками на источники</p>
+              <div class="expert-flow-chips">
+                <span>Согласие</span>
+                <span>Расхождения</span>
+                <span>Риски</span>
+                <span>Источники</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="expert-why-compare">
+          <div class="compare-card bad">
+            <h3>Обычный чат</h3>
+            <ul>
+              <li>Одна модель — один уверенный ответ</li>
+              <li>Легко пропустить альтернативную трактовку</li>
+              <li>Упрощённый вердикт «да/нет»</li>
+            </ul>
+          </div>
+          <div class="compare-card good">
+            <h3>Экспертное мнение</h3>
+            <ul>
+              <li>Несколько моделей смотрят на один вопрос</li>
+              <li>Видно, где мнения сходятся и где нет</li>
+              <li>Взвешенное заключение с оценкой рисков</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
