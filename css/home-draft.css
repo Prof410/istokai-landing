@@ -964,9 +964,7 @@
   width: 100%;
   max-width: none;
   height: auto;
-  filter: drop-shadow(0 12px 28px rgba(15, 23, 42, 0.1));
-  -webkit-mask-image: radial-gradient(ellipse 92% 88% at 50% 48%, #000 62%, transparent 100%);
-  mask-image: radial-gradient(ellipse 92% 88% at 50% 48%, #000 62%, transparent 100%);
+  filter: drop-shadow(0 10px 22px rgba(15, 23, 42, 0.08));
 }
 
 @media (max-width: 900px) {
