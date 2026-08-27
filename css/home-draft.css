@@ -421,66 +421,32 @@
   pointer-events: none;
 }
 
-.expert-mode-chip {
+#start .start-step-num--with-icon {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
-  margin-top: 16px;
-  padding: 8px 10px 8px 12px;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent-text) 32%, var(--border));
-  background: linear-gradient(135deg, var(--accent-soft), color-mix(in srgb, var(--bg-card) 70%, var(--accent-soft)));
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  width: auto;
+  color: transparent;
 }
 
-.expert-mode-chip-icon {
+.start-step-brain {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--bg-card);
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.55rem;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent-text) 30%, var(--border));
   color: var(--accent-text);
-  flex-shrink: 0;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 
-.expert-mode-chip-icon svg {
-  width: 16px;
-  height: 16px;
-}
-
-.expert-mode-chip-text {
-  font-size: 0.82rem;
-  font-weight: 650;
-  color: var(--text);
-  white-space: nowrap;
-}
-
-.expert-mode-chip-toggle {
-  position: relative;
-  width: 36px;
-  height: 20px;
-  border-radius: 999px;
-  background: var(--accent);
-  flex-shrink: 0;
-  margin-left: 2px;
-}
-
-.expert-mode-chip-toggle::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
-}
-
-[data-theme="light"] .expert-mode-chip {
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+.start-step-brain svg {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 .path-card {
