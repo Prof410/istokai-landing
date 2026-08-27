@@ -39,16 +39,16 @@
         </div>
       </nav>
       <div class="header-tools">
-        <div class="theme-switch" role="group" aria-label="Тема">
-          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" aria-label="Тёмная тема">
+        <div class="theme-switch" role="group" data-i18n-aria="ui.themeGroup" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" data-i18n-aria="ui.themeDark" aria-label="Тёмная">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
-          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" data-i18n-aria="ui.themeLight" aria-label="Светлая">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </button>
         </div>
       </div>
-      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+      <button class="menu-toggle" type="button" data-i18n-aria="ui.menu" aria-label="Меню">☰</button>
     </div>
   </header>
 
@@ -56,39 +56,39 @@
     <section class="hero hero--pkg">
       <div class="container hero-grid">
         <div class="hero-main">
-          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths" data-i18n="pkg.back">← К пакетам</a></p>
           <p class="path-kicker path-kicker--live" data-i18n="expert.kicker">Доступно · в тарифе приложения</p>
           <h1 class="hero-title"><span data-i18n="expert.title">Экспертное мнение</span> <span class="hero-title-note" data-i18n="expert.titleNote">(несколько продвинутых ИИ моделей)</span></h1>
-          <p class="hero-lead hero-lead--wide">
+          <p class="hero-lead hero-lead--wide" data-i18n="expert.hero.lead">
             Когда цена ошибки слишком высока для обычного чата. Запустите перекрёстный анализ документа несколькими ИИ-моделями и получите взвешенное заключение с оценкой рисков, а не упрощённый вердикт «да/нет».
           </p>
           <ul class="hero-lead-list">
-            <li>Несколько независимых моделей разбирают один вопрос — меньше однобоких трактовок и «уверенных» ошибок.</li>
-            <li>Сводный итог показывает, где модели согласны, где расходятся, и какие риски у каждого подхода.</li>
-            <li>Каждый тезис можно проверить по ссылке на пункт документа.</li>
+            <li data-i18n="expert.hero.li1">Несколько независимых моделей разбирают один вопрос — меньше однобоких трактовок и «уверенных» ошибок.</li>
+            <li data-i18n="expert.hero.li2">Сводный итог показывает, где модели согласны, где расходятся, и какие риски у каждого подхода.</li>
+            <li data-i18n="expert.hero.li3">Каждый тезис можно проверить по ссылке на пункт документа.</li>
           </ul>
           <div class="hero-pills">
-            <span class="hero-pill">Несколько моделей</span>
-            <span class="hero-pill">Сводный итог</span>
-            <span class="hero-pill">Оценка рисков</span>
-            <span class="hero-pill">Ссылки на источники</span>
+            <span class="hero-pill" data-i18n="expert.pill1">Несколько моделей</span>
+            <span class="hero-pill" data-i18n="expert.pill2">Сводный итог</span>
+            <span class="hero-pill" data-i18n="expert.pill3">Оценка рисков</span>
+            <span class="hero-pill" data-i18n="expert.pill4">Ссылки на источники</span>
           </div>
           <div class="hero-actions">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Запустить анализ в приложении</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="expert.cta.launch">Запустить анализ в приложении</a>
           </div>
         </div>
 
         <aside class="docs-hero-visual" aria-hidden="true">
           <article class="chat-mockup chat-mockup-hero docs-hero-mockup expert-hero-mockup">
             <div class="chat-header">
-              <span class="chat-title">Экспертное мнение</span>
-              <span class="chat-badge">● 2 модели · итог</span>
+              <span class="chat-title" data-i18n="expert.mock.title">Экспертное мнение</span>
+              <span class="chat-badge" data-i18n="expert.mock.badge">● 2 модели · итог</span>
             </div>
             <div class="chat-body">
-              <div class="bubble bubble-user">Можно ли расторгнуть договор без штрафов на 5-й день просрочки?</div>
+              <div class="bubble bubble-user" data-i18n="expert.mock.q">Можно ли расторгнуть договор без штрафов на 5-й день просрочки?</div>
               <div class="bubble bubble-bot">
-                <strong>Сводный итог:</strong> одностороннее расторжение на 5-й день сопряжено с риском. П. 8.1 допускает расторжение при просрочке &gt;10 дней, а п. 4.2 обязывает уплатить неустойку за фактический период.
-                <span class="source-link">→ Договор_поставки.pdf, п. 4.2, п. 8.1</span>
+                <span data-i18n-html="expert.mock.a"><strong>Сводный итог:</strong> одностороннее расторжение на 5-й день сопряжено с риском. П. 8.1 допускает расторжение при просрочке &gt;10 дней, а п. 4.2 обязывает уплатить неустойку за фактический период.</span>
+                <span class="source-link" data-i18n="expert.mock.source">→ Договор_поставки.pdf, п. 4.2, п. 8.1</span>
               </div>
             </div>
           </article>
@@ -98,31 +98,31 @@
 
     <section class="section section--soft" id="why">
       <div class="container">
-        <p class="section-label">Зачем</p>
-        <h2 class="section-title">Зачем нужен этот пакет</h2>
-        <p class="section-subtitle">Обычный чат с ИИ хорошо отвечает, когда вывод прямо следует из текста. Но в договорах, тендерах и регламентах часто нет одной правильной трактовки — а ошибка стоит дорого.</p>
+        <p class="section-label" data-i18n="sec.why">Зачем</p>
+        <h2 class="section-title" data-i18n="expert.why.title">Зачем нужен этот пакет</h2>
+        <p class="section-subtitle" data-i18n="expert.why.subtitle">Обычный чат с ИИ хорошо отвечает, когда вывод прямо следует из текста. Но в договорах, тендерах и регламентах часто нет одной правильной трактовки — а ошибка стоит дорого.</p>
 
         <div class="audience-grid expert-why-grid">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
-              <h3>Однозначного ответа нет</h3>
+              <h3 data-i18n="expert.why.1.title">Однозначного ответа нет</h3>
             </div>
-            <p class="audience-lead">Пункты договора могут тянуть в разные стороны: одна норма разрешает, другая ограничивает. Нужен разбор вариантов, а не быстрый вердикт «да/нет».</p>
+            <p class="audience-lead" data-i18n="expert.why.1.lead">Пункты договора могут тянуть в разные стороны: одна норма разрешает, другая ограничивает. Нужен разбор вариантов, а не быстрый вердикт «да/нет».</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 15h8"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg></span>
-              <h3>Модель не уверена в ответе</h3>
+              <h3 data-i18n="expert.why.2.title">Модель не уверена в ответе</h3>
             </div>
-            <p class="audience-lead">При спорных формулировках обычный чат часто даёт общий или осторожный ответ без ясной опоры на пункты. Вам нужно понять, где именно сомнение и какие есть альтернативы.</p>
+            <p class="audience-lead" data-i18n="expert.why.2.lead">При спорных формулировках обычный чат часто даёт общий или осторожный ответ без ясной опоры на пункты. Вам нужно понять, где именно сомнение и какие есть альтернативы.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
-              <h3>Нужно экспертное мнение</h3>
+              <h3 data-i18n="expert.why.3.title">Нужно экспертное мнение</h3>
             </div>
-            <p class="audience-lead">Когда вопрос сложный и от ответа зависят деньги, сроки или ответственность — включите «Экспертное мнение»: несколько моделей разберут кейс, а самая продвинутая соберёт взвешенный итог.</p>
+            <p class="audience-lead" data-i18n="expert.why.3.lead">Когда вопрос сложный и от ответа зависят деньги, сроки или ответственность — включите «Экспертное мнение»: несколько моделей разберут кейс, а самая продвинутая соберёт взвешенный итог.</p>
           </article>
         </div>
       </div>
@@ -130,38 +130,38 @@
 
     <section class="section" id="example">
       <div class="container">
-        <p class="section-label">На практике</p>
-        <h2 class="section-title">Как это выглядит на практике</h2>
-        <p class="section-subtitle">Три примера неоднозначных ситуаций: модели расходятся, а продвинутая ИИ собирает взвешенный итог. Листайте карусель.</p>
+        <p class="section-label" data-i18n="sec.practice">На практике</p>
+        <h2 class="section-title" data-i18n="expert.practice.title">Как это выглядит на практике</h2>
+        <p class="section-subtitle" data-i18n="expert.practice.subtitle">Три примера неоднозначных ситуаций: модели расходятся, а продвинутая ИИ собирает взвешенный итог. Листайте карусель.</p>
 
         <div class="expert-example-carousel" id="expert-example-carousel">
           <div class="expert-example-viewport">
             <div class="expert-example-track">
               <article class="expert-demo expert-example-slide is-active" data-slide="0">
-                <p class="expert-demo-kicker">Договор поставки · расторжение</p>
+                <p class="expert-demo-kicker" data-i18n="expert.slide1.kicker">Договор поставки · расторжение</p>
 
                 <div class="expert-demo-q">
-                  <p class="expert-demo-label">Ваш вопрос</p>
-                  <p class="expert-demo-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.qLabel">Ваш вопрос</p>
+                  <p class="expert-demo-quote" data-i18n="expert.slide1.q">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
                 </div>
 
-                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+                <p class="expert-demo-bridge" data-i18n="expert.demo.bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
 
                 <div class="expert-demo-models">
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 1</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--yes">Да, можно</p>
-                    <p>П. 8.1 допускает расторжение при нарушении сроков.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model1">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes" data-i18n="expert.slide1.m1.verdict">Да, можно</p>
+                    <p data-i18n="expert.slide1.m1.text">П. 8.1 допускает расторжение при нарушении сроков.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 2</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--no">Нет, нельзя</p>
-                    <p>П. 4.2 прямо требует неустойку за каждый день просрочки.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model2">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no" data-i18n="expert.slide1.m2.verdict">Нет, нельзя</p>
+                    <p data-i18n="expert.slide1.m2.text">П. 4.2 прямо требует неустойку за каждый день просрочки.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 3</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--mid">Зависит</p>
-                    <p>Право на расторжение есть только при просрочке свыше 10 дней.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model3">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid" data-i18n="expert.slide1.m3.verdict">Зависит</p>
+                    <p data-i18n="expert.slide1.m3.text">Право на расторжение есть только при просрочке свыше 10 дней.</p>
                   </article>
                 </div>
 
@@ -170,42 +170,42 @@
                 </div>
 
                 <div class="expert-demo-sum">
-                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
-                  <p class="expert-demo-quote">«Однозначного „да“ нет. На 5-й день одностороннее расторжение рискованно: п. 8.1 срабатывает при просрочке &gt;10 дней, а п. 4.2 всё равно обязывает уплатить неустойку за фактическую задержку. Рекомендация: сначала претензия об устранении нарушения, а не немедленное расторжение».</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.sumLabel">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote" data-i18n-html="expert.slide1.sum">«Однозначного „да“ нет. На 5-й день одностороннее расторжение рискованно: п. 8.1 срабатывает при просрочке &gt;10 дней, а п. 4.2 всё равно обязывает уплатить неустойку за фактическую задержку. Рекомендация: сначала претензия об устранении нарушения, а не немедленное расторжение».</p>
                   <ul class="expert-demo-points">
-                    <li>где модели согласны</li>
-                    <li>где расходятся</li>
-                    <li>какие риски</li>
-                    <li>ссылки на пункты документа</li>
+                    <li data-i18n="expert.demo.point1">где модели согласны</li>
+                    <li data-i18n="expert.demo.point2">где расходятся</li>
+                    <li data-i18n="expert.demo.point3">какие риски</li>
+                    <li data-i18n="expert.demo.point4">ссылки на пункты документа</li>
                   </ul>
                 </div>
               </article>
 
               <article class="expert-demo expert-example-slide" data-slide="1" hidden>
-                <p class="expert-demo-kicker">Тендер · решение об участии</p>
+                <p class="expert-demo-kicker" data-i18n="expert.slide2.kicker">Тендер · решение об участии</p>
 
                 <div class="expert-demo-q">
-                  <p class="expert-demo-label">Ваш вопрос</p>
-                  <p class="expert-demo-quote">«Стоит ли участвовать в этой закупке, если обеспечение заявки 5%, а в проекте контракта — жёсткие штрафы за сроки?»</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.qLabel">Ваш вопрос</p>
+                  <p class="expert-demo-quote" data-i18n="expert.slide2.q">«Стоит ли участвовать в этой закупке, если обеспечение заявки 5%, а в проекте контракта — жёсткие штрафы за сроки?»</p>
                 </div>
 
-                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+                <p class="expert-demo-bridge" data-i18n="expert.demo.bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
 
                 <div class="expert-demo-models">
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 1</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--yes">Да, участвовать</p>
-                    <p>НМЦК приемлема, маржа перекрывает типичные риски по срокам.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model1">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes" data-i18n="expert.slide2.m1.verdict">Да, участвовать</p>
+                    <p data-i18n="expert.slide2.m1.text">НМЦК приемлема, маржа перекрывает типичные риски по срокам.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 2</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--no">Нет, не стоит</p>
-                    <p>П. 12: неустойка 0,5%/день без верхнего предела — кассовый риск.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model2">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no" data-i18n="expert.slide2.m2.verdict">Нет, не стоит</p>
+                    <p data-i18n="expert.slide2.m2.text">П. 12: неустойка 0,5%/день без верхнего предела — кассовый риск.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 3</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--mid">Условно</p>
-                    <p>Только если есть запас по графику и лимит экспозиции по штрафам.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model3">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid" data-i18n="expert.slide2.m3.verdict">Условно</p>
+                    <p data-i18n="expert.slide2.m3.text">Только если есть запас по графику и лимит экспозиции по штрафам.</p>
                   </article>
                 </div>
 
@@ -214,42 +214,42 @@
                 </div>
 
                 <div class="expert-demo-sum">
-                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
-                  <p class="expert-demo-quote">«Участие возможно, но с оговорками. Обеспечение 5% и открытая неустойка создают риск кассового разрыва при срыве сроков. Рекомендация: участвовать только при уверенности в графике поставок и после оценки максимальной экспозиции по штрафам».</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.sumLabel">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote" data-i18n-html="expert.slide2.sum">«Участие возможно, но с оговорками. Обеспечение 5% и открытая неустойка создают риск кассового разрыва при срыве сроков. Рекомендация: участвовать только при уверенности в графике поставок и после оценки максимальной экспозиции по штрафам».</p>
                   <ul class="expert-demo-points">
-                    <li>где модели согласны</li>
-                    <li>где расходятся</li>
-                    <li>какие риски</li>
-                    <li>ссылки на пункты документа</li>
+                    <li data-i18n="expert.demo.point1">где модели согласны</li>
+                    <li data-i18n="expert.demo.point2">где расходятся</li>
+                    <li data-i18n="expert.demo.point3">какие риски</li>
+                    <li data-i18n="expert.demo.point4">ссылки на пункты документа</li>
                   </ul>
                 </div>
               </article>
 
               <article class="expert-demo expert-example-slide" data-slide="2" hidden>
-                <p class="expert-demo-kicker">Регламент · противоречия</p>
+                <p class="expert-demo-kicker" data-i18n="expert.slide3.kicker">Регламент · противоречия</p>
 
                 <div class="expert-demo-q">
-                  <p class="expert-demo-label">Ваш вопрос</p>
-                  <p class="expert-demo-quote">«Есть ли противоречия между разделом „Ответственность“ договора и Приложением №1 по срокам устранения замечаний?»</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.qLabel">Ваш вопрос</p>
+                  <p class="expert-demo-quote" data-i18n="expert.slide3.q">«Есть ли противоречия между разделом „Ответственность“ договора и Приложением №1 по срокам устранения замечаний?»</p>
                 </div>
 
-                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+                <p class="expert-demo-bridge" data-i18n="expert.demo.bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
 
                 <div class="expert-demo-models">
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 1</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--yes">Есть противоречие</p>
-                    <p>П. 9.1 — 10 рабочих дней, Приложение №1 — 5 календарных.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model1">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes" data-i18n="expert.slide3.m1.verdict">Есть противоречие</p>
+                    <p data-i18n="expert.slide3.m1.text">П. 9.1 — 10 рабочих дней, Приложение №1 — 5 календарных.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 2</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--no">Противоречия нет</p>
-                    <p>Приложение уточняет общий раздел и имеет приоритет по смыслу.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model2">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no" data-i18n="expert.slide3.m2.verdict">Противоречия нет</p>
+                    <p data-i18n="expert.slide3.m2.text">Приложение уточняет общий раздел и имеет приоритет по смыслу.</p>
                   </article>
                   <article class="expert-demo-model">
-                    <span class="expert-demo-model-tag">Модель 3</span>
-                    <p class="expert-demo-verdict expert-demo-verdict--mid">Спорно</p>
-                    <p>Разные единицы измерения (рабочие / календарные) создают зону спора.</p>
+                    <span class="expert-demo-model-tag" data-i18n="expert.demo.model3">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid" data-i18n="expert.slide3.m3.verdict">Спорно</p>
+                    <p data-i18n="expert.slide3.m3.text">Разные единицы измерения (рабочие / календарные) создают зону спора.</p>
                   </article>
                 </div>
 
@@ -258,27 +258,27 @@
                 </div>
 
                 <div class="expert-demo-sum">
-                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
-                  <p class="expert-demo-quote">«Противоречие подтверждается: разные сроки и разная единица измерения. Риск — спор о том, какой документ приоритетнее. Рекомендация: зафиксировать приоритет Приложения №1 или унифицировать формулировку в допсоглашении».</p>
+                  <p class="expert-demo-label" data-i18n="expert.demo.sumLabel">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote" data-i18n-html="expert.slide3.sum">«Противоречие подтверждается: разные сроки и разная единица измерения. Риск — спор о том, какой документ приоритетнее. Рекомендация: зафиксировать приоритет Приложения №1 или унифицировать формулировку в допсоглашении».</p>
                   <ul class="expert-demo-points">
-                    <li>где модели согласны</li>
-                    <li>где расходятся</li>
-                    <li>какие риски</li>
-                    <li>ссылки на пункты документа</li>
+                    <li data-i18n="expert.demo.point1">где модели согласны</li>
+                    <li data-i18n="expert.demo.point2">где расходятся</li>
+                    <li data-i18n="expert.demo.point3">какие риски</li>
+                    <li data-i18n="expert.demo.point4">ссылки на пункты документа</li>
                   </ul>
                 </div>
               </article>
             </div>
           </div>
 
-          <div class="carousel-controls expert-example-controls" role="group" aria-label="Примеры ответов">
-            <button type="button" class="carousel-btn expert-example-prev" aria-label="Предыдущий пример">‹</button>
-            <div class="carousel-dots" role="tablist" aria-label="Слайды примеров">
-              <button type="button" class="carousel-dot active" aria-label="Пример 1" data-expert-slide="0"></button>
-              <button type="button" class="carousel-dot" aria-label="Пример 2" data-expert-slide="1"></button>
-              <button type="button" class="carousel-dot" aria-label="Пример 3" data-expert-slide="2"></button>
+          <div class="carousel-controls expert-example-controls" role="group" data-i18n-aria="expert.carousel.aria" aria-label="Примеры ответов">
+            <button type="button" class="carousel-btn expert-example-prev" data-i18n-aria="expert.carousel.prev" aria-label="Предыдущий пример">‹</button>
+            <div class="carousel-dots" role="tablist" data-i18n-aria="expert.carousel.dots" aria-label="Слайды примеров">
+              <button type="button" class="carousel-dot active" data-i18n-aria="expert.carousel.ex1" aria-label="Пример 1" data-expert-slide="0"></button>
+              <button type="button" class="carousel-dot" data-i18n-aria="expert.carousel.ex2" aria-label="Пример 2" data-expert-slide="1"></button>
+              <button type="button" class="carousel-dot" data-i18n-aria="expert.carousel.ex3" aria-label="Пример 3" data-expert-slide="2"></button>
             </div>
-            <button type="button" class="carousel-btn expert-example-next" aria-label="Следующий пример">›</button>
+            <button type="button" class="carousel-btn expert-example-next" data-i18n-aria="expert.carousel.next" aria-label="Следующий пример">›</button>
           </div>
         </div>
       </div>
@@ -286,36 +286,36 @@
 
     <section class="section section--soft" id="features">
       <div class="container">
-        <p class="section-label">Надёжность</p>
-        <h2 class="section-title">Надёжность вместо уверенности одной модели</h2>
+        <p class="section-label" data-i18n="expert.reliability.label">Надёжность</p>
+        <h2 class="section-title" data-i18n="expert.reliability.title">Надёжность вместо уверенности одной модели</h2>
         <div class="audience-grid audience-grid--2x2">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></span>
-              <h3>Перекрёстная проверка</h3>
+              <h3 data-i18n="expert.feat1.title">Перекрёстная проверка</h3>
             </div>
-            <p class="audience-lead">Запрос обрабатывают несколько независимых моделей — это снижает риск «галлюцинаций» и однобоких трактовок.</p>
+            <p class="audience-lead" data-i18n="expert.feat1.lead">Запрос обрабатывают несколько независимых моделей — это снижает риск «галлюцинаций» и однобоких трактовок.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
-              <h3>Сводный итог, а не просто текст</h3>
+              <h3 data-i18n="expert.feat2.title">Сводный итог, а не просто текст</h3>
             </div>
-            <p class="audience-lead">Продвинутая модель выступает как ведущий эксперт: не просто суммирует ответы, а выделяет точки согласия, расхождения и оценивает риски каждого подхода.</p>
+            <p class="audience-lead" data-i18n="expert.feat2.lead">Продвинутая модель выступает как ведущий эксперт: не просто суммирует ответы, а выделяет точки согласия, расхождения и оценивает риски каждого подхода.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
-              <h3>Полная прозрачность</h3>
+              <h3 data-i18n="expert.feat3.title">Полная прозрачность</h3>
             </div>
-            <p class="audience-lead">Как и в базовом чате, каждый тезис подкреплён кликабельной ссылкой на конкретный абзац вашего документа.</p>
+            <p class="audience-lead" data-i18n="expert.feat3.lead">Как и в базовом чате, каждый тезис подкреплён кликабельной ссылкой на конкретный абзац вашего документа.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Решение остаётся за вами</h3>
+              <h3 data-i18n="expert.feat4.title">Решение остаётся за вами</h3>
             </div>
-            <p class="audience-lead">Режим не подменяет юриста и не выдаёт «да/нет» как приговор. Вы видите варианты и риски — итоговое решение принимаете сами.</p>
+            <p class="audience-lead" data-i18n="expert.feat4.lead">Режим не подменяет юриста и не выдаёт «да/нет» как приговор. Вы видите варианты и риски — итоговое решение принимаете сами.</p>
           </article>
         </div>
       </div>
@@ -323,14 +323,14 @@
 
     <section class="section" id="start">
       <div class="container">
-        <p class="section-label">Как это работает</p>
-        <h2 class="section-title">Три простых шага в интерфейсе</h2>
-        <p class="section-subtitle">Пакет уже установлен в приложении, для начала работы нужен 1 клик.</p>
+        <p class="section-label" data-i18n="sec.how">Как это работает</p>
+        <h2 class="section-title" data-i18n="expert.how.title">Три простых шага в интерфейсе</h2>
+        <p class="section-subtitle" data-i18n="expert.how.subtitle">Пакет уже установлен в приложении, для начала работы нужен 1 клик.</p>
         <div class="start-steps">
           <article class="start-step">
             <span class="start-step-num">1</span>
-            <h3>Прикрепите документы</h3>
-            <p>Откройте чат и добавьте папку или файл (договор, тендер, регламент).</p>
+            <h3 data-i18n="expert.how.step1.title">Прикрепите документы</h3>
+            <p data-i18n="expert.how.step1.text">Откройте чат и добавьте папку или файл (договор, тендер, регламент).</p>
           </article>
           <article class="start-step">
             <span class="start-step-num start-step-num--with-icon">
@@ -339,13 +339,13 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
               </span>
             </span>
-            <h3>Включите режим</h3>
-            <p>Нажмите переключатель рядом с полем ввода — и приложение ответит вам на вопрос в режиме «Экспертное мнение».</p>
+            <h3 data-i18n="expert.how.step2.title">Включите режим</h3>
+            <p data-i18n="expert.how.step2.text">Нажмите переключатель рядом с полем ввода — и приложение ответит вам на вопрос в режиме «Экспертное мнение».</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">3</span>
-            <h3>Задайте сложный вопрос</h3>
-            <p>Например: «Выдели все противоречия между разделом „Ответственность“ и Приложением №1». Получите структурированный разбор со ссылками.</p>
+            <h3 data-i18n="expert.how.step3.title">Задайте сложный вопрос</h3>
+            <p data-i18n="expert.how.step3.text">Например: «Выдели все противоречия между разделом „Ответственность“ и Приложением №1». Получите структурированный разбор со ссылками.</p>
           </article>
         </div>
       </div>
@@ -353,44 +353,44 @@
 
     <section class="section section--soft" id="who">
       <div class="container">
-        <p class="section-label">Аудитория</p>
-        <h2 class="section-title">Для кого этот пакет</h2>
+        <p class="section-label" data-i18n="sec.audience">Аудитория</p>
+        <h2 class="section-title" data-i18n="expert.who.title">Для кого этот пакет</h2>
         <div class="role-grid role-grid--3x3">
           <article class="role-card">
-            <h3>Юристы и договорные отделы</h3>
-            <p class="role-lead">Спорные формулировки, несколько возможных трактовок, выбор между рисками расторжения или претензии.</p>
+            <h3 data-i18n="expert.who.1.title">Юристы и договорные отделы</h3>
+            <p class="role-lead" data-i18n="expert.who.1.lead">Спорные формулировки, несколько возможных трактовок, выбор между рисками расторжения или претензии.</p>
           </article>
           <article class="role-card">
-            <h3>Специалисты по закупкам</h3>
-            <p class="role-lead">Решение «участвовать или нет», когда в ТЗ и проекте контракта есть противоречия и скрытые условия.</p>
+            <h3 data-i18n="expert.who.2.title">Специалисты по закупкам</h3>
+            <p class="role-lead" data-i18n="expert.who.2.lead">Решение «участвовать или нет», когда в ТЗ и проекте контракта есть противоречия и скрытые условия.</p>
           </article>
           <article class="role-card">
-            <h3>HR и руководители</h3>
-            <p class="role-lead">Сложные кадровые кейсы по положениям и инструкциям — когда нужен взвешенный разбор, а не быстрый ответ.</p>
+            <h3 data-i18n="expert.who.3.title">HR и руководители</h3>
+            <p class="role-lead" data-i18n="expert.who.3.lead">Сложные кадровые кейсы по положениям и инструкциям — когда нужен взвешенный разбор, а не быстрый ответ.</p>
           </article>
           <article class="role-card">
-            <h3>Специалисты по ИБ</h3>
-            <p class="role-lead">Проверка проектов договоров на соответствие стандартам и требованиям к ПДн с оценкой спорных пунктов.</p>
+            <h3 data-i18n="expert.who.4.title">Специалисты по ИБ</h3>
+            <p class="role-lead" data-i18n="expert.who.4.lead">Проверка проектов договоров на соответствие стандартам и требованиям к ПДн с оценкой спорных пунктов.</p>
           </article>
           <article class="role-card">
-            <h3>Финансисты и бухгалтерия</h3>
-            <p class="role-lead">Неоднозначные условия оплаты, штрафов и ответственности — когда цена ошибки измеряется суммой в договоре.</p>
+            <h3 data-i18n="expert.who.5.title">Финансисты и бухгалтерия</h3>
+            <p class="role-lead" data-i18n="expert.who.5.lead">Неоднозначные условия оплаты, штрафов и ответственности — когда цена ошибки измеряется суммой в договоре.</p>
           </article>
           <article class="role-card">
-            <h3>Инженеры и технические специалисты</h3>
-            <p class="role-lead">Противоречия между ТЗ, нормами и приложениями — перекрёстный разбор до принятия решения.</p>
+            <h3 data-i18n="expert.who.6.title">Инженеры и технические специалисты</h3>
+            <p class="role-lead" data-i18n="expert.who.6.lead">Противоречия между ТЗ, нормами и приложениями — перекрёстный разбор до принятия решения.</p>
           </article>
           <article class="role-card">
-            <h3>Консультанты и аудиторы</h3>
-            <p class="role-lead">Клиентские материалы с несколькими возможными выводами — согласие, расхождения и риски в одном итоге.</p>
+            <h3 data-i18n="expert.who.7.title">Консультанты и аудиторы</h3>
+            <p class="role-lead" data-i18n="expert.who.7.lead">Клиентские материалы с несколькими возможными выводами — согласие, расхождения и риски в одном итоге.</p>
           </article>
           <article class="role-card">
-            <h3>Служба поддержки и клиентский сервис</h3>
-            <p class="role-lead">Нестандартные обращения по регламентам, где простой чат даёт слишком уверенный и однобокий ответ.</p>
+            <h3 data-i18n="expert.who.8.title">Служба поддержки и клиентский сервис</h3>
+            <p class="role-lead" data-i18n="expert.who.8.lead">Нестандартные обращения по регламентам, где простой чат даёт слишком уверенный и однобокий ответ.</p>
           </article>
           <article class="role-card">
-            <h3>Владельцы и руководители малого бизнеса</h3>
-            <p class="role-lead">Критичные договоры и решения без штатного эксперта под рукой — взвешенный разбор со ссылками на пункты.</p>
+            <h3 data-i18n="expert.who.9.title">Владельцы и руководители малого бизнеса</h3>
+            <p class="role-lead" data-i18n="expert.who.9.lead">Критичные договоры и решения без штатного эксперта под рукой — взвешенный разбор со ссылками на пункты.</p>
           </article>
         </div>
       </div>
@@ -398,37 +398,37 @@
 
     <section class="section" id="security">
       <div class="container">
-        <p class="section-label">Безопасность</p>
-        <h2 class="section-title">Безопасность и конфиденциальность</h2>
-        <p class="section-subtitle">Для сложных разборов важны те же правила, что и для всей базы документов: контроль доступа, изоляция и резидентство данных.</p>
+        <p class="section-label" data-i18n="sec.security">Безопасность</p>
+        <h2 class="section-title" data-i18n="expert.security.title">Безопасность и конфиденциальность</h2>
+        <p class="section-subtitle" data-i18n="expert.security.subtitle">Для сложных разборов важны те же правила, что и для всей базы документов: контроль доступа, изоляция и резидентство данных.</p>
         <div class="security-grid security-grid--2x2">
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></span>
-              <h3>Централизованный контроль</h3>
+              <h3 data-i18n="expert.sec.control.title">Централизованный контроль</h3>
             </div>
-            <p>На тарифе «Команда» только администратор покупает место и управляет доступом. Участники не могут случайно слить бюджет усиленных запросов или удалить общую базу.</p>
+            <p data-i18n="expert.sec.control.text">На тарифе «Команда» только администратор покупает место и управляет доступом. Участники не могут случайно слить бюджет усиленных запросов или удалить общую базу.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-              <h3>Изоляция данных</h3>
+              <h3 data-i18n="expert.sec.isolation.title">Изоляция данных</h3>
             </div>
-            <p>Ваши файлы не смешиваются с данными других пользователей. Модели отвечают только по материалам вашего аккаунта и только на ваши вопросы.</p>
+            <p data-i18n="expert.sec.isolation.text">Ваши файлы не смешиваются с данными других пользователей. Модели отвечают только по материалам вашего аккаунта и только на ваши вопросы.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
-              <h3>Резидентство</h3>
+              <h3 data-i18n="expert.sec.residency.title">Резидентство</h3>
             </div>
-            <p>Сервис работает на серверах в РФ — в соответствии с требованиями <strong>152-ФЗ</strong> о персональных данных.</p>
+            <p data-i18n-html="expert.sec.residency.text">Сервис работает на серверах в РФ — в соответствии с требованиями <strong>152-ФЗ</strong> о персональных данных.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Приватность</h3>
+              <h3 data-i18n="expert.sec.privacy.title">Приватность</h3>
             </div>
-            <p>Загруженные документы <strong>не используются</strong> для обучения языковых моделей — ни в обычном чате, ни в режиме «Экспертное мнение».</p>
+            <p data-i18n-html="expert.sec.privacy.text">Загруженные документы <strong>не используются</strong> для обучения языковых моделей — ни в обычном чате, ни в режиме «Экспертное мнение».</p>
           </article>
         </div>
       </div>
@@ -438,12 +438,12 @@
       <div class="container">
         <div class="pkg-price-layout">
           <div class="pkg-price-copy">
-            <p class="section-label">Стоимость</p>
+            <p class="section-label" data-i18n="sec.pricing">Стоимость</p>
             <h2 class="section-title" data-i18n="expert.pricing.title">Включён в тариф приложения</h2>
             <div class="pkg-price-note">
-              <p class="pkg-price-lead">Отдельная ежемесячная подписка на пакет не требуется.</p>
-              <p>Режим «Экспертное мнение» доступен всем пользователям приложения. Стоимость ответа рассчитывается по ставке нескольких продвинутых моделей и прозрачно списывается с вашего внутреннего баланса ИИ в рублях после генерации и получения ответа.</p>
-              <p>Вы платите только за готовый ответ — без скрытых списаний и без бесконтрольного расхода баланса.</p>
+              <p class="pkg-price-lead" data-i18n="expert.pricing.lead">Отдельная ежемесячная подписка на пакет не требуется.</p>
+              <p data-i18n="expert.pricing.body1">Режим «Экспертное мнение» доступен всем пользователям приложения. Стоимость ответа рассчитывается по ставке нескольких продвинутых моделей и прозрачно списывается с вашего внутреннего баланса ИИ в рублях после генерации и получения ответа.</p>
+              <p data-i18n="expert.pricing.body2">Вы платите только за готовый ответ — без скрытых списаний и без бесконтрольного расхода баланса.</p>
             </div>
           </div>
           <aside class="pkg-price-visual" aria-hidden="true">
@@ -493,11 +493,11 @@
     <section class="section">
       <div class="container">
         <div class="pkg-final-cta">
-          <h2>Проверьте сложный договор прямо сейчас</h2>
-          <p>Загрузите документ, включите режим «Экспертное мнение» и задайте каверзный вопрос. Убедитесь, что система найдёт нюансы, которые легко пропустить при беглом чтении.</p>
+          <h2 data-i18n="expert.final.title">Проверьте сложный договор прямо сейчас</h2>
+          <p data-i18n="expert.final.text">Загрузите документ, включите режим «Экспертное мнение» и задайте каверзный вопрос. Убедитесь, что система найдёт нюансы, которые легко пропустить при беглом чтении.</p>
           <div class="pkg-final-cta-actions">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Запустить анализ в приложении</a>
-            <a href="../index.html#pricing" class="btn btn-secondary">Смотреть тарифы</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="expert.cta.launch">Запустить анализ в приложении</a>
+            <a href="../index.html#pricing" class="btn btn-secondary" data-i18n="cta.watchTariffs">Смотреть тарифы</a>
           </div>
         </div>
       </div>
@@ -526,7 +526,8 @@
   </footer>
 
   <script src="../js/main.js?v=28"></script>
-  <script src="../js/site-i18n-dict.js?v=2"></script>
-  <script src="../js/site-i18n.js?v=1"></script>
+  <script src="../js/site-i18n-dict.js?v=3"></script>
+  <script src="../js/_dict_expert.js"></script>
+  <script src="../js/site-i18n.js?v=2"></script>
 </body>
 </html>

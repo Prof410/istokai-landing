@@ -28,6 +28,24 @@
     return key;
   }
 
+  function getChatDemos(lang) {
+    const l = resolveLang(lang || getLang());
+    const pack = dict()[l] || {};
+    const fallback = dict()[DEFAULT_LANG] || {};
+    if (Array.isArray(pack.chatDemos)) return pack.chatDemos;
+    if (Array.isArray(fallback.chatDemos)) return fallback.chatDemos;
+    return [];
+  }
+
+  function getCaseChatDemos(lang) {
+    const l = resolveLang(lang || getLang());
+    const pack = dict()[l] || {};
+    const fallback = dict()[DEFAULT_LANG] || {};
+    if (Array.isArray(pack.caseChatDemos)) return pack.caseChatDemos;
+    if (Array.isArray(fallback.caseChatDemos)) return fallback.caseChatDemos;
+    return [];
+  }
+
   function updateLangSwitcher(lang) {
     document.querySelectorAll("[data-lang]").forEach((btn) => {
       const active = btn.dataset.lang === lang;
@@ -116,5 +134,12 @@
 
   setHtmlLang(getLang());
 
-  window.ZakonI18n = { getLang, setLang, t, applyI18n };
+  window.ZakonI18n = {
+    getLang,
+    setLang,
+    t,
+    applyI18n,
+    getChatDemos,
+    getCaseChatDemos,
+  };
 })();

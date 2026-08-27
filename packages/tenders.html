@@ -50,16 +50,16 @@
         </div>
       </nav>
       <div class="header-tools">
-        <div class="theme-switch" role="group" aria-label="Тема">
-          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" aria-label="Тёмная тема">
+        <div class="theme-switch" role="group" data-i18n-aria="ui.themeGroup" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" data-i18n-aria="ui.themeDark" aria-label="Тёмная тема">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
-          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" data-i18n-aria="ui.themeLight" aria-label="Светлая тема">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </button>
         </div>
       </div>
-      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+      <button class="menu-toggle" type="button" data-i18n-aria="ui.menu" aria-label="Меню">☰</button>
     </div>
   </header>
 
@@ -67,42 +67,42 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-main">
-          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths" data-i18n="pkg.back">← К пакетам</a></p>
           <p class="path-kicker path-kicker--live" data-i18n="tenders.kicker">Доступно · пакет «Тендерный специалист»</p>
           <h1 class="hero-title" id="hero-title" data-i18n="tenders.title">Проведите анализ предстоящей закупки за несколько минут</h1>
           <ul class="hero-lead-list">
-            <li>ИИ разбирает извещение, техническое задание и проект контракта — с опорой на 44-ФЗ, 223-ФЗ, 615-ПП и актуальную нормативную базу.</li>
-            <li>Каждый риск и каждый вывод можно проверить по цитате из исходного документа.</li>
-            <li>Один инструмент для участника и заказчика: оценить «стоит ли участвовать», найти ловушки в договоре или подготовить замечания к комплекту до публикации.</li>
+            <li data-i18n="tenders.hero.li1">ИИ разбирает извещение, техническое задание и проект контракта — с опорой на 44-ФЗ, 223-ФЗ, 615-ПП и актуальную нормативную базу.</li>
+            <li data-i18n="tenders.hero.li2">Каждый риск и каждый вывод можно проверить по цитате из исходного документа.</li>
+            <li data-i18n="tenders.hero.li3">Один инструмент для участника и заказчика: оценить «стоит ли участвовать», найти ловушки в договоре или подготовить замечания к комплекту до публикации.</li>
           </ul>
           <div class="hero-pills">
-            <span class="hero-pill"><strong>7 дней</strong>&nbsp;бесплатно</span>
-            <span class="hero-pill"><strong>44-ФЗ · 223-ФЗ · 615-ПП</strong></span>
+            <span class="hero-pill" data-i18n-html="tenders.pill1"><strong>7 дней</strong>&nbsp;бесплатно</span>
+            <span class="hero-pill" data-i18n-html="tenders.pill2"><strong>44-ФЗ · 223-ФЗ · 615-ПП</strong></span>
             <span class="hero-pill" data-i18n="tenders.pill3">Анализ за минуты</span>
             <span class="hero-pill" data-i18n="tenders.pill4">Со ссылкой на источник</span>
           </div>
           <div class="hero-actions hero-actions--pair">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
-            <a href="#how" class="btn btn-secondary">Как это работает</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="cta.tryFree">Попробовать бесплатно</a>
+            <a href="#how" class="btn btn-secondary" data-i18n="sec.how">Как это работает</a>
           </div>
         </div>
 
         <div class="tenders-report-mockup" aria-hidden="true">
           <div class="tenders-report-head">
-            <span>Отчёт по тендеру · zakupki.gov.ru</span>
-            <span class="tenders-report-live">● готово</span>
+            <span data-i18n="tenders.mock.head">Отчёт по тендеру · zakupki.gov.ru</span>
+            <span class="tenders-report-live" data-i18n="tenders.mock.live">● готово</span>
           </div>
           <div class="tenders-report-body">
-            <div class="tenders-report-verdict">Участвовать с оговорками</div>
+            <div class="tenders-report-verdict" data-i18n="tenders.mock.verdict">Участвовать с оговорками</div>
             <ul class="tenders-report-rows">
-              <li><span>НМЦК</span><strong>12,4 млн ₽</strong></li>
-              <li><span>Обеспечение</span><strong>1,5% · 14 дней</strong></li>
-              <li><span>Риски</span><strong>3 критичных</strong></li>
-              <li><span>Чек-лист</span><strong>8 пунктов допуска</strong></li>
+              <li><span data-i18n="tenders.mock.row1.label">НМЦК</span><strong data-i18n="tenders.mock.row1.value">12,4 млн ₽</strong></li>
+              <li><span data-i18n="tenders.mock.row2.label">Обеспечение</span><strong data-i18n="tenders.mock.row2.value">1,5% · 14 дней</strong></li>
+              <li><span data-i18n="tenders.mock.row3.label">Риски</span><strong data-i18n="tenders.mock.row3.value">3 критичных</strong></li>
+              <li><span data-i18n="tenders.mock.row4.label">Чек-лист</span><strong data-i18n="tenders.mock.row4.value">8 пунктов допуска</strong></li>
             </ul>
             <blockquote class="tenders-report-quote">
-              «Размер обеспечения исполнения контракта составляет 5% от НМЦК…»
-              <cite>→ Проект контракта, п. 21</cite>
+              <span data-i18n="tenders.mock.quote">«Размер обеспечения исполнения контракта составляет 5% от НМЦК…»</span>
+              <cite data-i18n="tenders.mock.cite">→ Проект контракта, п. 21</cite>
             </blockquote>
           </div>
         </div>
@@ -111,9 +111,9 @@
 
     <section class="section section--soft" id="outcomes">
       <div class="container">
-        <p class="section-label">Зачем</p>
-        <h2 class="section-title">Зачем нужен этот пакет</h2>
-        <p class="section-subtitle">
+        <p class="section-label" data-i18n="sec.why">Зачем</p>
+        <h2 class="section-title" data-i18n="tenders.why.title">Зачем нужен этот пакет</h2>
+        <p class="section-subtitle" data-i18n="tenders.why.subtitle">
           В госзакупках одна процедура — две стороны, и у каждой свои риски. Участнику достаточно жёсткой формулировки в проекте контракта — и заявку отклонят или контракт станет убыточным.
           Заказчику достаточно противоречия между извещением, ТЗ и договором — и процедуру оспорят, а сроки сорвутся.
         </p>
@@ -121,30 +121,30 @@
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
-              <h3>Быстрее решение «участвовать / нет»</h3>
+              <h3 data-i18n="tenders.why.c1.title">Быстрее решение «участвовать / нет»</h3>
             </div>
-            <p class="audience-lead">Не тратьте полдня на первичный разбор: система собирает документы, выделяет ключевые условия и формирует структурированный отчёт.</p>
+            <p class="audience-lead" data-i18n="tenders.why.c1.text">Не тратьте полдня на первичный разбор: система собирает документы, выделяет ключевые условия и формирует структурированный отчёт.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Меньше скрытых рисков</h3>
+              <h3 data-i18n="tenders.why.c2.title">Меньше скрытых рисков</h3>
             </div>
-            <p class="audience-lead">Штрафы, обеспечение, односторонний отказ, несогласованные формулировки — видны до подготовки заявки, а не после отклонения.</p>
+            <p class="audience-lead" data-i18n="tenders.why.c2.text">Штрафы, обеспечение, односторонний отказ, несогласованные формулировки — видны до подготовки заявки, а не после отклонения.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>Проверяемые выводы</h3>
+              <h3 data-i18n="tenders.why.c3.title">Проверяемые выводы</h3>
             </div>
-            <p class="audience-lead">Ответы не из общих рассуждений: опора на текст ваших файлов, 44-ФЗ, 223-ФЗ, 615-ПП и подзаконные акты — с точными ссылками на источники.</p>
+            <p class="audience-lead" data-i18n="tenders.why.c3.text">Ответы не из общих рассуждений: опора на текст ваших файлов, 44-ФЗ, 223-ФЗ, 615-ПП и подзаконные акты — с точными ссылками на источники.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <h3>Участник и заказчик</h3>
+              <h3 data-i18n="tenders.why.c4.title">Участник и заказчик</h3>
             </div>
-            <p class="audience-lead">Не нужно два разных сервиса. Одна ссылка или загрузка документов — и вопрос с вашей роли: «стоит ли участвовать» или «что исправить перед публикацией».</p>
+            <p class="audience-lead" data-i18n="tenders.why.c4.text">Не нужно два разных сервиса. Одна ссылка или загрузка документов — и вопрос с вашей роли: «стоит ли участвовать» или «что исправить перед публикацией».</p>
           </article>
         </div>
       </div>
@@ -152,32 +152,31 @@
 
     <section class="section" id="problem">
       <div class="container">
-        <p class="section-label">Проблема</p>
+        <p class="section-label" data-i18n="sec.problem">Проблема</p>
         <h2 class="section-title" data-i18n="tenders.problem.title">Ручная обработка тендера — 2–3 часа потраченного времени</h2>
-        <p class="section-subtitle">
-          Важные аспекты исполнения контракта разбросаны по различным файлам: извещение, ТЗ, проект контракта, обоснование НМЦК, требования к участнику.
-          У типичной закупки — десятки или сотни страниц PDF. Тендерный отдел тратит много времени на отбор и анализ рисков по будущему тендеру.
+        <p class="section-subtitle" data-i18n="tenders.problem.subtitle">
+          Важные условия разбросаны по извещению, ТЗ и проекту контракта. У типичной закупки — десятки или сотни страниц PDF; первичный разбор занимает часы.
         </p>
         <div class="compare-grid">
           <div class="compare-card bad">
-            <h3>Ручная обработка · 2–3 часа</h3>
+            <h3 data-i18n="tenders.problem.manual.title">Ручная обработка · 2–3 часа</h3>
             <ul>
-              <li>Скачать пакет из ЕИС — 5–12 файлов</li>
-              <li>Прочитать ТЗ — часто 50–200 страниц</li>
-              <li>Разобрать проект договора и обеспечение</li>
-              <li>Сверить требования с 44-ФЗ / 223-ФЗ / 615-ПП</li>
-              <li>Собрать выводы в таблицу или Word</li>
-              <li><strong>Итого: 2–3 часа</strong> на одну закупку</li>
+              <li data-i18n="tenders.problem.manual.li1">Скачать пакет из ЕИС — 5–12 файлов</li>
+              <li data-i18n="tenders.problem.manual.li2">Прочитать ТЗ — часто 50–200 страниц</li>
+              <li data-i18n="tenders.problem.manual.li3">Разобрать проект договора и обеспечение</li>
+              <li data-i18n="tenders.problem.manual.li4">Сверить требования с 44-ФЗ / 223-ФЗ / 615-ПП</li>
+              <li data-i18n="tenders.problem.manual.li5">Собрать выводы в таблицу или Word</li>
+              <li data-i18n-html="tenders.problem.manual.li6"><strong>Итого: 2–3 часа</strong> на одну закупку</li>
             </ul>
           </div>
           <div class="compare-card good">
-            <h3>Zakon-AI · несколько минут</h3>
+            <h3 data-i18n="tenders.compare.ai">Zakon-AI · несколько минут</h3>
             <ul>
-              <li>Вставьте ссылку с zakupki.gov.ru или загрузите файлы</li>
-              <li>Система скачает и разберёт документацию</li>
-              <li>Получите отчёт: карточка, риски, чек-лист, обеспечение</li>
-              <li>Каждый пункт — с цитатой из первоисточника</li>
-              <li><strong>Итого: ~5 минут</strong> от ссылки до готового отчёта</li>
+              <li data-i18n="tenders.problem.ai.li1">Вставьте ссылку с zakupki.gov.ru или загрузите файлы</li>
+              <li data-i18n="tenders.problem.ai.li2">Система скачает и разберёт документацию</li>
+              <li data-i18n="tenders.problem.ai.li3">Получите отчёт: карточка, риски, чек-лист, обеспечение</li>
+              <li data-i18n="tenders.problem.ai.li4">Каждый пункт — с цитатой из первоисточника</li>
+              <li data-i18n-html="tenders.problem.ai.li5"><strong>Итого: ~5 минут</strong> от ссылки до готового отчёта</li>
             </ul>
           </div>
         </div>
@@ -186,36 +185,36 @@
 
     <section class="section section--soft" id="how">
       <div class="container">
-        <p class="section-label">Процесс</p>
-        <h2 class="section-title">Как это работает</h2>
-        <p class="section-subtitle">
+        <p class="section-label" data-i18n="sec.process">Процесс</p>
+        <h2 class="section-title" data-i18n="sec.how">Как это работает</h2>
+        <p class="section-subtitle" data-i18n="tenders.how.subtitle">
           Экспресс-разбор занимает несколько минут: система собирает документы, извлекает ключевые параметры,
           проверяет требования к участникам и формирует отчёт с рисками и рекомендациями.
         </p>
         <div class="start-steps">
           <article class="start-step">
             <span class="start-step-num">1</span>
-            <h3>Ссылка с zakupki.gov.ru</h3>
-            <p>Поддерживаем 44-ФЗ, 223-ФЗ, 615-ПП: аукцион, конкурс, запрос котировок и другие процедуры. Вставьте URL извещения — или загрузите документы вручную.</p>
+            <h3 data-i18n="tenders.how.s1.title">Ссылка с zakupki.gov.ru</h3>
+            <p data-i18n="tenders.how.s1.text">Поддерживаем 44-ФЗ, 223-ФЗ, 615-ПП: аукцион, конкурс, запрос котировок и другие процедуры. Вставьте URL извещения — или загрузите документы вручную.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">2</span>
-            <h3>Скачиваем комплект из ЕИС</h3>
-            <p>Извещение, техническое задание, проект контракта, обоснование НМЦК, требования к участникам — всё, что заказчик опубликовал на площадке.</p>
+            <h3 data-i18n="tenders.how.s2.title">Скачиваем комплект из ЕИС</h3>
+            <p data-i18n="tenders.how.s2.text">Извещение, техническое задание, проект контракта, обоснование НМЦК, требования к участникам — всё, что заказчик опубликовал на площадке.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">3</span>
-            <h3>Разбираем содержимое</h3>
-            <p>Извлекаем требования к участнику и предмету закупки, сверяем с нормами 44-ФЗ, 223-ФЗ, 615-ПП, ищем противоречия между извещением, ТЗ и договором.</p>
+            <h3 data-i18n="tenders.how.s3.title">Разбираем содержимое</h3>
+            <p data-i18n="tenders.how.s3.text">Извлекаем требования к участнику и предмету закупки, сверяем с нормами 44-ФЗ, 223-ФЗ, 615-ПП, ищем противоречия между извещением, ТЗ и договором.</p>
           </article>
         </div>
         <div class="audience-grid" style="margin-top: 24px; grid-template-columns: 1fr;">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
-              <h3>Получаете отчёт и план действий</h3>
+              <h3 data-i18n="tenders.how.result.title">Получаете отчёт и план действий</h3>
             </div>
-            <p class="audience-lead">Карточка закупки, блок рисков, чек-лист допуска, обеспечение и вопросы организатору. Каждое утверждение — с цитатой из исходного файла. Отчёт можно скачать в PDF.</p>
+            <p class="audience-lead" data-i18n="tenders.how.result.text">Карточка закупки, блок рисков, чек-лист допуска, обеспечение и вопросы организатору. Каждое утверждение — с цитатой из исходного файла. Отчёт можно скачать в PDF.</p>
           </article>
         </div>
       </div>
@@ -223,51 +222,51 @@
 
     <section class="section" id="benefits">
       <div class="container">
-        <p class="section-label">Возможности</p>
-        <h2 class="section-title">Инструменты для работы с тендерами</h2>
-        <p class="section-subtitle">Один отчёт вместо десятка вкладок и файлов. Каждый вывод связан с источником — пунктом ТЗ, проекта контракта или извещения.</p>
+        <p class="section-label" data-i18n="sec.features">Возможности</p>
+        <h2 class="section-title" data-i18n="tenders.benefits.title">Инструменты для работы с тендерами</h2>
+        <p class="section-subtitle" data-i18n="tenders.benefits.subtitle">Один отчёт вместо десятка вкладок и файлов. Каждый вывод связан с источником — пунктом ТЗ, проекта контракта или извещения.</p>
         <div class="audience-grid audience-grid--2x3">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
-              <h3>Структурированный отчёт</h3>
+              <h3 data-i18n="tenders.benefits.c1.title">Структурированный отчёт</h3>
             </div>
-            <p class="audience-lead">Карточка закупки, риски, чек-лист допуска, обеспечение и вопросы организатору — в едином формате для команды.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c1.text">Карточка закупки, риски, чек-лист допуска, обеспечение и вопросы организатору — в едином формате для команды.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-              <h3>Замечания к документам</h3>
+              <h3 data-i18n="tenders.benefits.c2.title">Замечания к документам</h3>
             </div>
-            <p class="audience-lead">Замечания к извещению, ТЗ или проекту договора — по пунктам, со ссылками. Подходит участнику и заказчику.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c2.text">Замечания к извещению, ТЗ или проекту договора — по пунктам, со ссылками. Подходит участнику и заказчику.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
-              <h3>Сравнительные таблицы</h3>
+              <h3 data-i18n="tenders.benefits.c3.title">Сравнительные таблицы</h3>
             </div>
-            <p class="audience-lead">Сравните несколько закупок: сроки, обеспечение, штрафы — и экспортируйте таблицу в Excel.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c3.text">Сравните несколько закупок: сроки, обеспечение, штрафы — и экспортируйте таблицу в Excel.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>Проверка по источнику</h3>
+              <h3 data-i18n="tenders.benefits.c4.title">Проверка по источнику</h3>
             </div>
-            <p class="audience-lead">Каждая ссылка в блоке рисков кликабельна: откроется нужный файл с подсвеченным фрагментом.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c4.text">Каждая ссылка в блоке рисков кликабельна: откроется нужный файл с подсвеченным фрагментом.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
-              <h3>Нормативная база в комплекте</h3>
+              <h3 data-i18n="tenders.benefits.c5.title">Нормативная база в комплекте</h3>
             </div>
-            <p class="audience-lead">44-ФЗ, 223-ФЗ, 615-ПП, 135-ФЗ, постановления Правительства и ведомственные акты уже подключены.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c5.text">44-ФЗ, 223-ФЗ, 615-ПП, 135-ФЗ, постановления Правительства и ведомственные акты уже подключены.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></span>
-              <h3>Экспорт отчёта и вопросов</h3>
+              <h3 data-i18n="tenders.benefits.c6.title">Экспорт отчёта и вопросов</h3>
             </div>
-            <p class="audience-lead">Полный отчёт в PDF или список вопросов организатору в Word — для согласования или отправки на площадку.</p>
+            <p class="audience-lead" data-i18n="tenders.benefits.c6.text">Полный отчёт в PDF или список вопросов организатору в Word — для согласования или отправки на площадку.</p>
           </article>
         </div>
 
@@ -275,19 +274,19 @@
           <div class="compare-card bad">
             <h3 data-i18n="tenders.compare.human">Анализ человеком</h3>
             <ul>
-              <li>1–2 закупки в день на первичный отбор</li>
-              <li>Риски видны уже на этапе заявки</li>
-              <li>Часы на PDF, таблицы и повторные проверки</li>
-              <li>Выводы сложно обосновать коллегам</li>
+              <li data-i18n="tenders.compare.human.li1">1–2 закупки в день на первичный отбор</li>
+              <li data-i18n="tenders.compare.human.li2">Риски видны уже на этапе заявки</li>
+              <li data-i18n="tenders.compare.human.li3">Часы на PDF, таблицы и повторные проверки</li>
+              <li data-i18n="tenders.compare.human.li4">Выводы сложно обосновать коллегам</li>
             </ul>
           </div>
           <div class="compare-card good">
-            <h3>С «Тендерным специалистом»</h3>
+            <h3 data-i18n="tenders.compare.pkg">С «Тендерным специалистом»</h3>
             <ul>
-              <li>10–15 закупок для первичного отбора в день</li>
-              <li>Риски и экономика — до подготовки заявки</li>
-              <li>~5 минут от ссылки до готового отчёта</li>
-              <li>Каждый вывод — с цитатой из документа</li>
+              <li data-i18n="tenders.compare.pkg.li1">10–15 закупок для первичного отбора в день</li>
+              <li data-i18n="tenders.compare.pkg.li2">Риски и экономика — до подготовки заявки</li>
+              <li data-i18n="tenders.compare.pkg.li3">~5 минут от ссылки до готового отчёта</li>
+              <li data-i18n="tenders.compare.pkg.li4">Каждый вывод — с цитатой из документа</li>
             </ul>
           </div>
         </div>
@@ -296,35 +295,35 @@
 
     <section class="section section--soft" id="audience">
       <div class="container">
-        <p class="section-label">Аудитория</p>
-        <h2 class="section-title">Участник и заказчик — один инструмент</h2>
-        <p class="section-subtitle">Сервис нужен тем, кто регулярно выбирает закупки, проверяет документацию и принимает решение: заходить в тендер или не тратить ресурсы команды.</p>
+        <p class="section-label" data-i18n="sec.audience">Аудитория</p>
+        <h2 class="section-title" data-i18n="tenders.audience.title">Участник и заказчик — один инструмент</h2>
+        <p class="section-subtitle" data-i18n="tenders.audience.subtitle">Сервис нужен тем, кто регулярно выбирает закупки, проверяет документацию и принимает решение: заходить в тендер или не тратить ресурсы команды.</p>
         <div class="role-grid role-grid--2x2">
           <article class="role-card">
-            <h3>Участник (исполнитель)</h3>
-            <p class="role-lead">Поставщик, подрядчик, претендент. Разбор чужой документации перед подачей заявки.</p>
+            <h3 data-i18n="tenders.audience.p.title">Участник (исполнитель)</h3>
+            <p class="role-lead" data-i18n="tenders.audience.p.lead">Поставщик, подрядчик, претендент. Разбор чужой документации перед подачей заявки.</p>
             <ul class="role-benefits">
-              <li>Карточка закупки и риски по извещению, ТЗ и проекту договора</li>
-              <li>Оценка целесообразности участия до траты ресурсов на заявку</li>
-              <li>Чек-лист документов и замечания к проекту контракта</li>
+              <li data-i18n="tenders.audience.p.li1">Карточка закупки и риски по извещению, ТЗ и проекту договора</li>
+              <li data-i18n="tenders.audience.p.li2">Оценка целесообразности участия до траты ресурсов на заявку</li>
+              <li data-i18n="tenders.audience.p.li3">Чек-лист документов и замечания к проекту контракта</li>
             </ul>
           </article>
           <article class="role-card">
-            <h3>Заказчик</h3>
-            <p class="role-lead">Организация, проводящая закупку. Проверка своей документации до публикации.</p>
+            <h3 data-i18n="tenders.audience.c.title">Заказчик</h3>
+            <p class="role-lead" data-i18n="tenders.audience.c.lead">Организация, проводящая закупку. Проверка своей документации до публикации.</p>
             <ul class="role-benefits">
-              <li>Сверка извещения, ТЗ и проекта контракта между собой</li>
-              <li>Поиск противоречий 44-ФЗ / 223-ФЗ / 615-ПП и положения о закупках</li>
-              <li>Структурированные замечания к черновику для внутренней доработки</li>
+              <li data-i18n="tenders.audience.c.li1">Сверка извещения, ТЗ и проекта контракта между собой</li>
+              <li data-i18n="tenders.audience.c.li2">Поиск противоречий 44-ФЗ / 223-ФЗ / 615-ПП и положения о закупках</li>
+              <li data-i18n="tenders.audience.c.li3">Структурированные замечания к черновику для внутренней доработки</li>
             </ul>
           </article>
           <article class="role-card">
-            <h3>Тендерные специалисты и продажи</h3>
-            <p class="role-lead">Риски участия, чек-листы, замечания к контракту.</p>
+            <h3 data-i18n="tenders.audience.t.title">Тендерные специалисты и продажи</h3>
+            <p class="role-lead" data-i18n="tenders.audience.t.lead">Риски участия, чек-листы, замечания к контракту.</p>
           </article>
           <article class="role-card">
-            <h3>Юристы, службы заказчика, консультанты</h3>
-            <p class="role-lead">Норма под спорную ситуацию, проверка комплекта до публикации, быстрый разбор для клиента.</p>
+            <h3 data-i18n="tenders.audience.l.title">Юристы, службы заказчика, консультанты</h3>
+            <p class="role-lead" data-i18n="tenders.audience.l.lead">Норма под спорную ситуацию, проверка комплекта до публикации, быстрый разбор для клиента.</p>
           </article>
         </div>
       </div>
@@ -332,41 +331,41 @@
 
     <section class="section" id="corpus">
       <div class="container">
-        <p class="section-label">Нормативная база</p>
-        <h2 class="section-title">Что внутри пакета</h2>
-        <p class="section-subtitle">Актуальная нормативная база по закупкам подключена автоматически — плюс готовый структурированный отчёт по каждой закупке.</p>
+        <p class="section-label" data-i18n="sec.corpus">Нормативная база</p>
+        <h2 class="section-title" data-i18n="tenders.corpus.title">Что внутри пакета</h2>
+        <p class="section-subtitle" data-i18n="tenders.corpus.subtitle">Актуальная нормативная база по закупкам подключена автоматически — плюс готовый структурированный отчёт по каждой закупке.</p>
         <div class="audience-grid audience-grid--2x2">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
-              <h3>Федеральные законы</h3>
+              <h3 data-i18n="tenders.corpus.c1.title">Федеральные законы</h3>
             </div>
-            <p class="audience-lead">Контрактная система, корпоративные закупки, капремонт (615-ПП), защита конкуренции и смежные ограничения для участников процедур.</p>
-            <p class="pkg-card-meta">44-ФЗ, 223-ФЗ, 615-ПП, 135-ФЗ, 63-ФЗ</p>
+            <p class="audience-lead" data-i18n="tenders.corpus.c1.text">Контрактная система, корпоративные закупки, капремонт (615-ПП), защита конкуренции и смежные ограничения для участников процедур.</p>
+            <p class="pkg-card-meta" data-i18n="tenders.corpus.c1.meta">44-ФЗ, 223-ФЗ, 615-ПП, 135-ФЗ, 63-ФЗ</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg></span>
-              <h3>Постановления Правительства РФ</h3>
+              <h3 data-i18n="tenders.corpus.c2.title">Постановления Правительства РФ</h3>
             </div>
-            <p class="audience-lead">Банковские гарантии, допуск участников, национальный режим, ограничения на иностранное ПО и правила проведения закупок.</p>
-            <p class="pkg-card-meta">1005-ПП, 1236-ПП, 1875-ПП, 238-ПП, 2571-ПП, 2604-ПП, 878-ПП</p>
+            <p class="audience-lead" data-i18n="tenders.corpus.c2.text">Банковские гарантии, допуск участников, национальный режим, ограничения на иностранное ПО и правила проведения закупок.</p>
+            <p class="pkg-card-meta" data-i18n="tenders.corpus.c2.meta">1005-ПП, 1236-ПП, 1875-ПП, 238-ПП, 2571-ПП, 2604-ПП, 878-ПП</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
-              <h3>Ведомственные акты</h3>
+              <h3 data-i18n="tenders.corpus.c3.title">Ведомственные акты</h3>
             </div>
-            <p class="audience-lead">Методика расчёта НМЦК и практические разъяснения по применению норм закупок.</p>
-            <p class="pkg-card-meta">567-ПР, 158Н, 258-Н</p>
+            <p class="audience-lead" data-i18n="tenders.corpus.c3.text">Методика расчёта НМЦК и практические разъяснения по применению норм закупок.</p>
+            <p class="pkg-card-meta" data-i18n="tenders.corpus.c3.meta">567-ПР, 158Н, 258-Н</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></span>
-              <h3>Отчёт о тендере</h3>
+              <h3 data-i18n="tenders.corpus.c4.title">Отчёт о тендере</h3>
             </div>
-            <p class="audience-lead">По каждой закупке система формирует структурированный отчёт: карточка закупки, блок рисков, чек-лист допуска, обеспечение заявки и контракта, вопросы организатору. Каждый вывод — со ссылкой на пункт документа. Отчёт можно скачать в PDF.</p>
-            <p class="pkg-card-meta">Карточка · Риски · Чек-лист · Обеспечение · Вопросы · PDF</p>
+            <p class="audience-lead" data-i18n="tenders.corpus.c4.text">По каждой закупке система формирует структурированный отчёт: карточка закупки, блок рисков, чек-лист допуска, обеспечение заявки и контракта, вопросы организатору. Каждый вывод — со ссылкой на пункт документа. Отчёт можно скачать в PDF.</p>
+            <p class="pkg-card-meta" data-i18n="tenders.corpus.c4.meta">Карточка · Риски · Чек-лист · Обеспечение · Вопросы · PDF</p>
           </article>
         </div>
       </div>
@@ -374,128 +373,128 @@
 
     <section class="section section--soft" id="trial">
       <div class="container">
-        <p class="section-label">Старт</p>
-        <h2 class="section-title">Тестовый период: попробуйте перед покупкой</h2>
-        <p class="section-subtitle">Прежде чем доверить ИИ-эксперту важные задачи, нужно убедиться в его компетенции. Поэтому даём 7 дней бесплатного доступа для тестирования возможностей приложения.</p>
+        <p class="section-label" data-i18n="sec.trial">Старт</p>
+        <h2 class="section-title" data-i18n="tenders.trial.title">Тестовый период: попробуйте перед покупкой</h2>
+        <p class="section-subtitle" data-i18n="tenders.trial.subtitle">Прежде чем доверить ИИ-эксперту важные задачи, нужно убедиться в его компетенции. Поэтому даём 7 дней бесплатного доступа для тестирования возможностей приложения.</p>
         <div class="start-steps">
           <article class="start-step">
             <span class="start-step-num">1</span>
-            <h3>Регистрация</h3>
-            <p>Создайте аккаунт на платформе Zakon-AI и подключите пакет «Тендерный специалист» — нажмите «Попробовать».</p>
+            <h3 data-i18n="tenders.trial.s1.title">Регистрация</h3>
+            <p data-i18n="tenders.trial.s1.text">Создайте аккаунт на платформе Zakon-AI и подключите пакет «Тендерный специалист» — нажмите «Попробовать».</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">2</span>
-            <h3>Первый анализ</h3>
-            <p>Отправьте ссылку с zakupki.gov.ru в чат — система скачает документы и вернёт структурированный отчёт с рисками.</p>
+            <h3 data-i18n="tenders.trial.s2.title">Первый анализ</h3>
+            <p data-i18n="tenders.trial.s2.text">Отправьте ссылку с zakupki.gov.ru в чат — система скачает документы и вернёт структурированный отчёт с рисками.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">3</span>
-            <h3>Решение по тарифу</h3>
-            <p>5 полных анализов по ссылкам и +70 МБ для ваших документов — достаточно, чтобы оценить сервис на реальных закупках.</p>
+            <h3 data-i18n="tenders.trial.s3.title">Решение по тарифу</h3>
+            <p data-i18n="tenders.trial.s3.text">5 полных анализов по ссылкам и +70 МБ для ваших документов — достаточно, чтобы оценить сервис на реальных закупках.</p>
           </article>
         </div>
         <div class="audience-grid trial-perks" style="margin-top: 28px;">
           <article class="audience-card trial-perk">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>5 полных анализов</h3>
+              <h3 data-i18n="tenders.trial.perk1.title">5 полных анализов</h3>
             </div>
-            <p class="audience-lead">Тендеров по ссылкам с zakupki.gov.ru</p>
+            <p class="audience-lead" data-i18n="tenders.trial.perk1.text">Тендеров по ссылкам с zakupki.gov.ru</p>
           </article>
           <article class="audience-card trial-perk">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>
-              <h3>+70 МБ</h3>
+              <h3 data-i18n="tenders.trial.perk2.title">+70 МБ</h3>
             </div>
-            <p class="audience-lead">Дополнительного места для ваших документов</p>
+            <p class="audience-lead" data-i18n="tenders.trial.perk2.text">Дополнительного места для ваших документов</p>
           </article>
           <article class="audience-card trial-perk">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-              <h3>Все функции пакета</h3>
+              <h3 data-i18n="tenders.trial.perk3.title">Все функции пакета</h3>
             </div>
-            <p class="audience-lead">Полноценный доступ без урезанного демо</p>
+            <p class="audience-lead" data-i18n="tenders.trial.perk3.text">Полноценный доступ без урезанного демо</p>
           </article>
         </div>
-        <p class="pkg-trial-note">Тест доступен один раз на пакет. Никаких скрытых списаний со счёта приложения.</p>
+        <p class="pkg-trial-note" data-i18n="tenders.trial.note">Тест доступен один раз на пакет. Никаких скрытых списаний со счёта приложения.</p>
         <p class="start-cta" style="margin-top: 28px;">
-          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать бесплатно</a>
+          <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="cta.startFree">Начать бесплатно</a>
         </p>
       </div>
     </section>
 
     <section class="section" id="pricing">
       <div class="container">
-        <p class="section-label">Тариф</p>
-        <h2 class="section-title">Стоимость пакета</h2>
-        <p class="section-subtitle">Начните со стартового доступа, продолжите с полным — когда убедитесь, что сервис экономит время команды.</p>
+        <p class="section-label" data-i18n="tenders.pricing.label">Тариф</p>
+        <h2 class="section-title" data-i18n="tenders.pricing.title">Стоимость пакета</h2>
+        <p class="section-subtitle" data-i18n="tenders.pricing.subtitle">Начните со стартового доступа, продолжите с полным — когда убедитесь, что сервис экономит время команды.</p>
         <div class="pricing-grid pricing-grid--2">
           <article class="pricing-card">
-            <span class="pricing-badge">Тест</span>
-            <h3 class="pricing-name">Попробовать</h3>
-            <p class="pricing-amount">7 дней</p>
-            <p class="pricing-desc">Бесплатно, без привязки карты</p>
+            <span class="pricing-badge" data-i18n="tenders.pricing.trial.badge">Тест</span>
+            <h3 class="pricing-name" data-i18n="tenders.pricing.trial.name">Попробовать</h3>
+            <p class="pricing-amount" data-i18n="tenders.pricing.trial.amount">7 дней</p>
+            <p class="pricing-desc" data-i18n="tenders.pricing.trial.desc">Бесплатно, без привязки карты</p>
             <ul class="pricing-features">
-              <li>5 анализов по ссылкам с zakupki.gov.ru</li>
-              <li>+70 МБ для документов</li>
-              <li>Все функции пакета</li>
+              <li data-i18n="tenders.pricing.trial.li1">5 анализов по ссылкам с zakupki.gov.ru</li>
+              <li data-i18n="tenders.pricing.trial.li2">+70 МБ для документов</li>
+              <li data-i18n="tenders.pricing.trial.li3">Все функции пакета</li>
             </ul>
-            <a href="https://app.zakon-ai.ru" class="btn btn-secondary pricing-btn" target="_blank" rel="noopener noreferrer">Попробовать</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-secondary pricing-btn" target="_blank" rel="noopener noreferrer" data-i18n="cta.try">Попробовать</a>
           </article>
           <article class="pricing-card pricing-card--featured">
-            <span class="pricing-badge">Основной</span>
-            <h3 class="pricing-name">Полный доступ</h3>
-            <p class="pricing-amount">2 990 ₽ <span>/ мес</span></p>
-            <p class="pricing-desc">Подключение со счёта приложения</p>
+            <span class="pricing-badge" data-i18n="tenders.pricing.full.badge">Основной</span>
+            <h3 class="pricing-name" data-i18n="tenders.pricing.full.name">Полный доступ</h3>
+            <p class="pricing-amount" data-i18n-html="tenders.pricing.full.amount">2 990 ₽ <span>/ мес</span></p>
+            <p class="pricing-desc" data-i18n="tenders.pricing.full.desc">Подключение со счёта приложения</p>
             <ul class="pricing-features">
-              <li>Неограниченное число анализов*</li>
-              <li>Отчёт: карточка, риски, чек-лист, обеспечение</li>
-              <li>Экспорт отчёта PDF и вопросов Word</li>
-              <li>Нормативная база в комплекте</li>
+              <li data-i18n="tenders.pricing.full.li1">Неограниченное число анализов*</li>
+              <li data-i18n="tenders.pricing.full.li2">Отчёт: карточка, риски, чек-лист, обеспечение</li>
+              <li data-i18n="tenders.pricing.full.li3">Экспорт отчёта PDF и вопросов Word</li>
+              <li data-i18n="tenders.pricing.full.li4">Нормативная база в комплекте</li>
             </ul>
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer">Подключить</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary pricing-btn" target="_blank" rel="noopener noreferrer" data-i18n="cta.connect">Подключить</a>
           </article>
         </div>
-        <p class="pkg-formats-note" style="margin-top: 20px; text-align: center;">* Ответы модели в чате списываются со счёта ИИ. Подключение пакета — со счёта приложения (2 990 ₽/мес).</p>
+        <p class="pkg-formats-note" style="margin-top: 20px; text-align: center;" data-i18n="tenders.pricing.note">* Ответы модели в чате списываются со счёта ИИ. Подключение пакета — со счёта приложения (2 990 ₽/мес).</p>
       </div>
     </section>
 
     <section class="section section--soft" id="security">
       <div class="container">
-        <p class="section-label">Безопасность</p>
-        <h2 class="section-title">Безопасность и контроль для команды</h2>
-        <p class="section-subtitle">Для B2B это главный вопрос покупки — доступ, бюджет и изоляция данных под контролем администратора.</p>
+        <p class="section-label" data-i18n="sec.security">Безопасность</p>
+        <h2 class="section-title" data-i18n="tenders.security.title">Безопасность и контроль для команды</h2>
+        <p class="section-subtitle" data-i18n="tenders.security.subtitle">Для B2B это главный вопрос покупки — доступ, бюджет и изоляция данных под контролем администратора.</p>
         <div class="security-grid security-grid--2x2">
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></span>
-              <h3>Централизованный контроль</h3>
+              <h3 data-i18n="tenders.security.c1.title">Централизованный контроль</h3>
             </div>
-            <p>На тарифе «Команда» только администратор покупает дополнительное место и пакеты. Участники не могут случайно слить бюджет или удалить общую базу.</p>
+            <p data-i18n="tenders.security.c1.text">На тарифе «Команда» только администратор покупает дополнительное место и пакеты. Участники не могут случайно слить бюджет или удалить общую базу.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-              <h3>Изоляция данных</h3>
+              <h3 data-i18n="tenders.security.c2.title">Изоляция данных</h3>
             </div>
-            <p>Ваши файлы не смешиваются с другими пользователями. ИИ использует их только для ответа на ваши вопросы в рамках вашего аккаунта.</p>
+            <p data-i18n="tenders.security.c2.text">Ваши файлы не смешиваются с другими пользователями. ИИ использует их только для ответа на ваши вопросы в рамках вашего аккаунта.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
-              <h3>Резидентство</h3>
+              <h3 data-i18n="tenders.security.c3.title">Резидентство</h3>
             </div>
-            <p>Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>).</p>
+            <p data-i18n-html="tenders.security.c3.text">Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>).</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Приватность</h3>
+              <h3 data-i18n="tenders.security.c4.title">Приватность</h3>
             </div>
-            <p>Загруженные документы <strong>никогда не используются</strong> для обучения языковых моделей.</p>
+            <p data-i18n-html="tenders.security.c4.text">Загруженные документы <strong>никогда не используются</strong> для обучения языковых моделей.</p>
           </article>
         </div>
-        <p class="section-subtitle" style="margin-top: 24px; margin-bottom: 0;">
+        <p class="section-subtitle" style="margin-top: 24px; margin-bottom: 0;" data-i18n="tenders.security.disclaimer">
           Отчёт на 100% не заменяет юриста или тендерного специалиста. Система помогает быстро разобрать закупку и показывает источники: пункты ТЗ, проекта контракта, извещения и приложений. Каждый вывод можно проверить по цитате. Окончательное решение об участии в тендере принимает ответственный специалист.
         </p>
       </div>
@@ -503,32 +502,32 @@
 
     <section class="section" id="faq">
       <div class="container">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-title">Частые вопросы</h2>
+        <p class="section-label" data-i18n="sec.faq">FAQ</p>
+        <h2 class="section-title" data-i18n="tenders.faq.title">Частые вопросы</h2>
         <div class="faq-list">
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Можно ли доверять выводам сервиса?</span><span>+</span></button>
-            <div class="faq-answer">Отчёт на 100% не заменяет юриста или тендерного специалиста. Система помогает быстро разобрать закупку и показывает источники: пункты ТЗ, проекта контракта, извещения и приложений. Каждый вывод можно проверить по цитате. Окончательное решение об участии в тендере принимает ответственный специалист.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q1">Можно ли доверять выводам сервиса?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a1">Отчёт на 100% не заменяет юриста или тендерного специалиста. Система помогает быстро разобрать закупку и показывает источники: пункты ТЗ, проекта контракта, извещения и приложений. Каждый вывод можно проверить по цитате. Окончательное решение об участии в тендере принимает ответственный специалист.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Что входит в бесплатный тест?</span><span>+</span></button>
-            <div class="faq-answer">7 дней доступа, 5 полных анализов по ссылкам с zakupki.gov.ru и +70 МБ для ваших документов. Тест один раз на пакет, без скрытых списаний со счёта приложения.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q2">Что входит в бесплатный тест?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a2">7 дней доступа, 5 полных анализов по ссылкам с zakupki.gov.ru и +70 МБ для ваших документов. Тест один раз на пакет, без скрытых списаний со счёта приложения.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Какие закупки поддерживаются?</span><span>+</span></button>
-            <div class="faq-answer">Анализ по ссылке с zakupki.gov.ru по 44-ФЗ, 223-ФЗ, 615-ПП: аукцион, конкурс, запрос котировок и другие конкурентные процедуры. Также можно загрузить документы вручную и разобрать их в чате.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q3">Какие закупки поддерживаются?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a3">Анализ по ссылке с zakupki.gov.ru по 44-ФЗ, 223-ФЗ, 615-ПП: аукцион, конкурс, запрос котировок и другие конкурентные процедуры. Также можно загрузить документы вручную и разобрать их в чате.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Подходит ли пакет заказчику?</span><span>+</span></button>
-            <div class="faq-answer">Да. Загрузите черновик комплекта или опубликуйте ссылку — система найдёт противоречия между извещением, ТЗ и договором, подскажет риски претензий ФАС и поможет сформулировать замечания к документам.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q4">Подходит ли пакет заказчику?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a4">Да. Загрузите черновик комплекта или опубликуйте ссылку — система найдёт противоречия между извещением, ТЗ и договором, подскажет риски претензий ФАС и поможет сформулировать замечания к документам.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Нужно ли самому загружать законы 44-ФЗ, 223-ФЗ, 615-ПП?</span><span>+</span></button>
-            <div class="faq-answer">Нет. Актуальная нормативная база по закупкам подключена автоматически при подключении пакета — федеральные законы, постановления Правительства и ведомственные акты.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q5">Нужно ли самому загружать законы 44-ФЗ, 223-ФЗ, 615-ПП?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a5">Нет. Актуальная нормативная база по закупкам подключена автоматически при подключении пакета — федеральные законы, постановления Правительства и ведомственные акты.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button"><span>Как считается оплата?</span><span>+</span></button>
-            <div class="faq-answer">Подключение пакета — 2 990 ₽ в месяц со счёта приложения. Ответы модели в чате списываются отдельно со счёта ИИ по тарифу вашего аккаунта.</div>
+            <button class="faq-question" type="button"><span data-i18n="tenders.faq.q6">Как считается оплата?</span><span>+</span></button>
+            <div class="faq-answer" data-i18n="tenders.faq.a6">Подключение пакета — 2 990 ₽ в месяц со счёта приложения. Ответы модели в чате списываются отдельно со счёта ИИ по тарифу вашего аккаунта.</div>
           </article>
         </div>
       </div>
@@ -537,11 +536,11 @@
     <section class="section section--soft">
       <div class="container">
         <div class="pkg-final-cta">
-          <h2>Готовы ускорить работу с тендерами?</h2>
-          <p>Подключите пакет «Тендерный специалист» — для участника и заказчика: разбор документации, риски, замечания и уверенность в каждом решении по закупке.</p>
+          <h2 data-i18n="tenders.final.title">Готовы ускорить работу с тендерами?</h2>
+          <p data-i18n="tenders.final.text">Подключите пакет «Тендерный специалист» — для участника и заказчика: разбор документации, риски, замечания и уверенность в каждом решении по закупке.</p>
           <div class="pkg-final-cta-actions">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Попробовать бесплатно</a>
-            <a href="#contact" class="btn btn-secondary">Задать вопрос</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="cta.tryFree">Попробовать бесплатно</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="cta.askQuestion">Задать вопрос</a>
           </div>
         </div>
       </div>
@@ -550,57 +549,57 @@
     <section class="section contact-section" id="contact">
       <div class="container contact-grid">
         <div>
-          <p class="section-label">Контакт</p>
-          <h2 class="section-title">Обсудить пакет «Тендерный специалист»</h2>
-          <p class="section-subtitle" style="margin-bottom: 24px;">
+          <p class="section-label" data-i18n="tenders.contact.label">Контакт</p>
+          <h2 class="section-title" data-i18n="tenders.contact.title">Обсудить пакет «Тендерный специалист»</h2>
+          <p class="section-subtitle" style="margin-bottom: 24px;" data-i18n="tenders.contact.subtitle">
             Расскажем, как сервис работает на ваших закупках, поможем с первым анализом
             и ответим на вопросы по подключению для команды.
           </p>
           <ul class="contact-note-list">
-            <li>Консультация по возможностям пакета</li>
-            <li>Ответ в течение 1–2 рабочих дней</li>
-            <li>Демо разбора реальной закупки</li>
-            <li>Подключение для тендерного отдела</li>
+            <li data-i18n="tenders.contact.li1">Консультация по возможностям пакета</li>
+            <li data-i18n="tenders.contact.li2">Ответ в течение 1–2 рабочих дней</li>
+            <li data-i18n="tenders.contact.li3">Демо разбора реальной закупки</li>
+            <li data-i18n="tenders.contact.li4">Подключение для тендерного отдела</li>
           </ul>
         </div>
         <div class="form-card">
           <form id="lead-form">
             <input type="hidden" name="product" value="tenders">
             <div class="form-group">
-              <label for="name">Имя *</label>
-              <input id="name" name="name" type="text" required placeholder="Как к вам обращаться">
+              <label for="name" data-i18n="form.name">Имя *</label>
+              <input id="name" name="name" type="text" required data-i18n-placeholder="form.name.ph" placeholder="Как к вам обращаться">
             </div>
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" required placeholder="name@company.ru">
+              <label for="email" data-i18n="form.email">Email *</label>
+              <input id="email" name="email" type="email" required data-i18n-placeholder="form.email.ph" placeholder="name@company.ru">
             </div>
             <div class="form-group">
-              <label for="phone">Телефон *</label>
-              <input id="phone" name="phone" type="tel" required placeholder="+7 900 000-00-00" autocomplete="tel">
+              <label for="phone" data-i18n="form.phone">Телефон *</label>
+              <input id="phone" name="phone" type="tel" required data-i18n-placeholder="form.phone.ph" placeholder="+7 900 000-00-00" autocomplete="tel">
             </div>
             <div class="form-group">
-              <label for="role">Роль</label>
+              <label for="role" data-i18n="form.role">Роль</label>
               <select id="role" name="role">
-                <option value="">Выберите</option>
-                <option value="tender">Тендерный специалист</option>
-                <option value="management">Руководитель / собственник</option>
-                <option value="legal">Юрист</option>
-                <option value="sales">Коммерческий отдел</option>
-                <option value="customer">Служба заказчика</option>
-                <option value="consulting">Консалтинг</option>
-                <option value="other">Другое</option>
+                <option value="" data-i18n="form.role.select">Выберите</option>
+                <option value="tender" data-i18n="form.role.tender">Тендерный специалист</option>
+                <option value="management" data-i18n="form.role.management">Руководитель / собственник</option>
+                <option value="legal" data-i18n="form.role.legal">Юрист</option>
+                <option value="sales" data-i18n="form.role.sales">Коммерческий отдел</option>
+                <option value="customer" data-i18n="form.role.customer">Служба заказчика</option>
+                <option value="consulting" data-i18n="form.role.consulting">Консалтинг</option>
+                <option value="other" data-i18n="form.role.other">Другое</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Комментарий</label>
-              <textarea id="message" name="message" placeholder="Какие закупки разбираете? 44-ФЗ, 223-ФЗ или 615-ПП?"></textarea>
+              <label for="message" data-i18n="form.message">Комментарий</label>
+              <textarea id="message" name="message" data-i18n-placeholder="form.message.ph.tenders" placeholder="Какие закупки разбираете? 44-ФЗ, 223-ФЗ или 615-ПП?"></textarea>
             </div>
             <div class="form-group checkbox-row">
               <input id="consent" name="consent" type="checkbox" required>
-              <label for="consent">Согласен на <a href="../legal/privacy.html">обработку персональных данных</a> для обратной связи</label>
+              <label for="consent" data-i18n-html="form.consent">Согласен на <a href="../legal/privacy.html">обработку персональных данных</a> для обратной связи</label>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку</button>
-            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.</p>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form.submit">Отправить заявку</button>
+            <p class="form-note" data-i18n="form.note">Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.</p>
             <div id="form-status" class="form-status"></div>
           </form>
         </div>
@@ -630,7 +629,7 @@
   </footer>
 
   <script src="../js/main.js?v=27"></script>
-  <script src="../js/site-i18n-dict.js?v=2"></script>
-  <script src="../js/site-i18n.js?v=1"></script>
+  <script src="../js/site-i18n-dict.js?v=3"></script>
+  <script src="../js/site-i18n.js?v=2"></script>
 </body>
 </html>

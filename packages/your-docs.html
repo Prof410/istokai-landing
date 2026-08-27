@@ -39,16 +39,16 @@
         </div>
       </nav>
       <div class="header-tools">
-        <div class="theme-switch" role="group" aria-label="Тема">
-          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" aria-label="Тёмная тема">
+        <div class="theme-switch" role="group" data-i18n-aria="ui.themeGroup" aria-label="Тема">
+          <button type="button" class="theme-switch-btn active" data-theme-set="dark" aria-pressed="true" data-i18n-aria="ui.themeDark" aria-label="Тёмная">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
-          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+          <button type="button" class="theme-switch-btn" data-theme-set="light" aria-pressed="false" data-i18n-aria="ui.themeLight" aria-label="Светлая">
             <svg class="toolbar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </button>
         </div>
       </div>
-      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+      <button class="menu-toggle" type="button" data-i18n-aria="ui.menu" aria-label="Меню">☰</button>
     </div>
   </header>
 
@@ -56,43 +56,43 @@
     <section class="hero hero--pkg">
       <div class="container hero-grid">
         <div class="hero-main">
-          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
+          <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths" data-i18n="pkg.back">← К пакетам</a></p>
           <p class="path-kicker path-kicker--live" data-i18n="docs.kicker">Доступно · в тарифе приложения</p>
           <h1 class="hero-title" data-i18n="docs.title">ИИ-эксперт для работы с вашими документами</h1>
           <ul class="hero-lead-list">
-            <li>Zakon-AI превращает ваши документы в интеллектуальную систему, которая отвечает на вопросы за секунды.</li>
-            <li>Загрузите договоры, регламенты, технические задания, методички — всё, по чему вы обычно ищете вручную.</li>
-            <li>Задайте вопрос как коллеге: «где штраф за просрочку», «какой срок расторжения», «что по форс-мажору».</li>
-            <li>Получите точную цитату со ссылкой на конкретный пункт файла.</li>
+            <li data-i18n="docs.hero.li1">Zakon-AI превращает ваши документы в интеллектуальную систему, которая отвечает на вопросы за секунды.</li>
+            <li data-i18n="docs.hero.li2">Загрузите договоры, регламенты, технические задания, методички — всё, по чему вы обычно ищете вручную.</li>
+            <li data-i18n="docs.hero.li3">Задайте вопрос как коллеге: «где штраф за просрочку», «какой срок расторжения», «что по форс-мажору».</li>
+            <li data-i18n="docs.hero.li4">Получите точную цитату со ссылкой на конкретный пункт файла.</li>
           </ul>
           <div class="hero-pills">
-            <span class="hero-pill">Цитата в каждом ответе</span>
-            <span class="hero-pill">PDF, Word, Excel</span>
-            <span class="hero-pill">Папки и роли доступа</span>
-            <span class="hero-pill">Личная и командная база</span>
+            <span class="hero-pill" data-i18n="docs.pill1">Цитата в каждом ответе</span>
+            <span class="hero-pill" data-i18n="docs.pill2">PDF, Word, Excel</span>
+            <span class="hero-pill" data-i18n="docs.pill3">Папки и роли доступа</span>
+            <span class="hero-pill" data-i18n="docs.pill4">Личная и командная база</span>
           </div>
           <div class="hero-actions hero-actions--pair">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Загрузить файл и спросить</a>
-            <a href="../index.html#pricing" class="btn btn-secondary">Доступ для команды</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="docs.cta.upload">Загрузить файл и спросить</a>
+            <a href="../index.html#pricing" class="btn btn-secondary" data-i18n="docs.cta.team">Доступ для команды</a>
           </div>
         </div>
 
         <aside class="docs-hero-visual" aria-hidden="true">
           <article class="chat-mockup chat-mockup-hero docs-hero-mockup">
             <div class="chat-header">
-              <span class="chat-title">Ваши документы</span>
-              <span class="chat-badge">● готов</span>
+              <span class="chat-title" data-i18n="docs.mock.title">Ваши документы</span>
+              <span class="chat-badge" data-i18n="docs.mock.badge">● готов</span>
             </div>
             <div class="chat-body">
               <div class="chat-docs docs-hero-files">
-                <span class="doc-chip">📄 Договор_поставки_2024.pdf</span>
-                <span class="doc-chip">📄 Регламент_премирования.docx</span>
-                <span class="doc-chip">📁 Папка · Юридический отдел</span>
+                <span class="doc-chip" data-i18n="docs.mock.file1">📄 Договор_поставки_2024.pdf</span>
+                <span class="doc-chip" data-i18n="docs.mock.file2">📄 Регламент_премирования.docx</span>
+                <span class="doc-chip" data-i18n="docs.mock.file3">📁 Папка · Юридический отдел</span>
               </div>
-              <div class="bubble bubble-user">Где штраф за просрочку поставки?</div>
+              <div class="bubble bubble-user" data-i18n="docs.mock.q">Где штраф за просрочку поставки?</div>
               <div class="bubble bubble-bot">
-                Согласно договору, при просрочке поставки поставщик уплачивает неустойку в размере <strong>0,1% от суммы недопоставленного товара за каждый день</strong>, но не более 10% от стоимости партии.
-                <span class="source-link">→ Договор_поставки_2024.pdf, п. 7.3</span>
+                <span data-i18n-html="docs.mock.a">Согласно договору, при просрочке поставки поставщик уплачивает неустойку в размере <strong>0,1% от суммы недопоставленного товара за каждый день</strong>, но не более 10% от стоимости партии.</span>
+                <span class="source-link" data-i18n="docs.mock.source">→ Договор_поставки_2024.pdf, п. 7.3</span>
               </div>
             </div>
           </article>
@@ -102,131 +102,131 @@
 
     <section class="section section--soft" id="upload">
       <div class="container">
-        <p class="section-label">Файлы</p>
-        <h2 class="section-title">Что можно загружать</h2>
-        <p class="section-subtitle">В пакет «Ваши документы» можно загрузить практически любые рабочие материалы.</p>
+        <p class="section-label" data-i18n="sec.files">Файлы</p>
+        <h2 class="section-title" data-i18n="docs.upload.title">Что можно загружать</h2>
+        <p class="section-subtitle" data-i18n="docs.upload.subtitle">В пакет «Ваши документы» можно загрузить практически любые рабочие материалы.</p>
         <div class="audience-grid audience-grid--3x3">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15v-7"/></svg></span>
-              <h3>Договоры и контракты</h3>
+              <h3 data-i18n="docs.upload.card1.title">Договоры и контракты</h3>
             </div>
-            <p class="audience-lead">С поставщиками, клиентами, подрядчиками</p>
+            <p class="audience-lead" data-i18n="docs.upload.card1.lead">С поставщиками, клиентами, подрядчиками</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
-              <h3>Внутренние регламенты и политики</h3>
+              <h3 data-i18n="docs.upload.card2.title">Внутренние регламенты и политики</h3>
             </div>
-            <p class="audience-lead">ПВТР, положения о премировании, стандарты ИБ, политики обработки ПДн</p>
+            <p class="audience-lead" data-i18n="docs.upload.card2.lead">ПВТР, положения о премировании, стандарты ИБ, политики обработки ПДн</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <h3>Должностные инструкции и методички</h3>
+              <h3 data-i18n="docs.upload.card3.title">Должностные инструкции и методички</h3>
             </div>
-            <p class="audience-lead">Чтобы новые сотрудники быстрее вникали в процессы</p>
+            <p class="audience-lead" data-i18n="docs.upload.card3.lead">Чтобы новые сотрудники быстрее вникали в процессы</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg></span>
-              <h3>Тендерную документацию</h3>
+              <h3 data-i18n="docs.upload.card4.title">Тендерную документацию</h3>
             </div>
-            <p class="audience-lead">Извещения, технические задания, проекты контрактов</p>
+            <p class="audience-lead" data-i18n="docs.upload.card4.lead">Извещения, технические задания, проекты контрактов</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
-              <h3>Отраслевые нормативные акты</h3>
+              <h3 data-i18n="docs.upload.card5.title">Отраслевые нормативные акты</h3>
             </div>
-            <p class="audience-lead">Актуальные версии актов для регулируемой сферы</p>
+            <p class="audience-lead" data-i18n="docs.upload.card5.lead">Актуальные версии актов для регулируемой сферы</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-              <h3>Переписку и протоколы встреч</h3>
+              <h3 data-i18n="docs.upload.card6.title">Переписку и протоколы встреч</h3>
             </div>
-            <p class="audience-lead">Чтобы быстро вспомнить, о чём договаривались</p>
+            <p class="audience-lead" data-i18n="docs.upload.card6.lead">Чтобы быстро вспомнить, о чём договаривались</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
-              <h3>Отчёты и аналитику</h3>
+              <h3 data-i18n="docs.upload.card7.title">Отчёты и аналитику</h3>
             </div>
-            <p class="audience-lead">Финансовые, маркетинговые и технические отчёты</p>
+            <p class="audience-lead" data-i18n="docs.upload.card7.lead">Финансовые, маркетинговые и технические отчёты</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></span>
-              <h3>Презентации и изображения</h3>
+              <h3 data-i18n="docs.upload.card8.title">Презентации и изображения</h3>
             </div>
-            <p class="audience-lead">Сервис умеет работать и с визуальными материалами</p>
+            <p class="audience-lead" data-i18n="docs.upload.card8.lead">Сервис умеет работать и с визуальными материалами</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h6"/></svg></span>
-              <h3>Шаблоны и типовые формы</h3>
+              <h3 data-i18n="docs.upload.card9.title">Шаблоны и типовые формы</h3>
             </div>
-            <p class="audience-lead">Договоры, акты, заявки и другие бланки компании</p>
+            <p class="audience-lead" data-i18n="docs.upload.card9.lead">Договоры, акты, заявки и другие бланки компании</p>
           </article>
         </div>
-        <p class="pkg-formats-note"><strong>Доступные форматы для работы в приложении:</strong> PDF, DOC / DOCX, XLS / XLSX, PPT / PPTX, TXT / RTF, ZIP / RAR, JPG / PNG.</p>
+        <p class="pkg-formats-note" data-i18n-html="docs.upload.formats"><strong>Доступные форматы для работы в приложении:</strong> PDF, DOC / DOCX, XLS / XLSX, PPT / PPTX, TXT / RTF, ZIP / RAR, JPG / PNG.</p>
       </div>
     </section>
 
     <section class="section" id="features">
       <div class="container">
-        <p class="section-label">Возможности</p>
-        <h2 class="section-title">Что отличает Zakon-AI от обычного ИИ-чата</h2>
-        <p class="section-subtitle">Не просто загрузка файлов — правила, роли и контроль бюджета на уровне папок и команды.</p>
+        <p class="section-label" data-i18n="sec.features">Возможности</p>
+        <h2 class="section-title" data-i18n="docs.features.title">Что отличает Zakon-AI от обычного ИИ-чата</h2>
+        <p class="section-subtitle" data-i18n="docs.features.subtitle">Не просто загрузка файлов — правила, роли и контроль бюджета на уровне папок и команды.</p>
         <div class="audience-grid">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M8 12h8M8 16h5"/></svg></span>
-              <h3>Инструкции для ИИ на уровне папки</h3>
+              <h3 data-i18n="docs.feat1.title">Инструкции для ИИ на уровне папки</h3>
             </div>
-            <p class="audience-lead">Настройте правила для каждой папки (проекта). Укажите ИИ: «Отвечай только на основе текста», «Используй строгий юридический стиль» или «Выделяй только финансовые риски». Система запомнит это для всех чатов в этой папке.</p>
+            <p class="audience-lead" data-i18n="docs.feat1.lead">Настройте правила для каждой папки (проекта). Укажите ИИ: «Отвечай только на основе текста», «Используй строгий юридический стиль» или «Выделяй только финансовые риски». Система запомнит это для всех чатов в этой папке.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <h3>Гибкая система ролей</h3>
+              <h3 data-i18n="docs.feat2.title">Гибкая система ролей</h3>
             </div>
-            <p class="audience-lead">На тарифе «Команда» — полный контроль доступа. Назначайте роли для каждой папки: администратор видит всё, рядовой сотрудник — только то, что ему положено.</p>
-            <div class="pkg-role-badges" aria-label="Роли доступа">
-              <span class="pkg-role-badge">Читатель</span>
-              <span class="pkg-role-badge">С вопросами</span>
-              <span class="pkg-role-badge">Редактор</span>
-              <span class="pkg-role-badge">Менеджер</span>
+            <p class="audience-lead" data-i18n="docs.feat2.lead">На тарифе «Команда» — полный контроль доступа. Назначайте роли для каждой папки: администратор видит всё, рядовой сотрудник — только то, что ему положено.</p>
+            <div class="pkg-role-badges" data-i18n-aria="docs.roles.aria" aria-label="Роли доступа">
+              <span class="pkg-role-badge" data-i18n="docs.role.reader">Читатель</span>
+              <span class="pkg-role-badge" data-i18n="docs.role.ask">С вопросами</span>
+              <span class="pkg-role-badge" data-i18n="docs.role.editor">Редактор</span>
+              <span class="pkg-role-badge" data-i18n="docs.role.manager">Менеджер</span>
             </div>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
-              <h3>Режим «Усиленный ответ»</h3>
+              <h3 data-i18n="docs.feat3.title">Режим «Усиленный ответ»</h3>
             </div>
-            <p class="audience-lead">Для сложных аналитических задач включите переключатель «Усиленный ответ». Стоимость списывается с вашего внутреннего баланса ИИ в рублях.</p>
+            <p class="audience-lead" data-i18n="docs.feat3.lead">Для сложных аналитических задач включите переключатель «Усиленный ответ». Стоимость списывается с вашего внутреннего баланса ИИ в рублях.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-              <h3>Умный поиск по смыслу</h3>
+              <h3 data-i18n="docs.feat4.title">Умный поиск по смыслу</h3>
             </div>
-            <p class="audience-lead">Не нужно помнить точную формулировку — спросите «какие штрафы за просрочку?» и получите ответ из договоров и регламентов.</p>
+            <p class="audience-lead" data-i18n="docs.feat4.lead">Не нужно помнить точную формулировку — спросите «какие штрафы за просрочку?» и получите ответ из договоров и регламентов.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
-              <h3>Проверка по источнику</h3>
+              <h3 data-i18n="docs.feat5.title">Проверка по источнику</h3>
             </div>
-            <p class="audience-lead">Каждый тезис подкреплён кликабельной ссылкой на фрагмент документа — откройте первоисточник ровно на нужном абзаце.</p>
+            <p class="audience-lead" data-i18n="docs.feat5.lead">Каждый тезис подкреплён кликабельной ссылкой на фрагмент документа — откройте первоисточник ровно на нужном абзаце.</p>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>
-              <h3>Одна актуальная база для всех</h3>
+              <h3 data-i18n="docs.feat6.title">Одна актуальная база для всех</h3>
             </div>
-            <p class="audience-lead">Команда работает с одной версией документов, а не с «как кто запомнил» в переписке. Обновили файл в папке — ответы строятся уже по новой редакции.</p>
+            <p class="audience-lead" data-i18n="docs.feat6.lead">Команда работает с одной версией документов, а не с «как кто запомнил» в переписке. Обновили файл в папке — ответы строятся уже по новой редакции.</p>
           </article>
         </div>
       </div>
@@ -234,24 +234,24 @@
 
     <section class="section" id="start">
       <div class="container">
-        <p class="section-label">Как это работает</p>
-        <h2 class="section-title">Три прозрачных шага от файла к ответу</h2>
-        <p class="section-subtitle">Без «магии»: вы видите объём, статус индексации и ссылку на абзац — поэтому можно доверять результату.</p>
+        <p class="section-label" data-i18n="sec.how">Как это работает</p>
+        <h2 class="section-title" data-i18n="docs.how.title">Три прозрачных шага от файла к ответу</h2>
+        <p class="section-subtitle" data-i18n="docs.how.subtitle">Без «магии»: вы видите объём, статус индексации и ссылку на абзац — поэтому можно доверять результату.</p>
         <div class="start-steps">
           <article class="start-step">
             <span class="start-step-num">1</span>
-            <h3>Умная загрузка</h3>
-            <p>Перетащите файлы (PDF, Word, Excel, архивы). Система сразу покажет, сколько места займёт файл, и предупредит, если лимит тарифа исчерпан.</p>
+            <h3 data-i18n="docs.how.step1.title">Умная загрузка</h3>
+            <p data-i18n="docs.how.step1.text">Перетащите файлы (PDF, Word, Excel, архивы). Система сразу покажет, сколько места займёт файл, и предупредит, если лимит тарифа исчерпан.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">2</span>
-            <h3>Прозрачная индексация</h3>
-            <p>Файл проходит обработку. Вы видите статус: «В очереди» → «Обработка» → «Готов». Задавать вопросы можно только когда документ полностью проиндексирован — это гарантирует точность поиска.</p>
+            <h3 data-i18n="docs.how.step2.title">Прозрачная индексация</h3>
+            <p data-i18n="docs.how.step2.text">Файл проходит обработку. Вы видите статус: «В очереди» → «Обработка» → «Готов». Задавать вопросы можно только когда документ полностью проиндексирован — это гарантирует точность поиска.</p>
           </article>
           <article class="start-step">
             <span class="start-step-num">3</span>
-            <h3>Вопрос и проверка</h3>
-            <p>Задайте вопрос как коллеге. Получите ответ с кликабельной ссылкой, которая откроет документ ровно на нужном абзаце.</p>
+            <h3 data-i18n="docs.how.step3.title">Вопрос и проверка</h3>
+            <p data-i18n="docs.how.step3.text">Задайте вопрос как коллеге. Получите ответ с кликабельной ссылкой, которая откроет документ ровно на нужном абзаце.</p>
           </article>
         </div>
       </div>
@@ -259,51 +259,51 @@
 
     <section class="section section--soft" id="scenarios">
       <div class="container">
-        <p class="section-label">Сценарии</p>
-        <h2 class="section-title">Частые сценарии использования</h2>
+        <p class="section-label" data-i18n="sec.scenarios">Сценарии</p>
+        <h2 class="section-title" data-i18n="docs.scenarios.title">Частые сценарии использования</h2>
         <div class="audience-grid audience-grid--2x2">
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
-              <h3>Юрист</h3>
+              <h3 data-i18n="docs.sc.lawyer.title">Юрист</h3>
             </div>
             <ul class="audience-points pkg-scenario-list">
-              <li>«Найди во всех договорах за 2024 год пункты об одностороннем расторжении».</li>
-              <li>«Где лимит ответственности поставщика и чем он ограничен?»</li>
-              <li>«Есть ли противоречия между договором и допсоглашением по срокам?»</li>
+              <li data-i18n="docs.sc.lawyer.li1">«Найди во всех договорах за 2024 год пункты об одностороннем расторжении».</li>
+              <li data-i18n="docs.sc.lawyer.li2">«Где лимит ответственности поставщика и чем он ограничен?»</li>
+              <li data-i18n="docs.sc.lawyer.li3">«Есть ли противоречия между договором и допсоглашением по срокам?»</li>
             </ul>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <h3>HR</h3>
+              <h3 data-i18n="docs.sc.hr.title">HR</h3>
             </div>
             <ul class="audience-points pkg-scenario-list">
-              <li>«Составь выжимку из нового Положения о премировании для рассылки».</li>
-              <li>«Сколько дней отпуска положено при неполном стаже по нашему акту?»</li>
-              <li>«Какие основания для дисциплинарного взыскания указаны в ПВТР?»</li>
+              <li data-i18n="docs.sc.hr.li1">«Составь выжимку из нового Положения о премировании для рассылки».</li>
+              <li data-i18n="docs.sc.hr.li2">«Сколько дней отпуска положено при неполном стаже по нашему акту?»</li>
+              <li data-i18n="docs.sc.hr.li3">«Какие основания для дисциплинарного взыскания указаны в ПВТР?»</li>
             </ul>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Специалист ИБ</h3>
+              <h3 data-i18n="docs.sc.ib.title">Специалист ИБ</h3>
             </div>
             <ul class="audience-points pkg-scenario-list">
-              <li>«Проверь проект договора подрядчика на соответствие стандарту ПДн».</li>
-              <li>«Какие требования к доступу подрядчиков есть в регламенте ИБ?»</li>
-              <li>«Какие условия NDA обязательны по нашему шаблону?»</li>
+              <li data-i18n="docs.sc.ib.li1">«Проверь проект договора подрядчика на соответствие стандарту ПДн».</li>
+              <li data-i18n="docs.sc.ib.li2">«Какие требования к доступу подрядчиков есть в регламенте ИБ?»</li>
+              <li data-i18n="docs.sc.ib.li3">«Какие условия NDA обязательны по нашему шаблону?»</li>
             </ul>
           </article>
           <article class="audience-card">
             <div class="audience-head">
               <span class="audience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L11 10"/><path d="m16 16 6-6"/><path d="m21.5 10.5-1-1a2.12 2.12 0 0 0-3 0L12 11"/></svg></span>
-              <h3>Закупки / тендерщик</h3>
+              <h3 data-i18n="docs.sc.tender.title">Закупки / тендерщик</h3>
             </div>
             <ul class="audience-points pkg-scenario-list">
-              <li>«Сравни два извещения: сроки, обеспечение заявки и ограничения».</li>
-              <li>«Какой размер обеспечения и срок его возврата в проекте контракта?»</li>
-              <li>«Есть ли запрет или лимит на субподряд в документации?»</li>
+              <li data-i18n="docs.sc.tender.li1">«Сравни два извещения: сроки, обеспечение заявки и ограничения».</li>
+              <li data-i18n="docs.sc.tender.li2">«Какой размер обеспечения и срок его возврата в проекте контракта?»</li>
+              <li data-i18n="docs.sc.tender.li3">«Есть ли запрет или лимит на субподряд в документации?»</li>
             </ul>
           </article>
         </div>
@@ -312,44 +312,44 @@
 
     <section class="section section--soft" id="who">
       <div class="container">
-        <p class="section-label">Аудитория</p>
-        <h2 class="section-title">Для кого этот пакет</h2>
+        <p class="section-label" data-i18n="sec.audience">Аудитория</p>
+        <h2 class="section-title" data-i18n="docs.who.title">Для кого этот пакет</h2>
         <div class="role-grid role-grid--3x3">
           <article class="role-card">
-            <h3>Юристы и договорные отделы</h3>
-            <p class="role-lead">Поиск пунктов об ответственности и проверка проектов договоров.</p>
+            <h3 data-i18n="docs.who.1.title">Юристы и договорные отделы</h3>
+            <p class="role-lead" data-i18n="docs.who.1.lead">Поиск пунктов об ответственности и проверка проектов договоров.</p>
           </article>
           <article class="role-card">
-            <h3>Специалисты по закупкам</h3>
-            <p class="role-lead">Сравнение требований в тендерах, сроки подачи заявок.</p>
+            <h3 data-i18n="docs.who.2.title">Специалисты по закупкам</h3>
+            <p class="role-lead" data-i18n="docs.who.2.lead">Сравнение требований в тендерах, сроки подачи заявок.</p>
           </article>
           <article class="role-card">
-            <h3>HR и руководители</h3>
-            <p class="role-lead">Ответы по положениям о премировании, должностным инструкциям, протоколам.</p>
+            <h3 data-i18n="docs.who.3.title">HR и руководители</h3>
+            <p class="role-lead" data-i18n="docs.who.3.lead">Ответы по положениям о премировании, должностным инструкциям, протоколам.</p>
           </article>
           <article class="role-card">
-            <h3>Специалисты по ИБ</h3>
-            <p class="role-lead">Проверка договоров на соответствие стандартам и требованиям к ПДн.</p>
+            <h3 data-i18n="docs.who.4.title">Специалисты по ИБ</h3>
+            <p class="role-lead" data-i18n="docs.who.4.lead">Проверка договоров на соответствие стандартам и требованиям к ПДн.</p>
           </article>
           <article class="role-card">
-            <h3>Финансисты и бухгалтерия</h3>
-            <p class="role-lead">Условия оплаты, штрафы, акты и формулировки из договоров и регламентов.</p>
+            <h3 data-i18n="docs.who.5.title">Финансисты и бухгалтерия</h3>
+            <p class="role-lead" data-i18n="docs.who.5.lead">Условия оплаты, штрафы, акты и формулировки из договоров и регламентов.</p>
           </article>
           <article class="role-card">
-            <h3>Инженеры и технические специалисты</h3>
-            <p class="role-lead">Быстрый доступ к методичкам, ТЗ, нормам и внутренним инструкциям.</p>
+            <h3 data-i18n="docs.who.6.title">Инженеры и технические специалисты</h3>
+            <p class="role-lead" data-i18n="docs.who.6.lead">Быстрый доступ к методичкам, ТЗ, нормам и внутренним инструкциям.</p>
           </article>
           <article class="role-card">
-            <h3>Консультанты и аудиторы</h3>
-            <p class="role-lead">Разбор клиентских материалов со ссылками на конкретные фрагменты.</p>
+            <h3 data-i18n="docs.who.7.title">Консультанты и аудиторы</h3>
+            <p class="role-lead" data-i18n="docs.who.7.lead">Разбор клиентских материалов со ссылками на конкретные фрагменты.</p>
           </article>
           <article class="role-card">
-            <h3>Служба поддержки и клиентский сервис</h3>
-            <p class="role-lead">Ответы по регламентам и базе знаний без ожидания эксперта.</p>
+            <h3 data-i18n="docs.who.8.title">Служба поддержки и клиентский сервис</h3>
+            <p class="role-lead" data-i18n="docs.who.8.lead">Ответы по регламентам и базе знаний без ожидания эксперта.</p>
           </article>
           <article class="role-card">
-            <h3>Владельцы и руководители малого бизнеса</h3>
-            <p class="role-lead">Единая база договоров и правил компании без сложного внедрения.</p>
+            <h3 data-i18n="docs.who.9.title">Владельцы и руководители малого бизнеса</h3>
+            <p class="role-lead" data-i18n="docs.who.9.lead">Единая база договоров и правил компании без сложного внедрения.</p>
           </article>
         </div>
       </div>
@@ -357,37 +357,37 @@
 
     <section class="section" id="security">
       <div class="container">
-        <p class="section-label">Безопасность</p>
-        <h2 class="section-title">Безопасность и контроль для команды</h2>
-        <p class="section-subtitle">Для B2B это главный вопрос покупки — доступ, бюджет и изоляция данных под контролем администратора.</p>
+        <p class="section-label" data-i18n="sec.security">Безопасность</p>
+        <h2 class="section-title" data-i18n="docs.security.title">Безопасность и контроль для команды</h2>
+        <p class="section-subtitle" data-i18n="docs.security.subtitle">Для B2B это главный вопрос покупки — доступ, бюджет и изоляция данных под контролем администратора.</p>
         <div class="security-grid">
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></span>
-              <h3>Централизованный контроль</h3>
+              <h3 data-i18n="docs.sec.control.title">Централизованный контроль</h3>
             </div>
-            <p>На тарифе «Команда» только администратор покупает дополнительное место и пакеты. Участники не могут случайно слить бюджет или удалить общую базу.</p>
+            <p data-i18n="docs.sec.control.text">На тарифе «Команда» только администратор покупает дополнительное место и пакеты. Участники не могут случайно слить бюджет или удалить общую базу.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-              <h3>Изоляция данных</h3>
+              <h3 data-i18n="docs.sec.isolation.title">Изоляция данных</h3>
             </div>
-            <p>Ваши файлы не смешиваются с другими пользователями. ИИ использует их только для ответа на ваши вопросы в рамках вашего аккаунта.</p>
+            <p data-i18n="docs.sec.isolation.text">Ваши файлы не смешиваются с другими пользователями. ИИ использует их только для ответа на ваши вопросы в рамках вашего аккаунта.</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
-              <h3>Резидентство</h3>
+              <h3 data-i18n="docs.sec.residency.title">Резидентство</h3>
             </div>
-            <p>Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>).</p>
+            <p data-i18n-html="docs.sec.residency.text">Сервис работает на серверах в РФ (полное соответствие <strong>152-ФЗ</strong>).</p>
           </article>
           <article class="security-card">
             <div class="security-head">
               <span class="security-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span>
-              <h3>Приватность</h3>
+              <h3 data-i18n="docs.sec.privacy.title">Приватность</h3>
             </div>
-            <p>Загруженные документы <strong>никогда не используются</strong> для обучения языковых моделей.</p>
+            <p data-i18n-html="docs.sec.privacy.text">Загруженные документы <strong>никогда не используются</strong> для обучения языковых моделей.</p>
           </article>
         </div>
       </div>
@@ -397,11 +397,11 @@
       <div class="container">
         <div class="pkg-price-layout">
           <div class="pkg-price-copy">
-            <p class="section-label">Стоимость</p>
+            <p class="section-label" data-i18n="sec.pricing">Стоимость</p>
             <h2 class="section-title" data-i18n="docs.pricing.title">Сколько стоит</h2>
             <div class="pkg-price-note">
-              <p class="pkg-price-lead">Пакет «Ваши документы» <strong>включён в тариф пользования</strong> — отдельная оплата не нужна.</p>
-              <p>Доступен сразу после регистрации: загружайте файлы, настраивайте папки и задавайте вопросы в рамках выбранного тарифа приложения.</p>
+              <p class="pkg-price-lead" data-i18n-html="docs.pricing.lead">Пакет «Ваши документы» <strong>включён в тариф пользования</strong> — отдельная оплата не нужна.</p>
+              <p data-i18n="docs.pricing.body">Доступен сразу после регистрации: загружайте файлы, настраивайте папки и задавайте вопросы в рамках выбранного тарифа приложения.</p>
             </div>
           </div>
           <aside class="pkg-price-visual" aria-hidden="true">
@@ -442,11 +442,11 @@
     <section class="section">
       <div class="container">
         <div class="pkg-final-cta">
-          <h2>Готовы оживить вашу базу документов?</h2>
-          <p>Загрузите первые файлы и задайте вопрос — увидите, как быстро знания компании превращаются в ответы со ссылками на источники.</p>
+          <h2 data-i18n="docs.final.title">Готовы оживить вашу базу документов?</h2>
+          <p data-i18n="docs.final.text">Загрузите первые файлы и задайте вопрос — увидите, как быстро знания компании превращаются в ответы со ссылками на источники.</p>
           <div class="pkg-final-cta-actions">
-            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Загрузить файл и спросить</a>
-            <a href="../index.html#pricing" class="btn btn-secondary">Доступ для команды</a>
+            <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer" data-i18n="docs.cta.upload">Загрузить файл и спросить</a>
+            <a href="../index.html#pricing" class="btn btn-secondary" data-i18n="docs.cta.team">Доступ для команды</a>
           </div>
         </div>
       </div>
@@ -475,7 +475,8 @@
   </footer>
 
   <script src="../js/main.js?v=27"></script>
-  <script src="../js/site-i18n-dict.js?v=2"></script>
-  <script src="../js/site-i18n.js?v=1"></script>
+  <script src="../js/site-i18n-dict.js?v=3"></script>
+  <script src="../js/_dict_docs.js"></script>
+  <script src="../js/site-i18n.js?v=2"></script>
 </body>
 </html>
