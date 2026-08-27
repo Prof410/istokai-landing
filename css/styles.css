@@ -2,8 +2,8 @@
 [data-theme="dark"] {
   --bg: #0b0f19;
   --bg-soft: #111827;
-  --bg-card: #151d2f;
-  --bg-card-hover: #1a2438;
+  --bg-card: #1e2a40;
+  --bg-card-hover: #243148;
   --text: #e8edf7;
   --text-muted: #94a3b8;
   --text-strong: #e2e8f0;
@@ -16,7 +16,7 @@
   --success: #22c55e;
   --success-soft: rgba(34, 197, 94, 0.12);
   --error: #f87171;
-  --border: rgba(148, 163, 184, 0.14);
+  --border: rgba(148, 163, 184, 0.24);
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
