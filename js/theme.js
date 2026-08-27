@@ -14,7 +14,7 @@
     const base = href.includes("../") ? "../assets/" : "assets/";
     link.setAttribute(
       "href",
-      base + (next === "light" ? "favicon-light.png?v=7" : "favicon-dark.png?v=7")
+      base + (next === "light" ? "favicon-light.png?v=8" : "favicon-dark.png?v=8")
     );
   }
 

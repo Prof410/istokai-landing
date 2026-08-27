@@ -598,7 +598,7 @@ function initThemeToggle() {
     if (!link) return;
     const href = link.getAttribute("href") || "";
     const base = href.includes("../") ? "../assets/" : "assets/";
-    const file = theme === "light" ? "favicon-light.png?v=7" : "favicon-dark.png?v=7";
+    const file = theme === "light" ? "favicon-light.png?v=8" : "favicon-dark.png?v=8";
     link.setAttribute("href", base + file);
   }
 
