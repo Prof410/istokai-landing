@@ -939,7 +939,7 @@
 
 .hero-title-note {
   display: inline;
-  font-size: 0.62em;
+  font-size: 0.42em;
   font-weight: 600;
   color: var(--text-muted);
   white-space: nowrap;
@@ -1250,9 +1250,7 @@ body[data-page="expert-opinion"] #security .security-grid--2x2 {
   }
 
   .hero-title-note {
-    display: block;
-    margin-top: 6px;
-    white-space: normal;
+    font-size: 0.38em;
   }
 }
 
