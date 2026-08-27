@@ -264,12 +264,12 @@ img {
 .logo-ai {
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--accent-text);
+  color: #ffffff;
   padding: 2px 7px 2px 2px;
   margin-left: 1px;
   border-radius: 6px;
-  background: var(--logo-ai-bg);
-  border: 1px solid var(--logo-ai-border);
+  background: var(--btn-gradient);
+  border: none;
 }
 
 .logo-mark {
