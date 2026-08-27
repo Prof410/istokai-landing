@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=58">
+  <script src="../js/lang.js"></script>
+  <link rel="stylesheet" href="../css/styles.css?v=59">
   <link rel="stylesheet" href="../css/home-draft.css?v=47">
 </head>
 <body data-page="expert-opinion">
@@ -23,14 +24,19 @@
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="header-tagline">ИИ-эксперт для работы<br>с вашими документами</p>
+        <p class="header-tagline" data-i18n-html="header.tagline">ИИ-эксперт для работы<br>с вашими документами</p>
       </div>
       <nav class="nav">
-        <a href="../index.html#start">Как начать</a>
-        <a href="../index.html#pricing">Тарифы</a>
-        <a href="../index.html#paths">Пакеты</a>
-        <a href="#pricing">Стоимость</a>
-        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
+        <a href="../index.html#start" data-i18n="nav.start">Как начать</a>
+        <a href="../index.html#pricing" data-i18n="nav.pricing">Тарифы</a>
+        <a href="../index.html#paths" data-i18n="nav.packages">Пакеты</a>
+        <a href="#pricing" data-i18n="nav.cost">Стоимость</a>
+        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer"><span data-i18n="nav.startWork">Начать работать</span></a>
+        <div class="lang-switch" role="group" data-i18n-aria="ui.langGroup" aria-label="Язык">
+          <button type="button" class="lang-switch-btn" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switch-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch-btn" data-lang="zh" aria-pressed="false">ZH</button>
+        </div>
       </nav>
       <div class="header-tools">
         <div class="theme-switch" role="group" aria-label="Тема">
@@ -51,8 +57,8 @@
       <div class="container hero-grid">
         <div class="hero-main">
           <p class="hero-eyebrow"><a class="pkg-back-inline" href="../index.html#paths">← К пакетам</a></p>
-          <p class="path-kicker path-kicker--live">Доступно · в тарифе приложения</p>
-          <h1 class="hero-title">Экспертное мнение <span class="hero-title-note">(несколько продвинутых ИИ моделей)</span></h1>
+          <p class="path-kicker path-kicker--live" data-i18n="expert.kicker">Доступно · в тарифе приложения</p>
+          <h1 class="hero-title"><span data-i18n="expert.title">Экспертное мнение</span> <span class="hero-title-note" data-i18n="expert.titleNote">(несколько продвинутых ИИ моделей)</span></h1>
           <p class="hero-lead hero-lead--wide">
             Когда цена ошибки слишком высока для обычного чата. Запустите перекрёстный анализ документа несколькими ИИ-моделями и получите взвешенное заключение с оценкой рисков, а не упрощённый вердикт «да/нет».
           </p>
@@ -433,7 +439,7 @@
         <div class="pkg-price-layout">
           <div class="pkg-price-copy">
             <p class="section-label">Стоимость</p>
-            <h2 class="section-title">Включён в тариф приложения</h2>
+            <h2 class="section-title" data-i18n="expert.pricing.title">Включён в тариф приложения</h2>
             <div class="pkg-price-note">
               <p class="pkg-price-lead">Отдельная ежемесячная подписка на пакет не требуется.</p>
               <p>Режим «Экспертное мнение» доступен всем пользователям приложения. Стоимость ответа рассчитывается по ставке нескольких продвинутых моделей и прозрачно списывается с вашего внутреннего баланса ИИ в рублях после генерации и получения ответа.</p>
@@ -506,19 +512,21 @@
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
         <div class="footer-links">
-          <a href="../index.html#start">Как начать</a>
-          <a href="../index.html#pricing">Тарифы</a>
-          <a href="../index.html#paths">Пакеты</a>
-          <a href="#pricing">Стоимость</a>
-          <a href="../legal/terms.html">Пользовательское соглашение</a>
-          <a href="../legal/privacy.html">Политика конфиденциальности</a>
+          <a href="../index.html#start" data-i18n="nav.start">Как начать</a>
+          <a href="../index.html#pricing" data-i18n="nav.pricing">Тарифы</a>
+          <a href="../index.html#paths" data-i18n="nav.packages">Пакеты</a>
+          <a href="#pricing" data-i18n="nav.cost">Стоимость</a>
+          <a href="../legal/terms.html" data-i18n="footer.terms">Пользовательское соглашение</a>
+          <a href="../legal/privacy.html" data-i18n="footer.privacy">Политика конфиденциальности</a>
         </div>
       </div>
-      <p class="footer-tagline">ИИ-эксперт для работы с вашими документами</p>
-      <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
+      <p class="footer-tagline" data-i18n="footer.tagline">ИИ-эксперт для работы с вашими документами</p>
+      <div class="footer-copy" data-i18n="footer.copy">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
   </footer>
 
   <script src="../js/main.js?v=28"></script>
+  <script src="../js/site-i18n-dict.js?v=1"></script>
+  <script src="../js/site-i18n.js?v=1"></script>
 </body>
 </html>

@@ -389,12 +389,13 @@ img {
 .lang-switch {
   display: inline-flex;
   align-items: center;
-  padding: 4px;
+  padding: 2px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface-overlay-2);
-  gap: 2px;
+  gap: 1px;
   flex-shrink: 0;
+  margin-left: 4px;
 }
 
 .lang-switch-btn {
@@ -402,14 +403,15 @@ img {
   background: transparent;
   color: var(--text-muted);
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  min-width: 34px;
-  padding: 7px 8px;
+  letter-spacing: 0.03em;
+  min-width: 26px;
+  padding: 4px 6px;
   border-radius: 999px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  line-height: 1;
 }
 
 .lang-switch-btn:hover {

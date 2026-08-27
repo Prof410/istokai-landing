@@ -12,10 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=58">
+  <script src="../js/lang.js"></script>
+  <link rel="stylesheet" href="../css/styles.css?v=59">
   <link rel="stylesheet" href="../css/home-draft.css?v=47">
 </head>
-<body>
+<body data-page="privacy">
   <header class="header">
     <div class="container header-inner">
       <div class="header-brand">
@@ -23,14 +24,19 @@
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
-        <p class="header-tagline">ИИ-эксперт для работы<br>с вашими документами</p>
+        <p class="header-tagline" data-i18n-html="header.tagline">ИИ-эксперт для работы<br>с вашими документами</p>
       </div>
       <nav class="nav">
-        <a href="../index.html#start">Как начать</a>
-        <a href="../index.html#pricing">Тарифы</a>
-        <a href="../index.html#paths">Пакеты</a>
-        <a href="../index.html#faq">FAQ</a>
-        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer">Начать работать</a>
+        <a href="../index.html#start" data-i18n="nav.start">Как начать</a>
+        <a href="../index.html#pricing" data-i18n="nav.pricing">Тарифы</a>
+        <a href="../index.html#paths" data-i18n="nav.packages">Пакеты</a>
+        <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="https://app.zakon-ai.ru" class="btn btn-primary btn-contact-shimmer" target="_blank" rel="noopener noreferrer"><span data-i18n="nav.startWork">Начать работать</span></a>
+        <div class="lang-switch" role="group" data-i18n-aria="ui.langGroup" aria-label="Язык">
+          <button type="button" class="lang-switch-btn" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switch-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch-btn" data-lang="zh" aria-pressed="false">ZH</button>
+        </div>
       </nav>
       <div class="header-tools">
         <div class="theme-switch" role="group" aria-label="Тема">
@@ -47,6 +53,7 @@
   </header>
 
   <main>
+    <div class="container" style="padding-top:20px"><p class="pkg-trial-note" data-i18n="legal.langNote">Полный юридический текст доступен на русском языке.</p></div>
     <article class="article-page">
       <header class="article-page-hero">
         <div class="container">
@@ -104,7 +111,7 @@
         <p>Актуальная версия Политики публикуется на этой странице. При существенных изменениях администрация вправе дополнительно уведомить пользователей через Сервис или по email.</p>
 
         <h2>10. Связанные документы</h2>
-        <p><a href="terms.html">Пользовательское соглашение</a></p>
+        <p><a href="terms.html" data-i18n="footer.terms">Пользовательское соглашение</a></p>
       </div>
     </article>
   </main>
@@ -117,19 +124,21 @@
           <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
         </a>
         <div class="footer-links">
-          <a href="../index.html#start">Как начать</a>
-          <a href="../index.html#pricing">Тарифы</a>
-          <a href="../index.html#paths">Пакеты</a>
-          <a href="../index.html#faq">FAQ</a>
-          <a href="terms.html">Пользовательское соглашение</a>
-          <a href="privacy.html">Политика конфиденциальности</a>
+          <a href="../index.html#start" data-i18n="nav.start">Как начать</a>
+          <a href="../index.html#pricing" data-i18n="nav.pricing">Тарифы</a>
+          <a href="../index.html#paths" data-i18n="nav.packages">Пакеты</a>
+          <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="terms.html" data-i18n="footer.terms">Пользовательское соглашение</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Политика конфиденциальности</a>
         </div>
       </div>
-      <p class="footer-tagline">ИИ-эксперт для работы с вашими документами</p>
-      <div class="footer-copy">© 2026 Zakon-AI. Все права защищены.</div>
+      <p class="footer-tagline" data-i18n="footer.tagline">ИИ-эксперт для работы с вашими документами</p>
+      <div class="footer-copy" data-i18n="footer.copy">© 2026 Zakon-AI. Все права защищены.</div>
     </div>
   </footer>
 
   <script src="../js/main.js?v=27"></script>
+  <script src="../js/site-i18n-dict.js?v=1"></script>
+  <script src="../js/site-i18n.js?v=1"></script>
 </body>
 </html>

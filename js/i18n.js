@@ -223,7 +223,7 @@
       "pricing.pkg4.status": "Скоро",
       "pricing.pkg5.title": "Тендерный специалист",
       "pricing.pkg5.text":
-        "Профессиональный ИИ-эксперт для работы с госзакупками. Разбор тендера по ссылке с опорой на 44-ФЗ, 223-ФЗ, 135-ФЗ, 63-ФЗ, ПП РФ (1005, 1875, 878 и др.) и ведомственные акты — риски и ключевые факты за минуты.",
+        "Профессиональный ИИ-эксперт для работы с госзакупками. Разбор тендера по ссылке с опорой на 44-ФЗ, 223-ФЗ, 615-ПП, 135-ФЗ, 63-ФЗ, ПП РФ (1005, 1875, 878 и др.) и ведомственные акты — риски и ключевые факты за минуты.",
       "pricing.pkg5.status": "Доступно",
       "pricing.pkg6.title": "Экспертное мнение",
       "pricing.pkg6.text":
@@ -744,7 +744,7 @@
       "pricing.pkg4.status": "Coming soon",
       "pricing.pkg5.title": "Tender specialist",
       "pricing.pkg5.text":
-        "Professional AI assistant for public procurement. Tender review from a link, grounded in 44-FZ, 223-FZ, 135-FZ, 63-FZ, Government Decrees (1005, 1875, 878, etc.), and departmental acts — risks and key facts in minutes.",
+        "Professional AI assistant for public procurement. Tender review from a link, grounded in 44-FZ, 223-FZ, 615-PP, 135-FZ, 63-FZ, Government Decrees (1005, 1875, 878, etc.), and departmental acts — risks and key facts in minutes.",
       "pricing.pkg5.status": "Available",
       "pricing.pkg6.title": "Expert opinion",
       "pricing.pkg6.text":
