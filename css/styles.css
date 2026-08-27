@@ -29,11 +29,10 @@
   --chat-bg: linear-gradient(180deg, #121a2b, #0f1524);
   --chat-border: rgba(96, 165, 250, 0.5);
   --chat-shadow: 0 20px 50px rgba(59, 130, 246, 0.12), 0 0 0 1px rgba(59, 130, 246, 0.12);
-  --btn-gradient: linear-gradient(135deg, #7c3aed 0%, #4f46e5 42%, #2563eb 72%, #22d3ee 100%);
-  --btn-primary-bg: var(--btn-gradient);
+  --btn-primary-bg: linear-gradient(135deg, var(--accent), var(--accent-2));
   --btn-primary-color: #ffffff;
-  --btn-primary-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
-  --btn-secondary-border: transparent;
+  --btn-primary-shadow: 0 10px 30px var(--accent-glow);
+  --btn-secondary-border: rgba(147, 197, 253, 0.75);
   --footer-cta-color: #ffffff;
   --case-tabs-bg: rgba(15, 23, 42, 0.92);
   --contact-gradient: linear-gradient(180deg, rgba(59, 130, 246, 0.06), transparent);
@@ -99,11 +98,10 @@
   --chat-bg: linear-gradient(180deg, #ffffff, #f8fafc);
   --chat-border: rgba(15, 23, 42, 0.1);
   --chat-shadow: 0 24px 64px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.06);
-  --btn-gradient: linear-gradient(135deg, #7c3aed 0%, #4f46e5 42%, #2563eb 72%, #06b6d4 100%);
-  --btn-primary-bg: var(--btn-gradient);
+  --btn-primary-bg: linear-gradient(135deg, #2563eb, #1d4ed8);
   --btn-primary-color: #ffffff;
-  --btn-primary-shadow: 0 10px 28px rgba(124, 58, 237, 0.28);
-  --btn-secondary-border: transparent;
+  --btn-primary-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
+  --btn-secondary-border: rgba(15, 23, 42, 0.18);
   --footer-cta-color: #0f172a;
   --case-tabs-bg: rgba(255, 255, 255, 0.82);
   --contact-gradient: transparent;
@@ -263,12 +261,12 @@ img {
 .logo-ai {
   font-size: 0.88rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--accent-text);
   padding: 2px 7px 2px 2px;
   margin-left: 1px;
   border-radius: 6px;
-  background: var(--btn-gradient);
-  border: none;
+  background: var(--logo-ai-bg);
+  border: 1px solid var(--logo-ai-border);
 }
 
 .logo-mark {
@@ -326,7 +324,6 @@ img {
   background: var(--btn-primary-bg);
   color: var(--btn-primary-color);
   box-shadow: var(--btn-primary-shadow);
-  border: none;
 }
 
 .btn-contact-shimmer,
@@ -377,16 +374,15 @@ img {
 }
 
 .btn-secondary {
-  color: #ffffff;
-  border: none;
-  background: var(--btn-gradient);
-  box-shadow: var(--btn-primary-shadow);
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--btn-secondary-border);
 }
 
 .btn-secondary:hover {
-  color: #ffffff;
-  background: var(--btn-gradient);
-  filter: brightness(1.06);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+  background: var(--accent-soft);
 }
 
 .menu-toggle {
