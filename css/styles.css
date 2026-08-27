@@ -1542,6 +1542,12 @@ img {
   flex-shrink: 0;
 }
 
+.footer-logo .logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
 .footer-links {
   display: flex;
   gap: 16px 20px;
