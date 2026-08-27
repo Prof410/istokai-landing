@@ -946,24 +946,14 @@
   white-space: nowrap;
 }
 
-.expert-example {
-  margin-top: 28px;
-  padding: 28px 26px;
-  border-radius: 22px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
-  max-width: 52rem;
-}
-
 .expert-example-carousel {
   margin-top: 28px;
-  max-width: 52rem;
+  width: 100%;
+  max-width: none;
 }
 
-.expert-example-carousel .expert-example {
+.expert-example-carousel .expert-demo {
   margin-top: 0;
-  max-width: none;
   animation: expert-example-fade 0.35s ease;
 }
 
@@ -987,81 +977,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .expert-example-carousel .expert-example {
+  .expert-example-carousel .expert-demo {
     animation: none;
   }
 }
 
-[data-theme="light"] .expert-example {
-  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
-  background: #fff;
-}
-
-.expert-example-title {
-  margin: 0 0 22px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.expert-example-block {
-  margin: 0 0 20px;
-  padding: 16px 18px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: var(--bg-soft);
-}
-
-.expert-example-block--verdict {
-  border-color: color-mix(in srgb, var(--accent-text) 35%, var(--border));
-  background: var(--accent-soft);
-}
-
-.expert-example-label {
-  margin: 0 0 8px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-}
-
-.expert-example-quote {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.expert-example-list {
-  margin: 0;
-  padding-left: 1.15rem;
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.55;
-}
-
-.expert-example-list li {
-  margin: 0 0 8px;
-}
-
-.expert-example-list li:last-child {
-  margin-bottom: 0;
-}
-
-.expert-example-list strong {
-  color: var(--text);
-}
-
-.expert-example-sources {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--text-muted);
-}
-
-.expert-example-sources strong {
-  color: var(--text);
+.expert-why-grid {
+  margin-top: 28px;
 }
 
 .expert-hero-mockup .chat-body {

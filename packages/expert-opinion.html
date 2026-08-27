@@ -13,7 +13,7 @@
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/styles.css?v=57">
-  <link rel="stylesheet" href="../css/home-draft.css?v=35">
+  <link rel="stylesheet" href="../css/home-draft.css?v=36">
 </head>
 <body data-page="expert-opinion">
   <header class="header">
@@ -94,51 +94,22 @@
     <section class="section section--soft" id="why">
       <div class="container">
         <p class="section-label">Зачем</p>
-        <h2 class="section-title">Зачем нужен этот режим</h2>
-        <p class="section-subtitle">Когда в договоре нет однозначного ответа, одна модель часто выдаёт уверенное «да» или «нет». Режим запускает несколько моделей, а самая продвинутая собирает их выводы в одно взвешенное заключение.</p>
+        <h2 class="section-title">Зачем нужен этот пакет</h2>
+        <p class="section-subtitle">Обычный чат с ИИ хорошо отвечает, когда вывод прямо следует из текста. Но в договорах, тендерах и регламентах часто нет одной правильной трактовки — а ошибка стоит дорого.</p>
 
-        <div class="expert-demo">
-          <p class="expert-demo-kicker">Пример неоднозначной ситуации</p>
-
-          <div class="expert-demo-q">
-            <p class="expert-demo-label">Ваш вопрос</p>
-            <p class="expert-demo-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
-          </div>
-
-          <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
-
-          <div class="expert-demo-models">
-            <article class="expert-demo-model">
-              <span class="expert-demo-model-tag">Модель 1</span>
-              <p class="expert-demo-verdict expert-demo-verdict--yes">Да, можно</p>
-              <p>П. 8.1 допускает расторжение при нарушении сроков.</p>
-            </article>
-            <article class="expert-demo-model">
-              <span class="expert-demo-model-tag">Модель 2</span>
-              <p class="expert-demo-verdict expert-demo-verdict--no">Нет, нельзя</p>
-              <p>П. 4.2 прямо требует неустойку за каждый день просрочки.</p>
-            </article>
-            <article class="expert-demo-model">
-              <span class="expert-demo-model-tag">Модель 3</span>
-              <p class="expert-demo-verdict expert-demo-verdict--mid">Зависит</p>
-              <p>Право на расторжение есть только при просрочке свыше 10 дней.</p>
-            </article>
-          </div>
-
-          <div class="expert-demo-arrow" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-
-          <div class="expert-demo-sum">
-            <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
-            <p class="expert-demo-quote">«Однозначного „да“ нет. На 5-й день одностороннее расторжение рискованно: п. 8.1 срабатывает при просрочке &gt;10 дней, а п. 4.2 всё равно обязывает уплатить неустойку за фактическую задержку. Рекомендация: сначала претензия об устранении нарушения, а не немедленное расторжение».</p>
-            <ul class="expert-demo-points">
-              <li>где модели согласны</li>
-              <li>где расходятся</li>
-              <li>какие риски</li>
-              <li>ссылки на пункты документа</li>
-            </ul>
-          </div>
+        <div class="pain-grid expert-why-grid">
+          <article class="pain-card">
+            <h3>Однозначного ответа нет</h3>
+            <p>Пункты договора могут тянуть в разные стороны: одна норма разрешает, другая ограничивает. Нужен разбор вариантов, а не быстрый вердикт «да/нет».</p>
+          </article>
+          <article class="pain-card">
+            <h3>Одна модель слишком уверена</h3>
+            <p>Обычный чат выдаёт один уверенный ответ и легко пропускает альтернативную трактовку. Для спорных кейсов этого недостаточно.</p>
+          </article>
+          <article class="pain-card">
+            <h3>Нужен консилиум, а не угадайка</h3>
+            <p>Несколько моделей смотрят на один вопрос, а самая продвинутая собирает согласие, расхождения и риски — со ссылками на ваши документы.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -147,69 +118,141 @@
       <div class="container">
         <p class="section-label">На практике</p>
         <h2 class="section-title">Как это выглядит на практике</h2>
-        <p class="section-subtitle">Несколько примеров ответа режима «Экспертное мнение» — листайте, чтобы увидеть разные сценарии.</p>
+        <p class="section-subtitle">Три примера неоднозначных ситуаций: модели расходятся, а продвинутая ИИ собирает взвешенный итог. Листайте карусель.</p>
 
         <div class="expert-example-carousel" id="expert-example-carousel">
           <div class="expert-example-viewport">
             <div class="expert-example-track">
-              <article class="expert-example expert-example-slide is-active" data-slide="0">
-                <h3 class="expert-example-title">Договор поставки · расторжение</h3>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Ваш вопрос</p>
-                  <p class="expert-example-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
+              <article class="expert-demo expert-example-slide is-active" data-slide="0">
+                <p class="expert-demo-kicker">Договор поставки · расторжение</p>
+
+                <div class="expert-demo-q">
+                  <p class="expert-demo-label">Ваш вопрос</p>
+                  <p class="expert-demo-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
                 </div>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Анализ моделей</p>
-                  <ul class="expert-example-list">
-                    <li><strong>Модель 1</strong> указывает на п. 4.2, где указан штраф 0,1% за каждый день.</li>
-                    <li><strong>Модель 2</strong> обращает внимание на п. 8.1, допускающий расторжение при нарушении сроков свыше 10 дней.</li>
+
+                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+
+                <div class="expert-demo-models">
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes">Да, можно</p>
+                    <p>П. 8.1 допускает расторжение при нарушении сроков.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no">Нет, нельзя</p>
+                    <p>П. 4.2 прямо требует неустойку за каждый день просрочки.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid">Зависит</p>
+                    <p>Право на расторжение есть только при просрочке свыше 10 дней.</p>
+                  </article>
+                </div>
+
+                <div class="expert-demo-arrow" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+
+                <div class="expert-demo-sum">
+                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote">«Однозначного „да“ нет. На 5-й день одностороннее расторжение рискованно: п. 8.1 срабатывает при просрочке &gt;10 дней, а п. 4.2 всё равно обязывает уплатить неустойку за фактическую задержку. Рекомендация: сначала претензия об устранении нарушения, а не немедленное расторжение».</p>
+                  <ul class="expert-demo-points">
+                    <li>где модели согласны</li>
+                    <li>где расходятся</li>
+                    <li>какие риски</li>
+                    <li>ссылки на пункты документа</li>
                   </ul>
                 </div>
-                <div class="expert-example-block expert-example-block--verdict">
-                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
-                  <p class="expert-example-quote">«Одностороннее расторжение на 5-й день сопряжено с риском. Хотя п. 8.1 даёт право на расторжение при просрочке &gt;10 дней, п. 4.2 прямо обязывает уплатить неустойку за фактический период просрочки. Рекомендация: направить претензию о добровольном устранении нарушения, чтобы избежать штрафа».</p>
-                </div>
-                <p class="expert-example-sources"><strong>Источники:</strong> Договор_поставки.pdf, п. 4.2, п. 8.1</p>
               </article>
 
-              <article class="expert-example expert-example-slide" data-slide="1" hidden>
-                <h3 class="expert-example-title">Тендер · решение об участии</h3>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Ваш вопрос</p>
-                  <p class="expert-example-quote">«Стоит ли участвовать в этой закупке, если обеспечение заявки 5%, а в проекте контракта — жёсткие штрафы за сроки?»</p>
+              <article class="expert-demo expert-example-slide" data-slide="1" hidden>
+                <p class="expert-demo-kicker">Тендер · решение об участии</p>
+
+                <div class="expert-demo-q">
+                  <p class="expert-demo-label">Ваш вопрос</p>
+                  <p class="expert-demo-quote">«Стоит ли участвовать в этой закупке, если обеспечение заявки 5%, а в проекте контракта — жёсткие штрафы за сроки?»</p>
                 </div>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Анализ моделей</p>
-                  <ul class="expert-example-list">
-                    <li><strong>Модель 1</strong> отмечает приемлемую НМЦК, но высокий порог обеспечения заявки относительно маржи.</li>
-                    <li><strong>Модель 2</strong> фокусируется на п. 12 проекта контракта: неустойка 0,5%/день без верхнего предела.</li>
+
+                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+
+                <div class="expert-demo-models">
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes">Да, участвовать</p>
+                    <p>НМЦК приемлема, маржа перекрывает типичные риски по срокам.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no">Нет, не стоит</p>
+                    <p>П. 12: неустойка 0,5%/день без верхнего предела — кассовый риск.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid">Условно</p>
+                    <p>Только если есть запас по графику и лимит экспозиции по штрафам.</p>
+                  </article>
+                </div>
+
+                <div class="expert-demo-arrow" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+
+                <div class="expert-demo-sum">
+                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote">«Участие возможно, но с оговорками. Обеспечение 5% и открытая неустойка создают риск кассового разрыва при срыве сроков. Рекомендация: участвовать только при уверенности в графике поставок и после оценки максимальной экспозиции по штрафам».</p>
+                  <ul class="expert-demo-points">
+                    <li>где модели согласны</li>
+                    <li>где расходятся</li>
+                    <li>какие риски</li>
+                    <li>ссылки на пункты документа</li>
                   </ul>
                 </div>
-                <div class="expert-example-block expert-example-block--verdict">
-                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
-                  <p class="expert-example-quote">«Участие возможно, но с оговорками. Обеспечение и открытая неустойка создают риск кассового разрыва при срыве сроков. Рекомендация: участвовать только при уверенности в графике поставок и после оценки максимальной экспозиции по штрафам».</p>
-                </div>
-                <p class="expert-example-sources"><strong>Источники:</strong> Извещение.pdf · Проект_контракта.docx, п. 12</p>
               </article>
 
-              <article class="expert-example expert-example-slide" data-slide="2" hidden>
-                <h3 class="expert-example-title">Регламент · противоречия</h3>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Ваш вопрос</p>
-                  <p class="expert-example-quote">«Есть ли противоречия между разделом „Ответственность“ договора и Приложением №1 по срокам устранения замечаний?»</p>
+              <article class="expert-demo expert-example-slide" data-slide="2" hidden>
+                <p class="expert-demo-kicker">Регламент · противоречия</p>
+
+                <div class="expert-demo-q">
+                  <p class="expert-demo-label">Ваш вопрос</p>
+                  <p class="expert-demo-quote">«Есть ли противоречия между разделом „Ответственность“ договора и Приложением №1 по срокам устранения замечаний?»</p>
                 </div>
-                <div class="expert-example-block">
-                  <p class="expert-example-label">Анализ моделей</p>
-                  <ul class="expert-example-list">
-                    <li><strong>Модель 1</strong> находит в п. 9.1 срок 10 рабочих дней на устранение замечаний.</li>
-                    <li><strong>Модель 2</strong> указывает, что в Приложении №1 для того же случая указано 5 календарных дней.</li>
+
+                <p class="expert-demo-bridge">Обычный чат дал бы один ответ. Здесь вопрос разбирают сразу несколько моделей — и они расходятся:</p>
+
+                <div class="expert-demo-models">
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 1</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--yes">Есть противоречие</p>
+                    <p>П. 9.1 — 10 рабочих дней, Приложение №1 — 5 календарных.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 2</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--no">Противоречия нет</p>
+                    <p>Приложение уточняет общий раздел и имеет приоритет по смыслу.</p>
+                  </article>
+                  <article class="expert-demo-model">
+                    <span class="expert-demo-model-tag">Модель 3</span>
+                    <p class="expert-demo-verdict expert-demo-verdict--mid">Спорно</p>
+                    <p>Разные единицы измерения (рабочие / календарные) создают зону спора.</p>
+                  </article>
+                </div>
+
+                <div class="expert-demo-arrow" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+
+                <div class="expert-demo-sum">
+                  <p class="expert-demo-label">Самая продвинутая модель собирает итог</p>
+                  <p class="expert-demo-quote">«Противоречие подтверждается: разные сроки и разная единица измерения. Риск — спор о том, какой документ приоритетнее. Рекомендация: зафиксировать приоритет Приложения №1 или унифицировать формулировку в допсоглашении».</p>
+                  <ul class="expert-demo-points">
+                    <li>где модели согласны</li>
+                    <li>где расходятся</li>
+                    <li>какие риски</li>
+                    <li>ссылки на пункты документа</li>
                   </ul>
                 </div>
-                <div class="expert-example-block expert-example-block--verdict">
-                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
-                  <p class="expert-example-quote">«Противоречие подтверждается: разные сроки и разная единица измерения (рабочие vs календарные дни). Риск — спор о том, какой документ приоритетнее. Рекомендация: зафиксировать приоритет Приложения №1 или унифицировать формулировку в допсоглашении».</p>
-                </div>
-                <p class="expert-example-sources"><strong>Источники:</strong> Договор.pdf, п. 9.1 · Приложение_1.pdf, разд. 3</p>
               </article>
             </div>
           </div>
