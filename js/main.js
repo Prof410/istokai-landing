@@ -611,6 +611,72 @@ function initThemeToggle() {
   applyTheme(root.getAttribute("data-theme") || "dark");
 }
 
+function initExpertExampleCarousel() {
+  const root = document.getElementById("expert-example-carousel");
+  if (!root) return;
+
+  const slides = Array.from(root.querySelectorAll(".expert-example-slide"));
+  const dots = Array.from(root.querySelectorAll("[data-expert-slide]"));
+  const prevBtn = root.querySelector(".expert-example-prev");
+  const nextBtn = root.querySelector(".expert-example-next");
+  if (!slides.length) return;
+
+  let index = 0;
+  let timer = null;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(next) {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      const active = i === index;
+      slide.classList.toggle("is-active", active);
+      slide.hidden = !active;
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+      dot.setAttribute("aria-selected", i === index ? "true" : "false");
+    });
+  }
+
+  function startAuto() {
+    if (reducedMotion || slides.length < 2) return;
+    stopAuto();
+    timer = window.setInterval(() => show(index + 1), 7000);
+  }
+
+  function stopAuto() {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  prevBtn?.addEventListener("click", () => {
+    show(index - 1);
+    startAuto();
+  });
+  nextBtn?.addEventListener("click", () => {
+    show(index + 1);
+    startAuto();
+  });
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      show(Number(dot.dataset.expertSlide) || 0);
+      startAuto();
+    });
+  });
+
+  root.addEventListener("mouseenter", stopAuto);
+  root.addEventListener("mouseleave", startAuto);
+  root.addEventListener("focusin", stopAuto);
+  root.addEventListener("focusout", (event) => {
+    if (!root.contains(event.relatedTarget)) startAuto();
+  });
+
+  show(0);
+  startAuto();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
@@ -619,6 +685,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initChatDemo();
   initCaseCarousel();
   initCasePageTabs();
+  initExpertExampleCarousel();
   initThemeToggle();
   window.addEventListener("load", syncHeroChatHeight);
 

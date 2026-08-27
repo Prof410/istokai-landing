@@ -925,6 +925,42 @@
   max-width: 52rem;
 }
 
+.expert-example-carousel {
+  margin-top: 28px;
+  max-width: 52rem;
+}
+
+.expert-example-carousel .expert-example {
+  margin-top: 0;
+  max-width: none;
+  animation: expert-example-fade 0.35s ease;
+}
+
+@keyframes expert-example-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expert-example-controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expert-example-carousel .expert-example {
+    animation: none;
+  }
+}
+
 [data-theme="light"] .expert-example {
   box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
   background: #fff;

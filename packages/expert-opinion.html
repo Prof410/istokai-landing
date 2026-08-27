@@ -13,7 +13,7 @@
   <script src="../js/redirect.js"></script>
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/styles.css?v=57">
-  <link rel="stylesheet" href="../css/home-draft.css?v=26">
+  <link rel="stylesheet" href="../css/home-draft.css?v=27">
 </head>
 <body data-page="expert-opinion">
   <header class="header">
@@ -178,26 +178,83 @@
       <div class="container">
         <p class="section-label">На практике</p>
         <h2 class="section-title">Как это выглядит на практике</h2>
-        <p class="section-subtitle">Пример ответа режима «Экспертное мнение» — так пользователь видит ценность быстрее любого абстрактного описания.</p>
-        <article class="expert-example">
-          <h3 class="expert-example-title">Как выглядит ответ «Экспертного мнения»</h3>
-          <div class="expert-example-block">
-            <p class="expert-example-label">Ваш вопрос</p>
-            <p class="expert-example-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
+        <p class="section-subtitle">Несколько примеров ответа режима «Экспертное мнение» — листайте, чтобы увидеть разные сценарии.</p>
+
+        <div class="expert-example-carousel" id="expert-example-carousel">
+          <div class="expert-example-viewport">
+            <div class="expert-example-track">
+              <article class="expert-example expert-example-slide is-active" data-slide="0">
+                <h3 class="expert-example-title">Договор поставки · расторжение</h3>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Ваш вопрос</p>
+                  <p class="expert-example-quote">«Можно ли расторгнуть этот договор поставки в одностороннем порядке без штрафов, если задержка составила 5 дней?»</p>
+                </div>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Анализ моделей</p>
+                  <ul class="expert-example-list">
+                    <li><strong>Модель 1</strong> указывает на п. 4.2, где указан штраф 0,1% за каждый день.</li>
+                    <li><strong>Модель 2</strong> обращает внимание на п. 8.1, допускающий расторжение при нарушении сроков свыше 10 дней.</li>
+                  </ul>
+                </div>
+                <div class="expert-example-block expert-example-block--verdict">
+                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
+                  <p class="expert-example-quote">«Одностороннее расторжение на 5-й день сопряжено с риском. Хотя п. 8.1 даёт право на расторжение при просрочке &gt;10 дней, п. 4.2 прямо обязывает уплатить неустойку за фактический период просрочки. Рекомендация: направить претензию о добровольном устранении нарушения, чтобы избежать штрафа».</p>
+                </div>
+                <p class="expert-example-sources"><strong>Источники:</strong> Договор_поставки.pdf, п. 4.2, п. 8.1</p>
+              </article>
+
+              <article class="expert-example expert-example-slide" data-slide="1" hidden>
+                <h3 class="expert-example-title">Тендер · решение об участии</h3>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Ваш вопрос</p>
+                  <p class="expert-example-quote">«Стоит ли участвовать в этой закупке, если обеспечение заявки 5%, а в проекте контракта — жёсткие штрафы за сроки?»</p>
+                </div>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Анализ моделей</p>
+                  <ul class="expert-example-list">
+                    <li><strong>Модель 1</strong> отмечает приемлемую НМЦК, но высокий порог обеспечения заявки относительно маржи.</li>
+                    <li><strong>Модель 2</strong> фокусируется на п. 12 проекта контракта: неустойка 0,5%/день без верхнего предела.</li>
+                  </ul>
+                </div>
+                <div class="expert-example-block expert-example-block--verdict">
+                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
+                  <p class="expert-example-quote">«Участие возможно, но с оговорками. Обеспечение и открытая неустойка создают риск кассового разрыва при срыве сроков. Рекомендация: участвовать только при уверенности в графике поставок и после оценки максимальной экспозиции по штрафам».</p>
+                </div>
+                <p class="expert-example-sources"><strong>Источники:</strong> Извещение.pdf · Проект_контракта.docx, п. 12</p>
+              </article>
+
+              <article class="expert-example expert-example-slide" data-slide="2" hidden>
+                <h3 class="expert-example-title">Регламент · противоречия</h3>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Ваш вопрос</p>
+                  <p class="expert-example-quote">«Есть ли противоречия между разделом „Ответственность“ договора и Приложением №1 по срокам устранения замечаний?»</p>
+                </div>
+                <div class="expert-example-block">
+                  <p class="expert-example-label">Анализ моделей</p>
+                  <ul class="expert-example-list">
+                    <li><strong>Модель 1</strong> находит в п. 9.1 срок 10 рабочих дней на устранение замечаний.</li>
+                    <li><strong>Модель 2</strong> указывает, что в Приложении №1 для того же случая указано 5 календарных дней.</li>
+                  </ul>
+                </div>
+                <div class="expert-example-block expert-example-block--verdict">
+                  <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
+                  <p class="expert-example-quote">«Противоречие подтверждается: разные сроки и разная единица измерения (рабочие vs календарные дни). Риск — спор о том, какой документ приоритетнее. Рекомендация: зафиксировать приоритет Приложения №1 или унифицировать формулировку в допсоглашении».</p>
+                </div>
+                <p class="expert-example-sources"><strong>Источники:</strong> Договор.pdf, п. 9.1 · Приложение_1.pdf, разд. 3</p>
+              </article>
+            </div>
           </div>
-          <div class="expert-example-block">
-            <p class="expert-example-label">Анализ моделей</p>
-            <ul class="expert-example-list">
-              <li><strong>Модель 1</strong> указывает на п. 4.2, где указан штраф 0,1% за каждый день.</li>
-              <li><strong>Модель 2</strong> обращает внимание на п. 8.1, допускающий расторжение при нарушении сроков свыше 10 дней.</li>
-            </ul>
+
+          <div class="carousel-controls expert-example-controls" role="group" aria-label="Примеры ответов">
+            <button type="button" class="carousel-btn expert-example-prev" aria-label="Предыдущий пример">‹</button>
+            <div class="carousel-dots" role="tablist" aria-label="Слайды примеров">
+              <button type="button" class="carousel-dot active" aria-label="Пример 1" data-expert-slide="0"></button>
+              <button type="button" class="carousel-dot" aria-label="Пример 2" data-expert-slide="1"></button>
+              <button type="button" class="carousel-dot" aria-label="Пример 3" data-expert-slide="2"></button>
+            </div>
+            <button type="button" class="carousel-btn expert-example-next" aria-label="Следующий пример">›</button>
           </div>
-          <div class="expert-example-block expert-example-block--verdict">
-            <p class="expert-example-label">Сводный итог (Экспертное мнение)</p>
-            <p class="expert-example-quote">«Одностороннее расторжение на 5-й день сопряжено с риском. Хотя п. 8.1 даёт право на расторжение при просрочке &gt;10 дней, п. 4.2 прямо обязывает уплатить неустойку за фактический период просрочки. Рекомендация: направить претензию о добровольном устранении нарушения, чтобы избежать штрафа».</p>
-          </div>
-          <p class="expert-example-sources"><strong>Источники:</strong> Договор_поставки.pdf, п. 4.2, п. 8.1</p>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -386,6 +443,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=27"></script>
+  <script src="../js/main.js?v=28"></script>
 </body>
 </html>
