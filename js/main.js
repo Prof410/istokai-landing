@@ -593,10 +593,20 @@ function initThemeToggle() {
   const buttons = document.querySelectorAll("[data-theme-set]");
   if (!buttons.length) return;
 
+  function faviconFor(theme) {
+    const link = document.getElementById("site-favicon");
+    if (!link) return;
+    const href = link.getAttribute("href") || "";
+    const base = href.includes("../") ? "../assets/" : "assets/";
+    const file = theme === "light" ? "favicon-light.png?v=5" : "favicon-dark.png?v=5";
+    link.setAttribute("href", base + file);
+  }
+
   function applyTheme(theme) {
     const next = theme === "light" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     localStorage.setItem("zakon-theme", next);
+    faviconFor(next);
     buttons.forEach((btn) => {
       const active = btn.dataset.themeSet === next;
       btn.classList.toggle("active", active);
