@@ -3,8 +3,8 @@
 Статический сайт бренда **Zakon-AI**: технология RAG для корпоративной базы знаний.
 В конце — отраслевой кейс по электроэнергетике.
 
-Логотип: `assets/logo-mark.svg` (RAG-узлы: источник и три узла знаний).
-Favicon: `assets/favicon.svg`.
+Логотип: `assets/logo-mark.png` (нейросеть в форме мозга).
+Favicon: `assets/favicon.png`.
 
 Готов к публикации на **GitHub Pages**, Netlify или Vercel (как статика).
 
