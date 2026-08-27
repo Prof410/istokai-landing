@@ -1070,7 +1070,8 @@
 
 .expert-demo {
   margin-top: 32px;
-  max-width: 52rem;
+  width: 100%;
+  max-width: none;
   padding: 28px 26px;
   border-radius: 22px;
   border: 1px solid var(--border);
