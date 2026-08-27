@@ -825,6 +825,27 @@
 
 .pkg-formats-note strong {
   color: var(--text);
+  font-weight: 700;
+}
+
+.pkg-scenario-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pkg-scenario-list li {
+  position: relative;
+  margin: 0 0 10px;
+  padding-left: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pkg-scenario-list li:last-child {
+  margin-bottom: 0;
 }
 
 .pkg-format-badges {
