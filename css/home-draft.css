@@ -828,6 +828,17 @@
   font-weight: 700;
 }
 
+.pkg-trial-note {
+  margin: 20px 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
 .pkg-scenario-list {
   margin: 0;
   padding: 0;
