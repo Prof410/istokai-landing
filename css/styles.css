@@ -1877,9 +1877,9 @@ img {
   .hero-grid h1,
   .hero-grid .hero-title {
     font-size: clamp(1.45rem, 6.2vw, 1.85rem);
-    line-height: 1.7;
+    line-height: 1.35;
     margin-top: 0.85em;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     max-width: 100%;
     text-align: center;
     overflow-wrap: anywhere;

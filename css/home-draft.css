@@ -665,9 +665,13 @@
 
   .hero-grid .hero-main > .hero-title,
   .hero-main > .hero-title {
-    line-height: 1.7;
-    margin-bottom: 0;
+    line-height: 1.35;
+    margin-bottom: 1em;
     text-align: center;
+  }
+
+  .hero-main > .hero-title + .hero-lead-list {
+    margin-top: 0;
   }
 
   .hero-actions--pair .btn {
