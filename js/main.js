@@ -159,45 +159,40 @@ function initChatDemo() {
     return typeInto(element, cursor, text, speed, () => paused);
   }
 
+  function isDemoStopped(currentRun) {
+    return paused || currentRun !== runId;
+  }
+
   async function playDemo(index) {
     const currentRun = ++runId;
     const demos = getChatDemos();
     const demo = demos[index];
     if (!demo) return;
+
+    demoIndex = index;
     resetStage();
     renderDocs(demo.docs);
-
     dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
 
-    await wait(500);
-    if (currentRun !== runId) return;
+    await wait(400);
+    if (isDemoStopped(currentRun)) return;
 
-    await typeIntoLocal(inputText, inputCursor, demo.question, 24);
-    if (currentRun !== runId) return;
-
-    await wait(350);
-    if (currentRun !== runId) return;
-
-    inputText.textContent = "";
+    inputText.textContent = demo.question;
     inputCursor.hidden = true;
     userBubble.hidden = false;
-    await typeIntoLocal(userText, userCursor, demo.question, 20);
-    if (currentRun !== runId) return;
-
-    await wait(450);
-    if (currentRun !== runId) return;
-
-    typingEl.hidden = false;
-    await wait(1100);
-    if (currentRun !== runId) return;
-
-    typingEl.hidden = true;
+    userText.textContent = demo.question;
+    userCursor.hidden = true;
     botBubble.hidden = false;
-    await typeIntoLocal(botText, botCursor, demo.answer, 16);
-    if (currentRun !== runId) return;
-
+    botText.textContent = demo.answer;
+    botCursor.hidden = true;
     sourceEl.textContent = demo.source;
     sourceEl.hidden = false;
+    syncHeroChatHeight();
+
+    await wait(5000);
+    if (isDemoStopped(currentRun)) return;
+
+    playDemo((index + 1) % demos.length);
   }
 
   function startDemo(index) {
@@ -218,10 +213,9 @@ function initChatDemo() {
   });
 
   root.addEventListener("mouseleave", () => {
-    if (paused) {
-      paused = false;
-      playDemo(demoIndex);
-    }
+    if (!paused) return;
+    paused = false;
+    playDemo(demoIndex);
   });
 
   startDemo(0);

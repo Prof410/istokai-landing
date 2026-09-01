@@ -1948,6 +1948,24 @@ img {
     max-width: none;
   }
 
+  .footer-tagline {
+    display: none;
+  }
+
+  .footer-logo .logo-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .footer-logo .header-tagline {
+    display: block;
+    font-size: 0.58rem;
+    line-height: 1.15;
+    max-width: 9.5rem;
+  }
+
   .header-inner {
     position: relative;
     min-height: 56px;

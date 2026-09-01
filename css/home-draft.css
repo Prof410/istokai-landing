@@ -951,10 +951,12 @@
   font-style: italic;
 }
 
-.audience-grid--2x2,
-.role-grid--2x2,
-.security-grid--2x2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 901px) {
+  .audience-grid--2x2,
+  .role-grid--2x2,
+  .security-grid--2x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .role-grid--3x3 {
