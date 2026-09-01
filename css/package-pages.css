@@ -430,7 +430,7 @@
 /* ——— Tenders product landing (main-page layout) ——— */
 
 body[data-page="tenders-landing"] .header-tagline {
-  max-width: 14rem;
+  max-width: 9.5rem;
 }
 
 .tenders-hero-badges {

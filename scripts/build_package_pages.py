@@ -580,9 +580,11 @@ def render_page(pkg: dict) -> str:
       <div class="header-brand">
         <a href="../index.html" class="logo">
           <img class="logo-icon" src="../assets/logo-mark.svg?v=3" width="48" height="48" alt="">
-          <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+          <span class="logo-copy">
+            <span class="logo-text">Zakon<span class="logo-dash">-</span><span class="logo-ai">AI</span></span>
+            <span class="header-tagline">ИИ-эксперт для работы<br>с Вашими документами</span>
+          </span>
         </a>
-        <p class="header-tagline">ИИ-эксперт для работы<br>с Вашими документами</p>
       </div>
       <nav class="nav">
         <a href="../index.html#pricing">Пакеты</a>

@@ -124,12 +124,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 80px;
 }
 
 body {
   margin: 0;
-  padding-top: 72px;
+  padding-top: 64px;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -199,7 +199,7 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  min-height: 72px;
+  min-height: 64px;
 }
 
 .header-brand {
@@ -207,23 +207,32 @@ img {
   flex-direction: column;
   gap: 0;
   min-width: 0;
+  flex-shrink: 0;
 }
 
 .header-tagline {
-  display: none;
+  display: block;
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.62rem;
   font-weight: 500;
   color: var(--text-muted);
-  line-height: 1.35;
+  line-height: 1.2;
+  max-width: 10.5rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   font-weight: 700;
   font-size: 1.15rem;
+}
+
+.logo-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
 }
 
 .logo-icon {
@@ -1736,24 +1745,22 @@ img {
   }
 
   .header-brand {
-    gap: 6px;
     flex: 1;
     min-width: 0;
     padding-right: 8px;
   }
 
   .header-tagline {
-    display: block;
-    font-size: 0.72rem;
-    line-height: 1.35;
-    max-width: calc(100vw - 96px);
+    font-size: 0.58rem;
+    line-height: 1.15;
+    max-width: 9.5rem;
   }
 
   .header-inner {
     align-items: center;
-    min-height: 64px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    min-height: 56px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .hero {
@@ -1943,21 +1950,21 @@ img {
 
   .header-inner {
     position: relative;
-    min-height: 64px;
+    min-height: 56px;
   }
 
   body {
-    padding-top: 64px;
+    padding-top: 56px;
   }
 
   html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 72px;
   }
 
   .nav {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 56px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -2425,6 +2432,12 @@ img {
 
   .article-content {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .case-tabs-wrap {
+    top: 56px;
   }
 }
 
