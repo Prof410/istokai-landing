@@ -1770,6 +1770,17 @@ img {
     display: none;
   }
 
+  /* Back links on inner pages: show and offset ~1 line below header */
+  .hero-grid .hero-eyebrow:has(.pkg-back-inline) {
+    display: block;
+    margin: 1.2em 0 14px;
+  }
+
+  .pkg-back,
+  .case-back {
+    margin-top: 1.2em;
+  }
+
   .hero-grid h1,
   .hero-grid .hero-title {
     font-size: clamp(1.45rem, 6.2vw, 1.85rem);
