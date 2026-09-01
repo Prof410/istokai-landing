@@ -667,6 +667,7 @@
   .hero-main > .hero-title {
     line-height: 1.7;
     margin-bottom: 0;
+    text-align: center;
   }
 
   .hero-actions--pair .btn {

@@ -1785,6 +1785,38 @@ img {
     max-width: 9.5rem;
   }
 
+  .header .logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 6px;
+    row-gap: 1px;
+    gap: 0;
+  }
+
+  .header .logo .logo-copy {
+    display: contents;
+  }
+
+  .header .logo .logo-text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header .logo .logo-icon {
+    grid-column: 2;
+    grid-row: 1;
+    width: 38px;
+    height: 38px;
+  }
+
+  .header .logo .header-tagline {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: none;
+  }
+
   .header-inner {
     align-items: center;
     min-height: 56px;
@@ -1846,9 +1878,10 @@ img {
   .hero-grid .hero-title {
     font-size: clamp(1.45rem, 6.2vw, 1.85rem);
     line-height: 1.7;
-    margin-top: 1.2em;
+    margin-top: 0.85em;
     margin-bottom: 0;
     max-width: 100%;
+    text-align: center;
     overflow-wrap: anywhere;
     word-break: break-word;
   }
