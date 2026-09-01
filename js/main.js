@@ -15,6 +15,96 @@ const FORM_CONFIG = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_RE = /^8\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
+
+function formatRuPhoneMask(raw) {
+  let digits = String(raw || "").replace(/\D/g, "");
+  if (!digits.length) return "";
+  if (digits[0] === "7") digits = "8" + digits.slice(1);
+  else if (digits[0] !== "8") digits = "8" + digits;
+  digits = digits.slice(0, 11);
+  if (digits.length <= 1) return "8";
+  let out = "8(" + digits.slice(1, 4);
+  if (digits.length < 4) return out;
+  out = "8(" + digits.slice(1, 4) + ")";
+  if (digits.length <= 4) return out;
+  out += digits.slice(4, 7);
+  if (digits.length <= 7) return out;
+  out += "-" + digits.slice(7, 9);
+  if (digits.length <= 9) return out;
+  out += "-" + digits.slice(9, 11);
+  return out;
+}
+
+function bindPhoneMask(input) {
+  if (!input || input.dataset.maskBound === "1") return;
+  input.dataset.maskBound = "1";
+  input.setAttribute("inputmode", "tel");
+  input.setAttribute("autocomplete", "tel");
+  input.setAttribute("maxlength", "15");
+
+  input.addEventListener("focus", () => {
+    if (!input.value) {
+      input.value = "8(";
+    }
+  });
+
+  input.addEventListener("blur", () => {
+    if (input.value === "8(" || input.value === "8") {
+      input.value = "";
+    }
+  });
+
+  input.addEventListener("input", () => {
+    const formatted = formatRuPhoneMask(input.value);
+    input.value = formatted;
+  });
+
+  input.addEventListener("keydown", (event) => {
+    if (event.key !== "Backspace" || input.selectionStart !== input.selectionEnd) return;
+    const value = input.value;
+    if (!value) return;
+    const pos = input.selectionStart;
+    if (pos > 0 && /[()\-\s]/.test(value[pos - 1])) {
+      event.preventDefault();
+      input.value = formatRuPhoneMask(value.slice(0, pos - 1) + value.slice(pos));
+      const nextPos = Math.max(0, pos - 1);
+      input.setSelectionRange(nextPos, nextPos);
+    }
+  });
+}
+
+function bindEmailInput(input) {
+  if (!input || input.dataset.maskBound === "1") return;
+  input.dataset.maskBound = "1";
+  input.setAttribute("inputmode", "email");
+  input.setAttribute("autocomplete", "email");
+  input.setAttribute("spellcheck", "false");
+  input.setAttribute(
+    "pattern",
+    "[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}"
+  );
+
+  input.addEventListener("input", () => {
+    input.value = input.value.replace(/\s+/g, "");
+  });
+
+  input.addEventListener("blur", () => {
+    input.value = input.value.trim().toLowerCase();
+    input.classList.toggle("input-invalid", input.value.length > 0 && !EMAIL_RE.test(input.value));
+  });
+
+  input.addEventListener("focus", () => {
+    input.classList.remove("input-invalid");
+  });
+}
+
+function initLeadFormFields() {
+  const form = document.getElementById("lead-form");
+  if (!form) return;
+  bindPhoneMask(form.querySelector("#phone"));
+  bindEmailInput(form.querySelector("#email"));
+}
 
 function i18n(key) {
   return window.ZakonI18n?.t?.(key) || key;
@@ -381,7 +471,7 @@ async function submitLeadForm(event) {
   }
 
   const phoneDigits = phone.replace(/\D/g, "");
-  if (phoneDigits.length < 10) {
+  if (!PHONE_RE.test(phone) || phoneDigits.length !== 11 || phoneDigits[0] !== "8") {
     setFormStatus(i18n("form.error.phone"), "error");
     return;
   }
@@ -701,6 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("lead-form");
   if (form) {
+    initLeadFormFields();
     form.addEventListener("submit", submitLeadForm);
   }
 });

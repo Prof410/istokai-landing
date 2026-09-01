@@ -1477,6 +1477,11 @@ img {
   box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
+.form-group input.input-invalid {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
+}
+
 .form-group textarea {
   min-height: 110px;
   resize: vertical;
