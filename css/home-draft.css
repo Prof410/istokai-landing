@@ -277,17 +277,9 @@ body[data-page="home"] .hero-main > .hero-lead-list {
 .proof-grid,
 .audience-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 28px;
-}
-
-.audience-grid--2x3 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.audience-grid--3x3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .role-card,
@@ -699,16 +691,7 @@ body[data-page="home"] .hero-main > .hero-lead-list {
   box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
 }
 
-@media (max-width: 900px) {
-  .role-grid,
-  .role-grid--2x2,
-  .role-grid--3x3,
-  .pain-grid,
-  .proof-grid,
-  .audience-grid,
-  .audience-grid--2x3,
-  .audience-grid--3x3,
-  .audience-grid--2x2,
+@media (max-width: 960px) {
   .paths-grid,
   .paths-grid--2x2,
   .value-grid,
@@ -1036,16 +1019,25 @@ body[data-page="home"] .hero-main > .hero-lead-list {
   font-style: italic;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 961px) {
+  .role-grid,
+  .pain-grid,
+  .proof-grid,
+  .audience-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .audience-grid--2x2,
+  .audience-grid--2x3,
   .role-grid--2x2,
   .security-grid--2x2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
 
-.role-grid--3x3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  .audience-grid--3x3,
+  .role-grid--3x3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .pkg-price-layout {
