@@ -2045,6 +2045,35 @@ img {
     grid-row: 3;
     align-self: end;
     min-width: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 6px;
+    row-gap: 1px;
+  }
+
+  .footer-logo .logo-copy {
+    display: contents;
+  }
+
+  .footer-logo .logo-text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-logo .logo-icon {
+    grid-column: 2;
+    grid-row: 1;
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-logo .header-tagline {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: none;
+    font-size: 0.58rem;
   }
 
   .footer-copy {
@@ -2056,10 +2085,6 @@ img {
     max-width: 9.5rem;
     font-size: 0.68rem;
     line-height: 1.25;
-  }
-
-  .footer-logo .header-tagline {
-    font-size: 0.58rem;
   }
 
   .header-inner {
