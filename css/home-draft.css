@@ -649,16 +649,24 @@
     max-width: 100%;
   }
 
-  .hero-lead-list li {
-    font-size: 0.86rem;
+  .hero-main > .hero-lead-list {
+    margin-top: 0;
+    gap: 6px;
   }
 
   .hero-main > .hero-lead-list li {
-    font-size: 0.86rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
-  .hero .hero-title {
-    line-height: 1.5;
+  .hero-main > .hero-lead-list li::before {
+    top: 0.58em;
+  }
+
+  .hero-grid .hero-main > .hero-title,
+  .hero-main > .hero-title {
+    line-height: 1.7;
+    margin-bottom: 0;
   }
 
   .hero-actions--pair .btn {
