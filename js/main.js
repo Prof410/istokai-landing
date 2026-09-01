@@ -100,10 +100,10 @@ function bindEmailInput(input) {
 }
 
 function initLeadFormFields() {
-  const form = document.getElementById("lead-form");
-  if (!form) return;
-  bindPhoneMask(form.querySelector("#phone"));
-  bindEmailInput(form.querySelector("#email"));
+  document.querySelectorAll("#lead-form").forEach((form) => {
+    bindPhoneMask(form.querySelector('[name="phone"]'));
+    bindEmailInput(form.querySelector('[name="email"]'));
+  });
 }
 
 function i18n(key) {
@@ -789,9 +789,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.__zakonRestartCaseDemo?.();
   });
 
-  const form = document.getElementById("lead-form");
-  if (form) {
-    initLeadFormFields();
+  document.querySelectorAll("#lead-form").forEach((form) => {
     form.addEventListener("submit", submitLeadForm);
-  }
+  });
+  initLeadFormFields();
 });
