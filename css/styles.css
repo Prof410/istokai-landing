@@ -572,6 +572,15 @@ img {
   letter-spacing: normal;
 }
 
+.hero-eyebrow:has(.pkg-back-inline) {
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.hero-eyebrow:has(.pkg-back-inline) + .path-kicker {
+  margin-top: 0;
+}
+
 .hero-grid .chat-demo {
   min-width: 0;
   width: 100%;
@@ -1773,7 +1782,7 @@ img {
   /* Back links on inner pages: show and offset ~1 line below header */
   .hero-grid .hero-eyebrow:has(.pkg-back-inline) {
     display: block;
-    margin: 1.2em 0 14px;
+    margin: 1.2em 0 6px;
   }
 
   .pkg-back,
