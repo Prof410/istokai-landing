@@ -50,26 +50,10 @@
   --page-bg: linear-gradient(
     180deg,
     #ffffff 0%,
-    #fafbfe 5%,
-    #f5f8fc 10%,
-    #eef3fa 15%,
-    #f7f9fd 20%,
-    #eaeff6 25%,
-    #f3f7fb 30%,
-    #e8edf6 35%,
-    #f6f9fc 40%,
-    #ecf1f8 45%,
-    #f4f7fc 50%,
-    #e9eff7 55%,
-    #f8fafd 60%,
-    #edf2f9 65%,
-    #f5f8fc 70%,
-    #eaeff6 75%,
-    #f7f9fd 80%,
-    #eef3fa 85%,
-    #f5f8fc 90%,
-    #f9fbfe 95%,
-    #ffffff 100%
+    #fafcff 22%,
+    #f3f7fc 48%,
+    #edf2f9 72%,
+    #f8fafd 100%
   );
   --hero-glow: rgba(96, 165, 250, 0.2);
   --hero-glow-2: rgba(129, 140, 248, 0.14);
@@ -90,7 +74,7 @@
   --error: #dc2626;
   --border: rgba(15, 23, 42, 0.1);
   --shadow: 0 24px 64px rgba(15, 23, 42, 0.07);
-  --header-bg: rgba(255, 255, 255, 0.94);
+  --header-bg: rgba(255, 255, 255, 0.78);
   --surface-overlay: #ffffff;
   --surface-overlay-2: #f8fafc;
   --chat-bg: linear-gradient(180deg, #ffffff, #f8fafc);
@@ -2708,7 +2692,10 @@ img {
 
 /* Light theme — Apex-inspired polish */
 [data-theme="light"] body {
-  background: var(--page-bg);
+  background:
+    radial-gradient(ellipse 130% 85% at 50% -18%, rgba(191, 219, 254, 0.38) 0%, rgba(219, 234, 254, 0.1) 38%, transparent 72%),
+    radial-gradient(ellipse 70% 55% at 88% 8%, rgba(199, 210, 254, 0.16) 0%, transparent 68%),
+    var(--page-bg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 100vh;
@@ -2745,15 +2732,16 @@ img {
 }
 
 [data-theme="light"] .hero::before {
-  inset: -15% auto auto 42%;
-  width: min(92vw, 860px);
-  height: min(92vw, 860px);
-  transform: translateX(-25%);
+  inset: -35% auto auto 50%;
+  width: min(160vw, 1280px);
+  height: min(120vw, 980px);
+  transform: translateX(-50%);
   background: radial-gradient(
-    circle at 35% 35%,
-    var(--hero-glow) 0%,
-    rgba(147, 197, 253, 0.1) 38%,
-    transparent 68%
+    ellipse 72% 64% at 50% 38%,
+    rgba(147, 197, 253, 0.2) 0%,
+    rgba(147, 197, 253, 0.08) 42%,
+    rgba(219, 234, 254, 0.03) 62%,
+    transparent 82%
   );
   opacity: 1;
 }
@@ -2761,12 +2749,23 @@ img {
 [data-theme="light"] .hero::after {
   content: "";
   position: absolute;
-  right: -8%;
-  bottom: 0;
-  width: min(55vw, 480px);
-  height: min(55vw, 480px);
-  background: radial-gradient(circle, var(--hero-glow-2) 0%, transparent 68%);
+  right: -12%;
+  bottom: -8%;
+  width: min(62vw, 520px);
+  height: min(62vw, 520px);
+  background: radial-gradient(
+    ellipse 70% 70% at 50% 50%,
+    rgba(129, 140, 248, 0.1) 0%,
+    rgba(129, 140, 248, 0.04) 45%,
+    transparent 78%
+  );
   pointer-events: none;
+}
+
+[data-theme="light"] .header {
+  backdrop-filter: blur(18px) saturate(1.15);
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
 }
 
 [data-theme="light"] .stat-card,
@@ -2787,11 +2786,6 @@ img {
   background: #f1f5f9;
   border: 1px solid var(--border);
   color: var(--text);
-}
-
-[data-theme="light"] .header {
-  border-bottom-color: rgba(15, 23, 42, 0.08);
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
 }
 
 [data-theme="light"] .nav a:hover {
