@@ -36,8 +36,6 @@
   --footer-cta-color: #ffffff;
   --case-tabs-bg: rgba(15, 23, 42, 0.92);
   --contact-gradient: linear-gradient(180deg, rgba(59, 130, 246, 0.06), transparent);
-  --logo-ai-bg: rgba(59, 130, 246, 0.15);
-  --logo-ai-border: rgba(59, 130, 246, 0.25);
   --compare-bad: #f87171;
   --compare-good: #86efac;
   --cta-block-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(99, 102, 241, 0.1));
@@ -105,8 +103,6 @@
   --footer-cta-color: #0f172a;
   --case-tabs-bg: rgba(255, 255, 255, 0.82);
   --contact-gradient: transparent;
-  --logo-ai-bg: rgba(37, 99, 235, 0.08);
-  --logo-ai-border: rgba(37, 99, 235, 0.18);
   --compare-bad: #dc2626;
   --compare-good: #16a34a;
   --cta-block-bg: linear-gradient(135deg, #eef3fa 0%, #f8faff 55%, #ffffff 100%);
@@ -267,14 +263,8 @@ img {
 }
 
 .logo-ai {
-  font-size: 0.88rem;
   font-weight: 700;
   color: var(--accent-text);
-  padding: 2px 7px 2px 2px;
-  margin-left: 1px;
-  border-radius: 6px;
-  background: var(--logo-ai-bg);
-  border: 1px solid var(--logo-ai-border);
 }
 
 .logo-mark {
