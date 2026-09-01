@@ -44,7 +44,7 @@
 
 .hero .hero-title {
   font-size: clamp(1.55rem, 3.6vw, 2.35rem);
-  line-height: 1.15;
+  line-height: 1.55;
   max-width: 38rem;
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -70,11 +70,16 @@
   min-width: 0;
 }
 
-body[data-page="home"] .hero-main > .hero-lead-list {
-  margin-top: calc(2 * 1.05rem * 1.55);
+.hero-main > .hero-title {
+  margin-bottom: 0;
 }
 
-body[data-page="home"] .hero-main > .hero-lead-list li {
+.hero-main > .hero-lead-list,
+.hero-main > .hero-title + .hero-lead {
+  margin-top: 0;
+}
+
+.hero-main > .hero-lead-list li {
   font-size: 0.92rem;
 }
 
@@ -645,20 +650,15 @@ body[data-page="home"] .hero-main > .hero-lead-list li {
   }
 
   .hero-lead-list li {
-    font-size: 0.98rem;
-  }
-
-  body[data-page="home"] .hero-main > .hero-lead-list {
-    margin-top: calc(2 * 0.86rem * 1.55);
-  }
-
-  body[data-page="home"] .hero-main > .hero-lead-list li {
     font-size: 0.86rem;
   }
 
-  body:not([data-page="home"]) .hero-main > .hero-title + .hero-lead-list,
-  body:not([data-page="home"]) .hero-main > .hero-title + .hero-lead {
-    margin-top: calc(2 * 0.86rem * 1.55);
+  .hero-main > .hero-lead-list li {
+    font-size: 0.86rem;
+  }
+
+  .hero .hero-title {
+    line-height: 1.5;
   }
 
   .hero-actions--pair .btn {
@@ -754,11 +754,6 @@ body[data-page="home"] .hero-main > .hero-lead-list li {
 .hero--pkg .hero-lead-list {
   max-width: 44rem;
   margin-bottom: 18px;
-}
-
-body:not([data-page="home"]) .hero-main > .hero-title + .hero-lead-list,
-body:not([data-page="home"]) .hero-main > .hero-title + .hero-lead {
-  margin-top: calc(2 * 1.05rem * 1.55);
 }
 
 .hero--pkg .hero-pills {
