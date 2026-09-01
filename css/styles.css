@@ -223,6 +223,11 @@ img {
   font-size: 1.15rem;
 }
 
+.header .logo,
+.footer-logo {
+  gap: 2px;
+}
+
 .logo-copy {
   display: flex;
   flex-direction: column;
@@ -1790,9 +1795,8 @@ img {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     align-items: center;
-    column-gap: 6px;
+    column-gap: 0;
     row-gap: 1px;
-    gap: 0;
   }
 
   .header .logo .logo-copy {
@@ -1809,6 +1813,7 @@ img {
     grid-row: 1;
     width: 38px;
     height: 38px;
+    margin-left: -10px;
   }
 
   .header .logo .header-tagline {
@@ -2082,7 +2087,7 @@ img {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     align-items: center;
-    column-gap: 6px;
+    column-gap: 0;
     row-gap: 1px;
   }
 
@@ -2100,6 +2105,7 @@ img {
     grid-row: 1;
     width: 32px;
     height: 32px;
+    margin-left: -8px;
   }
 
   .footer-logo .header-tagline {
