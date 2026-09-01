@@ -124,12 +124,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 88px;
 }
 
 body {
   margin: 0;
-  padding-top: 64px;
+  padding-top: 72px;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -199,7 +199,7 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  min-height: 64px;
+  min-height: 72px;
 }
 
 .header-brand {
@@ -207,11 +207,10 @@ img {
   flex-direction: column;
   gap: 0;
   min-width: 0;
-  flex-shrink: 0;
 }
 
 .header-tagline {
-  display: block;
+  display: none;
   margin: 0;
   font-size: 0.62rem;
   font-weight: 500;
@@ -223,7 +222,7 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-weight: 700;
   font-size: 1.15rem;
 }
@@ -1751,6 +1750,7 @@ img {
   }
 
   .header-tagline {
+    display: block;
     font-size: 0.58rem;
     line-height: 1.15;
     max-width: 9.5rem;
@@ -2444,7 +2444,7 @@ img {
 /* Case page tabs */
 .case-tabs-wrap {
   position: sticky;
-  top: 64px;
+  top: 72px;
   z-index: 50;
   background: var(--case-tabs-bg);
   backdrop-filter: blur(12px);
