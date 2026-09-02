@@ -610,8 +610,10 @@ function initCaseCarousel() {
   window.__zakonRestartCaseDemo = () => goToSlide(slideIndex);
 }
 
-function setFormStatus(message, type) {
-  const status = document.getElementById("form-status");
+function setFormStatus(message, type, form) {
+  const root = form || document.querySelector("#lead-form");
+  const status = root?.closest(".form-card, .contact-grid, .container")?.querySelector(".form-status")
+    || document.getElementById("form-status");
   if (!status) return;
   status.textContent = message;
   status.className = `form-status ${type || ""}`;
@@ -622,36 +624,36 @@ async function submitLeadForm(event) {
 
   const form = event.target;
   const submitBtn = form.querySelector('button[type="submit"]');
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const phone = form.phone.value.trim();
-  const role = form.role.value;
-  const message = form.message.value.trim();
-  const consent = form.consent.checked;
+  const name = form.name?.value?.trim() || "";
+  const email = form.email?.value?.trim() || "";
+  const phone = form.phone?.value?.trim() || "";
+  const role = form.role?.value?.trim() || "";
+  const message = form.message?.value?.trim() || "";
+  const consent = form.consent?.checked;
 
   if (!name || !email || !phone || !consent) {
-    setFormStatus(i18n("form.error.required"), "error");
+    setFormStatus(i18n("form.error.required"), "error", form);
     return;
   }
 
   if (!EMAIL_RE.test(email)) {
-    setFormStatus(i18n("form.error.email"), "error");
+    setFormStatus(i18n("form.error.email"), "error", form);
     return;
   }
 
   const phoneDigits = phone.replace(/\D/g, "");
   if (!PHONE_RE.test(phone) || phoneDigits.length !== 11 || phoneDigits[0] !== "8") {
-    setFormStatus(i18n("form.error.phone"), "error");
+    setFormStatus(i18n("form.error.phone"), "error", form);
     return;
   }
 
   if (FORM_CONFIG.mode === "disabled" || FORM_CONFIG.formspreeEndpoint.includes("YOUR_FORM_ID")) {
-    setFormStatus(i18n("form.error.notConfigured"), "error");
+    setFormStatus(i18n("form.error.notConfigured"), "error", form);
     return;
   }
 
   submitBtn.disabled = true;
-  setFormStatus(i18n("form.error.sending"), "");
+  setFormStatus(i18n("form.error.sending"), "", form);
 
   const payload = {
     name,
@@ -687,9 +689,9 @@ async function submitLeadForm(event) {
     }
 
     form.reset();
-    setFormStatus(i18n("form.error.success"), "success");
+    setFormStatus(i18n("form.error.success"), "success", form);
   } catch (error) {
-    setFormStatus(i18n("form.error.fail"), "error");
+    setFormStatus(i18n("form.error.fail"), "error", form);
     console.error(error);
   } finally {
     submitBtn.disabled = false;
