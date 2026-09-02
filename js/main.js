@@ -682,7 +682,7 @@ function initThemeToggle() {
     if (!link) return;
     const href = link.getAttribute("href") || "";
     const base = href.includes("../") ? "../assets/" : "assets/";
-    const file = theme === "light" ? "favicon-light.png?v=8" : "favicon-dark.png?v=8";
+    const file = theme === "light" ? "favicon-light.png?v=9" : "favicon-dark.png?v=9";
     link.setAttribute("href", base + file);
   }
 
