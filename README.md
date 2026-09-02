@@ -50,6 +50,10 @@ formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
 
 на ваш реальный endpoint.
 
+### Лист ожидания (пакет «Финансовый анализ»)
+
+Email из popup «Встать в лист ожидания» уходит в **тот же Formspree** (поле `waitlistFormspreeEndpoint` в `js/main.js`). В панели Formspree ищите письма с темой **«Лист ожидания: Финансовый анализ»** — там поле `email` и метка `waitlist_package: finance`. Можно выгрузить CSV или настроить отдельную форму Formspree и указать её URL в `waitlistFormspreeEndpoint`.
+
 **Альтернатива:** [Web3Forms](https://web3forms.com) — укажите `mode: "web3forms"` и `web3formsAccessKey`.
 
 ## Домен

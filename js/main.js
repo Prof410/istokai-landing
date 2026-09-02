@@ -12,6 +12,8 @@ const FORM_CONFIG = {
   mode: "formspree", // "formspree" | "web3forms" | "disabled"
   formspreeEndpoint: "https://formspree.io/f/xlgkyrqa",
   web3formsAccessKey: "YOUR_WEB3FORMS_ACCESS_KEY",
+  /** Лист ожидания: по умолчанию тот же Formspree — заявки видны в dashboard с темой «Лист ожидания: …» */
+  waitlistFormspreeEndpoint: "https://formspree.io/f/xlgkyrqa",
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -103,6 +105,173 @@ function initLeadFormFields() {
   document.querySelectorAll("#lead-form").forEach((form) => {
     bindPhoneMask(form.querySelector('[name="phone"]'));
     bindEmailInput(form.querySelector('[name="email"]'));
+  });
+}
+
+const WAITLIST_PACKAGES = {
+  finance: {
+    subject: "Лист ожидания: Финансовый анализ",
+    titleKey: "waitlist.finance.title",
+    leadKey: "waitlist.finance.lead",
+  },
+};
+
+function setWaitlistStatus(message, type) {
+  const status = document.querySelector("#waitlist-form .waitlist-modal__status");
+  if (!status) return;
+  status.textContent = message;
+  status.className = `waitlist-modal__status${type ? ` waitlist-modal__status--${type}` : ""}`;
+}
+
+function ensureWaitlistModal() {
+  let modal = document.getElementById("waitlist-modal");
+  if (modal) return modal;
+
+  modal = document.createElement("div");
+  modal.id = "waitlist-modal";
+  modal.className = "waitlist-modal";
+  modal.hidden = true;
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="waitlist-modal__backdrop" data-waitlist-close tabindex="-1"></div>
+    <div class="waitlist-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="waitlist-modal-title">
+      <button type="button" class="waitlist-modal__close" data-waitlist-close data-i18n-aria="waitlist.close" aria-label="Закрыть">×</button>
+      <h2 id="waitlist-modal-title" class="waitlist-modal__title" data-i18n="waitlist.finance.title">Лист ожидания: Финансовый анализ</h2>
+      <p class="waitlist-modal__lead" data-i18n="waitlist.finance.lead">Оставьте email — напишем, когда пакет будет готов в приложении.</p>
+      <form id="waitlist-form" class="waitlist-modal__form" novalidate>
+        <input type="hidden" name="package" value="finance">
+        <label class="waitlist-modal__field">
+          <span class="waitlist-modal__label" data-i18n="waitlist.email.label">Email</span>
+          <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="waitlist.email.placeholder" placeholder="you@company.ru">
+        </label>
+        <p class="waitlist-modal__consent" data-i18n-html="waitlist.consent">Нажимая «Отправить», вы соглашаетесь на обработку email для уведомления о запуске. <a href="/legal/privacy.html">Политика конфиденциальности</a>.</p>
+        <button type="submit" class="btn btn-primary btn-contact-shimmer waitlist-modal__submit" data-i18n="waitlist.submit">Отправить</button>
+        <p class="waitlist-modal__status" aria-live="polite"></p>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  modal.querySelectorAll("[data-waitlist-close]").forEach((el) => {
+    el.addEventListener("click", closeWaitlistModal);
+  });
+
+  modal.querySelector("#waitlist-form")?.addEventListener("submit", submitWaitlistForm);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeWaitlistModal();
+  });
+
+  window.ZakonI18n?.applyI18n?.(window.ZakonI18n.getLang());
+  bindEmailInput(modal.querySelector('input[name="email"]'));
+  return modal;
+}
+
+function updateWaitlistModalCopy(packageId) {
+  const config = WAITLIST_PACKAGES[packageId] || WAITLIST_PACKAGES.finance;
+  const modal = document.getElementById("waitlist-modal");
+  if (!modal) return;
+
+  const title = modal.querySelector(".waitlist-modal__title");
+  const lead = modal.querySelector(".waitlist-modal__lead");
+  const pkgInput = modal.querySelector('input[name="package"]');
+
+  if (title && config.titleKey) {
+    title.dataset.i18n = config.titleKey;
+    title.textContent = i18n(config.titleKey);
+  }
+  if (lead && config.leadKey) {
+    lead.dataset.i18n = config.leadKey;
+    lead.textContent = i18n(config.leadKey);
+  }
+  if (pkgInput) pkgInput.value = packageId;
+
+  setWaitlistStatus("", "");
+  const form = modal.querySelector("#waitlist-form");
+  if (form) {
+    form.classList.remove("waitlist-modal__form--done");
+    form.querySelector('button[type="submit"]').disabled = false;
+    const emailInput = form.querySelector('input[name="email"]');
+    if (emailInput) emailInput.disabled = false;
+  }
+}
+
+function openWaitlistModal(packageId = "finance") {
+  const modal = ensureWaitlistModal();
+  updateWaitlistModalCopy(packageId);
+  modal.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("waitlist-modal-open");
+  const emailInput = modal.querySelector('input[name="email"]');
+  window.setTimeout(() => emailInput?.focus(), 50);
+}
+
+function closeWaitlistModal() {
+  const modal = document.getElementById("waitlist-modal");
+  if (!modal || modal.hidden) return;
+  modal.hidden = true;
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("waitlist-modal-open");
+}
+
+async function submitWaitlistForm(event) {
+  event.preventDefault();
+  const form = event.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const email = form.email.value.trim();
+  const packageId = form.package.value || "finance";
+  const config = WAITLIST_PACKAGES[packageId] || WAITLIST_PACKAGES.finance;
+
+  if (!EMAIL_RE.test(email)) {
+    setWaitlistStatus(i18n("waitlist.error.email"), "error");
+    return;
+  }
+
+  const endpoint = FORM_CONFIG.waitlistFormspreeEndpoint || FORM_CONFIG.formspreeEndpoint;
+  if (FORM_CONFIG.mode === "disabled" || endpoint.includes("YOUR_FORM_ID")) {
+    setWaitlistStatus(i18n("form.error.notConfigured"), "error");
+    return;
+  }
+
+  submitBtn.disabled = true;
+  setWaitlistStatus(i18n("waitlist.error.sending"), "");
+
+  const payload = {
+    email,
+    _subject: config.subject,
+    waitlist_package: packageId,
+    source_page: window.location.pathname,
+    form_type: "waitlist",
+  };
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      throw new Error("waitlist submit failed");
+    }
+
+    form.classList.add("waitlist-modal__form--done");
+    form.email.disabled = true;
+    setWaitlistStatus(i18n("waitlist.success"), "success");
+  } catch {
+    submitBtn.disabled = false;
+    setWaitlistStatus(i18n("waitlist.error.generic"), "error");
+  }
+}
+
+function initWaitlist() {
+  document.querySelectorAll("[data-waitlist-open]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      openWaitlistModal(trigger.dataset.waitlistOpen || "finance");
+    });
   });
 }
 
@@ -793,4 +962,5 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", submitLeadForm);
   });
   initLeadFormFields();
+  initWaitlist();
 });
