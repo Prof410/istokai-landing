@@ -3190,12 +3190,14 @@ img {
 
 .waitlist-modal__dialog {
   position: relative;
+  z-index: 1;
   width: min(100%, 440px);
   padding: 28px 24px 24px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow-lg, 0 24px 48px rgba(0, 0, 0, 0.35));
+  background: var(--bg-card);
+  color: var(--text);
+  box-shadow: var(--shadow);
 }
 
 .waitlist-modal__close {
@@ -3256,7 +3258,7 @@ img {
   padding: 12px 14px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--surface-overlay-2, var(--bg-soft));
   color: var(--text);
   font: inherit;
 }
@@ -3301,4 +3303,28 @@ img {
 
 .waitlist-modal__form--done .waitlist-modal__submit {
   display: none;
+}
+
+[data-theme="light"] .waitlist-modal__dialog {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.18);
+}
+
+[data-theme="light"] .waitlist-modal__field input {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.14);
+  color: #0f172a;
+}
+
+[data-theme="dark"] .waitlist-modal__dialog {
+  background: #1e2a40;
+  border-color: rgba(148, 163, 184, 0.28);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .waitlist-modal__field input {
+  background: #0f172a;
+  border-color: rgba(148, 163, 184, 0.28);
+  color: #e8edf7;
 }
