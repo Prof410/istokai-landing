@@ -1550,3 +1550,58 @@ body[data-page="tenders"] #faq .faq-item {
     display: none !important;
   }
 }
+
+/* Сворачиваемые списки на мобильном (#pain, #who) */
+.mob-collapsible__toggle {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .mob-collapsible__panel {
+    display: block !important;
+  }
+
+  .mob-collapsible__panel[hidden] {
+    display: block !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .mob-collapsible {
+    margin-top: 10px;
+  }
+
+  .mob-collapsible__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    background: transparent;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--accent-text);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mob-collapsible__icon {
+    flex-shrink: 0;
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  .mob-collapsible__panel {
+    padding-top: 10px;
+  }
+
+  .mob-collapsible__panel .role-benefits,
+  .mob-collapsible__panel .audience-points {
+    font-size: 0.84rem;
+  }
+}

@@ -942,6 +942,54 @@ function initExpertExampleCarousel() {
   startAuto();
 }
 
+function setMobCollapsibleState(toggle, panel, open) {
+  panel.hidden = !open;
+  toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  const icon = toggle.querySelector(".mob-collapsible__icon");
+  if (icon) icon.textContent = open ? "−" : "+";
+  const label = toggle.querySelector(".mob-collapsible__label");
+  if (label && window.ZakonI18n) {
+    const key = open ? "ui.detailsLess" : "ui.detailsMore";
+    label.dataset.i18n = key;
+    const text = window.ZakonI18n.t(key);
+    if (text !== key) label.textContent = text;
+  }
+}
+
+function syncMobCollapsiblesForViewport() {
+  const mobile = window.matchMedia("(max-width: 900px)").matches;
+  document.querySelectorAll(".mob-collapsible").forEach((root) => {
+    const toggle = root.querySelector(".mob-collapsible__toggle");
+    const panel = root.querySelector(".mob-collapsible__panel");
+    if (!toggle || !panel) return;
+    if (!mobile) {
+      setMobCollapsibleState(toggle, panel, true);
+      return;
+    }
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setMobCollapsibleState(toggle, panel, isOpen);
+  });
+}
+
+function initMobCollapsibles() {
+  const mq = window.matchMedia("(max-width: 900px)");
+
+  document.querySelectorAll(".mob-collapsible").forEach((root) => {
+    const toggle = root.querySelector(".mob-collapsible__toggle");
+    const panel = root.querySelector(".mob-collapsible__panel");
+    if (!toggle || !panel) return;
+
+    toggle.addEventListener("click", () => {
+      if (!mq.matches) return;
+      const willOpen = panel.hidden;
+      setMobCollapsibleState(toggle, panel, willOpen);
+    });
+  });
+
+  syncMobCollapsiblesForViewport();
+  mq.addEventListener("change", syncMobCollapsiblesForViewport);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initFaq();
@@ -958,6 +1006,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initHeroTitleTypewriter();
     window.__zakonRestartChatDemo?.();
     window.__zakonRestartCaseDemo?.();
+    syncMobCollapsiblesForViewport();
   });
 
   document.querySelectorAll("#lead-form").forEach((form) => {
@@ -965,4 +1014,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   initLeadFormFields();
   initWaitlist();
+  initMobCollapsibles();
 });
