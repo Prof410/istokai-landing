@@ -1526,3 +1526,27 @@ body[data-page="tenders"] #faq .faq-item {
     margin-top: 8px;
   }
 }
+
+/* Полный / краткий текст: одна страница, разный объём на ПК и моб */
+.copy-short {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .copy-full {
+    display: none !important;
+  }
+
+  .copy-short {
+    display: block;
+  }
+
+  li.copy-dual .copy-short,
+  p.copy-dual .copy-short {
+    display: block;
+  }
+
+  .copy-full-only {
+    display: none !important;
+  }
+}
