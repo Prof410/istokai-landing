@@ -362,15 +362,116 @@ async function initHeroTitleTypewriter() {
   syncHeroChatHeight();
 }
 
+function captureHeroChatDemoState() {
+  const docsEl = document.getElementById("demo-docs");
+  const userBubble = document.getElementById("demo-user");
+  const userText = document.getElementById("demo-user-text");
+  const botBubble = document.getElementById("demo-bot");
+  const botText = document.getElementById("demo-bot-text");
+  const sourceEl = document.getElementById("demo-source");
+  const typingEl = document.getElementById("demo-typing");
+  const inputText = document.getElementById("demo-input-text");
+
+  return {
+    docsHtml: docsEl?.innerHTML ?? "",
+    userHidden: userBubble?.hidden ?? true,
+    botHidden: botBubble?.hidden ?? true,
+    typingHidden: typingEl?.hidden ?? true,
+    sourceHidden: sourceEl?.hidden ?? true,
+    userText: userText?.textContent ?? "",
+    botText: botText?.textContent ?? "",
+    sourceText: sourceEl?.textContent ?? "",
+    inputText: inputText?.textContent ?? "",
+  };
+}
+
+function restoreHeroChatDemoState(state) {
+  const docsEl = document.getElementById("demo-docs");
+  const userBubble = document.getElementById("demo-user");
+  const userText = document.getElementById("demo-user-text");
+  const botBubble = document.getElementById("demo-bot");
+  const botText = document.getElementById("demo-bot-text");
+  const sourceEl = document.getElementById("demo-source");
+  const typingEl = document.getElementById("demo-typing");
+  const inputText = document.getElementById("demo-input-text");
+  if (!docsEl || !userBubble || !userText || !botBubble || !botText || !sourceEl || !typingEl || !inputText) {
+    return;
+  }
+
+  docsEl.innerHTML = state.docsHtml;
+  userBubble.hidden = state.userHidden;
+  botBubble.hidden = state.botHidden;
+  typingEl.hidden = state.typingHidden;
+  sourceEl.hidden = state.sourceHidden;
+  userText.textContent = state.userText;
+  botText.textContent = state.botText;
+  sourceEl.textContent = state.sourceText;
+  inputText.textContent = state.inputText;
+}
+
+function syncHeroChatMockupHeight() {
+  const root = document.getElementById("hero-chat-demo");
+  const mockup = root?.querySelector(".chat-mockup-hero");
+  if (!mockup) return;
+
+  if (window.innerWidth > 960) {
+    mockup.style.minHeight = "";
+    return;
+  }
+
+  const docsEl = document.getElementById("demo-docs");
+  const userBubble = document.getElementById("demo-user");
+  const userText = document.getElementById("demo-user-text");
+  const botBubble = document.getElementById("demo-bot");
+  const botText = document.getElementById("demo-bot-text");
+  const sourceEl = document.getElementById("demo-source");
+  const typingEl = document.getElementById("demo-typing");
+  const inputText = document.getElementById("demo-input-text");
+  const demos = getChatDemos();
+
+  if (!docsEl || !userBubble || !userText || !botBubble || !botText || !sourceEl || !typingEl || !inputText || !demos.length) {
+    return;
+  }
+
+  const snapshot = captureHeroChatDemoState();
+  let maxHeight = 0;
+
+  typingEl.hidden = true;
+
+  demos.forEach((demo) => {
+    docsEl.innerHTML = demo.docs.map((name) => `<span class="doc-chip">${name}</span>`).join("");
+    inputText.textContent = demo.question;
+    userBubble.hidden = false;
+    userText.textContent = demo.question;
+    botBubble.hidden = false;
+    botText.textContent = demo.answer;
+    sourceEl.textContent = demo.source;
+    sourceEl.hidden = false;
+    maxHeight = Math.max(maxHeight, mockup.getBoundingClientRect().height);
+  });
+
+  restoreHeroChatDemoState(snapshot);
+
+  if (maxHeight > 0) {
+    mockup.style.minHeight = `${Math.ceil(maxHeight)}px`;
+  }
+}
+
 function syncHeroChatHeight() {
   const main = document.querySelector(".hero-main");
   const demo = document.querySelector(".chat-demo");
-  if (!main || !demo) return;
+  if (!demo) return;
 
   if (window.innerWidth <= 960) {
     demo.style.minHeight = "";
+    syncHeroChatMockupHeight();
     return;
   }
+
+  const mockup = demo.querySelector(".chat-mockup-hero");
+  if (mockup) mockup.style.minHeight = "";
+
+  if (!main) return;
 
   demo.style.minHeight = `${main.offsetHeight}px`;
 }
@@ -446,7 +547,6 @@ function initChatDemo() {
     botCursor.hidden = true;
     sourceEl.textContent = demo.source;
     sourceEl.hidden = false;
-    syncHeroChatHeight();
 
     await wait(5000);
     if (isDemoStopped(currentRun)) return;
@@ -477,8 +577,8 @@ function initChatDemo() {
     playDemo(demoIndex);
   });
 
-  startDemo(0);
   syncHeroChatHeight();
+  startDemo(0);
   window.addEventListener("resize", syncHeroChatHeight);
   window.__zakonRestartChatDemo = () => startDemo(0);
 }
@@ -1004,6 +1104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("zakon:langchange", () => {
     initHeroTitleTypewriter();
+    syncHeroChatHeight();
     window.__zakonRestartChatDemo?.();
     window.__zakonRestartCaseDemo?.();
     syncMobCollapsiblesForViewport();

@@ -1878,9 +1878,11 @@ img {
   .chat-mockup-hero {
     min-height: 400px;
     height: auto;
+    box-sizing: border-box;
   }
 
   .chat-body-demo {
+    flex: 1 1 auto;
     min-height: 280px;
   }
 
